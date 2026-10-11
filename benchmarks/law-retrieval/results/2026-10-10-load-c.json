@@ -1,0 +1,348 @@
+{
+  "date": "2026-10-09",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approaches": {
+    "c": {
+      "summary": {
+        "n": 3,
+        "lawAt1": 1,
+        "lawAt5": 1,
+        "articleRecall": 1,
+        "avgSeconds": 12.483967986000001,
+        "avgCostUsd": 0.21588533333333335,
+        "errors": 0
+      },
+      "load": {
+        "avgAppCpuMs": 522.3093333333333,
+        "peakAppRssMB": 255.868928,
+        "avgDbCpuMs": 112.884,
+        "avgDbReadMB": 0,
+        "dbMemMB": 1309.442048,
+        "avgBwbCalls": 6,
+        "avgBwbWaitSeconds": 1.6485033479999973
+      },
+      "byDifficulty": {
+        "obscure": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 13.516028875,
+          "avgCostUsd": 0.155484,
+          "errors": 0
+        },
+        "common": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 12.795780417000001,
+          "avgCostUsd": 0.281956,
+          "errors": 0
+        },
+        "mid": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 11.140094666000001,
+          "avgCostUsd": 0.21021600000000001,
+          "errors": 0
+        }
+      },
+      "tuchtrecht": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "verdict": "Marine #1",
+          "recall": 1
+        }
+      ],
+      "questions": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "8",
+              "1"
+            ]
+          },
+          "top": [
+            "BWBR0003866",
+            "BWBR0026257",
+            "BWBR0010902",
+            "BWBR0003865",
+            "BWBR0004788"
+          ],
+          "articles": [
+            "8",
+            "1",
+            "7"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0003866",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985",
+              "articles": [
+                "8",
+                "1",
+                "7"
+              ],
+              "why": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine: regelt verzoek tot correctie, uitvoering, kennisgeving en rechtsmiddelen voor marinepersoneel (matroos)."
+            },
+            {
+              "id": "BWBR0026257",
+              "title": "Regeling Wet bescherming persoonsgegevens ministerie van Defensie",
+              "articles": [],
+              "why": "Algemene Defensieregeling bescherming persoonsgegevens, inclusief correctierechten."
+            },
+            {
+              "id": "BWBR0010902",
+              "title": "Rijksbesluit uitvoeringsbepalingen militair straf- en tuchtrecht",
+              "articles": [],
+              "why": "Uitvoeringsbepalingen militair straf- en tuchtrecht, mogelijk over registratie van straffen."
+            },
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [],
+              "why": "Bijna-identieke regeling voor de Landmacht; minder passend omdat een matroos tot de Marine behoort."
+            },
+            {
+              "id": "BWBR0004788",
+              "title": "Wet militair tuchtrecht",
+              "articles": [],
+              "why": "Wet militair tuchtrecht: grondslag voor tuchtstraffen en registratie daarvan."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 13.516028875,
+          "usage": {
+            "input_tokens": 34886,
+            "output_tokens": 797
+          },
+          "apiCalls": 3,
+          "costUsd": 0.155484,
+          "load": {
+            "appCpuMs": 538.311,
+            "appRssMB": 217.481216,
+            "dbCpuMs": 122.264,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.442048,
+            "bwbCalls": 6,
+            "bwbWaitMs": 758.6433350000007
+          },
+          "trace": [
+            "filters: Defensie, ministeriele-regeling, beleidsregel, AMvB, wet, reglement, Militair recht, Militaire ambtenarenrecht, Tuchtrecht, Privacy, Ambtenarenrecht, Defensie, Werk- en loopbaan",
+            "words: krijgstucht, tucht, straffen, strafregister, registratie, register, straf, militair, militairen, Defensie, personeelsdossier, aantekening, verwijdering, gegevens, tuchtrecht, persoonsgegevens, correctie, Wet militair tuchtrecht, regeling, voorschrift, bewaring, vernietiging, strafregistratie",
+            "titles: Regeling registratie krijgstuchtelijke straffen | Wet militair tuchtrecht | Regeling verwijdering aantekeningen tuchtstraffen militairen | Voorschrift strafregister krijgstucht | Regeling personeelsdossiers Defensie | Besluit verwerking persoonsgegevens Defensie | Regeling strafregister militairen",
+            "shortlist: 150 titles; top: BWBR0004788 Wet militair tuchtrecht (33.1) | BWBR0003865 Privacy-regeling centrale registratie tuchtrechtelijke gegev (27.7) | BWBR0003866 Privacy-regeling centrale registratie tuchtrechtelijke gegev (27.7) | BWBR0050757 Aanwijzingsregeling 2024 ex. artikelen 4, tweede lid, en 49, (25.4) | BWBR0005462 Instelling Commissie Evaluatie Militair Straf- en Tuchtrecht (24.0) | BWBR0010902 Rijksbesluit uitvoeringsbepalingen militair straf- en tuchtr (23.8) | BWBR0015853 Regeling bescherming persoonsgegevens in personeelsdossiers  (23.5) | BWBR0038815 Wijzigingsbesluit Rijksbesluit uitvoeringsbepalingen militai (22.8)",
+            "picked (shortlist rank): BWBR0003866 #3, BWBR0003865 #2, BWBR0004788 #1, BWBR0026257 #12, BWBR0010902 #6",
+            "outlines: BWBR0003866 12 articles, BWBR0003865 12 articles, BWBR0004788 133 articles",
+            "demoted (no relevant articles): BWBR0003865, BWBR0004788"
+          ]
+        },
+        {
+          "id": "awb-bezwaartermijn",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005537",
+            "alsoAccept": [],
+            "articles": [
+              "6:7",
+              "6:8"
+            ]
+          },
+          "top": [
+            "BWBR0005537",
+            "BWBR0002448",
+            "BWBR0005416",
+            "BWBR0004287",
+            "BWBR0006622"
+          ],
+          "articles": [
+            "6:7",
+            "6:8",
+            "3:41",
+            "6:9",
+            "6:11",
+            "7:1",
+            "1:5",
+            "6:4"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005537",
+              "title": "Algemene wet bestuursrecht",
+              "articles": [
+                "6:7",
+                "6:8",
+                "3:41",
+                "6:9",
+                "6:11",
+                "7:1",
+                "1:5",
+                "6:4"
+              ],
+              "why": "Awb regelt bezwaartermijn van zes weken (art. 6:7) en aanvang daags na bekendmaking (art. 6:8, 3:41)."
+            },
+            {
+              "id": "BWBR0002448",
+              "title": "Algemene termijnenwet",
+              "articles": [
+                "1",
+                "3",
+                "4"
+              ],
+              "why": "Algemene termijnenwet: verlenging termijn als einde op zaterdag, zondag of feestdag valt."
+            },
+            {
+              "id": "BWBR0005416",
+              "title": "Gemeentewet",
+              "articles": [],
+              "why": "Gemeentewet: grondslag gemeentelijke parkeerverordening en bevoegdheden."
+            },
+            {
+              "id": "BWBR0004287",
+              "title": "Bekendmakingswet",
+              "articles": [],
+              "why": "Bekendmakingswet over bekendmaking van besluiten, minder direct relevant."
+            },
+            {
+              "id": "BWBR0006622",
+              "title": "Wegenverkeerswet 1994",
+              "articles": [],
+              "why": "Wegenverkeerswet 1994 kan grondslag bieden voor parkeervergunningen/verkeersbesluiten."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 12.795780417000001,
+          "usage": {
+            "input_tokens": 66474,
+            "output_tokens": 803
+          },
+          "apiCalls": 3,
+          "costUsd": 0.281956,
+          "load": {
+            "appCpuMs": 669.421,
+            "appRssMB": 232.947712,
+            "dbCpuMs": 119.075,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.372416,
+            "bwbCalls": 6,
+            "bwbWaitMs": 3560.8558749999975
+          },
+          "trace": [
+            "filters: Justitie en Veiligheid, Veiligheid en Justitie, Binnenlandse Zaken en Koninkrijksrelaties, Infrastructuur en Waterstaat, wet, AMvB, ministeriele-regeling, Bestuursrecht, Bestuursprocesrecht, Staats- en bestuursrecht, Verkeersrecht, Procesrecht, Overheid, bestuur en koninkrijk, Rechtspraak, Verkeer en vervoer",
+            "words: algemene, bestuursrecht, bezwaar, beroep, termijn, termijnenwet, bestuursorgaan, besluit, beschikking, procesrecht, bestuursrechtspraak, gemeentewet, parkeer, parkeren, vergunning, wegenverkeer, rechtspraak, verlenging, bekendmaking, awb",
+            "titles: Algemene wet bestuursrecht | Algemene termijnenwet | Gemeentewet | Wegenverkeerswet 1994 | Besluit proceskosten bestuursrecht | Bekendmakingswet",
+            "shortlist: 150 titles; top: BWBR0002448 Algemene termijnenwet (33.1) | BWBR0048715 Beleidsregel voeren van verweer in procedures bij Afdeling B (29.2) | BWBR0002144 Wet bestuursrechtspraak bedrijfsorganisatie (25.7) | BWBR0030699 Besluit vaststelling selectielijst van de Raad van State dee (25.4) | BWBR0005537 Algemene wet bestuursrecht (25.4) | BWBR0006358 Besluit proceskosten bestuursrecht (25.0) | BWBR0004287 Bekendmakingswet (24.6) | BWBR0006622 Wegenverkeerswet 1994 (23.7)",
+            "picked (shortlist rank): BWBR0005537 #5, BWBR0002448 #1, BWBR0006622 #8, BWBR0005416 #12, BWBR0004287 #7",
+            "outlines: BWBR0005537 582 articles, BWBR0002448 8 articles, BWBR0006622 400 articles",
+            "demoted (no relevant articles): BWBR0006622"
+          ]
+        },
+        {
+          "id": "arbeid-dagelijkse-rusttijd",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007671",
+            "alsoAccept": [],
+            "articles": [
+              "5:3"
+            ]
+          },
+          "top": [
+            "BWBR0007671",
+            "BWBR0007687",
+            "BWBR0005290",
+            "BWBR0016941",
+            "BWBR0032353"
+          ],
+          "articles": [
+            "5:3",
+            "1:7",
+            "5:8",
+            "4:1a",
+            "1:3"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0007671",
+              "title": "Arbeidstijdenwet",
+              "articles": [
+                "5:3",
+                "1:7",
+                "5:8",
+                "4:1a",
+                "1:3"
+              ],
+              "why": "Arbeidstijdenwet regelt de dagelijkse rusttijd (11 uur, eens per 7 dagen in te korten tot 8 uur); 23.00-07.00 is 8 uur rust."
+            },
+            {
+              "id": "BWBR0007687",
+              "title": "Arbeidstijdenbesluit",
+              "articles": [
+                "5.8:1"
+              ],
+              "why": "Arbeidstijdenbesluit bevat nadere en afwijkende regels voor arbeids- en rusttijden."
+            },
+            {
+              "id": "BWBR0005290",
+              "title": "Burgerlijk Wetboek Boek 7",
+              "articles": [],
+              "why": "BW Boek 7 bevat het arbeidsovereenkomstenrecht, waaronder de regels over werktijden en oproepen."
+            },
+            {
+              "id": "BWBR0016941",
+              "title": "Wet bestuurlijke boete Arbeidstijdenwet",
+              "articles": [],
+              "why": "Wet bestuurlijke boete Arbeidstijdenwet regelt de handhaving bij overtredingen."
+            },
+            {
+              "id": "BWBR0032353",
+              "title": "Beleidsregel boeteoplegging Arbeidstijdenwet en Arbeidstijdenbesluit 2013",
+              "articles": [],
+              "why": "Beleidsregel boeteoplegging bij overtreding van de rusttijdregels in de Arbeidstijdenwet."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 11.140094666000001,
+          "usage": {
+            "input_tokens": 48609,
+            "output_tokens": 789
+          },
+          "apiCalls": 3,
+          "costUsd": 0.21021600000000001,
+          "load": {
+            "appCpuMs": 359.196,
+            "appRssMB": 255.868928,
+            "dbCpuMs": 97.313,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.319168,
+            "bwbCalls": 6,
+            "bwbWaitMs": 626.0108339999933
+          },
+          "trace": [
+            "filters: Sociale Zaken en Werkgelegenheid, wet, AMvB, ministeriele-regeling, beleidsregel, Arbeidsrecht, Arbeidsrecht en sociaal-zekerheidsrecht, Werk- en loopbaan",
+            "words: arbeidstijden, arbeidstijdenwet, arbeidstijdenbesluit, arbeidstijd, rusttijd, rust, werktijd, dienstrooster, rooster, nachtarbeid, nachtdienst, horeca, werknemer, werkgever, arbeidsomstandigheden, arbeidsovereenkomst, werktijden, beleidsregels, Arbeidstijdenregeling",
+            "titles: Arbeidstijdenwet | Arbeidstijdenbesluit | Arbeidstijdenregeling | Beleidsregels Arbeidstijdenwet | Burgerlijk Wetboek Boek 7 | Wet arbeid en zorg",
+            "shortlist: 150 titles; top: BWBR0007687 Arbeidstijdenbesluit (38.4) | BWBR0007671 Arbeidstijdenwet (38.2) | BWBR0032353 Beleidsregel boeteoplegging Arbeidstijdenwet en Arbeidstijde (35.6) | BWBR0034083 Beleidsregel boeteoplegging Arbeidstijdenwet en Arbeidstijde (33.6) | BWBR0052429 Beleidsregel boeteoplegging Arbeidstijdenwet en Arbeidstijde (33.6) | BWBR0052432 Beleidsregel boeteoplegging Arbeidstijdenwet en Arbeidstijde (33.6) | BWBR0028275 Regeling vervanging archiefbescheiden toezicht op de Arbeids (33.2) | BWBR0016941 Wet bestuurlijke boete Arbeidstijdenwet (29.2)",
+            "picked (shortlist rank): BWBR0007671 #2, BWBR0007687 #1, BWBR0032353 #3, BWBR0005290 #18, BWBR0016941 #8",
+            "outlines: BWBR0007671 95 articles, BWBR0007687 150 articles, BWBR0032353 10 articles",
+            "demoted (no relevant articles): BWBR0032353"
+          ]
+        }
+      ]
+    }
+  }
+}

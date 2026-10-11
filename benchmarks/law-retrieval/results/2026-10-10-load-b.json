@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-09",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approaches": {
+    "b": {
+      "summary": {
+        "n": 3,
+        "lawAt1": 0.6666666666666666,
+        "lawAt5": 0.6666666666666666,
+        "articleRecall": 0.3333333333333333,
+        "avgSeconds": 9.337691333666667,
+        "avgCostUsd": 0.04876,
+        "errors": 0
+      },
+      "load": {
+        "avgAppCpuMs": 54.675000000000004,
+        "peakAppRssMB": 101.433344,
+        "avgDbCpuMs": 1268.9360000000001,
+        "avgDbReadMB": 0.0027306666666666664,
+        "dbMemMB": 1318.129664,
+        "avgBwbCalls": 0,
+        "avgBwbWaitSeconds": 0
+      },
+      "byDifficulty": {
+        "obscure": {
+          "n": 1,
+          "lawAt1": 0,
+          "lawAt5": 0,
+          "articleRecall": 0,
+          "avgSeconds": 9.672789625000002,
+          "avgCostUsd": 0.043496,
+          "errors": 0
+        },
+        "common": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 0,
+          "avgSeconds": 9.000750542000002,
+          "avgCostUsd": 0.043247999999999995,
+          "errors": 0
+        },
+        "mid": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 9.339533833999997,
+          "avgCostUsd": 0.059536000000000006,
+          "errors": 0
+        }
+      },
+      "tuchtrecht": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "verdict": "Landmacht #1 boven Marine",
+          "recall": 0
+        }
+      ],
+      "questions": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "8",
+              "1"
+            ]
+          },
+          "top": [
+            "BWBR0003865",
+            "BWBR0004788",
+            "BWBR0010902"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [
+                "8",
+                "1",
+                "3",
+                "7",
+                "4"
+              ],
+              "why": "Privacyregeling centrale registratie tuchtrechtelijke gegevens regelt het verzoek tot correctie bij de houder, de inhoud ervan, uitvoering door de uitvoerder, kennisgeving en rechtsmiddelen. Kanttekening: deze regeling geldt voor de Koninklijke Landmacht. Een matroos dient bij de Koninklijke Marine; de kandidatenlijst bevat geen marine-variant. Deze regeling is daarom het best passende, maar mogelijk niet rechtstreeks toepasselijk."
+            },
+            {
+              "id": "BWBR0004788",
+              "title": "Wet militair tuchtrecht",
+              "articles": [
+                "79",
+                "85"
+              ],
+              "why": "Wet militair tuchtrecht: algemeen kader voor militaire tuchtstraffen, het beroep daartegen en aantekeningen daarvan."
+            },
+            {
+              "id": "BWBR0010902",
+              "title": "Rijksbesluit uitvoeringsbepalingen militair straf- en tuchtrecht",
+              "articles": [
+                "6"
+              ],
+              "why": "Uitvoeringsbepalingen bij het militair straf- en tuchtrecht; alleen aanvullende context."
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 9.672789625000002,
+          "usage": {
+            "input_tokens": 7674,
+            "output_tokens": 640
+          },
+          "apiCalls": 2,
+          "costUsd": 0.043496,
+          "load": {
+            "appCpuMs": 78.62,
+            "appRssMB": 89.243648,
+            "dbCpuMs": 947.764,
+            "dbReadMB": 0,
+            "dbMemMB": 1317.2736,
+            "bwbCalls": 0,
+            "bwbWaitMs": 0
+          },
+          "trace": [
+            "query [[\"opgelegde straf\",\"straf\",\"tuchtrechtelijke straf\"],[\"aantekening\",\"registratie\",\"geregistreerd\"],[\"commandant\",\"militair\"]]: 5 articles",
+            "query [[\"Wet militair tuchtrecht\",\"tuchtrecht\"],[\"register\",\"strafkaart\",\"aantekening\"],[\"mededeling\",\"kennisgeving\",\"in kennis\"]]: 10 articles",
+            "query [[\"schepeling\",\"zeeman\",\"matroos\"],[\"tuchtrecht\",\"straf\"]] (relaxed): 2 articles",
+            "query [[\"straffenregister\",\"strafregister\",\"registratie\"],[\"verbetering\",\"wijziging\",\"correctie\"],[\"verzoek\",\"verzoekschrift\"]]: 30 articles",
+            "query [[\"verzoek\"],[\"verbetering\",\"verwijdering\"],[\"afwijzing\",\"afgewezen\",\"beroep\",\"beklag\"]]: 30 articles",
+            "candidates: BWBV0004680 Verdrag tot samenwerking inzake octrooien (0.182, 2q) | BWBR0004788 Wet militair tuchtrecht (0.174, 2q) | BWBR0003865 Privacy-regeling centrale registratie tuchtrechtel (0.155, 2q) | BWBR0019468 Wet toezicht accountantsorganisaties (0.091, 1q) | BWBR0028278 Wetboek van Koophandel BES (0.091, 1q) | BWBR0003952 Regeling Bescherming persoonlijke levenssfeer bij  (0.083, 1q) | BWBR0052798 Aanwijzingsbesluit elektronische kanalen Kiesraad  (0.083, 1q) | BWBV0006181 Uitleveringsverdrag tussen Nederland en San Marino (0.083, 1q) | BWBR0022543 Landbouwkwaliteitsregeling 2007 (0.077, 1q) | BWBR0010902 Rijksbesluit uitvoeringsbepalingen militair straf- (0.077, 1q) | BWBR0028574 Mijnbesluit BES (0.077, 1q) | BWBR0004189 Wet op de architectentitel (0.077, 1q) | BWBR0028837 Circulaire toelating en uitzetting Bonaire, Sint E (0.071, 1q) | BWBR0028607 Besluit burgerlijke stand BES (0.071, 1q) | BWBR0051978 CBR beleidsregel aanwijzing keurend medisch specia (0.071, 1q)",
+            "picked (candidate rank): BWBR0003865 #3, BWBR0004788 #2, BWBR0010902 #10"
+          ]
+        },
+        {
+          "id": "awb-bezwaartermijn",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005537",
+            "alsoAccept": [],
+            "articles": [
+              "6:7",
+              "6:8"
+            ]
+          },
+          "top": [
+            "BWBR0005537"
+          ],
+          "articles": [
+            "3:41",
+            "3:42",
+            "3:44"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005537",
+              "title": "Algemene wet bestuursrecht",
+              "articles": [
+                "3:41",
+                "3:42",
+                "3:44"
+              ],
+              "why": "De Awb regelt de bekendmaking van besluiten aan de aanvrager door toezending (art. 3:41). De bezwaartermijn zelf staat in art. 6:7 en 6:8 Awb: zes weken, ingaand op de dag na bekendmaking, dus vanaf 4 maart. Die artikelen staan niet in de kandidatenlijst en zijn daarom niet opgenomen."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 0,
+          "seconds": 9.000750542000002,
+          "usage": {
+            "input_tokens": 8722,
+            "output_tokens": 418
+          },
+          "apiCalls": 2,
+          "costUsd": 0.043247999999999995,
+          "load": {
+            "appCpuMs": 69.308,
+            "appRssMB": 101.433344,
+            "dbCpuMs": 2581.309,
+            "dbReadMB": 0.008192,
+            "dbMemMB": 1317.994496,
+            "bwbCalls": 0,
+            "bwbWaitMs": 0
+          },
+          "trace": [
+            "query [[\"bezwaartermijn\",\"termijn\",\"bezwaarschrift\"],[\"zes weken\"],[\"bekendmaking\",\"bekendgemaakt\",\"toegezonden\"]]: 30 articles",
+            "query [[\"parkeervergunning\",\"vergunning\"],[\"bezwaar\",\"bezwaarschrift\"],[\"gemeente\",\"college\",\"burgemeester\"]]: 13 articles",
+            "query [[\"besluit\"],[\"bekendmaking\",\"toezending\",\"uitreiking\"],[\"belanghebbende\",\"aanvrager\"]]: 30 articles",
+            "query [[\"bezwaarschrift\"],[\"termijn\"],[\"verschoonbaar\",\"niet-ontvankelijk\",\"te laat\"]]: 30 articles",
+            "query [[\"termijn\"],[\"indienen\",\"bezwaar\"],[\"dag na\",\"aanvangt\"]]: 30 articles",
+            "candidates: BWBR0005537 Algemene wet bestuursrecht (0.122, 2q) | BWBR0039456 Regeling bezwarenprocedure KB (0.119, 2q) | BWBR0026494 Handleiding voor de toepassing van de Rijkswet op  (0.110, 2q) | BWBR0034205 Besluit ontheffing niet-storneerbare incasso voor  (0.096, 2q) | BWBR0027122 Handleiding Rijkswet op het Nederlanderschap 2003  (0.093, 2q) | BWBR0008708 Zonering vliegbasis Volkel (0.091, 2q) | BWBR0049082 Regeling sanering verkeerslawaai 2024 (0.091, 1q) | BWBV0006284 Internationaal Verdrag voor de instandhouding van  (0.091, 1q) | BWBR0033305 Besluit uitgifte drie vergunningen voor analoge co (0.091, 1q) | BWBR0049945 Beleid procesrecht herstel toeslagen (0.091, 1q) | BWBR0032499 Tariefbeschikking tweedelijns curatieve GGZ (0.088, 2q) | BWBV0003819 Verdrag inzake de verlening van Europese octrooien (0.088, 2q) | BWBR0041394 Prestatie- en tariefbeschikking medisch-specialist (0.083, 1q) | BWBV0007162 Versterkte Partnerschaps- en Samenwerkingsovereenk (0.083, 1q) | BWBR0052060 Besluit goedkeuring tarieven Stichting Groene Erke (0.083, 1q)",
+            "picked (candidate rank): BWBR0005537 #1"
+          ]
+        },
+        {
+          "id": "arbeid-dagelijkse-rusttijd",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007671",
+            "alsoAccept": [],
+            "articles": [
+              "5:3"
+            ]
+          },
+          "top": [
+            "BWBR0007671",
+            "BWBR0007687",
+            "BWBV0002317"
+          ],
+          "articles": [
+            "5:3",
+            "5:1",
+            "1:7",
+            "5:8",
+            "5:7"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0007671",
+              "title": "Arbeidstijdenwet",
+              "articles": [
+                "5:3",
+                "5:1",
+                "1:7",
+                "5:8",
+                "5:7"
+              ],
+              "why": "Arbeidstijdenwet regelt de dagelijkse onafgebroken rusttijd van 11 uur per 24 uur, die eenmaal per 7x24 uur mag worden ingekort tot 8 uur. Tussen 23.00 en 07.00 uur zit 8 uur rust, wat dus alleen eenmaal per week is toegestaan. Art. 1:7 bevat de definities, waaronder die van nachtdienst; een dienst tot 23.00 uur is geen nachtdienst."
+            },
+            {
+              "id": "BWBR0007687",
+              "title": "Arbeidstijdenbesluit",
+              "articles": [
+                "4.3:1"
+              ],
+              "why": "Het Arbeidstijdenbesluit bevat aanvullende afwijkingen van de wettelijke regels. Voor de horeca geldt daarin geen specifieke afwijking van de dagelijkse rusttijd."
+            },
+            {
+              "id": "BWBV0002317",
+              "title": "Verdrag betreffende arbeidsvoorwaarden en -omstandigheden in hotels, restaurants en soortgelijke bedrijven",
+              "articles": [
+                "4"
+              ],
+              "why": "ILO-verdrag over de arbeidsvoorwaarden in hotels en restaurants, waaronder de arbeids- en rusttijden."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 9.339533833999997,
+          "usage": {
+            "input_tokens": 11764,
+            "output_tokens": 624
+          },
+          "apiCalls": 2,
+          "costUsd": 0.059536000000000006,
+          "load": {
+            "appCpuMs": 16.097,
+            "appRssMB": 94.076928,
+            "dbCpuMs": 277.735,
+            "dbReadMB": 0,
+            "dbMemMB": 1318.129664,
+            "bwbCalls": 0,
+            "bwbWaitMs": 0
+          },
+          "trace": [
+            "query [[\"Arbeidstijdenwet\"],[\"rusttijd\",\"rust\"],[\"werknemer\"]]: 22 articles",
+            "query [[\"horeca\",\"restaurant\"],[\"arbeidstijden\",\"rusttijd\"],[\"werknemer\"]]: 2 articles",
+            "query [[\"rusttijd\",\"onafgebroken rust\"],[\"dienst\"],[\"24 uren\",\"uren\"]]: 30 articles",
+            "query [[\"rooster\",\"arbeidspatroon\"],[\"werkgever\"],[\"vaststelling\",\"bekendmaking\"]]: 1 articles",
+            "query [[\"dagelijkse rust\",\"onafgebroken rust\",\"rusttijd\"],[\"inkorten\",\"verkorting\",\"eenmaal\"],[\"periode van 7 maal 24 uren\",\"week\"]]: 30 articles",
+            "candidates: BWBR0007671 Arbeidstijdenwet (0.265, 3q) | BWBR0007687 Arbeidstijdenbesluit (0.160, 2q) | BWBV0004455 Europese Overeenkomst nopens de arbeidsvoorwaarden (0.158, 2q) | BWBR0003482 Algemeen militair ambtenarenreglement (0.148, 2q) | BWBR0009386 Arbeidstijdenbesluit vervoer (0.134, 2q) | BWBR0006040 Burgerlijk ambtenarenreglement defensie (0.129, 2q) | BWBR0026215 Circulaire Arbeidsvoorwaarden personenchauffeurs (0.114, 2q) | BWBV0002317 Verdrag betreffende arbeidsvoorwaarden en -omstand (0.091, 1q) | BWBR0048863 Besluit ondervolmacht personele aangelegenheden DG (0.091, 1q) | BWBR0008498 Arbeidsomstandighedenbesluit (0.083, 1q) | BWBR0028326 Arbeidsbesluit hotels, restaurants en casino’s 200 (0.083, 1q) | BWBR0028693 Rechtspositiebesluit ambtenaren BES (0.059, 1q) | BWBR0028202 Arbeidswet 2000 BES (0.056, 1q) | BWBR0028723 Dienst- en werktijdenbesluit brandweerkorps BES (0.053, 1q) | BWBV0001021 Europees Sociaal Handvest (0.053, 1q)",
+            "picked (candidate rank): BWBR0007671 #1, BWBR0007687 #2, BWBV0002317 #8"
+          ]
+        }
+      ]
+    }
+  }
+}

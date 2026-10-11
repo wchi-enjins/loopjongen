@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-09",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approaches": {
+    "a": {
+      "summary": {
+        "n": 3,
+        "lawAt1": 1,
+        "lawAt5": 1,
+        "articleRecall": 1,
+        "avgSeconds": 8.459232708666667,
+        "avgCostUsd": 0.054976,
+        "errors": 0
+      },
+      "load": {
+        "avgAppCpuMs": 191.11566666666667,
+        "peakAppRssMB": 273.956864,
+        "avgDbCpuMs": 72.16733333333333,
+        "avgDbReadMB": 0,
+        "dbMemMB": 1309.372416,
+        "avgBwbCalls": 2.6666666666666665,
+        "avgBwbWaitSeconds": 0.22909887499999923
+      },
+      "byDifficulty": {
+        "obscure": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 9.612157959,
+          "avgCostUsd": 0.063692,
+          "errors": 0
+        },
+        "common": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 8.013181291999999,
+          "avgCostUsd": 0.046068,
+          "errors": 0
+        },
+        "mid": {
+          "n": 1,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 7.752358875000001,
+          "avgCostUsd": 0.055168,
+          "errors": 0
+        }
+      },
+      "tuchtrecht": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "verdict": "Marine #1",
+          "recall": 1
+        }
+      ],
+      "questions": [
+        {
+          "id": "tuchtrecht-km-correctie",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "8",
+              "1"
+            ]
+          },
+          "top": [
+            "BWBR0003866",
+            "BWBR0003865"
+          ],
+          "articles": [
+            "8",
+            "1",
+            "7"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0003866",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985",
+              "articles": [
+                "8",
+                "1",
+                "7"
+              ],
+              "why": "Art. 8 regelt het correctieverzoek bij de houder (volgens art. 1 de bevelhebber der Zeestrijdkrachten), wat erin moet staan, de uitvoering door de uitvoerder, wie moet worden geïnformeerd, en bezwaar bij de minister van Defensie."
+            },
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [
+                "8"
+              ],
+              "why": "Een vergelijkbare regeling voor de Landmacht; voor deze vraag minder relevant."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 9.612157959,
+          "usage": {
+            "input_tokens": 13208,
+            "output_tokens": 543
+          },
+          "apiCalls": 4,
+          "costUsd": 0.063692,
+          "load": {
+            "appCpuMs": 160.589,
+            "appRssMB": 206.471168,
+            "dbCpuMs": 78.661,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.372416,
+            "bwbCalls": 3,
+            "bwbWaitMs": 239.72245800000064
+          },
+          "trace": [
+            "text: Plan: military discipline (Wet militair tuchtrecht) and the registration of punishments: a ministerial regulation from Defensie on the \"strafregister\" or \"registratie straffen\".",
+            "search_laws {\"words\":\"registratie straffen\",\"mode\":\"any\",\"authority\":\"Defensie\"} -> 4 hits",
+            "get_law_outline {\"id\":\"BWBR0003866\"} -> Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985 (BWBR0003866)",
+            "read_articles {\"id\":\"BWBR0003866\",\"labels\":[\"8\",\"7\",\"1\"]} -> Artikel 8 Verzoek tot correctie van gegevens",
+            "finish: BWBR0003866, BWBR0003865"
+          ]
+        },
+        {
+          "id": "awb-bezwaartermijn",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005537",
+            "alsoAccept": [],
+            "articles": [
+              "6:7",
+              "6:8"
+            ]
+          },
+          "top": [
+            "BWBR0005537"
+          ],
+          "articles": [
+            "6:7",
+            "6:8",
+            "3:41",
+            "6:9",
+            "6:11"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005537",
+              "title": "Algemene wet bestuursrecht",
+              "articles": [
+                "6:7",
+                "6:8",
+                "3:41",
+                "6:9",
+                "6:11"
+              ],
+              "why": "De Awb stelt de bezwaartermijn op zes weken. Die termijn begint op de dag na de bekendmaking, en bekendmaking gebeurt door het besluit toe te sturen. De Awb regelt ook wanneer een bezwaarschrift op tijd is ingediend en wat er gebeurt als het te laat is."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.013181291999999,
+          "usage": {
+            "input_tokens": 9387,
+            "output_tokens": 426
+          },
+          "apiCalls": 3,
+          "costUsd": 0.046068,
+          "load": {
+            "appCpuMs": 324.078,
+            "appRssMB": 273.956864,
+            "dbCpuMs": 66.073,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.278208,
+            "bwbCalls": 2,
+            "bwbWaitMs": 199.37245799999982
+          },
+          "trace": [
+            "text: This falls under the Algemene wet bestuursrecht (Awb), articles 6:7 and 6:8. I'll check the BWB id.",
+            "read_articles {\"id\":\"BWBR0005537\",\"labels\":[\"6:7\",\"6:8\",\"3:41\"]} -> Artikel 6:7",
+            "read_articles {\"id\":\"BWBR0005537\",\"labels\":[\"6:9\",\"6:11\"]} -> Artikel 6:9",
+            "finish: BWBR0005537"
+          ]
+        },
+        {
+          "id": "arbeid-dagelijkse-rusttijd",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007671",
+            "alsoAccept": [],
+            "articles": [
+              "5:3"
+            ]
+          },
+          "top": [
+            "BWBR0007671"
+          ],
+          "articles": [
+            "5:3",
+            "1:7"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0007671",
+              "title": "Arbeidstijdenwet",
+              "articles": [
+                "5:3",
+                "1:7"
+              ],
+              "why": "Volgens art. 5:3 lid 2 heb je als volwassene recht op 11 uur rust aaneengesloten per 24 uur. Van 23.00 tot 07.00 uur is maar 8 uur rust, en dat mag maar één keer per 7 dagen en alleen als het werk of de bedrijfsomstandigheden dat vereisen."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.752358875000001,
+          "usage": {
+            "input_tokens": 11542,
+            "output_tokens": 450
+          },
+          "apiCalls": 3,
+          "costUsd": 0.055168,
+          "load": {
+            "appCpuMs": 88.68,
+            "appRssMB": 170.950656,
+            "dbCpuMs": 71.768,
+            "dbReadMB": 0,
+            "dbMemMB": 1309.208576,
+            "bwbCalls": 3,
+            "bwbWaitMs": 248.2017089999972
+          },
+          "trace": [
+            "text: Plan: Arbeidstijdenwet, rest periods (art. 5:3 dagelijkse rust 11 uur, may be reduced to 8 once per 7 days). Also Arbeidstijdenbesluit may have horeca exceptions.",
+            "search_laws {\"words\":\"Arbeidstijdenwet\",\"mode\":\"all\"} -> 10 hits",
+            "read_articles {\"id\":\"BWBR0007671\",\"labels\":[\"5:3\",\"1:7\"]} -> Artikel 5:3",
+            "finish: BWBR0007671"
+          ]
+        }
+      ]
+    }
+  }
+}

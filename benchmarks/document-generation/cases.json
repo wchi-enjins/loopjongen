@@ -1,0 +1,372 @@
+{
+  "_doc": "Cases for run.ts. Each case: template id, form values (merged over the template defaults), an AI instruction, regex checks on the final text (case-insensitive) and yes/no rubric items for the judge. 'trap' cases ask for something mandatory law probably does not allow: the lawyer decides, so the AI must apply the instruction and add a clear warning with the article.",
+  "cases": [
+    {
+      "id": "arbeid-thuiswerk",
+      "template": "arbeidsovereenkomst",
+      "kind": "alteration",
+      "values": {
+        "wg_naam": "Bakkerij De Korst B.V.",
+        "wg_adres": "Utrecht",
+        "wn_naam": "Sanne de Vries",
+        "wn_adres": "Utrecht",
+        "functie": "Planner",
+        "ingangsdatum": "2026-11-01",
+        "salaris": "3200",
+        "plaats": "Utrecht",
+        "datum": "2026-10-15"
+      },
+      "instructions": "Voeg een thuiswerkregeling toe: werknemer werkt twee dagen per week thuis en ontvangt een thuiswerkvergoeding van € 2,40 per thuiswerkdag.",
+      "must_include": [
+        "thuiswerk",
+        "2,40"
+      ],
+      "must_not_include": [
+        "\\{\\{"
+      ],
+      "rubric": [
+        "De thuiswerkregeling is verwerkt met twee thuiswerkdagen per week en een vergoeding van € 2,40 per thuiswerkdag.",
+        "De overige afspraken (functie, salaris van € 3.200, proeftijd, opzegging) zijn inhoudelijk ongewijzigd gebleven.",
+        "Het document bevat geen bepaling die in strijd is met dwingend arbeidsrecht."
+      ]
+    },
+    {
+      "id": "arbeid-proeftijd-trap",
+      "template": "arbeidsovereenkomst",
+      "kind": "trap",
+      "values": {
+        "wg_naam": "Bakkerij De Korst B.V.",
+        "wg_adres": "Utrecht",
+        "wn_naam": "Sanne de Vries",
+        "wn_adres": "Utrecht",
+        "functie": "Verkoopmedewerker",
+        "ingangsdatum": "2026-11-01",
+        "duur": "bepaald",
+        "einddatum": "2027-03-31",
+        "salaris": "2600",
+        "uren": "38",
+        "plaats": "Utrecht",
+        "datum": "2026-10-15"
+      },
+      "instructions": "Voeg een proeftijd van twee maanden toe.",
+      "must_include": [
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "De gevraagde proeftijd is verwerkt.",
+        "Het document waarschuwt duidelijk dat een proeftijd bij een overeenkomst van ten hoogste zes maanden nietig is (art. 7:652 BW)."
+      ]
+    },
+    {
+      "id": "arbeid-concurrentie-trap",
+      "template": "arbeidsovereenkomst",
+      "kind": "trap",
+      "values": {
+        "wg_naam": "Softwarehuis Delta B.V.",
+        "wg_adres": "Eindhoven",
+        "wn_naam": "Thomas Bakker",
+        "wn_adres": "Eindhoven",
+        "wn_geboortedatum": "1995-04-12",
+        "functie": "Accountmanager",
+        "ingangsdatum": "2026-11-01",
+        "duur": "bepaald",
+        "einddatum": "2027-10-31",
+        "salaris": "4200",
+        "plaats": "Eindhoven",
+        "datum": "2026-10-15"
+      },
+      "instructions": "Voeg een concurrentiebeding van 12 maanden toe.",
+      "must_include": [
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "Het concurrentiebeding van 12 maanden is verwerkt.",
+        "Het document waarschuwt duidelijk dat bij bepaalde tijd een schriftelijke motivering van zwaarwegende bedrijfs- of dienstbelangen vereist is (art. 7:653 lid 2 BW), of bevat die motivering."
+      ]
+    },
+    {
+      "id": "huur-huisdieren",
+      "template": "huurovereenkomst",
+      "kind": "alteration",
+      "values": {
+        "vh_naam": "Vastgoed Noord B.V.",
+        "vh_adres": "Groningen",
+        "hr_naam": "Lisa Jansen",
+        "object_adres": "Herestraat 10a, Groningen",
+        "ingangsdatum": "2026-12-01",
+        "kale_huur": "1100",
+        "servicekosten": "60",
+        "waarborgsom": "2200",
+        "plaats": "Groningen",
+        "datum": "2026-10-20"
+      },
+      "instructions": "Huisdieren zijn toegestaan, met uitzondering van honden.",
+      "must_include": [
+        "huisdier"
+      ],
+      "must_not_include": [
+        "\\{\\{"
+      ],
+      "rubric": [
+        "Het document staat huisdieren toe, met uitzondering van honden.",
+        "De waarborgsom bedraagt ten hoogste tweemaal de kale huurprijs (art. 7:261b BW).",
+        "De huur is aangegaan voor onbepaalde tijd."
+      ]
+    },
+    {
+      "id": "huur-borg-trap",
+      "template": "huurovereenkomst",
+      "kind": "trap",
+      "values": {
+        "vh_naam": "Vastgoed Noord B.V.",
+        "vh_adres": "Groningen",
+        "hr_naam": "Lisa Jansen",
+        "object_adres": "Herestraat 10a, Groningen",
+        "ingangsdatum": "2026-12-01",
+        "kale_huur": "1200",
+        "waarborgsom": "2400",
+        "plaats": "Groningen",
+        "datum": "2026-10-20"
+      },
+      "instructions": "Verhoog de waarborgsom naar drie maanden kale huur.",
+      "must_include": [
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "De waarborgsom van drie maanden kale huur is verwerkt.",
+        "Het document waarschuwt duidelijk dat de waarborgsom ten hoogste tweemaal de kale huurprijs mag bedragen (art. 7:261b lid 2 BW)."
+      ]
+    },
+    {
+      "id": "huur-bepaald-trap",
+      "template": "huurovereenkomst",
+      "kind": "trap",
+      "values": {
+        "vh_naam": "Vastgoed Noord B.V.",
+        "vh_adres": "Groningen",
+        "hr_naam": "Lisa Jansen",
+        "object_adres": "Herestraat 10a, Groningen",
+        "ingangsdatum": "2026-12-01",
+        "kale_huur": "1100",
+        "waarborgsom": "1100",
+        "plaats": "Groningen",
+        "datum": "2026-10-20"
+      },
+      "instructions": "Maak er een huurovereenkomst voor bepaalde tijd van drie jaar van.",
+      "must_include": [
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "De huur voor bepaalde tijd van drie jaar is verwerkt.",
+        "Het document waarschuwt duidelijk dat bepaalde tijd alleen voor aangewezen categorieën huurders en voor ten hoogste twee jaar mag (art. 7:271 lid 2 BW)."
+      ]
+    },
+    {
+      "id": "nda-boete-in-plaats-van-schade",
+      "template": "geheimhouding",
+      "kind": "alteration",
+      "values": {
+        "p1_naam": "Innovatie Lab B.V.",
+        "p1_adres": "Delft",
+        "p2_naam": "Bouwbedrijf Steen B.V.",
+        "p2_adres": "Rotterdam",
+        "doel": "het beoordelen van een mogelijke samenwerking bij de ontwikkeling van duurzame bouwmaterialen",
+        "plaats": "Delft",
+        "datum": "2026-10-10"
+      },
+      "instructions": "De boete komt in de plaats van schadevergoeding.",
+      "must_include": [],
+      "must_not_include": [
+        "volledige schadevergoeding te vorderen \\(in afwijking van artikel 6:92 lid 2 BW\\)"
+      ],
+      "rubric": [
+        "Het boetebeding bepaalt dat de boete in de plaats komt van schadevergoeding (art. 6:92 BW).",
+        "Er is geen tegenstrijdige bepaling meer die naast de boete volledige schadevergoeding toestaat."
+      ]
+    },
+    {
+      "id": "nda-werknemer",
+      "template": "geheimhouding",
+      "kind": "law",
+      "values": {
+        "p1_naam": "Innovatie Lab B.V.",
+        "p1_adres": "Delft",
+        "p2_naam": "Mark Visser",
+        "p2_adres": "Den Haag",
+        "richting": "eenzijdig",
+        "doel": "de werkzaamheden van Partij 2 als werknemer van Partij 1",
+        "plaats": "Delft",
+        "datum": "2026-10-10"
+      },
+      "instructions": "Partij 2 is een werknemer van Partij 1.",
+      "must_include": [],
+      "must_not_include": [],
+      "rubric": [
+        "Het document houdt bij het boetebeding rekening met art. 7:650 BW (bijvoorbeeld schriftelijk, bestemming of hoogte van de boete), of signaleert die beperking uitdrukkelijk."
+      ]
+    },
+    {
+      "id": "volmacht-hypotheek-trap",
+      "template": "volmacht",
+      "kind": "trap",
+      "values": {
+        "vmg_naam": "Pieter de Boer",
+        "vmg_adres": "Utrecht",
+        "gm_naam": "Anna de Boer",
+        "gm_adres": "Utrecht",
+        "handelingen": "het namens volmachtgever kopen van de woning aan de Kerkstraat 1 te Utrecht",
+        "plaats": "Utrecht",
+        "datum": "2026-10-05"
+      },
+      "instructions": "Laat de volmacht ook gelden voor het verlenen van een recht van hypotheek op de woning bij de notaris.",
+      "must_include": [],
+      "must_not_include": [],
+      "rubric": [
+        "De volmacht omvat het verlenen van een recht van hypotheek.",
+        "Het document waarschuwt duidelijk dat een volmacht tot het verlenen van een hypotheek bij notariële akte moet worden verleend (art. 3:260 lid 3 BW)."
+      ]
+    },
+    {
+      "id": "volmacht-substitutie",
+      "template": "volmacht",
+      "kind": "alteration",
+      "values": {
+        "vmg_naam": "Pieter de Boer",
+        "vmg_adres": "Utrecht",
+        "gm_naam": "mr. Anna Smit",
+        "gm_adres": "Utrecht",
+        "handelingen": "het namens volmachtgever opzeggen van de huurovereenkomst betreffende de bedrijfsruimte aan de Oudegracht 5 te Utrecht",
+        "plaats": "Utrecht",
+        "datum": "2026-10-05"
+      },
+      "instructions": "Gevolmachtigde mag de volmacht doorgeven aan een kantoorgenoot.",
+      "must_include": [],
+      "must_not_include": [
+        "niet bevoegd deze volmacht aan een ander te verlenen"
+      ],
+      "rubric": [
+        "Substitutie aan een kantoorgenoot is toegestaan (art. 3:64 BW).",
+        "Er staat geen tegenstrijdige bepaling meer in die substitutie verbiedt."
+      ]
+    },
+    {
+      "id": "aanmaning-consument-7dagen-trap",
+      "template": "ingebrekestelling",
+      "kind": "trap",
+      "values": {
+        "sch_naam": "Installatiebedrijf Warmte B.V.",
+        "sch_iban": "NL00BANK0123456789",
+        "deb_naam": "J. Meijer",
+        "deb_type": "consument",
+        "factuurnummer": "2026-118",
+        "factuurdatum": "2026-08-01",
+        "vervaldatum": "2026-08-31",
+        "hoofdsom": "1000",
+        "plaats": "Zwolle",
+        "datum": "2026-10-01"
+      },
+      "instructions": "Geef de schuldenaar maar 7 dagen om te betalen.",
+      "must_include": [
+        "150,00",
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "De betalingstermijn van zeven dagen is verwerkt.",
+        "De brief bevat een duidelijke waarschuwing dat bij een consument een termijn van ten minste veertien dagen na ontvangst vereist is (art. 6:96 lid 6 BW).",
+        "De buitengerechtelijke incassokosten bedragen € 150,00 (BIK-staffel over € 1.000)."
+      ]
+    },
+    {
+      "id": "aanmaning-zakelijk-incassobureau",
+      "template": "ingebrekestelling",
+      "kind": "alteration",
+      "values": {
+        "sch_naam": "Groothandel Oost B.V.",
+        "sch_iban": "NL00BANK0987654321",
+        "deb_naam": "Restaurant De Haven B.V.",
+        "deb_type": "zakelijk",
+        "factuurnummer": "F-5512",
+        "factuurdatum": "2026-08-15",
+        "vervaldatum": "2026-09-14",
+        "hoofdsom": "12000",
+        "plaats": "Enschede",
+        "datum": "2026-10-01"
+      },
+      "instructions": "Vermeld dat de vordering bij uitblijven van betaling wordt overgedragen aan incassobureau Snel Incasso B.V.",
+      "must_include": [
+        "Snel Incasso",
+        "895,00"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "De brief vermeldt dat de vordering bij uitblijven van betaling wordt overgedragen aan Snel Incasso B.V.",
+        "De buitengerechtelijke incassokosten bedragen € 895,00 (BIK-staffel over € 12.000).",
+        "De wettelijke handelsrente (art. 6:119a BW) wordt genoemd."
+      ]
+    },
+    {
+      "id": "vso-outplacement",
+      "template": "vaststellingsovereenkomst",
+      "kind": "alteration",
+      "values": {
+        "wg_naam": "Logistiek Centraal B.V.",
+        "wg_adres": "Tilburg",
+        "wn_naam": "Fatima El Amrani",
+        "wn_adres": "Tilburg",
+        "indienst": "2018-03-01",
+        "functie": "Teamleider",
+        "salaris": "4000",
+        "reden": "een reorganisatie waardoor de functie vervalt",
+        "einddatum": "2027-02-28",
+        "vergoeding": "15000",
+        "plaats": "Tilburg",
+        "datum": "2026-10-15"
+      },
+      "instructions": "Werknemer krijgt een outplacementtraject ter waarde van € 3.000, rechtstreeks betaald door werkgever.",
+      "must_include": [
+        "outplacement",
+        "3\\.000"
+      ],
+      "must_not_include": [
+        "\\{\\{"
+      ],
+      "rubric": [
+        "Het outplacementtraject van € 3.000, rechtstreeks betaald door werkgever, is verwerkt.",
+        "Vastgelegd is dat het initiatief bij de werkgever ligt, dat geen sprake is van een dringende reden en dat werknemer niet arbeidsongeschikt is (WW).",
+        "De bedenktermijn van veertien dagen is opgenomen (art. 7:670b BW)."
+      ]
+    },
+    {
+      "id": "vso-bedenktermijn-trap",
+      "template": "vaststellingsovereenkomst",
+      "kind": "trap",
+      "values": {
+        "wg_naam": "Logistiek Centraal B.V.",
+        "wg_adres": "Tilburg",
+        "wn_naam": "Fatima El Amrani",
+        "wn_adres": "Tilburg",
+        "indienst": "2018-03-01",
+        "functie": "Teamleider",
+        "salaris": "4000",
+        "reden": "een reorganisatie waardoor de functie vervalt",
+        "einddatum": "2027-02-28",
+        "vergoeding": "15000",
+        "plaats": "Tilburg",
+        "datum": "2026-10-15"
+      },
+      "instructions": "Laat de bedenktermijn weg, werknemer wil snel tekenen.",
+      "must_include": [
+        "Let op"
+      ],
+      "must_not_include": [],
+      "rubric": [
+        "Het document waarschuwt duidelijk dat de bedenktermijn wettelijk geldt en niet kan worden uitgesloten; ontbreekt de vermelding, dan geldt drie weken (art. 7:670b BW)."
+      ]
+    }
+  ]
+}

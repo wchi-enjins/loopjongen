@@ -1,0 +1,3112 @@
+{
+  "date": "2026-10-09",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "approaches": {
+    "b": {
+      "summary": {
+        "n": 21,
+        "lawAt1": 0.9047619047619048,
+        "lawAt5": 0.9523809523809523,
+        "articleRecall": 0.8809523809523809,
+        "avgSeconds": 7.894253410761903,
+        "avgCostUsd": 0.04515295238095237,
+        "errors": 0
+      },
+      "byDifficulty": {
+        "obscure": {
+          "n": 10,
+          "lawAt1": 0.8,
+          "lawAt5": 0.9,
+          "articleRecall": 0.8,
+          "avgSeconds": 7.857398208499997,
+          "avgCostUsd": 0.04575359999999999,
+          "errors": 0
+        },
+        "common": {
+          "n": 5,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 0.9,
+          "avgSeconds": 7.434417741600001,
+          "avgCostUsd": 0.046352,
+          "errors": 0
+        },
+        "mid": {
+          "n": 6,
+          "lawAt1": 1,
+          "lawAt5": 1,
+          "articleRecall": 1,
+          "avgSeconds": 8.338875138833332,
+          "avgCostUsd": 0.043152666666666666,
+          "errors": 0
+        }
+      },
+      "tuchtrecht": [
+        {
+          "id": "tuchtrecht-km-bewaartermijn",
+          "verdict": "Landmacht #1 boven Marine",
+          "recall": 1
+        },
+        {
+          "id": "tuchtrecht-km-correctie",
+          "verdict": "Marine #1",
+          "recall": 1
+        },
+        {
+          "id": "tuchtrecht-km-verstrekking-toegang",
+          "verdict": "Marine #1",
+          "recall": 1
+        }
+      ],
+      "questions": [
+        {
+          "id": "tuchtrecht-km-bewaartermijn",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "10"
+            ]
+          },
+          "top": [
+            "BWBR0003865",
+            "BWBR0003866",
+            "BWBR0004788"
+          ],
+          "articles": [
+            "10",
+            "1",
+            "3"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [
+                "10",
+                "1",
+                "3"
+              ],
+              "why": "Landmacht-regeling: art. 10 regelt bewaartermijnen van tuchtrechtelijke gegevens (verwijdering na 6 jaren, koppeling aan bevordering/initiële opleiding) op onderdeelsniveau en in de centrale registratie; vraag noemt geen krijgsmachtdeel, Landmacht is meest gangbaar."
+            },
+            {
+              "id": "BWBR0003866",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985",
+              "articles": [
+                "10",
+                "1",
+                "3"
+              ],
+              "why": "Bijna-identieke Marine-regeling met dezelfde bewaartermijnen in art. 10; opgenomen omdat de vraag het krijgsmachtdeel niet noemt."
+            },
+            {
+              "id": "BWBR0004788",
+              "title": "Wet militair tuchtrecht",
+              "articles": [
+                "97"
+              ],
+              "why": "Algemene kaderwet militair tuchtrecht; regelt de bewaartermijnen niet rechtstreeks."
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.374443999999999,
+          "usage": {
+            "input_tokens": 9749,
+            "output_tokens": 582
+          },
+          "apiCalls": 2,
+          "costUsd": 0.050636,
+          "trace": [
+            "query [[\"tuchtrechtelijke\",\"tuchtstraf\",\"straffen\"],[\"verwijderd\",\"vernietigd\",\"verwijdering\"],[\"militair\"]]: 6 articles",
+            "query [[\"registratie\",\"register\",\"tuchtregister\"],[\"bevordering\",\"bevorderd\"],[\"vernietigd\",\"verwijderd\"]]: 9 articles",
+            "query [[\"Besluit\",\"Regeling\"],[\"militair tuchtrecht\",\"Wet militair tuchtrecht\",\"tuchtrecht\"],[\"registratie\",\"bewaartermijn\"]]: 30 articles",
+            "query [[\"initiële opleiding\",\"opleiding\"],[\"tuchtstraf\",\"straffen\"]] (relaxed): 29 articles",
+            "query [[\"strafregister\",\"straflijst\",\"registratie\"],[\"onderdeel\",\"eenheid\",\"commandant\"],[\"termijn\",\"jaren\"]]: 30 articles",
+            "candidates: BWBR0003865 Privacy-regeling centrale registratie tuchtrechtel (0.251, 3q) | BWBR0003866 Privacy-regeling centrale registratie tuchtrechtel (0.232, 3q) | BWBR0004788 Wet militair tuchtrecht (0.091, 1q) | BWBR0049565 Besluit bevorderen samenwerking en rechtmatige zor (0.091, 1q) | BWBR0050757 Aanwijzingsregeling 2024 ex. artikelen 4, tweede l (0.091, 1q) | BWBR0030288 Uitvoeringsregeling zeevisserij (0.091, 1q) | BWBV0001517 Verdrag van Stockholm inzake persistente organisch (0.083, 1q) | BWBR0045627 Beleidsregel verstrekking tenuitvoerleggingsgegeve (0.083, 1q) | BWBR0046618 Implementatiebesluit registratie uiteindelijk bela (0.083, 1q) | BWBR0028075 Rijkswet Raad voor de rechtshandhaving (0.077, 1q) | BWBR0032335 Besluit dierlijke producten (0.077, 1q) | BWBR0030250 Wet dieren (0.077, 1q) | BWBR0006516 Besluit algemene rechtspositie politie (0.071, 1q) | BWBR0005682 Wet op het hoger onderwijs en wetenschappelijk ond (0.071, 1q) | BWBR0035238 Regeling diergeneeskundigen (0.071, 1q)",
+            "picked (candidate rank): BWBR0003865 #1, BWBR0003866 #2, BWBR0004788 #3"
+          ]
+        },
+        {
+          "id": "tuchtrecht-km-correctie",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "8",
+              "1"
+            ]
+          },
+          "top": [
+            "BWBR0003866",
+            "BWBR0003865"
+          ],
+          "articles": [
+            "8",
+            "4",
+            "1",
+            "3",
+            "7",
+            "5"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0003866",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985",
+              "articles": [
+                "8",
+                "4",
+                "1",
+                "3",
+                "7",
+                "5"
+              ],
+              "why": "Matroos valt onder de Koninklijke Marine; art. 8 regelt het verzoek tot correctie van tuchtrechtelijke gegevens (indiening, inhoud, uitvoering, informeren betrokkenen, afwijzing), art. 4 de bewerker die correcties verwerkt, art. 1 de begrippen."
+            },
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [
+                "8",
+                "4",
+                "1"
+              ],
+              "why": "Bijna-identieke regeling voor de Koninklijke Landmacht; minder passend omdat een matroos tot de marine behoort."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.173770709,
+          "usage": {
+            "input_tokens": 7787,
+            "output_tokens": 499
+          },
+          "apiCalls": 2,
+          "costUsd": 0.041128,
+          "trace": [
+            "query [[\"straffenregister\",\"strafregister\",\"registratie\"],[\"verzoek\",\"verbetering\",\"verwijdering\"],[\"schepeling\",\"matroos\",\"zeevarende\"]]: 5 articles",
+            "query [[\"verzoek\"],[\"kapitein\",\"gezagvoerder\",\"commandant\"],[\"straf\",\"tuchtstraf\"],[\"aantekening\",\"registratie\"]]: 1 articles",
+            "query [[\"verbetering\",\"verwijdering\"],[\"kennisgeving\",\"mededeling\",\"geïnformeerd\"],[\"straffen\",\"strafregistratie\"]]: 5 articles",
+            "query [[\"tuchtrecht\",\"krijgstucht\",\"straf\"],[\"registratie\",\"register\"],[\"verbetering\",\"correctie\",\"wijziging\"]]: 13 articles",
+            "query [[\"afwijzing\",\"afgewezen\",\"weigering\"],[\"verzoek\"],[\"registratie\",\"register\",\"aantekening\"],[\"beroep\",\"bezwaar\"]]: 30 articles",
+            "candidates: BWBV0006389 Associatieovereenkomst tussen de Europese Unie en  (0.162, 2q) | BWBR0003866 Privacy-regeling centrale registratie tuchtrechtel (0.122, 2q) | BWBR0003865 Privacy-regeling centrale registratie tuchtrechtel (0.114, 2q) | BWBR0026494 Handleiding voor de toepassing van de Rijkswet op  (0.093, 2q) | BWBR0050941 Besluit bemanning zeeschepen (0.091, 1q) | BWBR0028837 Circulaire toelating en uitzetting Bonaire, Sint E (0.091, 1q) | BWBR0052951 Wet op de Nederlandse identiteitskaart (0.091, 1q) | BWBR0027122 Handleiding Rijkswet op het Nederlanderschap 2003  (0.088, 2q) | BWBV0006220 Maritiem arbeidsverdrag, 2006 (0.083, 1q) | BWBR0007246 Uitvoeringsbesluit Rijksoctrooiwet 1995 (0.083, 1q) | BWBV0006423 Associatieovereenkomst tussen de Europese Unie en  (0.083, 1q) | BWBR0051039 Regeling registratie zeeschepen (0.077, 1q) | BWBR0011756 Beginselenwet justitiële jeugdinrichtingen (0.077, 1q) | BWBV0005882 Overeenkomst waarbij een associatie tot stand word (0.077, 1q) | BWBV0006427 Associatieovereenkomst tussen de Europese Unie en  (0.077, 1q)",
+            "picked (candidate rank): BWBR0003866 #2, BWBR0003865 #3"
+          ]
+        },
+        {
+          "id": "tuchtrecht-km-verstrekking-toegang",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "5",
+              "6",
+              "2"
+            ]
+          },
+          "top": [
+            "BWBR0003866",
+            "BWBR0003865"
+          ],
+          "articles": [
+            "5",
+            "6",
+            "2",
+            "1"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0003866",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Marine 1985",
+              "articles": [
+                "5",
+                "6",
+                "2",
+                "1"
+              ],
+              "why": "Privacy-regeling Koninklijke Marine: art. 5 beperkt verstrekking aan Directeur Personeel KM tot rechtspositionele beslissingen (justitiële beslissingen alleen voor militair rechterlijke colleges); art. 6 regelt wie rechtstreeks toegang heeft."
+            },
+            {
+              "id": "BWBR0003865",
+              "title": "Privacy-regeling centrale registratie tuchtrechtelijke gegevens Koninklijke Landmacht 1985",
+              "articles": [
+                "5",
+                "6"
+              ],
+              "why": "Bijna-identieke regeling voor de Koninklijke Landmacht; ter vergelijking, niet van toepassing op de Marine."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.026472124999998,
+          "usage": {
+            "input_tokens": 10382,
+            "output_tokens": 479
+          },
+          "apiCalls": 2,
+          "costUsd": 0.051107999999999994,
+          "trace": [
+            "query [[\"registratie\"],[\"Directeur Personeel Koninklijke Marine\",\"Koninklijke Marine\",\"marine\"],[\"gegevens\",\"verstrekking\"]]: 15 articles",
+            "query [[\"justitiële\",\"justitie\"],[\"beslissing\"],[\"gegevens\",\"verstrekken\"],[\"Koninklijke Marine\",\"defensie\"]]: 14 articles",
+            "query [[\"rechtstreekse toegang\",\"toegang\",\"rechtstreeks\"],[\"registratie\"],[\"Koninklijke Marine\",\"defensie\",\"marechaussee\"]]: 14 articles",
+            "query [[\"krijgstucht\",\"militair\"],[\"registratie\"],[\"toegang\",\"verstrekking\"]]: 18 articles",
+            "query [[\"justitiële documentatie\",\"justitiële gegevens\"],[\"defensie\",\"militair\",\"Koninklijke Marine\"],[\"verstrekking\",\"verstrekken\"]]: 7 articles",
+            "candidates: BWBR0003866 Privacy-regeling centrale registratie tuchtrechtel (0.344, 4q) | BWBR0023086 Besluit politiegegevens (0.210, 3q) | BWBR0003988 Regeling bescherming persoonlijke levenssfeer geau (0.167, 2q) | BWBR0003865 Privacy-regeling centrale registratie tuchtrechtel (0.160, 2q) | BWBR0016544 Besluit justitiële en strafvorderlijke gegevens (0.153, 2q) | BWBR0028837 Circulaire toelating en uitzetting Bonaire, Sint E (0.118, 2q) | BWBR0028778 Handleiding Rijkswet op het Nederlanderschap 2003  (0.114, 2q) | BWBR0052663 Circulaire kennis en vaardigheden van gekwalificee (0.105, 2q) | BWBR0033519 Regeling registratie en verstrekking gegevens mili (0.091, 1q) | BWBR0012812 Paspoortuitvoeringsregeling Koninklijke Marechauss (0.083, 1q) | BWBR0028691 Regeling justitiële documentatie en verklaringen o (0.083, 1q) | BWBR0017347 Besluit controle op rechtspersonen (0.077, 1q) | BWBR0033103 Aanwijzing opsporing en behandeling militaire zake (0.077, 1q) | BWBR0046747 Wet veiligheidstoets investeringen, fusies en over (0.077, 1q) | BWBR0047082 Wet vrachtwagenheffing (0.071, 1q)",
+            "picked (candidate rank): BWBR0003866 #1, BWBR0003865 #4"
+          ]
+        },
+        {
+          "id": "huur-opzegging-huurder",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005290",
+            "alsoAccept": [],
+            "articles": [
+              "271"
+            ]
+          },
+          "top": [
+            "BWBR0005290",
+            "BWBR0028752"
+          ],
+          "articles": [
+            "271",
+            "228",
+            "272",
+            "267"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005290",
+              "title": "Burgerlijk Wetboek Boek 7",
+              "articles": [
+                "271",
+                "228",
+                "272",
+                "267"
+              ],
+              "why": "BW Boek 7 regelt huur van woonruimte. Art. 271 bepaalt de opzegtermijn voor de huurder: gelijk aan de betalingsperiode (bij maandelijkse betaling één maand), met een minimum van één maand en een maximum van drie maanden. Ook wordt opgezegd tegen een voor huurbetaling overeengekomen dag, en opzegging door de huurder kan per brief of e-mail (schriftelijk). Art. 228 regelt de opzegging van huur voor onbepaalde tijd."
+            },
+            {
+              "id": "BWBR0028752",
+              "title": "Burgerlijk Wetboek BES Boek 7a",
+              "articles": [
+                "1603n"
+              ],
+              "why": "Dit is de BES-variant met dezelfde opzegregel. Die is alleen relevant als de woning op Bonaire, Sint Eustatius of Saba ligt."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.06370575,
+          "usage": {
+            "input_tokens": 10447,
+            "output_tokens": 537
+          },
+          "apiCalls": 2,
+          "costUsd": 0.052528,
+          "trace": [
+            "query [[\"huurovereenkomst\",\"huur\"],[\"opzegging\"],[\"woonruimte\"],[\"onbepaalde tijd\"]]: 5 articles",
+            "query [[\"opzegging\",\"opzeggen\"],[\"huurder\"],[\"opzegtermijn\",\"termijn\"],[\"betalingstermijn\",\"maand\"]]: 15 articles",
+            "query [[\"opzegging\"],[\"huurder\"],[\"deurwaardersexploot\",\"aangetekende brief\",\"schriftelijk\"]]: 14 articles",
+            "query [[\"huur\",\"huurovereenkomst\"],[\"einde\",\"beëindiging\"],[\"huurder\"],[\"verhuurder\"]]: 30 articles",
+            "query [[\"opzegtermijn\",\"termijn\"],[\"huurder\"],[\"ten minste één maand\",\"drie maanden\",\"maand\"]]: 30 articles",
+            "candidates: BWBR0005290 Burgerlijk Wetboek Boek 7 (0.433, 5q) | BWBR0028752 Burgerlijk Wetboek BES Boek 7a (0.297, 4q) | BWBR0003403 Leegstandwet (0.258, 3q) | BWBR0028558 Wet huurcommissieregeling BES (0.208, 3q) | BWBR0049092 Besluit onroerende zaken omzetbelasting (0.190, 3q) | BWBR0028917 Faillissementswet BES (0.108, 2q) | BWBR0001860 Faillissementswet (0.103, 2q) | BWBR0002416 Visserijwet 1963 (0.083, 1q) | BWBR0048028 Wet goed verhuurderschap (0.077, 1q) | BWBR0005291 Burgerlijk Wetboek Boek 3 (0.067, 1q) | BWBR0002634 Uitvoeringsbeschikking omzetbelasting 1968 (0.067, 1q) | BWBR0004581 Wet administratiefrechtelijke handhaving verkeersv (0.059, 1q) | BWBR0043850 Besluit gemeentelijke schuldhulpverlening (0.059, 1q) | BWBR0001827 Wetboek van Burgerlijke Rechtsvordering (0.053, 1q) | BWBR0002565 Overgangswet nieuw Burgerlijk Wetboek (0.050, 1q)",
+            "picked (candidate rank): BWBR0005290 #1, BWBR0028752 #2"
+          ]
+        },
+        {
+          "id": "awb-bezwaartermijn",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005537",
+            "alsoAccept": [],
+            "articles": [
+              "6:7",
+              "6:8"
+            ]
+          },
+          "top": [
+            "BWBR0005537"
+          ],
+          "articles": [
+            "6:8",
+            "3:41",
+            "3:42"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005537",
+              "title": "Algemene wet bestuursrecht",
+              "articles": [
+                "6:8",
+                "3:41",
+                "3:42"
+              ],
+              "why": "Awb regelt de bezwaartermijn (zes weken, art. 6:7) en de aanvang ervan op de dag na bekendmaking (art. 6:8). Bekendmaking van een besluit aan de aanvrager gebeurt door toezending (art. 3:41). Het besluit treedt pas in werking na bekendmaking (art. 3:42). Art. 6:7 staat niet in de kandidatenlijst en kan daarom niet worden opgenomen. Deze wet is van toepassing op het gemeentelijke besluit over de parkeervergunning."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 0.5,
+          "seconds": 7.208291250000002,
+          "usage": {
+            "input_tokens": 10157,
+            "output_tokens": 450
+          },
+          "apiCalls": 2,
+          "costUsd": 0.049628,
+          "trace": [
+            "query [[\"termijn\"],[\"aanvangt\",\"vangt aan\"],[\"bekendgemaakt\",\"bekendmaking\",\"toegezonden\"]]: 30 articles",
+            "query [[\"parkeervergunning\",\"vergunning\"],[\"bezwaar\"],[\"gemeente\",\"burgemeester\",\"college\"]]: 11 articles",
+            "query [[\"bezwaarschrift\",\"bezwaar\"],[\"termijn\"],[\"zes weken\"]]: 30 articles",
+            "query [[\"bezwaarschrift\",\"beroepschrift\"],[\"indienen\",\"ingediend\"],[\"termijn\"],[\"besluit\"]]: 30 articles",
+            "query [[\"bekendmaking\",\"toezending\",\"uitreiking\"],[\"besluit\"],[\"belanghebbende\",\"aanvrager\"]]: 30 articles",
+            "candidates: BWBR0005537 Algemene wet bestuursrecht (0.265, 3q) | BWBR0050823 Regeling Talentontwikkeling (0.121, 2q) | BWBR0050547 Regeling Vormgeving 2025–2028 (0.114, 2q) | BWBR0052224 Startregeling architectuur (0.111, 2q) | BWBR0050925 Regeling Internationalisering Ontwerpsector 2025–2 (0.108, 2q) | BWBR0050552 Regeling Architectuur 2025–2028 (0.106, 2q) | BWBV0006853 Regeling Geschillenbeslechting Nederlandse Taaluni (0.104, 2q) | BWBR0050932 Regeling Artistic & Design Research for Immersive  (0.093, 2q) | BWBR0050559 Regeling Digitale cultuur 2025–2028 (0.091, 2q) | BWBR0042024 Circulaire Wet dwangsom en beroep bij niet tijdig  (0.091, 1q) | BWBR0008691 Mededingingswet (0.091, 1q) | BWBR0033305 Besluit uitgifte drie vergunningen voor analoge co (0.091, 1q) | BWBR0050543 Startregeling creatieve industrie (0.089, 2q) | BWBR0050825 Regeling Open Oproep (0.089, 2q) | BWBR0047587 Regeling Voucherprocedure (0.083, 1q)",
+            "picked (candidate rank): BWBR0005537 #1"
+          ]
+        },
+        {
+          "id": "sr-diefstal-strafmaximum",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0001854",
+            "alsoAccept": [],
+            "articles": [
+              "310"
+            ]
+          },
+          "top": [
+            "BWBR0001854",
+            "BWBR0046489",
+            "BWBR0039092",
+            "BWBR0028570"
+          ],
+          "articles": [
+            "310",
+            "311",
+            "321"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0001854",
+              "title": "Wetboek van Strafrecht",
+              "articles": [
+                "310",
+                "311",
+                "321"
+              ],
+              "why": "Art. 310 Sr: diefstal (wegnemen van een goed dat aan een ander toebehoort met oogmerk van wederrechtelijke toe-eigening), maximaal vier jaar gevangenisstraf of geldboete van de vierde categorie. Art. 311 geeft de gekwalificeerde vormen, bijvoorbeeld met braak (max. zes jaar). Art. 321 betreft verduistering als afgrenzing."
+            },
+            {
+              "id": "BWBR0046489",
+              "title": "Richtlijn voor strafvordering (winkel)diefstal/verduistering al dan niet met geweld",
+              "articles": [],
+              "why": "OM-richtlijn voor de strafeis bij (winkel)diefstal en verduistering; geeft de praktische strafmaat."
+            },
+            {
+              "id": "BWBR0039092",
+              "title": "Richtlijn voor strafvordering diefstal voertuigen",
+              "articles": [],
+              "why": "Strafvorderingsrichtlijn voor diefstal van voertuigen; kan van belang zijn bij fietsdiefstal."
+            },
+            {
+              "id": "BWBR0028570",
+              "title": "Wetboek van Strafrecht BES",
+              "articles": [
+                "323"
+              ],
+              "why": "BES-variant van de diefstalbepaling; alleen relevant als het feit in Caribisch Nederland is gepleegd."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.169074083,
+          "usage": {
+            "input_tokens": 8386,
+            "output_tokens": 586
+          },
+          "apiCalls": 2,
+          "costUsd": 0.045264,
+          "trace": [
+            "query [[\"diefstal\"],[\"wegneemt\",\"wegnemen\"],[\"wederrechtelijk\",\"toe te eigenen\",\"toe-eigenen\"]]: 4 articles",
+            "query [[\"goed\",\"enig goed\"],[\"toebehoort\",\"toebehorende\"],[\"oogmerk\"]]: 6 articles",
+            "query [[\"diefstal\"],[\"openbare weg\",\"spoorweg\",\"station\"]]: 7 articles",
+            "query [[\"verduistering\",\"toe-eigenen\"],[\"wederrechtelijk\"],[\"gevangenisstraf\"]]: 6 articles",
+            "query [[\"diefstal\"],[\"gevangenisstraf\"],[\"geldboete\",\"categorie\"]]: 17 articles",
+            "candidates: BWBR0001854 Wetboek van Strafrecht (0.430, 5q) | BWBR0028570 Wetboek van Strafrecht BES (0.333, 4q) | BWBR0015252 Wet internationale misdrijven (0.132, 2q) | BWBR0052068 Toezichtbeleid Erkenninghouders, Keurmeesters en T (0.091, 1q) | BWBR0036310 Richtlijn voor strafvordering straatroof (0.083, 1q) | BWBV0003800 Verdrag inzake de fysieke beveiliging van kernmate (0.077, 1q) | BWBR0001869 Wetboek van Militair Strafrecht (0.077, 1q) | BWBV0006078 Overeenkomst tussen het Koninkrijk der Nederlanden (0.077, 1q) | BWBR0036295 Richtlijn voor strafvordering metaaldiefstal (0.071, 1q) | BWBV0005936 Verdrag tussen het Koninkrijk der Nederlanden en d (0.071, 1q) | BWBV0001084 Overeenkomst tussen de Regering van het Koninkrijk (0.071, 1q) | BWBR0039092 Richtlijn voor strafvordering diefstal voertuigen (0.067, 1q) | BWBR0036299 Richtlijn voor strafvordering inbraken overig (0.063, 1q) | BWBR0046489 Richtlijn voor strafvordering (winkel)diefstal/ver (0.059, 1q) | BWBR0048567 Richtlijn voor strafvordering opiumwet, softdrugs (0.053, 1q)",
+            "picked (candidate rank): BWBR0001854 #1, BWBR0046489 #14, BWBR0039092 #12, BWBR0028570 #2"
+          ]
+        },
+        {
+          "id": "rv-kantonrechter-competentie",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0001827",
+            "alsoAccept": [],
+            "articles": [
+              "93"
+            ]
+          },
+          "top": [
+            "BWBR0001827",
+            "BWBR0028899"
+          ],
+          "articles": [
+            "93",
+            "94"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0001827",
+              "title": "Wetboek van Burgerlijke Rechtsvordering",
+              "articles": [
+                "93",
+                "94"
+              ],
+              "why": "Art. 93 Rv: de kantonrechter is bevoegd voor vorderingen tot en met € 25.000, inclusief de rente die tot de dag van dagvaarding is verschenen. Een vordering van € 18.000 plus rente hoort dus bij de kantonrechter, zolang het totaal niet boven € 25.000 uitkomt. Art. 94 Rv regelt hoe de waarde wordt bepaald bij meerdere vorderingen en bij een eis in reconventie."
+            },
+            {
+              "id": "BWBR0028899",
+              "title": "Wet griffierechten burgerlijke zaken",
+              "articles": [
+                "4"
+              ],
+              "why": "Wet griffierechten burgerlijke zaken: regelt het griffierecht in dagvaardingszaken bij de kantonrechter en bij de rechtbank. Dit is aanvullend relevant voor de kosten van de procedure."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.193195791999998,
+          "usage": {
+            "input_tokens": 11174,
+            "output_tokens": 518
+          },
+          "apiCalls": 2,
+          "costUsd": 0.055056,
+          "trace": [
+            "query [[\"kantonzaken\",\"kantonrechter\"],[\"rente\",\"renten\"],[\"waarde\"]]: 2 articles",
+            "query [[\"Rechtsvordering\"],[\"kantonrechter\"],[\"geldvordering\",\"vordering\"],[\"beloop\",\"onbepaalde waarde\"]]: 6 articles",
+            "query [[\"dagvaarding\",\"dagvaarden\"],[\"kantonrechter\",\"sector kanton\"],[\"rechtbank\"]]: 18 articles",
+            "query [[\"bevoegdheid\",\"bevoegd\"],[\"kantonrechter\"],[\"rente\",\"kosten\"],[\"vordering\"]]: 7 articles",
+            "query [[\"kantonrechter\"],[\"vordering\"],[\"25.000\",\"bedrag\",\"waarde\"]]: 22 articles",
+            "candidates: BWBR0001827 Wetboek van Burgerlijke Rechtsvordering (0.421, 5q) | BWBR0005290 Burgerlijk Wetboek Boek 7 (0.219, 3q) | BWBR0002393 Vorderingswet (0.150, 2q) | BWBR0004581 Wet administratiefrechtelijke handhaving verkeersv (0.144, 2q) | BWBR0001903 Wetboek van Strafvordering (0.141, 2q) | BWBR0012092 Wet verplichte deelneming in een bedrijfstakpensio (0.125, 2q) | BWBR0018831 Wet verplichte beroepspensioenregeling (0.125, 2q) | BWBR0009950 Telecommunicatiewet (0.091, 1q) | BWBR0028899 Wet griffierechten burgerlijke zaken (0.083, 1q) | BWBR0003045 Burgerlijk Wetboek Boek 2 (0.077, 1q) | BWBR0002761 Burgerlijk Wetboek Boek 4 (0.071, 1q) | BWBR0013132 Besluit orde van dienst gerechten (0.071, 1q) | BWBR0018536 Circulaire bekwaamheidseisen buitengewoon opsporin (0.063, 1q) | BWBR0002656 Burgerlijk Wetboek Boek 1 (0.056, 1q) | BWBR0050261 Besluit mandaat, volmacht en machtiging ambtelijke (0.048, 1q)",
+            "picked (candidate rank): BWBR0001827 #1, BWBR0028899 #9"
+          ]
+        },
+        {
+          "id": "arbeid-proeftijd-vast-contract",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005290",
+            "alsoAccept": [],
+            "articles": [
+              "652"
+            ]
+          },
+          "top": [
+            "BWBR0005290",
+            "BWBR0028752"
+          ],
+          "articles": [
+            "652",
+            "655",
+            "671",
+            "670a"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0005290",
+              "title": "Burgerlijk Wetboek Boek 7",
+              "articles": [
+                "652",
+                "655",
+                "671",
+                "670a"
+              ],
+              "why": "Art. 7:652 BW: bij een arbeidsovereenkomst voor onbepaalde tijd mag de proeftijd ten hoogste twee maanden zijn. Een langer proeftijdbeding is nietig. Ontslag tijdens de proeftijd valt onder de uitzonderingen in art. 670a/671, maar die gelden alleen bij een geldige proeftijd."
+            },
+            {
+              "id": "BWBR0028752",
+              "title": "Burgerlijk Wetboek BES Boek 7a",
+              "articles": [
+                "1615n"
+              ],
+              "why": "BES-variant: ook hier is een proeftijd van meer dan twee maanden nietig. Alleen relevant als u in Caribisch Nederland werkt."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 6.5378218330000015,
+          "usage": {
+            "input_tokens": 5076,
+            "output_tokens": 449
+          },
+          "apiCalls": 2,
+          "costUsd": 0.029283999999999998,
+          "trace": [
+            "query [[\"proeftijd\"],[\"twee maanden\",\"maanden\"],[\"nietig\"]]: 4 articles",
+            "query [[\"proeftijd\"],[\"gelijk\",\"beide partijen\"],[\"schriftelijk\"]]: 2 articles",
+            "query [[\"proeftijd\"],[\"arbeidsovereenkomst\"],[\"onbepaalde tijd\"]]: 5 articles",
+            "query [[\"proeftijd\"],[\"collectieve arbeidsovereenkomst\",\"cao\"],[\"afwijken\",\"afwijking\"]]: 1 articles",
+            "query [[\"proeftijd\",\"proeftijdbeding\"],[\"opzegging\",\"opzeggen\"],[\"werkgever\",\"werknemer\"]]: 7 articles",
+            "candidates: BWBR0005290 Burgerlijk Wetboek Boek 7 (0.425, 5q) | BWBR0028752 Burgerlijk Wetboek BES Boek 7a (0.174, 2q) | BWBR0006636 Wet tot oprichting van de naamloze vennootschap De (0.091, 1q) | BWBR0020809 Pensioenwet (0.091, 1q) | BWBR0028174 Wet beëindiging arbeidsovereenkomsten BES (0.083, 1q) | BWBR0049656 Regeling volmacht personele aangelegenheden CBR 20 (0.077, 1q) | BWBR0005731 Personele regeling herverdeling wegenbeheer (0.071, 1q) | BWBR0006516 Besluit algemene rechtspositie politie (0.071, 1q)",
+            "picked (candidate rank): BWBR0005290 #1, BWBR0028752 #2"
+          ]
+        },
+        {
+          "id": "arbeid-dagelijkse-rusttijd",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007671",
+            "alsoAccept": [],
+            "articles": [
+              "5:3"
+            ]
+          },
+          "top": [
+            "BWBR0007671",
+            "BWBR0007687"
+          ],
+          "articles": [
+            "5:3",
+            "5:1",
+            "5:7",
+            "5:8",
+            "5:12"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0007671",
+              "title": "Arbeidstijdenwet",
+              "articles": [
+                "5:3",
+                "5:1",
+                "5:7",
+                "5:8",
+                "5:12"
+              ],
+              "why": "Arbeidstijdenwet art. 5:3: na een dienst een onafgebroken rust van 11 uur per 24 uur, eenmaal per 7 dagen in te korten tot 8 uur. Tussen 23.00 en 07.00 uur zit 8 uur rust. Dat mag dus alleen als incidentele inkorting (maximaal eenmaal per week), niet structureel. Art. 5:1 bevat de begripsbepalingen; art. 5:7 en 5:8 regelen de maximale arbeidstijd; art. 5:12 de AMvB-afwijkingen."
+            },
+            {
+              "id": "BWBR0007687",
+              "title": "Arbeidstijdenbesluit",
+              "articles": [
+                "4.6:1"
+              ],
+              "why": "Arbeidstijdenbesluit met afwijkingen en aanvullingen per sector. Voor de horeca blijft de algemene rusttijdregel van de wet gelden."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 10.981356084,
+          "usage": {
+            "input_tokens": 7563,
+            "output_tokens": 567
+          },
+          "apiCalls": 2,
+          "costUsd": 0.041592,
+          "trace": [
+            "query [[\"rusttijd\",\"rust\"],[\"dienst\"],[\"aaneengesloten\",\"onafgebroken\"],[\"24 uur\"]]: 3 articles",
+            "query [[\"dagelijkse rust\",\"rusttijd\"],[\"inkorten\",\"verkorten\",\"eenmaal\",\"per periode van 7 maal 24 uur\"],[\"8 uur\",\"acht uur\"]]: 2 articles",
+            "query [[\"werknemer\"],[\"rust\"],[\"dienst\"]] (relaxed): 17 articles",
+            "query [[\"Arbeidstijdenwet\"],[\"rusttijd\"]] (relaxed): 30 articles",
+            "query [[\"Arbeidstijdenbesluit\"],[\"rusttijd\"],[\"afwijking\",\"uitzondering\"]]: 30 articles",
+            "candidates: BWBR0007687 Arbeidstijdenbesluit (0.168, 2q) | BWBR0007671 Arbeidstijdenwet (0.162, 2q) | BWBR0026215 Circulaire Arbeidsvoorwaarden personenchauffeurs (0.142, 2q) | BWBV0004455 Europese Overeenkomst nopens de arbeidsvoorwaarden (0.091, 1q) | BWBR0024175 Regeling werk- en rusttijden luchtvaart (0.091, 1q) | BWBR0002113 Inkwartieringsbesluit (0.091, 1q) | BWBR0045932 Regeling werkgeverstegemoetkoming langdurige inzet (0.083, 1q) | BWBR0010508 Arbeidsvoorwaarden en andere personeelsaangelegenh (0.083, 1q) | BWBV0004440 Briefwisseling tussen de Nederlandse en de Amerika (0.083, 1q) | BWBR0030215 Reglement betreffende het scheepvaartpersoneel op  (0.077, 1q) | BWBR0006516 Besluit algemene rechtspositie politie (0.077, 1q) | BWBR0051068 Regeling bemanning zeeschepen (0.071, 1q) | BWBR0011982 Besluit personenvervoer 2000 (0.067, 1q) | BWBV0005255 Protocol nopens de rechtspositie van international (0.067, 1q) | BWBR0027945 Regeling specificaties en typegoedkeuring boordcom (0.063, 1q)",
+            "picked (candidate rank): BWBR0007671 #2, BWBR0007687 #1"
+          ]
+        },
+        {
+          "id": "medezeggenschap-camera-instemming",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0002747",
+            "alsoAccept": [],
+            "articles": [
+              "27"
+            ]
+          },
+          "top": [
+            "BWBR0002747",
+            "BWBR0037591",
+            "BWBR0033572",
+            "BWBR0042812"
+          ],
+          "articles": [
+            "27",
+            "2"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0002747",
+              "title": "Wet op de ondernemingsraden",
+              "articles": [
+                "27",
+                "2"
+              ],
+              "why": "Bij 120 werknemers is een ondernemingsraad verplicht (art. 2). Art. 27 lid 1 onder l geeft de OR instemmingsrecht bij een personeelsvolgsysteem. Een besluit zonder instemming of vervangende toestemming van de kantonrechter is nietig, mits de OR schriftelijk een beroep op de nietigheid doet. Art. 36 staat niet in de kandidatenlijst en is daarom weggelaten."
+            },
+            {
+              "id": "BWBR0037591",
+              "title": "Beleidsregels cameratoezicht, College bescherming persoonsgegevens",
+              "articles": [],
+              "why": "De beleidsregels cameratoezicht bevestigen dat een (verborgen) camera onder het instemmingsrecht van de OR voor personeelsvolgsystemen valt."
+            },
+            {
+              "id": "BWBR0033572",
+              "title": "CBP richtsnoeren: beveiliging van persoonsgegevens",
+              "articles": [],
+              "why": "Deze richtsnoeren noemen monitoring als personeelsvolgsysteem in de zin van art. 27 lid 1 WOR, waarvoor instemming nodig is."
+            },
+            {
+              "id": "BWBR0042812",
+              "title": "Besluit lijst verwerkingen persoonsgegevens waarvoor een gegevensbeschermingseffectbeoordeling (DPIA) verplicht is, Autoriteit Persoonsgegevens",
+              "articles": [],
+              "why": "Stelselmatige monitoring van werknemers staat op de lijst van verwerkingen waarvoor een DPIA verplicht is."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.222357790999988,
+          "usage": {
+            "input_tokens": 9511,
+            "output_tokens": 704
+          },
+          "apiCalls": 2,
+          "costUsd": 0.052124000000000004,
+          "trace": [
+            "query [[\"instemming\"],[\"ondernemingsraad\"],[\"personeelsvolgsysteem\",\"waarneming\",\"controle\",\"aanwezigheid\",\"gedrag\",\"prestaties\"]]: 2 articles",
+            "query [[\"kantonrechter\"],[\"ondernemingsraad\"],[\"instemming\",\"nietigheid\"]]: 4 articles",
+            "query [[\"nietig\",\"nietigheid\"],[\"instemming\",\"ondernemingsraad\"],[\"besluit\",\"ondernemer\"]]: 9 articles",
+            "query [[\"ondernemingsraad\",\"personeelsvertegenwoordiging\"],[\"instellen\",\"verplicht\"],[\"vijftig\",\"personen\"]]: 30 articles",
+            "query [[\"camera\",\"cameratoezicht\",\"monitoring\"],[\"werknemer\",\"werkgever\"],[\"persoonsgegevens\"]]: 11 articles",
+            "query [[\"personeelsvolgsysteem\",\"volgsysteem\"]] (relaxed): 21 articles",
+            "candidates: BWBR0002747 Wet op de ondernemingsraden (0.356, 4q) | BWBR0033572 CBP richtsnoeren: beveiliging van persoonsgegevens (0.218, 3q) | BWBR0037852 Wet bescherming klokkenluiders (0.154, 2q) | BWBR0037591 Beleidsregels cameratoezicht, College bescherming  (0.150, 2q) | BWBR0014813 Selectielijst beleidsterrein Arbeidsverhoudingen v (0.131, 2q) | BWBR0022832 Tijdelijke regeling verlof met elektronisch volgsy (0.091, 1q) | BWBR0042812 Besluit lijst verwerkingen persoonsgegevens waarvo (0.091, 1q) | BWBR0003045 Burgerlijk Wetboek Boek 2 (0.083, 1q) | BWBR0030288 Uitvoeringsregeling zeevisserij (0.083, 1q) | BWBR0015853 Regeling bescherming persoonsgegevens in personeel (0.083, 1q) | BWBR0042294 Wet medezeggenschap cliënten zorginstellingen 2018 (0.077, 1q) | BWBR0040179 Besluit basisveiligheidsnormen stralingsbeschermin (0.077, 1q) | BWBR0020685 Wet medezeggenschap op scholen (0.071, 1q) | BWBR0035000 Regeling basisnet (0.071, 1q) | BWBR0003026 Wet melding collectief ontslag (0.071, 1q)",
+            "BWBR0002747: dropped articles not in candidates 36",
+            "picked (candidate rank): BWBR0002747 #1, BWBR0037591 #4, BWBR0033572 #2, BWBR0042812 #7"
+          ]
+        },
+        {
+          "id": "vakantiebijslag-minimum",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0002638",
+            "alsoAccept": [],
+            "articles": [
+              "15"
+            ]
+          },
+          "top": [
+            "BWBR0002638",
+            "BWBR0050187"
+          ],
+          "articles": [
+            "15",
+            "16",
+            "17",
+            "18",
+            "1",
+            "2"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0002638",
+              "title": "Wet minimumloon en minimumvakantiebijslag",
+              "articles": [
+                "15",
+                "16",
+                "17",
+                "18",
+                "1",
+                "2"
+              ],
+              "why": "WML regelt het wettelijk recht op minimumvakantiebijslag van ten minste 8% van het loon, ongeacht wat in het contract staat (ook voor parttimers). Art. 16 regelt beperkte afwijkingen (alleen bij hoge lonen, via cao/publiekrechtelijke regeling), art. 17 de uitbetaling en art. 18 vakantiebonnen/fonds."
+            },
+            {
+              "id": "BWBR0050187",
+              "title": "Beleidsregel bestuursrechtelijke handhaving Wet minimumloon en minimumvakantiebijslag 2024",
+              "articles": [
+                "7"
+              ],
+              "why": "Beleidsregel over de handhaving: de werkgever kan een boete krijgen als hij minder dan 8% vakantiebijslag betaalt."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.033115624999991,
+          "usage": {
+            "input_tokens": 15327,
+            "output_tokens": 453
+          },
+          "apiCalls": 2,
+          "costUsd": 0.070368,
+          "trace": [
+            "query [[\"vakantiebijslag\"],[\"arbeidsovereenkomst\",\"schriftelijk\"],[\"afwijking\",\"nietig\"]]: 5 articles",
+            "query [[\"vakantiebijslag\"],[\"deeltijd\",\"arbeidsduur\"]]: 8 articles",
+            "query [[\"vakantiebijslag\",\"vakantiegeld\"],[\"werknemer\"],[\"loon\",\"minimumloon\"]]: 30 articles",
+            "query [[\"vakantiebijslag\"],[\"8%\",\"acht procent\",\"percentage\"]]: 30 articles",
+            "query [[\"vakantiebijslag\"]] (relaxed): 30 articles",
+            "candidates: BWBR0002638 Wet minimumloon en minimumvakantiebijslag (0.297, 4q) | BWBR0004045 Werkloosheidswet (0.280, 4q) | BWBR0015703 Participatiewet (0.274, 4q) | BWBR0007687 Arbeidstijdenbesluit (0.213, 3q) | BWBR0033471 Dagloonbesluit werknemersverzekeringen (0.210, 3q) | BWBR0046078 Besluit uitvoering Wet arbeid vreemdelingen 2022 (0.200, 3q) | BWBR0029368 Algemeen inkomensbesluit socialezekerheidswetten (0.193, 3q) | BWBR0008657 Wet arbeidsongeschiktheidsvoorziening jonggehandic (0.174, 2q) | BWBR0019057 Wet werk en inkomen naar arbeidsvermogen (0.154, 2q) | BWBR0041895 Besluit beslagvrije voet (0.141, 2q) | BWBR0013008 Wet arbeid en zorg (0.132, 2q) | BWBR0004163 Wet inkomensvoorziening oudere en gedeeltelijk arb (0.110, 2q) | BWBR0004044 Wet inkomensvoorziening oudere en gedeeltelijk arb (0.104, 2q) | BWBR0050187 Beleidsregel bestuursrechtelijke handhaving Wet mi (0.100, 2q) | BWBR0006468 Regeling samenloop arbeidsongeschiktheidsuitkering (0.078, 2q)",
+            "picked (candidate rank): BWBR0002638 #1, BWBR0050187 #14"
+          ]
+        },
+        {
+          "id": "geboorteverlof-partner",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0013008",
+            "alsoAccept": [],
+            "articles": [
+              "4:2"
+            ]
+          },
+          "top": [
+            "BWBR0013008",
+            "BWBR0028752",
+            "BWBR0005290"
+          ],
+          "articles": [
+            "4:2",
+            "4:1",
+            "4:3",
+            "4:2a",
+            "4:2b",
+            "4:2c",
+            "4:4",
+            "3:1a"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0013008",
+              "title": "Wet arbeid en zorg",
+              "articles": [
+                "4:2",
+                "4:1",
+                "4:3",
+                "4:2a",
+                "4:2b",
+                "4:2c",
+                "4:4",
+                "3:1a"
+              ],
+              "why": "Wet arbeid en zorg regelt het geboorteverlof voor de partner: eenmaal de arbeidsduur per week met behoud van loon, op te nemen binnen vier weken na de bevalling (art. 4:2). Daarnaast regelt de wet het aanvullend geboorteverlof van maximaal vijf weken met een UWV-uitkering (art. 4:2a-4:2c). Ook het kort verzuimverlof bij de bevalling valt eronder (art. 4:1)."
+            },
+            {
+              "id": "BWBR0028752",
+              "title": "Burgerlijk Wetboek BES Boek 7a",
+              "articles": [
+                "1614ce",
+                "1614ca"
+              ],
+              "why": "BES-variant van het geboorteverlof; alleen relevant als de werknemer werkt op Bonaire, Sint Eustatius of Saba."
+            },
+            {
+              "id": "BWBR0005290",
+              "title": "Burgerlijk Wetboek Boek 7",
+              "articles": [
+                "670"
+              ],
+              "why": "Ontslagbescherming bij het geldend maken van het recht op geboorteverlof."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.793757083000004,
+          "usage": {
+            "input_tokens": 8211,
+            "output_tokens": 604
+          },
+          "apiCalls": 2,
+          "costUsd": 0.044924,
+          "trace": [
+            "query [[\"aanvullend geboorteverlof\"],[\"uitkering\",\"loon\"]]: 5 articles",
+            "query [[\"geboorteverlof\"],[\"eenmaal de arbeidsduur\",\"arbeidsduur per week\"],[\"vier weken\",\"binnen\"]]: 3 articles",
+            "query [[\"geboorteverlof\",\"verlof\"],[\"bevalling\",\"geboorte\"],[\"echtgenoot\",\"partner\",\"levensgezel\"]]: 23 articles",
+            "query [[\"verlof\"],[\"erkend\",\"erkenning\",\"kind\"],[\"bevalling\"],[\"opnemen\",\"termijn\"]]: 7 articles",
+            "query [[\"geboorteverlof\",\"kraamverlof\"],[\"Wet arbeid en zorg\",\"werknemer\"],[\"werkgever\",\"doorbetaling\",\"loon\"]]: 15 articles",
+            "candidates: BWBR0013008 Wet arbeid en zorg (0.439, 5q) | BWBR0028728 Wet ziekteverzekering BES (0.174, 2q) | BWBR0028236 Uitvoeringsregeling loonbelasting 2011 (0.160, 2q) | BWBR0028752 Burgerlijk Wetboek BES Boek 7a (0.150, 2q) | BWBR0035962 Uitvoeringsregeling WNT (0.144, 2q) | BWBR0011265 Ouderschapsverlof in het primair onderwijs (0.136, 2q) | BWBR0041760 Circulaire wijzigingen in de financiële arbeidsvoo (0.077, 1q) | BWBR0012647 Reglement justitiële jeugdinrichtingen (0.071, 1q) | BWBR0005290 Burgerlijk Wetboek Boek 7 (0.071, 1q) | BWBV0001016 Internationaal Verdrag inzake economische, sociale (0.063, 1q) | BWBR0039789 Regeling voorzieningen bij vredes- en humanitaire  (0.059, 1q) | BWBR0014687 Regeling vredesmissies politie (0.056, 1q) | BWBR0006530 Besluit rechtspositie rechterlijke ambtenaren (0.053, 1q) | BWBR0003482 Algemeen militair ambtenarenreglement (0.050, 1q) | BWBR0006040 Burgerlijk ambtenarenreglement defensie (0.048, 1q)",
+            "picked (candidate rank): BWBR0013008 #1, BWBR0028752 #4, BWBR0005290 #9"
+          ]
+        },
+        {
+          "id": "winkel-zondag-feestdag",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007952",
+            "alsoAccept": [],
+            "articles": [
+              "2",
+              "3"
+            ]
+          },
+          "top": [
+            "BWBR0007952",
+            "BWBR0002120",
+            "BWBR0028197"
+          ],
+          "articles": [
+            "2",
+            "3",
+            "6",
+            "8",
+            "1"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0007952",
+              "title": "Winkeltijdenwet",
+              "articles": [
+                "2",
+                "3",
+                "6",
+                "8",
+                "1"
+              ],
+              "why": "Winkeltijdenwet verbiedt winkelopening op zondag en tweede Pinksterdag (art. 2); de gemeenteraad kan bij verordening vrijstelling verlenen (art. 3), B&W verlenen ontheffing bij een andere rustdag (art. 6), en bij AMvB kunnen vrijstellingen gelden (art. 8)."
+            },
+            {
+              "id": "BWBR0002120",
+              "title": "Zondagswet",
+              "articles": [
+                "4",
+                "3"
+              ],
+              "why": "De Zondagswet bevat aanvullende zondagsregels en gemeentelijke ontheffingsbevoegdheden, maar is minder direct relevant voor winkelopening."
+            },
+            {
+              "id": "BWBR0028197",
+              "title": "Wet winkelsluiting BES",
+              "articles": [
+                "2"
+              ],
+              "why": "Dit is de BES-variant van het winkelsluitingsverbod en is alleen relevant als de winkel in Caribisch Nederland ligt."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 6.724094292000009,
+          "usage": {
+            "input_tokens": 4366,
+            "output_tokens": 523
+          },
+          "apiCalls": 2,
+          "costUsd": 0.027924,
+          "trace": [
+            "query [[\"winkel\",\"winkels\"],[\"zondag\"],[\"geopend\"]]: 4 articles",
+            "query [[\"Pinksterdag\",\"feestdag\"],[\"winkel\"],[\"geopend\",\"openstelling\"]]: 3 articles",
+            "query [[\"gemeenteraad\",\"verordening\"],[\"vrijstelling\",\"ontheffing\"],[\"zondag\",\"feestdag\"]]: 3 articles",
+            "query [[\"burgemeester\",\"gemeenteraad\"],[\"ontheffing\"],[\"winkel\"],[\"zondag\",\"feestdag\"]]: 1 articles",
+            "query [[\"Winkeltijdenwet\",\"winkeltijden\"],[\"vrijstelling\",\"ontheffing\"]]: 6 articles",
+            "candidates: BWBR0007952 Winkeltijdenwet (0.348, 4q) | BWBR0028197 Wet winkelsluiting BES (0.174, 2q) | BWBR0002120 Zondagswet (0.091, 1q) | BWBR0002458 Alcoholwet (0.091, 1q) | BWBR0013360 Vuurwerkbesluit (0.083, 1q) | BWBR0005537 Algemene wet bestuursrecht (0.077, 1q) | BWBR0039766 Beleidsregels Buitengewoon Opsporingsambtenaar (0.071, 1q)",
+            "picked (candidate rank): BWBR0007952 #1, BWBR0002120 #3, BWBR0028197 #2"
+          ]
+        },
+        {
+          "id": "huurcommissie-leges-voorschot",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0014315",
+            "alsoAccept": [],
+            "articles": [
+              "7"
+            ]
+          },
+          "top": [
+            "BWBR0014315",
+            "BWBR0019760"
+          ],
+          "articles": [
+            "7",
+            "9a"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0014315",
+              "title": "Uitvoeringswet huurprijzen woonruimte",
+              "articles": [
+                "7",
+                "9a"
+              ],
+              "why": "Art. 7 Uitvoeringswet huurprijzen woonruimte regelt de aan de Staat verschuldigde vergoeding (leges): het voorschot wordt terugbetaald aan de huurder die in het gelijk wordt gesteld. Ook is daar geregeld dat het verzoek niet in behandeling wordt genomen als het voorschot niet tijdig wordt betaald. Art. 9a gaat over gebundelde verzoeken binnen een wooncomplex en is aanvullend."
+            },
+            {
+              "id": "BWBR0019760",
+              "title": "Circulaire Huurprijsbeleid periode 1 juli 2006 tot 1 januari 2007",
+              "articles": [],
+              "why": "Deze circulaire licht toe dat alleen de verzoeker een legesvoorschot betaalt en dat dit wordt terugbetaald als hij (gedeeltelijk) in het gelijk wordt gesteld. De circulaire is verouderd (2006) en dient alleen als achtergrond."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.278569958000007,
+          "usage": {
+            "input_tokens": 2651,
+            "output_tokens": 569
+          },
+          "apiCalls": 2,
+          "costUsd": 0.021984,
+          "trace": [
+            "query [[\"leges\"],[\"huurcommissie\",\"Uitvoeringswet huurprijzen woonruimte\"],[\"verhuurder\"],[\"in het gelijk gesteld\"]]: 1 articles",
+            "query [[\"leges\",\"voorschot\"],[\"huurcommissie\"],[\"huurder\"],[\"terugbetaling\",\"terugbetaald\",\"in het gelijk\"]]: 3 articles",
+            "query [[\"leges\"],[\"huurder\"],[\"niet-ontvankelijk\",\"termijn\",\"niet tijdig\"]]: 2 articles",
+            "query [[\"huurcommissie\"],[\"leges\"],[\"vergoeding\",\"terugbetalen\"]]: 1 articles",
+            "query [[\"legesbedrag\",\"leges\"],[\"voldaan\",\"betaling\"],[\"verzoek\"],[\"huurprijs\",\"huurprijzen\"]]: 2 articles",
+            "candidates: BWBR0014315 Uitvoeringswet huurprijzen woonruimte (0.439, 5q) | BWBR0019760 Circulaire Huurprijsbeleid periode 1 juli 2006 tot (0.265, 3q)",
+            "picked (candidate rank): BWBR0014315 #1, BWBR0019760 #2"
+          ]
+        },
+        {
+          "id": "gedetineerde-uitvaart-verlof",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0010171",
+            "alsoAccept": [],
+            "articles": [
+              "24",
+              "21"
+            ]
+          },
+          "top": [
+            "BWBR0010171",
+            "BWBR0009709",
+            "BWBR0019741"
+          ],
+          "articles": [
+            "24",
+            "21",
+            "22",
+            "4",
+            "5",
+            "2",
+            "3",
+            "6"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0010171",
+              "title": "Regeling tijdelijk verlaten van de inrichting",
+              "articles": [
+                "24",
+                "21",
+                "22",
+                "4",
+                "5",
+                "2",
+                "3",
+                "6"
+              ],
+              "why": "Regelt incidenteel verlof voor humanitaire doeleinden bij overlijden van een ouder van de gedetineerde (bijwonen uitvaart), inclusief voorwaarden zoals bewaking/begeleiding, de rol van de mening van familieleden en de weigeringsgronden."
+            },
+            {
+              "id": "BWBR0009709",
+              "title": "Penitentiaire beginselenwet",
+              "articles": [
+                "57"
+              ],
+              "why": "Penitentiaire beginselenwet als wettelijke grondslag; hoorrecht van de gedetineerde bij beslissingen van de directeur."
+            },
+            {
+              "id": "BWBR0019741",
+              "title": "Regeling toelating en weigering bezoek en beperking telefooncontacten penitentiaire inrichtingen",
+              "articles": [
+                "6c"
+              ],
+              "why": "Tijdelijke verruiming van bezoek en telefooncontact bij overlijden van een ouder; alternatief als verlof niet wordt verleend."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.02377533399999,
+          "usage": {
+            "input_tokens": 7246,
+            "output_tokens": 576
+          },
+          "apiCalls": 2,
+          "costUsd": 0.040504,
+          "trace": [
+            "query [[\"uitvaart\",\"begrafenis\",\"crematie\",\"overlijden\"],[\"gedetineerde\",\"gevangene\"],[\"verlof\",\"bezoek\"]]: 3 articles",
+            "query [[\"incidenteel verlof\",\"verlof\"],[\"uitvaart\",\"begrafenis\",\"overleden\"],[\"bewaking\",\"begeleiding\",\"escorte\"]]: 3 articles",
+            "query [[\"verlof\"],[\"bloedverwant\",\"familie\",\"nabestaanden\"],[\"uitvaart\",\"begrafenis\",\"overlijden\"]]: 10 articles",
+            "query [[\"Regeling tijdelijk verlaten van de inrichting\",\"verlaten van de inrichting\"],[\"uitvaart\",\"begrafenis\",\"overlijden\"]]: 2 articles",
+            "query [[\"verlof\",\"bijwonen\"],[\"penitentiaire inrichting\",\"gevangenis\"],[\"directeur\"]] (relaxed): 10 articles",
+            "candidates: BWBR0010171 Regeling tijdelijk verlaten van de inrichting (0.430, 5q) | BWBR0029054 Afspraken over de harmonisatie arbeidsvoorwaarden  (0.174, 2q) | BWBR0019741 Regeling toelating en weigering bezoek en beperkin (0.083, 1q) | BWBR0005494 Reglement rechtstoestand tewerkgestelden (0.083, 1q) | BWBR0045627 Beleidsregel verstrekking tenuitvoerleggingsgegeve (0.083, 1q) | BWBR0012647 Reglement justitiële jeugdinrichtingen (0.077, 1q) | BWBR0032071 Aanwijzing vervolgbeslissing inzake levensbeëndigi (0.077, 1q) | BWBR0045281 Aanwijzing voorwaardelijke invrijheidstelling (0.077, 1q) | BWBR0006516 Besluit algemene rechtspositie politie (0.071, 1q) | BWBR0048695 Mandaatbesluit hoofden afdelingen Divisie Individu (0.071, 1q) | BWBR0009709 Penitentiaire beginselenwet (0.067, 1q) | BWBR0028223 Wet tot regeling van het toezicht op psychiatrisch (0.063, 1q) | BWBR0048836 Beleidskader Beperkt Beveiligde Afdeling van het G (0.063, 1q) | BWBR0006530 Besluit rechtspositie rechterlijke ambtenaren (0.059, 1q) | BWBR0046863 Beleidskader Kortdurend Penitentiair Programma van (0.059, 1q)",
+            "picked (candidate rank): BWBR0010171 #1, BWBR0009709 #11, BWBR0019741 #3"
+          ]
+        },
+        {
+          "id": "lesmotor-lesaanduiding",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0008048",
+            "alsoAccept": [],
+            "articles": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "top": [
+            "BWBR0008048"
+          ],
+          "articles": [
+            "2",
+            "1",
+            "3",
+            "4"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0008048",
+              "title": "Regeling vaststelling L-bord",
+              "articles": [
+                "2",
+                "1",
+                "3",
+                "4"
+              ],
+              "why": "placeholder"
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 6.063442666999996,
+          "usage": {
+            "input_tokens": 7642,
+            "output_tokens": 314
+          },
+          "apiCalls": 2,
+          "costUsd": 0.036848,
+          "trace": [
+            "query [[\"rijles\",\"rijonderricht\",\"lesvoertuig\"],[\"motorrijwiel\",\"motor\"],[\"aanduiding\",\"bord\",\"letter\"]]: 2 articles",
+            "query [[\"voertuig\",\"motorrijwiel\"],[\"rijonderricht\",\"rijinstructeur\",\"WRM\"],[\"aanduiding\"],[\"afmeting\",\"hoogte\",\"breedte\"]]: 1 articles",
+            "query [[\"lesmotor\",\"motorrijwiel\"],[\"aanduiding\",\"lesaanduiding\"]] (relaxed): 6 articles",
+            "query [[\"L\",\"lesaanduiding\",\"rijschool\"],[\"zichtbaar\"],[\"achteropkomend\",\"tegemoetkomend\",\"verkeer\"]]: 6 articles",
+            "query [[\"Regeling\",\"Reglement\"],[\"rijonderricht\",\"motorrijtuigen\"],[\"kenmerk\",\"aanduiding\"]]: 30 articles",
+            "candidates: BWBR0008074 Reglement rijbewijzen (0.174, 2q) | BWBR0008048 Regeling vaststelling L-bord (0.162, 2q) | BWBR0043001 Verkeersregeling Defensie (0.158, 2q) | BWBR0052637 Beleidsbesluit fiscale maatregelen naar aanleiding (0.121, 2q) | BWBR0005813 Uitvoeringsregeling belasting van personenauto's e (0.091, 1q) | BWBR0041142 Regeling bewijs van verzekering niet-kentekenplich (0.091, 1q) | BWBR0007311 Uitvoeringsbesluit motorrijtuigenbelasting 1994 (0.083, 1q) | BWBR0004825 Reglement verkeersregels en verkeerstekens 1990 (R (0.083, 1q) | BWBR0052834 Reglement Stimuleringsmaatregel Filmproductie in N (0.083, 1q) | BWBR0005807 Uitvoeringsbesluit belasting van personenauto's en (0.077, 1q) | BWBR0039766 Beleidsregels Buitengewoon Opsporingsambtenaar (0.077, 1q) | BWBR0050597 Kaderbesluit bpm (0.077, 1q) | BWBV0003507 Verdrag inzake het wegverkeer (0.071, 1q) | BWBR0035390 Omzetbelasting, margeregeling; regeling voor gebru (0.067, 1q) | BWBV0004310 Verdrag inzake verkeerstekens (0.067, 1q)",
+            "picked (candidate rank): BWBR0008048 #2"
+          ]
+        },
+        {
+          "id": "pluimvee-sterfte-melden",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0035248",
+            "alsoAccept": [],
+            "articles": [
+              "3a.2"
+            ]
+          },
+          "top": [
+            "BWBR0035248",
+            "BWBR0045051",
+            "BWBR0035217",
+            "BWBR0046239"
+          ],
+          "articles": [
+            "3a.2"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0035248",
+              "title": "Regeling houders van dieren",
+              "articles": [
+                "3a.2"
+              ],
+              "why": "Art. 3a.2 regelt de meldplicht bij sterfte in een koppel vleeskuikens ouder dan 10 dagen (sterftedrempel op twee opeenvolgende dagen) en het inschakelen van de dierenarts."
+            },
+            {
+              "id": "BWBR0045051",
+              "title": "Regeling veterinaire maatregelen specifieke dierziekten of zoönosen",
+              "articles": [
+                "3.14",
+                "3.16"
+              ],
+              "why": "Meldingsplicht in verband met aviaire influenza wanneer de sterfte op twee achtereenvolgende dagen groter is dan driemaal het gemiddelde sterftecijfer van het koppel."
+            },
+            {
+              "id": "BWBR0035217",
+              "title": "Besluit houders van dieren",
+              "articles": [
+                "2.58",
+                "2.53"
+              ],
+              "why": "Welzijnsregels voor vleeskuikens: documentatie van de dagelijkse mortaliteit en maatregelen na signalering door een dierenarts."
+            },
+            {
+              "id": "BWBR0046239",
+              "title": "Regeling diergeneesmiddelen 2022",
+              "articles": [
+                "3.12",
+                "3.9"
+              ],
+              "why": "Verplichte regelmatige bezoeken van de bedrijfsdierenarts bij vleeskuikens (eenmaal per ronde)."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 8.24048666699999,
+          "usage": {
+            "input_tokens": 12713,
+            "output_tokens": 675
+          },
+          "apiCalls": 2,
+          "costUsd": 0.06435199999999999,
+          "trace": [
+            "query [[\"vleeskuikens\",\"vleeskuiken\"],[\"sterfte\",\"sterftecijfer\",\"uitval\"],[\"koppel\"]]: 2 articles",
+            "query [[\"sterfte\",\"sterftecijfer\"],[\"dierenarts\",\"dierenartsen\"],[\"pluimvee\",\"kippen\",\"vleeskuikens\"]]: 1 articles",
+            "query [[\"vleeskuikens\",\"vleeskuiken\"],[\"melding\",\"melden\",\"gemeld\"],[\"sterfte\",\"uitval\"]]: 1 articles",
+            "query [[\"dagelijkse sterfte\",\"sterftecijfer\",\"sterfte\"],[\"percentage\",\"procent\"],[\"koppel\",\"pluimvee\"]]: 2 articles",
+            "query [[\"vogelgriep\",\"aviaire influenza\"],[\"melding\",\"melden\"],[\"sterfte\",\"uitval\"]]: 8 articles",
+            "query [[\"vleeskuikens\",\"vleeskuiken\"],[\"dierenarts\",\"dierenartsen\"],[\"houder\",\"pluimveehouder\"]]: 15 articles",
+            "candidates: BWBR0035248 Regeling houders van dieren (0.350, 4q) | BWBR0035217 Besluit houders van dieren (0.174, 2q) | BWBR0051870 Specifiek interventiebeleid NVWA Dierenwelzijn (IB (0.174, 2q) | BWBR0051734 Regeling maatregelen beschermings- en bewakingszon (0.091, 1q) | BWBR0045051 Regeling veterinaire maatregelen specifieke dierzi (0.083, 1q) | BWBR0051772 Regeling maatregelen beschermings- en bewakingszon (0.083, 1q) | BWBR0051781 Regeling maatregelen beschermings- en bewakingszon (0.077, 1q) | BWBR0051791 Regeling maatregelen beschermings- en bewakingszon (0.071, 1q) | BWBR0046239 Regeling diergeneesmiddelen 2022 (0.071, 1q) | BWBR0051808 Regeling maatregelen bewakingszone hoogpathogene v (0.067, 1q) | BWBR0051746 Specifiek interventiebeleid NVWA diergeneesmiddele (0.067, 1q) | BWBR0051792 Regeling maatregelen bewakingszone hoogpathogene v (0.063, 1q) | BWBR0051776 Regeling maatregelen beschermings- en bewakingszon (0.059, 1q) | BWBR0051794 Regeling maatregelen bewakingszone hoogpathogene v (0.056, 1q)",
+            "picked (candidate rank): BWBR0035248 #1, BWBR0045051 #5, BWBR0035217 #2, BWBR0046239 #9"
+          ]
+        },
+        {
+          "id": "belasting-afschrijving-betaalrekening",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0004766",
+            "alsoAccept": [],
+            "articles": [
+              "1ce"
+            ]
+          },
+          "top": [
+            "BWBR0004766",
+            "BWBR0004770"
+          ],
+          "articles": [
+            "1ca",
+            "1ch"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0004766",
+              "title": "Uitvoeringsregeling Invorderingswet 1990",
+              "articles": [
+                "1ca",
+                "1ch"
+              ],
+              "why": "Hoofdstuk IA regelt de overheidsvordering (rechtstreekse afschrijving van de betaalrekening zonder beslag), met definities als bestedingsruimte en deelvordering en de regels over bedrag per keer, frequentie en duur."
+            },
+            {
+              "id": "BWBR0004770",
+              "title": "Invorderingswet 1990",
+              "articles": [
+                "19"
+              ],
+              "why": "Wettelijke grondslag voor de vordering van de ontvanger op het tegoed van de rekening bij de betaaldienstverlener."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 0,
+          "seconds": 6.727744582999993,
+          "usage": {
+            "input_tokens": 6927,
+            "output_tokens": 435
+          },
+          "apiCalls": 2,
+          "costUsd": 0.036408,
+          "trace": [
+            "query [[\"invorderingswet\",\"invordering\"],[\"betaalrekening\"],[\"maand\",\"maximaal\",\"termijn\"]]: 3 articles",
+            "query [[\"ontvanger\"],[\"belastingschuldige\"],[\"betaalrekening\",\"saldo\"],[\"bedrag\",\"maand\"]]: 3 articles",
+            "query [[\"vereenvoudigd derdenbeslag\",\"derdenbeslag\",\"beslag\"],[\"betaalrekening\",\"bank\"],[\"beslagvrije voet\"]]: 1 articles",
+            "query [[\"leidraad invordering\"],[\"betaalrekening\",\"bankrekening\"]] (relaxed): 2 articles",
+            "query [[\"afschrijving\",\"afschrijven\",\"verrekening\"],[\"betaalrekening\",\"bankrekening\",\"rekening\"],[\"ontvanger\"]]: 16 articles",
+            "candidates: BWBR0040762 Invordering, Leidraad Invordering BES (0.251, 3q) | BWBR0004766 Uitvoeringsregeling Invorderingswet 1990 (0.239, 3q) | BWBR0005290 Burgerlijk Wetboek Boek 7 (0.142, 2q) | BWBR0051015 Besluit administratieve verplichtingen omzetbelast (0.129, 2q) | BWBR0045013 Model jaarverslaggeving CAK bestuurlijke verantwoo (0.091, 1q) | BWBR0052226 Tijdelijke subsidieregeling rechtsbijstand bij bes (0.091, 1q) | BWBR0043592 Model jaarverslaggeving CAK bestuurlijke verantwoo (0.083, 1q) | BWBR0004770 Invorderingswet 1990 (0.067, 1q) | BWBR0051693 Inkomstenbelasting, vennootschapsbelasting; geruis (0.063, 1q) | BWBR0001860 Faillissementswet (0.056, 1q) | BWBR0029244 Belastingwet BES (0.053, 1q) | BWBR0047168 Besluit noodmaatregelen coronacrisis (0.050, 1q) | BWBR0048112 Besluit meldingsplichtige grensoverschrijdende con (0.048, 1q) | BWBR0034630 Wijzigingsbesluit Leidraad Invordering 2008 (aanpa (0.045, 1q) | BWBR0014556 Subsidieregeling Internationalisering 2004 (0.043, 1q)",
+            "picked (candidate rank): BWBR0004766 #2, BWBR0004770 #8"
+          ]
+        },
+        {
+          "id": "diplomaat-persoonsgegevens-inzage",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0014172",
+            "alsoAccept": [],
+            "articles": [
+              "10",
+              "11"
+            ]
+          },
+          "top": [
+            "BWBR0013983",
+            "BWBR0013968",
+            "BWBR0028208"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0013983",
+              "title": "Inschrijving geprivilegieerden in de GBA",
+              "articles": [],
+              "why": "Circulaire over registratie van geprivilegieerden (diplomatiek personeel) door BuZa/BRP; meest specifiek voor de positie van een attaché, inclusief verzoeken van geprivilegieerden."
+            },
+            {
+              "id": "BWBR0013968",
+              "title": "Regeling Wet bescherming persoonsgegevens Ministerie van Financiën",
+              "articles": [
+                "3.2",
+                "3.4",
+                "1.1"
+              ],
+              "why": "Vergelijkbare departementale regeling over het recht op inzage en correctie bij een ministerie. Deze regeling geldt voor Financiën, niet voor BuZa, en dient alleen als analogie."
+            },
+            {
+              "id": "BWBR0028208",
+              "title": "Wet basisadministraties persoonsgegevens BES",
+              "articles": [
+                "17",
+                "18"
+              ],
+              "why": "Regeling voor inzage en verbetering in de basisadministratie, met een beslistermijn van vier weken. Dit is de BES-variant en daarom alleen ter vergelijking relevant."
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 10.85018979200002,
+          "usage": {
+            "input_tokens": 8995,
+            "output_tokens": 546
+          },
+          "apiCalls": 2,
+          "costUsd": 0.0469,
+          "trace": [
+            "query [[\"persoonsgegevens\"],[\"diplomatiek\",\"ambassade\",\"vertegenwoordiging\",\"bevoorrechte personen\"],[\"registratie\",\"register\"]]: 12 articles",
+            "query [[\"inzage\",\"verbetering\",\"rectificatie\"],[\"persoonsgegevens\"],[\"Buitenlandse Zaken\",\"minister\"]]: 30 articles",
+            "query [[\"recht op inzage\",\"inzage\"],[\"betrokkene\"],[\"verwerkingsverantwoordelijke\",\"verantwoordelijke\"]]: 30 articles",
+            "query [[\"verbetering\",\"rectificatie\"],[\"persoonsgegevens\"],[\"termijn\",\"maand\"]]: 30 articles",
+            "query [[\"verzoek\"],[\"inzage\",\"verbetering\",\"aanvulling\",\"verwijdering\"],[\"termijn\",\"weken\",\"beslist\"]]: 30 articles",
+            "candidates: BWBR0014194 Wet justitiële en strafvorderlijke gegevens (0.224, 3q) | BWBR0033229 Richtsnoeren publicatie van persoonsgegevens op in (0.211, 3q) | BWBR0041791 Regeling WPG Defensie (0.174, 2q) | BWBR0022463 Wet politiegegevens (0.144, 2q) | BWBR0028208 Wet basisadministraties persoonsgegevens BES (0.139, 2q) | BWBR0037591 Beleidsregels cameratoezicht, College bescherming  (0.139, 2q) | BWBR0040934 Regeling inzage- en correctierecht UWV 2018 (0.130, 2q) | BWBR0040871 Regeling rechten betrokkenen bij de verwerking van (0.103, 2q) | BWBR0003952 Regeling Bescherming persoonlijke levenssfeer bij  (0.096, 2q) | BWBR0013968 Regeling Wet bescherming persoonsgegevens Minister (0.091, 1q) | BWBR0013983 Inschrijving geprivilegieerden in de GBA (0.091, 1q) | BWBR0033572 CBP richtsnoeren: beveiliging van persoonsgegevens (0.089, 2q) | BWBR0050551 Circulaire uniformering aanvraag- en uitgifteproce (0.083, 1q) | BWBR0035090 Besluit genetisch gemodificeerde organismen milieu (0.083, 1q) | BWBR0037896 Beleidsregels verwerking persoonsgegevens gezondhe (0.083, 1q)",
+            "picked (candidate rank): BWBR0013983 #11, BWBR0013968 #10, BWBR0028208 #5"
+          ]
+        },
+        {
+          "id": "zwangerschapsuitkering-spreekuur-verhuizing",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0020117",
+            "alsoAccept": [],
+            "articles": [
+              "5",
+              "7"
+            ]
+          },
+          "top": [
+            "BWBR0020117",
+            "BWBR0013008",
+            "BWBR0043626"
+          ],
+          "articles": [
+            "5",
+            "7",
+            "1",
+            "4",
+            "6"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0020117",
+              "title": "Controlevoorschriften Wet arbeid en zorg 2006",
+              "articles": [
+                "5",
+                "7",
+                "1",
+                "4",
+                "6"
+              ],
+              "why": "Controlevoorschriften Wazo regelen direct het verschijnen op het spreekuur bij verhindering (art. 5) en het doorgeven van een wijziging van woon- of verblijfplaats (art. 7) voor uitkeringsgerechtigden bij zwangerschaps- en bevallingsverlof."
+            },
+            {
+              "id": "BWBR0013008",
+              "title": "Wet arbeid en zorg",
+              "articles": [
+                "3:28"
+              ],
+              "why": "Wettelijke grondslag in de Wazo voor de bevoegdheid van het UWV om controlevoorschriften vast te stellen."
+            },
+            {
+              "id": "BWBR0043626",
+              "title": "Controlevoorschriften Ziektewet 2020",
+              "articles": [
+                "4",
+                "2"
+              ],
+              "why": "Vergelijkbare regels voor Ziektewet-uitkeringen (bijvoorbeeld bij ziekte door zwangerschap); minder specifiek voor een Wazo-uitkering."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.443660165999987,
+          "usage": {
+            "input_tokens": 8887,
+            "output_tokens": 637
+          },
+          "apiCalls": 2,
+          "costUsd": 0.048288,
+          "trace": [
+            "query [[\"zwangerschapsuitkering\",\"bevallingsuitkering\",\"zwangerschapsverlof\",\"bevallingsverlof\"],[\"verplichting\",\"verplicht\",\"gehouden\"],[\"Uitvoeringsinstituut werknemersverzekeringen\",\"UWV\"]]: 3 articles",
+            "query [[\"controlevoorschriften\",\"controle\"],[\"uitkering\"],[\"zwangerschap\",\"bevalling\",\"verlof\"]]: 8 articles",
+            "query [[\"oproep\",\"opgeroepen\"],[\"spreekuur\"],[\"Uitvoeringsinstituut werknemersverzekeringen\",\"UWV\"]]: 2 articles",
+            "query [[\"spreekuur\",\"onderzoek\"],[\"verzekeringsarts\",\"arts\"],[\"verhinderd\",\"verhindering\",\"niet kunnen verschijnen\"]]: 30 articles",
+            "query [[\"verhuizing\",\"adreswijziging\",\"adres\",\"woonplaats\"],[\"mededelen\",\"melden\",\"doorgeven\",\"verstrekken\"],[\"uitkering\",\"zwangerschap\",\"bevalling\"]]: 30 articles",
+            "candidates: BWBR0020117 Controlevoorschriften Wet arbeid en zorg 2006 (0.237, 3q) | BWBR0043626 Controlevoorschriften Ziektewet 2020 (0.182, 2q) | BWBR0001888 Ziektewet (0.113, 2q) | BWBR0020483 Besluit ontheffing verplichtingen sociale zekerhei (0.091, 1q) | BWBV0004471 Verdrag tussen het Koninkrijk der Nederlanden en h (0.091, 1q) | BWBR0013008 Wet arbeid en zorg (0.091, 1q) | BWBV0005625 Administratief Akkoord met betrekking tot de wijze (0.083, 2q) | BWBV0001840 Administratief Akkoord met betrekking tot de wijze (0.083, 1q) | BWBR0006516 Besluit algemene rechtspositie politie (0.083, 1q) | BWBV0004472 Verdrag tussen het Koninkrijk der Nederlanden en d (0.083, 1q) | BWBR0013905 Verrekening uitkeringen ingevolge ziektewet/wet ar (0.083, 1q) | BWBV0001577 Verdrag tussen het Koninkrijk der Nederlanden en d (0.077, 1q) | BWBR0006517 Besluit bezoldiging politie (0.071, 1q) | BWBV0001447 Verdrag tussen het Koninkrijk der Nederlanden en d (0.071, 1q) | BWBR0037896 Beleidsregels verwerking persoonsgegevens gezondhe (0.071, 1q)",
+            "picked (candidate rank): BWBR0020117 #1, BWBR0013008 #6, BWBR0043626 #2"
+          ]
+        },
+        {
+          "id": "tattoo-vergunning-duur-kosten",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0021915",
+            "alsoAccept": [],
+            "articles": [
+              "3",
+              "5"
+            ]
+          },
+          "top": [
+            "BWBR0021915",
+            "BWBR0021605",
+            "BWBR0021917",
+            "BWBR0001969"
+          ],
+          "articles": [
+            "3",
+            "5",
+            "2",
+            "1"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0021915",
+              "title": "Warenwetregeling tatoeëren en piercen",
+              "articles": [
+                "3",
+                "5",
+                "2",
+                "1"
+              ],
+              "why": "Regelt de geldigheidsduur van de vergunning (drie jaar) en de tarieven voor aanvraag, waaronder het tarief bij werken met uitsluitend wegwerpmateriaal."
+            },
+            {
+              "id": "BWBR0021605",
+              "title": "Warenwetbesluit tatoeëren en piercen",
+              "articles": [
+                "3",
+                "4",
+                "5"
+              ],
+              "why": "Grondslag van de vergunningplicht voor tatoeëren en van de verlening van de vergunning op aanvraag."
+            },
+            {
+              "id": "BWBR0021917",
+              "title": "Regeling mandaatverlening aan de GGD’en met betrekking tot de uitvoering van het Warenwetbesluit tatoeëren en piercen",
+              "articles": [
+                "3",
+                "2"
+              ],
+              "why": "Mandaat aan de GGD om vergunningaanvragen af te handelen."
+            },
+            {
+              "id": "BWBR0001969",
+              "title": "Warenwet",
+              "articles": [
+                "24"
+              ],
+              "why": "De Warenwet is de wettelijke basis voor de vergunningplicht en het vereiste van een geldige vergunning."
+            }
+          ],
+          "lawAt1": true,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 7.649996041999985,
+          "usage": {
+            "input_tokens": 7466,
+            "output_tokens": 575
+          },
+          "apiCalls": 2,
+          "costUsd": 0.041364,
+          "trace": [
+            "query [[\"vergunning\"],[\"tatoeëren\",\"tatoeage\",\"piercen\"],[\"geldig\",\"geldigheidsduur\",\"jaar\"]]: 5 articles",
+            "query [[\"tarief\",\"vergoeding\",\"kosten\"],[\"vergunning\"],[\"tatoeëren\",\"tatoeage\"]] (relaxed): 2 articles",
+            "query [[\"GGD\",\"gemeentelijke gezondheidsdienst\"],[\"tatoeëren\",\"tatoeage\",\"piercen\"],[\"vergunning\"]]: 6 articles",
+            "query [[\"Warenwetbesluit tatoeëren en piercen\",\"tatoeëren en piercen\"],[\"aanvraag\",\"vergunning\"]]: 12 articles",
+            "query [[\"sterilisatie\",\"steriliseren\",\"wegwerpmateriaal\"]] (relaxed): 30 articles",
+            "candidates: BWBR0021915 Warenwetregeling tatoeëren en piercen (0.342, 4q) | BWBR0049253 Specifiek Interventiebeleid NVWA tatoeëren, pierce (0.168, 2q) | BWBR0021605 Warenwetbesluit tatoeëren en piercen (0.162, 2q) | BWBR0021917 Regeling mandaatverlening aan de GGD’en met betrek (0.160, 2q) | BWBR0022549 Richtlijn decontaminatie apparatuur ziekenhuisafva (0.091, 1q) | BWBR0001969 Warenwet (0.083, 1q) | BWBR0052828 Gewijzigde Beleidsregel huisartsenzorg en multidis (0.083, 1q) | BWBV0006074 Verdrag van de Raad van Europa inzake het voorkome (0.077, 1q) | BWBR0052840 Gewijzigde Beleidsregel huisartsenzorg en multidis (0.071, 1q) | BWBR0052808 Gewijzigde Beleidsregel huisartsenzorg en multidis (0.067, 1q) | BWBV0007040 Verdrag van Ljubljana-Den Haag inzake internationa (0.063, 1q) | BWBR0052827 Gewijzigde Beleidsregel huisartsenzorg en multidis (0.059, 1q) | BWBR0029442 Regeling aanspraken zorgverzekering BES (0.056, 1q) | BWBR0043470 Besluit medische hulpmiddelen (0.053, 1q) | BWBR0045528 Omgevingsregeling (0.050, 1q)",
+            "picked (candidate rank): BWBR0021915 #1, BWBR0021605 #3, BWBR0021917 #4, BWBR0001969 #6"
+          ]
+        }
+      ]
+    },
+    "b-raw": {
+      "summary": {
+        "n": 21,
+        "lawAt1": 0,
+        "lawAt5": 0.047619047619047616,
+        "articleRecall": 0.047619047619047616,
+        "avgSeconds": 9.892184394809524,
+        "avgCostUsd": 0,
+        "errors": 0
+      },
+      "byDifficulty": {
+        "obscure": {
+          "n": 10,
+          "lawAt1": 0,
+          "lawAt5": 0,
+          "articleRecall": 0,
+          "avgSeconds": 11.573509366600002,
+          "avgCostUsd": 0,
+          "errors": 0
+        },
+        "common": {
+          "n": 5,
+          "lawAt1": 0,
+          "lawAt5": 0,
+          "articleRecall": 0,
+          "avgSeconds": 8.464985358400009,
+          "avgCostUsd": 0,
+          "errors": 0
+        },
+        "mid": {
+          "n": 6,
+          "lawAt1": 0,
+          "lawAt5": 0.16666666666666666,
+          "articleRecall": 0.16666666666666666,
+          "avgSeconds": 8.279308638833326,
+          "avgCostUsd": 0,
+          "errors": 0
+        }
+      },
+      "tuchtrecht": [
+        {
+          "id": "tuchtrecht-km-bewaartermijn",
+          "verdict": "geen van beide",
+          "recall": 0
+        },
+        {
+          "id": "tuchtrecht-km-correctie",
+          "verdict": "geen van beide",
+          "recall": 0
+        },
+        {
+          "id": "tuchtrecht-km-verstrekking-toegang",
+          "verdict": "geen van beide",
+          "recall": 0
+        }
+      ],
+      "questions": [
+        {
+          "id": "tuchtrecht-km-bewaartermijn",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "10"
+            ]
+          },
+          "top": [
+            "BWBR0009071",
+            "BWBR0003482",
+            "BWBR0017869",
+            "BWBR0042345",
+            "BWBR0011825"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0009071",
+              "title": "Regeling kentekens en kentekenplaten",
+              "articles": [
+                "4",
+                "1"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0003482",
+              "title": "Algemeen militair ambtenarenreglement",
+              "articles": [
+                "39a",
+                "24b",
+                "39"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0017869",
+              "title": "Regeling beleidsregels vereveningsbijdrage zorgverzekering 2006",
+              "articles": [
+                "9"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0042345",
+              "title": "Circulaire wijziging financiële arbeidsvoorwaarden schoonmakers in dienst bij de Rijksschoonmaakorganisatie",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0011825",
+              "title": "Vreemdelingenbesluit 2000",
+              "articles": [
+                "3.86",
+                "3.58"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 20.977012958000007,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"een or vrijwillig or dienende or militair or heeft or zijn or initiële or opleiding or afgerond or twee or jaar or later or krijgt or hij or tuchtstraf or drie or na or die or straf or wordt or effectief or bevorderd or wanneer or worden or de or tuchtrechtelijke or gegevens or verwijderd or zowel or op or onderdeelsniveau or als or uit or centrale or registratie or noem or relevante or artikelleden\""
+          ]
+        },
+        {
+          "id": "tuchtrecht-km-correctie",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "8",
+              "1"
+            ]
+          },
+          "top": [
+            "BWBV0001830",
+            "BWBV0001668",
+            "BWBV0001961",
+            "BWBV0001384",
+            "BWBV0001571"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBV0001830",
+              "title": "Verdrag van de Verenigde Naties tegen corruptie",
+              "articles": [
+                "46",
+                "44",
+                "55",
+                "Article 46"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBV0001668",
+              "title": "Verdrag van de Verenigde Naties tegen grensoverschrijdende georganiseerde misdaad",
+              "articles": [
+                "18",
+                "16",
+                "Article 18",
+                "13"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBV0001961",
+              "title": "Verdrag tussen de Regering van het Koninkrijk der Nederlanden, ten behoeve van de Nederlandse Antillen, en de Regering van de Verenigde Staten van Amerika inzake de uitwisseling van gegevens met betrekking tot belastingen",
+              "articles": [
+                "4",
+                "Article 4"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBV0001384",
+              "title": "Verdrag inzake het verbod van het gebruik, de aanleg van voorraden, de productie en de overdracht van anti-personeelsmijnen en inzake de vernietiging van deze wapens",
+              "articles": [
+                "8"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBV0001571",
+              "title": "Verdrag tussen de Regering van het Koninkrijk der Nederlanden en de Regering van Georgië tot het vermijden van dubbele belasting en het voorkomen van het ontgaan van belasting met betrekking tot belastingen naar het inkomen",
+              "articles": [
+                "28"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 15.938548791999986,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"een or matroos or vindt or dat or straf or ten or onrechte or in or de or registratie or staat or bij or wie or dient or hij or verzoek or wat or moet or daarin or staan or voert or correctie or uit or worden or geïnformeerd or en or kan or doen or als or het or wordt or afgewezen\""
+          ]
+        },
+        {
+          "id": "tuchtrecht-km-verstrekking-toegang",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0003866",
+            "alsoAccept": [],
+            "articles": [
+              "5",
+              "6",
+              "2"
+            ]
+          },
+          "top": [
+            "BWBR0051391",
+            "BWBR0051046",
+            "BWBR0002958",
+            "BWBR0049828",
+            "BWBR0035498"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0051391",
+              "title": "Kavelbesluit kavel Gamma-B windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0051046",
+              "title": "Kavelbesluit kavel Gamma-A windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0002958",
+              "title": "Aanwijzingen inzake de bescherming van de persoonlijke levenssfeer in verband met geautomatiseerde systemen waarin persoonsgegevens zijn opgenomen bij de Rijksoverheid",
+              "articles": [
+                "A",
+                "B",
+                "C"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0049828",
+              "title": "Bevoegdhedenregeling COA 2020",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0035498",
+              "title": "Aanwijzing opsporingsbevoegdheden",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 7.8597122499999825,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"mag or de or directeur or personeel or koninklijke or marine or gegevens or uit or registratie or opvragen or om or een or justitiële or beslissing or te or nemen or en or wie or heeft or rechtstreeks or toegang or tot\""
+          ]
+        },
+        {
+          "id": "huur-opzegging-huurder",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005290",
+            "alsoAccept": [],
+            "articles": [
+              "271"
+            ]
+          },
+          "top": [
+            "BWBR0042072",
+            "BWBR0040775",
+            "BWBR0043347",
+            "BWBR0039354",
+            "BWBR0044347"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0042072",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2018",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0040775",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2017",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0043347",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2019",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0039354",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2016",
+              "articles": [
+                "2",
+                "5",
+                "4"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0044347",
+              "title": "Regeling vaststelling voorschotverlening duurzame energieproductie en klimaattransitie 2021",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 8.474036374999995,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or huur or een or appartement or voor or onbepaalde or tijd or en or betaal or de or per or maand or ga or verhuizen or hoe or moet or opzeggen or welke or opzegtermijn or geldt or er or mij\""
+          ]
+        },
+        {
+          "id": "awb-bezwaartermijn",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005537",
+            "alsoAccept": [],
+            "articles": [
+              "6:7",
+              "6:8"
+            ]
+          },
+          "top": [
+            "BWBR0005556",
+            "BWBR0005432",
+            "BWBR0004808",
+            "BWBR0004813",
+            "BWBR0003603"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0005556",
+              "title": "Wet tot wijziging van een aantal gemeentegrenzen in het zuidelijk deel van Noord-Kennemerland",
+              "articles": [
+                "1"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0005432",
+              "title": "Wet samenvoeging van de gemeenten Geffen en Nuland",
+              "articles": [
+                "1"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0004808",
+              "title": "Herindelingswet Waterland",
+              "articles": [
+                "1",
+                "2"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0004813",
+              "title": "Herindelingswet noordoostelijk en midden Zuid-Holland",
+              "articles": [
+                "1",
+                "2"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0003603",
+              "title": "Wet tot instelling gemeenten Almere en Zeewolde",
+              "articles": [
+                "3"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 17.424931500000007,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"de or gemeente or heeft or mijn or aanvraag or voor or een or parkeervergunning or afgewezen or het or besluit or is or op or maart or aan or mij or toegestuurd or hoeveel or tijd or heb or ik or om or bezwaar or te or maken or en or vanaf or wanneer or begint or die or termijn or lopen\""
+          ]
+        },
+        {
+          "id": "sr-diefstal-strafmaximum",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0001854",
+            "alsoAccept": [],
+            "articles": [
+              "310"
+            ]
+          },
+          "top": [
+            "BWBV0006764",
+            "BWBV0002800",
+            "BWBR0045281",
+            "BWBR0049542",
+            "BWBR0049556"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBV0006764",
+              "title": "Radioreglement 1979",
+              "articles": [
+                "Article 52",
+                "Article 1",
+                "Article 5",
+                "Article 19",
+                "Article 32",
+                "Article 9",
+                "Article 33",
+                "Article 51"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBV0002800",
+              "title": "Regionaal Akkoord inzake het gebruik van de 87,5 - 108 MHz Band voor FM radio omroep",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0045281",
+              "title": "Aanwijzing voorwaardelijke invrijheidstelling",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0049542",
+              "title": "Tarieventabel Handhaving Centraal Bureau voor de Statistiek 2024",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0049556",
+              "title": "Tarieventabel Handhaving Centraal Bureau voor de Statistiek 2023",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 4.0706857080000045,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"iemand or heeft or voor or het or station or een or fiets or meegenomen or die or niet or van or hem or was or met or de or bedoeling or zelf or te or houden or welke or straf or kan or hij or daarvoor or maximaal or krijgen\""
+          ]
+        },
+        {
+          "id": "rv-kantonrechter-competentie",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0001827",
+            "alsoAccept": [],
+            "articles": [
+              "93"
+            ]
+          },
+          "top": [
+            "BWBR0031789",
+            "BWBR0050717",
+            "BWBR0003894",
+            "BWBR0051015",
+            "BWBR0040228"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0031789",
+              "title": "Wet herziening gerechtelijke kaart",
+              "articles": [
+                "CVIII",
+                "CX",
+                "CXLIII",
+                "CIVa",
+                "CXIVb",
+                "CXIVa",
+                "CXV",
+                "CIV"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0050717",
+              "title": "Inkomstenbelasting, eigenwoningschuld vanaf 1 januari 2013; bij annuïtaire lening is overeengekomen contractuele rente hoger dan marktconforme rente",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0003894",
+              "title": "Wet tot gemeentelijke indeling van de Waddenzee",
+              "articles": [
+                "2"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0051015",
+              "title": "Besluit administratieve verplichtingen omzetbelasting",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0040228",
+              "title": "Regeling aanpassing factoren, grondslagen en bedragen wetten voor verzetsdeelnemers en oorlogsgetroffenen per 1 januari 2018",
+              "articles": [
+                "2"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 4.367927667000011,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"een or klant or betaalt or factuur or van or 18 or 000 or plus or rente or niet or moet or ik or hem or dagvaarden or bij or de or kantonrechter or of or civiele or kamer or rechtbank\""
+          ]
+        },
+        {
+          "id": "arbeid-proeftijd-vast-contract",
+          "difficulty": "common",
+          "gold": {
+            "law": "BWBR0005290",
+            "alsoAccept": [],
+            "articles": [
+              "652"
+            ]
+          },
+          "top": [
+            "BWBR0051391",
+            "BWBR0008977",
+            "BWBR0051046",
+            "BWBR0049647",
+            "BWBR0050357"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0051391",
+              "title": "Kavelbesluit kavel Gamma-B windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0008977",
+              "title": "Suppletieregeling gedeeltelijk arbeidsongeschikten sector Defensie",
+              "articles": [
+                "19",
+                "21"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0051046",
+              "title": "Kavelbesluit kavel Gamma-A windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0049647",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie en klimaattransitie 2023",
+              "articles": [
+                "12"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0050357",
+              "title": "Regeling vaststelling voorschotverlening duurzame energieproductie en klimaattransitie 2025",
+              "articles": [
+                "12"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 7.987345542000025,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or krijg or een or vast or contract or en or mijn or nieuwe or werkgever or wil or proeftijd or van or drie or maanden or afspreken or mag or dat or wat or als or het or toch or zo or in or komt or te or staan\""
+          ]
+        },
+        {
+          "id": "arbeid-dagelijkse-rusttijd",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007671",
+            "alsoAccept": [],
+            "articles": [
+              "5:3"
+            ]
+          },
+          "top": [
+            "BWBR0051391",
+            "BWBR0045198",
+            "BWBR0051046",
+            "BWBV0001736",
+            "BWBR0050414"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0051391",
+              "title": "Kavelbesluit kavel Gamma-B windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0045198",
+              "title": "NWO besluit van 26 mei 2021 tot verdaging en opschorting van haar aanvraagprocedures naar aanleiding van de hack op de NWO-netwerkservers",
+              "articles": [
+                "1"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0051046",
+              "title": "Kavelbesluit kavel Gamma-A windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBV0001736",
+              "title": "Europees-mediterrane overeenkomst waarbij een associatie tot stand wordt gebracht tussen de Europese Gemeenschap en haar lidstaten, enerzijds, en de Democratische Republiek Algerije, anderzijds",
+              "articles": [
+                "Enig artikel",
+                "Enig"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0050414",
+              "title": "Regeling aanpassing factoren, grondslagen en bedragen wetten voor verzetsdeelnemers en oorlogsgetroffenen per 1 januari 2025",
+              "articles": [
+                "2"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 7.282422250000003,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or ben or 25 or en or werk or in or de or bediening or van or een or restaurant or mijn or werkgever or roostert or me or tot or 23 or 00 or uur or volgende or ochtend or om or 07 or weer or mag or dat\""
+          ]
+        },
+        {
+          "id": "medezeggenschap-camera-instemming",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0002747",
+            "alsoAccept": [],
+            "articles": [
+              "27"
+            ]
+          },
+          "top": [
+            "BWBR0037896",
+            "BWBR0046987",
+            "BWBR0047176",
+            "BWBR0033855",
+            "BWBR0028497"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0037896",
+              "title": "Beleidsregels verwerking persoonsgegevens gezondheid zieke werknemers",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0046987",
+              "title": "Loonheffingen, loon, vrijgesteld loon en vergoedingen en verstrekkingen",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0047176",
+              "title": "Loonheffingen, inkomstenbelasting, winst, vervoer; reiskostenvergoedingen, reizen per auto en openbaar vervoer",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0033855",
+              "title": "Loonheffingen, extraterritoriale werknemers; 30%-regeling",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0028497",
+              "title": "Wet ongevallenverzekering BES",
+              "articles": [
+                "5",
+                "1"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 9.917624750000018,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"onze or werkgever or een or bedrijf or met or 120 or werknemers or wil or camera or en or software or invoeren or waarmee or de or productiviteit or van or medewerkers or wordt or gevolgd or heeft or gekozen or vertegenwoordiging or het or personeel or daarover or instemmingsrecht or wat or als or toch or zonder or instemming or invoert\""
+          ]
+        },
+        {
+          "id": "vakantiebijslag-minimum",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0002638",
+            "alsoAccept": [],
+            "articles": [
+              "15"
+            ]
+          },
+          "top": [
+            "BWBV0004785",
+            "BWBV0001384",
+            "BWBV0004607",
+            "BWBV0001109",
+            "BWBV0001051"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBV0004785",
+              "title": "Verdrag tussen de Staten die partij zijn bij het Noord-Atlantisch Verdrag, nopens de rechtspositie van hun krijgsmachten",
+              "articles": [
+                "VII",
+                "Article VII"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBV0001384",
+              "title": "Verdrag inzake het verbod van het gebruik, de aanleg van voorraden, de productie en de overdracht van anti-personeelsmijnen en inzake de vernietiging van deze wapens",
+              "articles": [
+                "8"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBV0004607",
+              "title": "Verdrag tussen het Koninkrijk der Nederlanden en Japan tot het vermijden van dubbele belasting en het voorkomen van het ontgaan van belasting met betrekking tot belastingen naar het inkomen",
+              "articles": [
+                "4",
+                "Article 4",
+                "11"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBV0001109",
+              "title": "Overeenkomst tussen het Koninkrijk der Nederlanden en de Verenigde Staten van Amerika tot het vermijden van dubbele belasting en het voorkomen van het ontgaan van belasting met betrekking tot belastingen naar het inkomen",
+              "articles": [
+                "19",
+                "XXXV",
+                "4",
+                "26",
+                "12",
+                "14"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBV0001051",
+              "title": "Verdrag inzake het Open Luchtruim",
+              "articles": [
+                "III"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 9.276367582999985,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or werk or als or parttime or schoonmaker or mijn or werkgever or zegt or dat or hij or geen or vakantiegeld or hoeft or te or betalen or omdat or niet or in or arbeidscontract or staat or klopt or en or hoeveel or moet or het or minimaal or zijn\""
+          ]
+        },
+        {
+          "id": "geboorteverlof-partner",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0013008",
+            "alsoAccept": [],
+            "articles": [
+              "4:2"
+            ]
+          },
+          "top": [
+            "BWBV0003189",
+            "BWBW33099",
+            "BWBR0026494",
+            "BWBR0027122",
+            "BWBR0028778"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBV0003189",
+              "title": "Verdrag inzake internationale zakelijke rechten op mobiel materieel",
+              "articles": [
+                "1",
+                "29",
+                "39"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBW33099",
+              "title": "Handleiding Rijkswet op het Nederlanderschap 2003",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0026494",
+              "title": "Handleiding voor de toepassing van de Rijkswet op het Nederlanderschap 2003 toegespitst op het gebruik in Curaçao en Sint Maarten",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0027122",
+              "title": "Handleiding Rijkswet op het Nederlanderschap 2003 toegespitst op het gebruik in Aruba",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0028778",
+              "title": "Handleiding Rijkswet op het Nederlanderschap 2003 toegespitst op het gebruik in de openbare lichamen Bonaire, Sint Eustatius en Saba",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 10.81447095799999,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"mijn or vriendin or is or gisteren or bevallen or van or ons or kind or op or hoeveel or betaald or verlof or werkgever or heb or ik or recht or en or binnen or welke or periode or moet or dat or opnemen\""
+          ]
+        },
+        {
+          "id": "winkel-zondag-feestdag",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0007952",
+            "alsoAccept": [],
+            "articles": [
+              "2",
+              "3"
+            ]
+          },
+          "top": [
+            "BWBR0051391",
+            "BWBR0051046",
+            "BWBR0010606",
+            "BWBR0003603",
+            "BWBR0005432"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0051391",
+              "title": "Kavelbesluit kavel Gamma-B windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0051046",
+              "title": "Kavelbesluit kavel Gamma-A windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0010606",
+              "title": "Uitvoering periodieke GBA-audit",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0003603",
+              "title": "Wet tot instelling gemeenten Almere en Zeewolde",
+              "articles": [
+                "3",
+                "2"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0005432",
+              "title": "Wet samenvoeging van de gemeenten Geffen en Nuland",
+              "articles": [
+                "1"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 7.56306020899996,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or heb or een or kledingwinkel or mag or op or zondag or en or tweede or pinksterdag or open or zijn or kan or de or gemeente or daar or uitzondering or voor or maken\""
+          ]
+        },
+        {
+          "id": "huurcommissie-leges-voorschot",
+          "difficulty": "mid",
+          "gold": {
+            "law": "BWBR0014315",
+            "alsoAccept": [],
+            "articles": [
+              "7"
+            ]
+          },
+          "top": [
+            "BWBR0052336",
+            "BWBR0014315",
+            "BWBR0005290",
+            "BWBR0039553",
+            "BWBR0049092"
+          ],
+          "articles": [
+            "7",
+            "13",
+            "4",
+            "14",
+            "10a",
+            "12",
+            "11"
+          ],
+          "hits": [
+            {
+              "id": "BWBR0052336",
+              "title": "Systeemcode elektriciteit 2026",
+              "articles": [
+                "8.3",
+                "8.2"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0014315",
+              "title": "Uitvoeringswet huurprijzen woonruimte",
+              "articles": [
+                "7",
+                "13",
+                "4",
+                "14",
+                "10a",
+                "12",
+                "11"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0005290",
+              "title": "Burgerlijk Wetboek Boek 7",
+              "articles": [
+                "271",
+                "253",
+                "252a",
+                "274"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0039553",
+              "title": "Wet maatregelen huurwoningmarkt Caribisch Nederland",
+              "articles": [
+                "1.9",
+                "1.15",
+                "1.14",
+                "1.19",
+                "1.16",
+                "1.5"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0049092",
+              "title": "Besluit onroerende zaken omzetbelasting",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": true,
+          "articleRecall": 1,
+          "seconds": 4.821906083000009,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or heb or als or huurder or een or geschil or over or mijn or huurprijs or aan or de or huurcommissie or voorgelegd or en or moet or voorschot or betalen or krijg or dat or terug or gelijk or wat or gebeurt or er or het or niet or op or tijd or betaal\""
+          ]
+        },
+        {
+          "id": "gedetineerde-uitvaart-verlof",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0010171",
+            "alsoAccept": [],
+            "articles": [
+              "24",
+              "21"
+            ]
+          },
+          "top": [
+            "BWBR0052452",
+            "BWBV0004455",
+            "BWBV0006220",
+            "BWBR0027122",
+            "BWBR0052885"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0052452",
+              "title": "Beleidsregel prestatiebeschrijvingen en tarieven zorgzwaartepakketten en volledig pakket thuis 2026",
+              "articles": [
+                "6"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBV0004455",
+              "title": "Europese Overeenkomst nopens de arbeidsvoorwaarden voor de bemanningen van motorrijtuigen in het internationale vervoer over de weg (AETR)",
+              "articles": [
+                "Article 8",
+                "Article 1"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBV0006220",
+              "title": "Maritiem arbeidsverdrag, 2006",
+              "articles": [
+                "Voorschrift 3.1",
+                "Regulation 2.3",
+                "Voorschrift 4.4",
+                "Voorschrift 2.2"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0027122",
+              "title": "Handleiding Rijkswet op het Nederlanderschap 2003 toegespitst op het gebruik in Aruba",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0052885",
+              "title": "Maatregelenbeleid COA",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 12.218261249999982,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"mijn or broer or zit or een or gevangenisstraf or uit or onze or vader or is or vorige or week or overleden or kan or hij or toestemming or krijgen or om or de or uitvaart or bij or te or wonen or ook or als or onder or bewaking or zou or moeten or staan or en or maakt or het or wat or rest or van or familie or daarvan or vindt\""
+          ]
+        },
+        {
+          "id": "lesmotor-lesaanduiding",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0008048",
+            "alsoAccept": [],
+            "articles": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "top": [
+            "BWBR0025798",
+            "BWBR0052410",
+            "BWBR0016425",
+            "BWBR0046862",
+            "BWBV0004959"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0025798",
+              "title": "Regeling voertuigen",
+              "articles": [
+                "11.14"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0052410",
+              "title": "Kavelbesluit V windenergiegebied Hollandse Kust (noord)",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0016425",
+              "title": "Intrekkingsbesluit V&W 2004",
+              "articles": [
+                "I"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0046862",
+              "title": "Toelatingskader instrument voor kwaliteitsborging bouw van 22 april 2022",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBV0004959",
+              "title": "Notawisseling tussen de Nederlandse en de Britse Regering inzake de uitoefening van rechten en verplichtingen welke ten aanzien van de in de Bondsrepubliek Duitsland gestationeerde Nederlandse militaire eenheden voortvloeien uit twee op 26 mei 1952 te Bonn gesloten en op 23 oktober 1954 te Parijs herziene Verdragen",
+              "articles": [
+                "7",
+                "17",
+                "4",
+                "11",
+                "39",
+                "8",
+                "12",
+                "41"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 4.130259041999991,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or geef or motorrijlessen or aan or welke or kleur or en or afmetingen or moet or de or lesaanduiding or op or mijn or lesmotor or voldoen or voor or welk or verkeer or die or zichtbaar or zijn\""
+          ]
+        },
+        {
+          "id": "pluimvee-sterfte-melden",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0035248",
+            "alsoAccept": [],
+            "articles": [
+              "3a.2"
+            ]
+          },
+          "top": [
+            "BWBR0046056",
+            "BWBR0032499",
+            "BWBR0053174",
+            "BWBR0045040",
+            "BWBR0046027"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0046056",
+              "title": "Beleidsregel ‘Prestaties en tarieven forensische zorg’",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0032499",
+              "title": "Tariefbeschikking tweedelijns curatieve GGZ",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0053174",
+              "title": "Richtlijn voor strafvordering jeugdigen algemeen",
+              "articles": [],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0045040",
+              "title": "Besluit vaststelling selectielijst Ministerie van Justitie en Veiligheid en rechtsvoorgangers over de periode vanaf 5 mei 1945",
+              "articles": [
+                "2"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0046027",
+              "title": "Beleidsregel prestaties en tarieven gespecialiseerde geestelijke gezondheidszorg",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 6.726240667000005,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or heb or een or bedrijf or met or vleeskuikens or vanaf or welk or sterftepercentage or in or koppel or ben or verplicht or dat or te or melden or en or wanneer or moet or dierenarts or inschakelen\""
+          ]
+        },
+        {
+          "id": "belasting-afschrijving-betaalrekening",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0004766",
+            "alsoAccept": [],
+            "articles": [
+              "1ce"
+            ]
+          },
+          "top": [
+            "BWBR0051391",
+            "BWBR0042072",
+            "BWBR0039354",
+            "BWBR0040775",
+            "BWBR0043347"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0051391",
+              "title": "Kavelbesluit kavel Gamma-B windenergiegebied IJmuiden Ver",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0042072",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2018",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0039354",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2016",
+              "articles": [
+                "2",
+                "5",
+                "4"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0040775",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2017",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0043347",
+              "title": "Regeling vaststelling definitieve correcties duurzame energieproductie 2019",
+              "articles": [
+                "2",
+                "6",
+                "4"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 13.155528290999994,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"de or belastingdienst or heeft or voor or een or openstaande or aanslag or inkomstenbelasting or van or 200 or zonder or beslag or rechtstreeks or geld or mijn or betaalrekening or laten or afschrijven or hoeveel or mag or ontvanger or zo or per or keer or innen or hoe or vaak or maand or en or lang or dat or doorgaan\""
+          ]
+        },
+        {
+          "id": "diplomaat-persoonsgegevens-inzage",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0014172",
+            "alsoAccept": [],
+            "articles": [
+              "10",
+              "11"
+            ]
+          },
+          "top": [
+            "BWBR0052858",
+            "BWBR0050589",
+            "BWBR0024926",
+            "BWBR0049112",
+            "BWBR0041794"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0052858",
+              "title": "Besluit beperkingen openbaarheid archief van het Ministerie van SZW, directie Gemeenschappelijke Organisatie Bedrijfsvoering (GOB), 1996–2009",
+              "articles": [
+                "1"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0050589",
+              "title": "Besluit vaststelling cameraplan voor 2025",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0024926",
+              "title": "Regeling categorieën persoonsgegevens WMG",
+              "articles": [
+                "2",
+                "5",
+                "4"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0049112",
+              "title": "Besluit vaststelling cameraplan 2024",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0041794",
+              "title": "Besluit mandaat, volmacht en machtiging LNV 2019",
+              "articles": [
+                "25",
+                "14"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 18.614342082999997,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or werk or als or attaché or bij or een or buitenlandse or ambassade or in or den or haag or vermoed or dat or het or ministerie or van or zaken or onjuiste or persoonsgegevens or over or mij or heeft or vastgelegd or hoe or kan or inzage or en or verbetering or vragen or binnen or welke or termijn or moet or daarop or worden or beslist\""
+          ]
+        },
+        {
+          "id": "zwangerschapsuitkering-spreekuur-verhuizing",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0020117",
+            "alsoAccept": [],
+            "articles": [
+              "5",
+              "7"
+            ]
+          },
+          "top": [
+            "BWBR0013028",
+            "BWBR0029368",
+            "BWBR0028497",
+            "BWBR0028087",
+            "BWBR0013008"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0013028",
+              "title": "Aanpassing Besluit ziekte en arbeidsongeschiktheid voor onderwijspersoneel primair en voortgezet onderwijs en educatie en beroepsonderwijs (BZA)",
+              "articles": [],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0029368",
+              "title": "Algemeen inkomensbesluit socialezekerheidswetten",
+              "articles": [
+                "3:3",
+                "3:2",
+                "2:4"
+              ],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0028497",
+              "title": "Wet ongevallenverzekering BES",
+              "articles": [
+                "5"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0028087",
+              "title": "Belastingheffing van pensioenen en uitkeringen betaald krachtens het Nederlandse sociale zekerheidsstelsel onder de werking van de Nederlandse belastingverdragen en de Belastingregeling voor het Koninkrijk",
+              "articles": [],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0013008",
+              "title": "Wet arbeid en zorg",
+              "articles": [
+                "3:29",
+                "3:18",
+                "3:8",
+                "3:1",
+                "3:1a"
+              ],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 6.417546250000014,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or ontvang or van or het or uwv or een or uitkering or tijdens or mijn or zwangerschaps or en or bevallingsverlof or ben or opgeroepen or voor or spreekuur or de or verzekeringsarts or maar or kan or die or dag or niet or wat or moet or doen or doorgeven or dat or verlof or ga or verhuizen\""
+          ]
+        },
+        {
+          "id": "tattoo-vergunning-duur-kosten",
+          "difficulty": "obscure",
+          "gold": {
+            "law": "BWBR0021915",
+            "alsoAccept": [],
+            "articles": [
+              "3",
+              "5"
+            ]
+          },
+          "top": [
+            "BWBR0050462",
+            "BWBR0016382",
+            "BWBR0046530",
+            "BWBR0031069",
+            "BWBR0028837"
+          ],
+          "articles": [],
+          "hits": [
+            {
+              "id": "BWBR0050462",
+              "title": "Regeling aanvraag- en veilingprocedure vergunningen niet-landelijke commerciële radio-omroep 2024",
+              "articles": [
+                "1.2"
+              ],
+              "why": "score 0.091"
+            },
+            {
+              "id": "BWBR0016382",
+              "title": "Loonbelasting, vrije vergoedingen en verstrekkingen; extraterritoriale kosten",
+              "articles": [],
+              "why": "score 0.083"
+            },
+            {
+              "id": "BWBR0046530",
+              "title": "Beleidsregel SARS-CoV-2 virus extra kosten Wlz 2022",
+              "articles": [
+                "4"
+              ],
+              "why": "score 0.077"
+            },
+            {
+              "id": "BWBR0031069",
+              "title": "Regeling aanvraag- en veilingprocedure vergunningen 800, 900 en 1800 MHz",
+              "articles": [
+                "2",
+                "26",
+                "12"
+              ],
+              "why": "score 0.071"
+            },
+            {
+              "id": "BWBR0028837",
+              "title": "Circulaire toelating en uitzetting Bonaire, Sint Eustatius en Saba",
+              "articles": [],
+              "why": "score 0.067"
+            }
+          ],
+          "lawAt1": false,
+          "lawAt5": false,
+          "articleRecall": 0,
+          "seconds": 9.697642083000042,
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "apiCalls": 0,
+          "costUsd": 0,
+          "trace": [
+            "query \"ik or wil or een or tattoostudio or openen or en or heb or daarvoor or vergunning or van or de or ggd or nodig or hoe or lang or is or zo or geldig or wat or kost or aanvraag or als or alleen or met or wegwerpmateriaal or werk\""
+          ]
+        }
+      ]
+    }
+  }
+}

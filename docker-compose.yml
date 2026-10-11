@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: legal
+      POSTGRES_PASSWORD: legal
+      POSTGRES_DB: legal
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U legal -d legal"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: ./app
+    # Keys are read at runtime (shared ../.env, then this folder's .env); never copied into the image.
+    env_file:
+      - path: ../.env
+        required: false
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgres://legal:legal@db:5432/legal
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
