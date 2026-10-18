@@ -1,6 +1,7 @@
 import { NEW_CHAT_TITLE, db, uniqueTitle } from "@/lib/db";
 import { CHAT_MODEL, LEGAL_SYSTEM_PROMPT, anthropic } from "@/lib/ai";
 import { lawContext } from "@/lib/lawsearch";
+import { sourcesContext } from "@/lib/sources";
 import { DEFAULT_EFFORT, DEFAULT_LAW_SEARCH, pickEffort, pickLawSearch, pickModel, supportsEffort } from "@/lib/models";
 
 const MAX_DOC_CHARS = 120_000;
@@ -71,20 +72,26 @@ export async function POST(req: Request, ctx: RouteContext<"/api/conversations/[
           answer += text;
           controller.enqueue(encoder.encode(text));
         };
-        // Look up the law articles for this question first (and the previous one, for follow-ups); the
-        // answer then cites them and ends with links. A failed search does not block the answer.
+        // Look up the law articles, and in parallel decisions and rulings (ACM, AP, Kifid, rechtspraak), for this
+        // question first (and the previous one, for follow-ups); the answer then cites them and ends with links.
+        // A failed search does not block the answer.
         // ponytail: blocks the first token for the search time (~8 s for B); stream a status line if that bothers users.
         let law = { block: "", sources: "" };
         let lawError = "";
         const question = history.rows.filter((m: { role: string }) => m.role === "user").slice(-2).map((m: { content: string }) => m.content).join("\n\n").slice(-4000);
+        const sourcesSearch = Promise.resolve()
+          .then(() => sourcesContext(question, anthropic(userKey)))
+          .catch((err) => (console.error("Besluiten en uitspraken zoeken mislukt:", err), { block: "", sources: "" }));
         try {
           law = await lawContext(lawSearch, question, anthropic(userKey));
         } catch (err) {
           lawError = err instanceof Error ? err.message : "onbekend";
         }
-        const fullSystem = law.block
+        const src = await sourcesSearch;
+        let fullSystem = law.block
           ? `${system}\n\nBij deze vraag zijn de volgende geldende wetsartikelen uit het Basiswettenbestand (wetten.overheid.nl) gezocht. Gebruik ze als bron waar ze relevant zijn en verwijs naar regeling en artikel. Zeg het als ze de vraag niet (volledig) beantwoorden; noem dan geen artikelnummers die je niet zeker weet.\n\n<wetgeving>\n${law.block}\n</wetgeving>`
           : system;
+        if (src.block) fullSystem += `\n\nBij deze vraag zijn ook besluiten en uitspraken gezocht bij de ACM, de Autoriteit Persoonsgegevens, het Kifid en rechtspraak.nl (per document het begin van de tekst). Gebruik ze als bron waar ze relevant zijn en noem een besluit of uitspraak bij naam (instantie, partij, nummer of ECLI) en datum. Zeg het als ze de vraag niet (volledig) beantwoorden; noem dan geen andere besluiten of uitspraken waarvan je niet zeker weet dat ze bestaan.\n\n<besluiten_en_uitspraken>\n${src.block}\n</besluiten_en_uitspraken>`;
         // Effort sets thinking depth (thinking can't be disabled on Opus 5.5). On a safety
         // refusal the API retries server-side on Anthropic's recommended fallback model.
         const stream = anthropic(userKey).beta.messages.stream({
@@ -121,6 +128,7 @@ export async function POST(req: Request, ctx: RouteContext<"/api/conversations/[
         if ((await stream.finalMessage()).stop_reason === "refusal") send("\n\n[Het model heeft dit verzoek geweigerd.]");
         if (law.sources) send(`\n\n---\n**Gezochte wetgeving (aanpak ${lawSearch.toUpperCase()}):**\n${law.sources}`);
         else if (lawError) send(`\n\n---\n_Wetgeving zoeken (aanpak ${lawSearch.toUpperCase()}) mislukt: ${lawError}_`);
+        if (src.sources) send(`${law.sources || lawError ? "" : "\n\n---"}\n\n**Gezochte besluiten en uitspraken:**\n${src.sources}`);
       } catch (err) {
         const msg = `\n\n[Fout bij AI-verzoek: ${err instanceof Error ? err.message : "onbekend"}]`;
         answer += msg;
