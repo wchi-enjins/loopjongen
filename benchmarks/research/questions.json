@@ -1,0 +1,77 @@
+{
+  "_doc": "Research-answer benchmark for deep search: Moonlit's 5 questions (Dutch text exactly as sent on 2026-10-10). 'reference' lists what Moonlit Luna found (competitor research/moonlit-raw/2026-10-10-5-questions.md). It is a REFERENCE, not gold: nothing was verified independently, and Moonlit's own claim check flagged some of it. 'gaps' are things Moonlit said it could not find; an honest 'not found' there is a correct answer unless a source proves otherwise. Score with rubric.md.",
+  "questions": [
+    {
+      "id": "acm-dark-patterns",
+      "question": "Welke besluiten en boetes heeft de ACM opgelegd aan webshops voor misleidende kortingen, nep-afteltimers of andere dark patterns? Noem per zaak het bedrijf, jaar en de geschonden bepaling.",
+      "portals": ["acm.nl", "rechtspraak.nl"],
+      "verified": false,
+      "reference": [
+        "2024 fake-discount fines: Day Traders/Koopjedeal EUR 163,000; Leen Bakker EUR 130,000; G-Star EUR 110,000; JYSK EUR 112,500; Tommy Hilfiger EUR 105,500",
+        "Koopjedeal breached art. 2b lid 2 Prijzenwet jo. art. 5a lid 1 Besluit prijsaanduiding producten (research found the same in the JYSK PDF, plus art. 2.9 Whc)",
+        "Court confirmed the Leen Bakker and Koopjedeal fines (ACM press release 13 Nov 2025)",
+        "Epic Games (Fortnite), decision 18 Dec 2023: EUR 562,500 for misleading timers (art. 8.8 Whc jo. 6:193g onder g BW), EUR 562,500 for direct exhortation to children (art. 8.8 Whc jo. 6:193i onder e BW), binding instruction on Item Shop dark pattern (6:193b lid 2 BW); objection unfounded 27 Nov 2024",
+        "TrendX 2022: EUR 100,000 for fake reviews and unclear delivery times",
+        "Vodafone 2019: EUR 1,159,000 (6:193d jo. 6:193e onder c BW) and EUR 1,961,500 (6:193c lid 1 onder d BW), both jo. art. 8.8 Whc",
+        "Countdown timers 2023: dozens of webshops addressed, no fines, no names"
+      ],
+      "gaps": ["ECLI of the court ruling on Leen Bakker/Koopjedeal not found by Moonlit"]
+    },
+    {
+      "id": "ap-cookies",
+      "question": "Wat zegt de Autoriteit Persoonsgegevens over tracking cookies en cookiewalls, en welke boetes heeft de AP hiervoor opgelegd? Hoe verhoudt zich dat tot art. 11.7a Telecommunicatiewet?",
+      "portals": ["autoriteitpersoonsgegevens.nl", "wetten.overheid.nl"],
+      "verified": false,
+      "reference": [
+        "Tracking cookies need prior consent; cookie walls not allowed; pre-ticked boxes or 'by continuing you agree' are not valid consent",
+        "Kruidvat (A.S. Watson): EUR 600,000 for art. 6 lid 1 jo. 5 lid 1 onder a AVG, lowered to EUR 50,000 on objection; primary decision dated 2 or 3 May 2024 (sources differ)",
+        "Coolblue: fine for art. 5 lid 1 jo. 6 lid 1 AVG, set at EUR 40,000 on objection",
+        "Art. 11.7a Tw requires information and consent 'onverminderd de AVG'; ACM supervises 11.7a, AP supervises the AVG; for tracking cookies the regulators agreed AP takes the lead",
+        "Only enforcement on 11.7a itself found: ACM order subject to penalty against NPO (2014)"
+      ],
+      "gaps": []
+    },
+    {
+      "id": "bnpl-ccd2",
+      "question": "Vanaf wanneer valt achteraf betalen (BNPL) onder AFM-toezicht door de herziene Consumentenkredietrichtlijn (CCD2), en wat is de status van de Nederlandse implementatiewet? Zijn er Kifid-uitspraken over achteraf betalen of incassokosten?",
+      "portals": ["afm.nl", "kifid.nl", "zoek.officielebekendmakingen.nl"],
+      "verified": false,
+      "reference": [
+        "BNPL falls under the Wft from 20 Nov 2026; licence under art. 2:60 Wft",
+        "Bill 36924: submitted 2 Apr 2026, nota n.a.v. verslag 23 Jun, wetgevingsoverleg 28 Sep, amended bill to the Eerste Kamer 6 Oct 2026; adoption not established. MvT says entry into force 26 Nov 2026, Kamerbrief says 20 Nov 2026",
+        "HR 26 May 2023, ECLI:NL:HR:2023:778 and HR 27 Jun 2025, ECLI:NL:HR:2025:1008 (art. 7:58 lid 2 onder e BW)",
+        "Kifid 2026-0304 and 2026-0305 (Klarna): credit agreement annulled under art. 3:40 lid 2 BW for not meeting art. 7:60/7:61 BW",
+        "Kifid 2026-0861 and 2026-0953 (Klarna): complaint not admissible, exemption art. 1:20 lid 1 onder e Wft (old)"
+      ],
+      "gaps": []
+    },
+    {
+      "id": "influencers-crm",
+      "question": "Wat zijn de regels van de Reclamecode voor influencers die onze achteraf-betaaldienst promoten, met voorbeelden van RCC-uitspraken? En heeft het College voor de Rechten van de Mens geoordeeld over discriminatie door algoritmische kredietchecks of risicoprofilering?",
+      "portals": ["reclamecode.nl", "oordelen.mensenrechten.nl"],
+      "verified": false,
+      "reference": [
+        "RSM art. 3 onder a en b (disclose advertising and relevant relationship), art. 6 (advertiser duty of care); examples: Tylko 2026, Fanatec 2019, Gentle Skincare 2024, Basic-Fit 2026",
+        "Credit advertising: missing 'Let op! Geld lenen kost geld' breaches art. 2 NRC; BNPL without mentioning a credit check breaches art. 7 NRC",
+        "College: Santander 2019-2 (indirect distinction on nationality); ING 2024-62/2024-63 (race), 2024-100 (nationality), 2026-78 (justified); Breeze 2023-82; test under art. 1 Awgb"
+      ],
+      "gaps": [
+        "No RCC ruling on influencers promoting BNPL",
+        "No College ruling on algorithmic credit checks specifically"
+      ]
+    },
+    {
+      "id": "vat-oss-bnpl",
+      "question": "Welke btw-regels gelden voor onze verkopen aan consumenten in andere EU-landen (OSS), en zijn er standpunten van de Belastingdienst-kennisgroepen of rechtspraak over het btw-moment bij achteraf betalen?",
+      "portals": ["kennisgroepen.belastingdienst.nl", "uitspraken.rechtspraak.nl"],
+      "verified": false,
+      "reference": [
+        "Distance sales taxed where goods arrive (art. 5a lid 1 onder a Wet OB); EUR 10,000 threshold (art. 6k Wet OB)",
+        "OSS (Unieregeling): quarterly electronic return, also in quarters without sales",
+        "VAT moment (art. 13 Wet OB): at invoice if invoicing is required, otherwise at delivery or payment; due at the latest one year after the payment fell due; transfer of receivables to a BNPL provider",
+        "A-G opinion 26 Jun 2014, ECLI:NL:PHR:2014:688"
+      ],
+      "gaps": ["No kennisgroep position or case law on the VAT moment for BNPL"]
+    }
+  ]
+}

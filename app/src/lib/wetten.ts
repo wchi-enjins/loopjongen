@@ -1,7 +1,7 @@
 import { attrsOf, childrenOf, flatten, parseOrdered, parsePlain, tagOf, tidy, type XNode } from "./xml";
 
 const SRU = "https://zoekservice.overheid.nl/sru/Search";
-const HEADERS = { Accept: "application/xml", "User-Agent": "loopjongen-bwb/1.0 (+wesselchi123@gmail.com)" };
+export const HEADERS = { Accept: "application/xml", "User-Agent": "loopjongen-bwb/1.0 (+wesselchi123@gmail.com)" };
 const today = () => new Date().toISOString().slice(0, 10);
 
 export type LawHit = {
