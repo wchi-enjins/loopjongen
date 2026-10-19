@@ -4,7 +4,7 @@
  *
  *   node --import ./benchmarks/law-retrieval/resolve-ts.mjs benchmarks/law-retrieval/run.ts --dry
  *       validate the gold set (ids in manifest, articles via getLaw), no Claude calls
- *   node --import ./benchmarks/law-retrieval/resolve-ts.mjs benchmarks/law-retrieval/run.ts [--approach a|b|b-raw|c|b-then-a|a-and-b] [--case <id>]... [--out <name>]
+ *   node --import ./benchmarks/law-retrieval/resolve-ts.mjs benchmarks/law-retrieval/run.ts [--approach a|b|b-raw|c|b-then-a|a-and-b|deep] [--case <id>]... [--out <name>]
  *       --approach may be repeated; --out writes results/<name>.{json,md} (default: the date);
  *       --compare <name> adds the summaries from results/<name>.json to the first table
  *       full run (costs API credit; needs ANTHROPIC_API_KEY from .env)
@@ -33,6 +33,7 @@ const APPROACHES: Record<string, [string, string]> = {
   c: ["c-catalog/search.ts", "search"],
   "b-then-a": ["hybrid/search.ts", "searchFallback"],
   "a-and-b": ["hybrid/search.ts", "searchBoth"],
+  deep: ["deep/search.ts", "search"],
 };
 const MODEL = process.env.LAW_MODEL ?? "claude-opus-5-5";
 const PRICE = { input: 4 / 1e6, output: 20 / 1e6 }; // claude-opus-5-5, USD per token
@@ -45,7 +46,8 @@ const normFor = (law: string, label: string) => (BW.has(law) ? norm(label).repla
 
 const selected = questions.filter((q) => !only.length || only.includes(q.id));
 if (!selected.length) throw new Error(`Geen vraag ${only.join(", ")}`);
-const approaches = approachArgs.length ? approachArgs : Object.keys(APPROACHES);
+// deep is left out of the default run because it is much more expensive; pass --approach deep to run it.
+const approaches = approachArgs.length ? approachArgs : Object.keys(APPROACHES).filter((a) => a !== "deep");
 for (const a of approaches) if (!APPROACHES[a]) throw new Error(`Onbekende aanpak ${a} (${Object.keys(APPROACHES).join("|")})`);
 
 // Validate the gold set before spending anything.
@@ -283,4 +285,4 @@ writeFileSync(new URL(`results/${out}.json`, dir), JSON.stringify(json, null, 2)
 writeFileSync(new URL(`results/${out}.md`, dir), lines.join("\n") + "\n");
 console.log(`\n${Object.entries(results).map(([a, rows]) => sumRow(a, summary(rows))).join("\n")}\nRapport: ${new URL(`results/${out}.md`, dir).pathname}`);
 // b-fulltext keeps a Postgres pool open; close it so node exits.
-if (approaches.some((a) => a.includes("b"))) await (await import(new URL("b-fulltext/search.ts", dir).href)).pool.end();
+if (approaches.some((a) => a.includes("b") || a === "deep")) await (await import(new URL("b-fulltext/search.ts", dir).href)).pool.end();
