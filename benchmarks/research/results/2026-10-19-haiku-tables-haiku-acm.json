@@ -1,0 +1,822 @@
+{
+  "date": "2026-10-19",
+  "stages": {
+    "loop": true,
+    "table": true,
+    "quotes": true,
+    "check": true
+  },
+  "questions": [
+    {
+      "id": "acm-dark-patterns",
+      "question": "Welke besluiten en boetes heeft de ACM opgelegd aan webshops voor misleidende kortingen, nep-afteltimers of andere dark patterns? Noem per zaak het bedrijf, jaar en de geschonden bepaling.",
+      "result": {
+        "docs": [
+          {
+            "key": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "title": "ACM legt boetes op aan webwinkels voor nepkortingen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal",
+            "title": "Rechtbank bevestigt boetes ACM voor nepkortingen Leen Bakker en Koopjedeal",
+            "url": "https://www.acm.nl/nl/publicaties/rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-waarschuwt-voor-nepkortingen",
+            "title": "ACM waarschuwt voor nepkortingen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-waarschuwt-voor-nepkortingen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-wil-einde-aan-nepkortingen-na-komst-strengere-regels",
+            "title": "ACM wil einde aan nepkortingen na komst strengere regels",
+            "url": "https://www.acm.nl/nl/publicaties/acm-wil-einde-aan-nepkortingen-na-komst-strengere-regels",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-pakt-webwinkels-aan-die-nepkortingen-gebruiken",
+            "title": "ACM pakt webwinkels aan die nepkortingen gebruiken",
+            "url": "https://www.acm.nl/nl/publicaties/acm-pakt-webwinkels-aan-die-nepkortingen-gebruiken",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen",
+            "title": "ACM publiceert boetebesluiten webwinkels voor nepkortingen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken",
+            "title": "ACM spreekt webshops aan die misleidende countdowntimers gebruiken",
+            "url": "https://www.acm.nl/nl/publicaties/acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken",
+            "source": "acm"
+          },
+          {
+            "key": "acm:boete-voor-belvilla-voor-misleidende-prijsvermelding",
+            "title": "Boete voor Belvilla voor misleidende prijsvermelding",
+            "url": "https://www.acm.nl/nl/publicaties/boete-voor-belvilla-voor-misleidende-prijsvermelding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding",
+            "title": "ACM: aanpak verkoop nepreviews nieuwe stap in bestrijding online misleiding",
+            "url": "https://www.acm.nl/nl/publicaties/acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-beboet-webwinkel-trendx-voor-misleiden-consumenten",
+            "title": "ACM beboet webwinkel TrendX voor misleiden consumenten",
+            "url": "https://www.acm.nl/nl/publicaties/acm-beboet-webwinkel-trendx-voor-misleiden-consumenten",
+            "source": "acm"
+          },
+          {
+            "key": "acm:boete-voor-oneerlijke-handelspraktijken-trendx",
+            "title": "Boete voor oneerlijke handelspraktijken TrendX",
+            "url": "https://www.acm.nl/nl/publicaties/boete-voor-oneerlijke-handelspraktijken-trendx",
+            "source": "acm"
+          },
+          {
+            "key": "acm:boete-house-tickets-voor-misleiding-bij-online-veilingen",
+            "title": "Boete House of Tickets voor misleiding bij online veilingen",
+            "url": "https://www.acm.nl/nl/publicaties/boete-house-tickets-voor-misleiding-bij-online-veilingen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:boete-kpn-voor-oneerlijke-handelspraktijken-op-websites",
+            "title": "Boete KPN voor oneerlijke handelspraktijken op websites",
+            "url": "https://www.acm.nl/nl/publicaties/boete-kpn-voor-oneerlijke-handelspraktijken-op-websites",
+            "source": "acm"
+          },
+          {
+            "key": "acm:boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding",
+            "title": "Boete besluit voor Belvilla voor misleidende prijsvermelding",
+            "url": "https://www.acm.nl/nl/publicaties/boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-geeft-update-spelregels-tegen-online-misleiding",
+            "title": "ACM geeft update spelregels tegen online misleiding",
+            "url": "https://www.acm.nl/nl/publicaties/acm-geeft-update-spelregels-tegen-online-misleiding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-webwinkel-boxershorts-ass-moet-duidelijker-zijn-over-abonnement",
+            "title": "ACM: webwinkel boxershorts On that ass moet duidelijker zijn over abonnement",
+            "url": "https://www.acm.nl/nl/publicaties/acm-webwinkel-boxershorts-ass-moet-duidelijker-zijn-over-abonnement",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-stelt-grenzen-aan-online-misleiding",
+            "title": "ACM stelt grenzen aan online misleiding",
+            "url": "https://www.acm.nl/nl/publicaties/acm-stelt-grenzen-aan-online-misleiding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:de-acm-beboet-reisbemiddelaar-tix-voor-oneerlijke-handelspraktijk",
+            "title": "De ACM beboet reisbemiddelaar Tix voor oneerlijke handelspraktijk",
+            "url": "https://www.acm.nl/nl/publicaties/de-acm-beboet-reisbemiddelaar-tix-voor-oneerlijke-handelspraktijk",
+            "source": "acm"
+          },
+          {
+            "key": "acm:telecomaanbieders-maken-opzeggen-abonnementen-makkelijker-na-actie-acm",
+            "title": "Telecomaanbieders maken opzeggen abonnementen makkelijker na actie ACM",
+            "url": "https://www.acm.nl/nl/publicaties/telecomaanbieders-maken-opzeggen-abonnementen-makkelijker-na-actie-acm",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-beboet-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "title": "ACM beboet Epic voor oneerlijke praktijken gericht op kinderen in Fortnite",
+            "url": "https://www.acm.nl/nl/publicaties/acm-beboet-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "source": "acm"
+          },
+          {
+            "key": "acm:wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm",
+            "title": "Wish stopt met schijnkortingen en prijspersonalisatie na actie ACM",
+            "url": "https://www.acm.nl/nl/publicaties/wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen",
+            "title": "ACM en Europese consumententoezichthouders: SHEIN moet website aanpassen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming",
+            "title": "ACM dwingt webwinkel Sneakerstad te voldoen aan regels consumentenbescherming",
+            "url": "https://www.acm.nl/nl/publicaties/acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op",
+            "title": "ACM legt webwinkel Sneakerstad last onder dwangsom op",
+            "url": "https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op",
+            "source": "acm"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBROT:2026:171",
+            "title": "Rechtbank Rotterdam 2026-01-14, ECLI:NL:RBROT:2026:171",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2026:171",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "acm:acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen",
+            "title": "ACM beboet meubelverkoper Seats and Sofas voor misleidende prijzen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen",
+            "title": "ACM ziet nog veel misleidende kortingen en adviseert: eerst checken, dan bestellen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-wil-eerlijke-kortingen-om-consumenten-te-beschermen-tegen-misleiding",
+            "title": "ACM wil eerlijke kortingen om consumenten te beschermen tegen misleiding",
+            "url": "https://www.acm.nl/nl/publicaties/acm-wil-eerlijke-kortingen-om-consumenten-te-beschermen-tegen-misleiding",
+            "source": "acm"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBROT:2025:12968",
+            "title": "Rechtbank Rotterdam 2025-11-11, ECLI:NL:RBROT:2025:12968",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2025:12968",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBROT:2025:12967",
+            "title": "Rechtbank Rotterdam 2025-11-11, ECLI:NL:RBROT:2025:12967",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2025:12967",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "acm:beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal",
+            "title": "Beslissing op bezwaar boetebesluit Day Traders (Koopjedeal)",
+            "url": "https://www.acm.nl/nl/publicaties/beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal",
+            "source": "acm"
+          },
+          {
+            "key": "acm:de-acm-en-andere-europese-consumententoezichthouders-gaan-harder-optreden-om-gamers-te-beschermen-tegen-misleiding",
+            "title": "De ACM en andere Europese consumententoezichthouders gaan harder optreden om gamers te beschermen tegen misleiding",
+            "url": "https://www.acm.nl/nl/publicaties/de-acm-en-andere-europese-consumententoezichthouders-gaan-harder-optreden-om-gamers-te-beschermen-tegen-misleiding",
+            "source": "acm"
+          },
+          {
+            "key": "acm:uitspraak-cbb-boete-misleidende-handelspraktijken-volkswagen",
+            "title": "Uitspraak CBb boete misleidende handelspraktijken Volkswagen",
+            "url": "https://www.acm.nl/nl/publicaties/uitspraak-cbb-boete-misleidende-handelspraktijken-volkswagen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels",
+            "title": "EU toezichthouders: Temu moet zich houden aan consumentenregels",
+            "url": "https://www.acm.nl/nl/publicaties/eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels",
+            "source": "acm"
+          },
+          {
+            "key": "acm:bol-doet-toezeggingen-aan-acm-die-consumenten-en-verkopers-meer-beschermen",
+            "title": "Bol doet toezeggingen aan ACM die consumenten en verkopers meer beschermen",
+            "url": "https://www.acm.nl/nl/publicaties/bol-doet-toezeggingen-aan-acm-die-consumenten-en-verkopers-meer-beschermen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:naleving-leidraad-bescherming-online-consument-onderzoek-onder-webshops",
+            "title": "Naleving Leidraad Bescherming Online Consument Onderzoek onder webshops",
+            "url": "https://www.acm.nl/nl/publicaties/naleving-leidraad-bescherming-online-consument-onderzoek-onder-webshops",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-legt-webwinkel-we-love-musthaves-last-onder-dwangsom-op",
+            "title": "ACM legt webwinkel We Love Musthaves last onder dwangsom op",
+            "url": "https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-we-love-musthaves-last-onder-dwangsom-op",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-legt-webwinkel-kjekk-last-onder-dwangsom-op",
+            "title": "ACM legt webwinkel Kjekk last onder dwangsom op",
+            "url": "https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-kjekk-last-onder-dwangsom-op",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op",
+            "title": "ACM legt webwinkel Ti-84shop last onder dwangsom op",
+            "url": "https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op",
+            "source": "acm"
+          },
+          {
+            "key": "acm:leidraad-bescherming-online-consument",
+            "title": "Leidraad Bescherming online consument",
+            "url": "https://www.acm.nl/nl/publicaties/leidraad-bescherming-online-consument",
+            "source": "acm"
+          },
+          {
+            "key": "bwb:BWBR0005289:193b",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193b",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193b",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0005289:193c",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193c",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193c",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0005289:193d",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193d",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193d",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0005289:193g",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193g",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193g",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0005289:193i",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193i",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193i",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0005289:193j",
+            "title": "Burgerlijk Wetboek Boek 6, art. 193j",
+            "url": "https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193j",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0015104:5a",
+            "title": "Besluit prijsaanduiding producten, art. 5a",
+            "url": "https://wetten.overheid.nl/BWBR0015104/2023-01-01#Artikel5a",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0020586:2.9",
+            "title": "Wet handhaving consumentenbescherming, art. 2.9",
+            "url": "https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk2_Paragraaf2_Artikel2.9",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0020586:2.15",
+            "title": "Wet handhaving consumentenbescherming, art. 2.15",
+            "url": "https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk2_Paragraaf2_Artikel2.15",
+            "source": "bwb"
+          },
+          {
+            "key": "bwb:BWBR0020586:8.8",
+            "title": "Wet handhaving consumentenbescherming, art. 8.8",
+            "url": "https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk8_Artikel8.8",
+            "source": "bwb"
+          },
+          {
+            "key": "acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "title": "Sancties Epic voor oneerlijke praktijken gericht op kinderen in Fortnite",
+            "url": "https://www.acm.nl/nl/publicaties/sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "source": "acm"
+          },
+          {
+            "key": "acm:gebruikers-moeten-amazon-prime-twee-klikken-op-kunnen-zeggen",
+            "title": "Gebruikers moeten Amazon Prime in twee klikken op kunnen zeggen",
+            "url": "https://www.acm.nl/nl/publicaties/gebruikers-moeten-amazon-prime-twee-klikken-op-kunnen-zeggen",
+            "source": "acm"
+          },
+          {
+            "key": "acm:webwinkels-we-love-musthaves-en-bluegood-moeten-hun-klanten-duidelijker-informeren",
+            "title": "Webwinkels We Love Musthaves en Bluegood moeten hun klanten duidelijker informeren",
+            "url": "https://www.acm.nl/nl/publicaties/webwinkels-we-love-musthaves-en-bluegood-moeten-hun-klanten-duidelijker-informeren",
+            "source": "acm"
+          },
+          {
+            "key": "acm:acm-beboet-dropshipper-voor-onduidelijke-informatie-over-leveren-en-retourneren-bestellingen",
+            "title": "ACM beboet dropshipper voor onduidelijke informatie over leveren en retourneren bestellingen",
+            "url": "https://www.acm.nl/nl/publicaties/acm-beboet-dropshipper-voor-onduidelijke-informatie-over-leveren-en-retourneren-bestellingen",
+            "source": "acm"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBROT:2019:4155",
+            "title": "Rechtbank Rotterdam 2019-05-23, ECLI:NL:RBROT:2019:4155",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2019:4155",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "acm:boetebesluit-gt-ecom-vanwege-onduidelijke-informatie-op-website",
+            "title": "Boetebesluit GT Ecom vanwege onduidelijke informatie op website",
+            "url": "https://www.acm.nl/nl/publicaties/boetebesluit-gt-ecom-vanwege-onduidelijke-informatie-op-website",
+            "source": "acm"
+          },
+          {
+            "key": "acm:website-cvmaker-voortaan-duidelijk-over-kosten-voor-gebruikers-na-actie-acm",
+            "title": "Website CVmaker voortaan duidelijk over kosten voor gebruikers na actie ACM",
+            "url": "https://www.acm.nl/nl/publicaties/website-cvmaker-voortaan-duidelijk-over-kosten-voor-gebruikers-na-actie-acm",
+            "source": "acm"
+          }
+        ],
+        "laws": [
+          {
+            "id": "BWBR0005289",
+            "title": "Burgerlijk Wetboek Boek 6",
+            "articles": [
+              "193g",
+              "193c",
+              "193b",
+              "193i",
+              "193d",
+              "193j"
+            ],
+            "why": "Afdeling 6.3A BW bevat de normen voor misleidende en agressieve handelspraktijken: de zwarte lijst (onder g timers, onder v en aa reviews en biedbots) en misleiding over prijs (6:193c lid 1 onder d), waarop de ACM-besluiten tegen Epic, TrendX, House of Tickets, Seats and Sofas, Sneakerstad en TI84shop berusten."
+          },
+          {
+            "id": "BWBR0020586",
+            "title": "Wet handhaving consumentenbescherming",
+            "articles": [
+              "8.8",
+              "2.15",
+              "2.9"
+            ],
+            "why": "De Whc verbiedt in art. 8.8 oneerlijke handelspraktijken, geeft in art. 2.9 de bevoegdheid tot boete of dwangsom en legt in art. 2.15 het boetemaximum vast (10% van de omzet bij 6:193g/6:193i)."
+          },
+          {
+            "id": "BWBR0015104",
+            "title": "Besluit prijsaanduiding producten",
+            "articles": [
+              "5a",
+              "3",
+              "4"
+            ],
+            "why": "Het Besluit prijsaanduiding producten bevat de dertig-dagen-regel voor van-voor-prijzen (art. 5a), geschonden door Leen Bakker en Koopjedeal, en de prijsvermeldingsplicht (art. 3 en 4), geschonden door Seats and Sofas."
+          }
+        ],
+        "trace": [
+          "text: **Plan vóór het zoeken** 1. **Misleidende kortingen (nepkortingen, referentieprijzen):** ACM-besluiten en boetes op grond van de oneerlijke-handelspraktijkenregels (art. 6:193c en 6:193d BW, prijsaanduiding). Ook relevant: Prijsaanduidingsregels. 2. **Nep-afteltimers en valse schaarste/urgentie:** a",
+          "search_sources \"aftelklok\" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"nepkorting\" [acm,ap,kifid,rechtspraak]: acm 6, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"dark patterns\" [acm,ap,kifid,rechtspraak]: acm 1, ap 1, kifid 0, rechtspraak 6",
+          "search_sources \"referentieprijs\" [acm,ap,kifid,rechtspraak]: acm 10, ap 2, kifid 6, rechtspraak 20",
+          "search_sources \"webshop boete\" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 1, rechtspraak 20",
+          "search_sources \"oneerlijke handelspraktijk webwinkel\" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 2, rechtspraak 20",
+          "search_sources \"misleidende korting boete\" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 10, rechtspraak 20",
+          "search_sources \"valse urgentie\" [acm,ap,kifid,rechtspraak]: acm 0, ap 1, kifid 6, rechtspraak 20",
+          "text: De eerste zoekronde levert een duidelijke kern op: een reeks ACM-zaken over nepkortingen (2023–2026, met Leen Bakker en Koopjedeal), en losse boetes voor Belvilla, House Tickets en TrendX. Ik lees nu de primaire documenten.",
+          "read_document acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen: 4685 chars",
+          "read_document acm:rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal: 1941 chars",
+          "read_document acm:acm-waarschuwt-voor-nepkortingen: 4386 chars",
+          "read_document acm:acm-wil-einde-aan-nepkortingen-na-komst-strengere-regels: 3750 chars",
+          "read_document acm:acm-pakt-webwinkels-aan-die-nepkortingen-gebruiken: 3730 chars",
+          "read_document acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen: 144931 chars",
+          "text: De ACM-besluiten over nepkortingen zijn nu goed in beeld. Ik zoek nu naar de andere categorieën (nepreviews, schaarste en aftelklokken, verborgen kosten, abonnementsvallen) en lees de overige ACM-zaken uit de eerste ronde.",
+          "search_sources \"nepreviews\" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 10",
+          "search_sources \"countdown\" [acm,ap,kifid,rechtspraak]: acm 4, ap 0, kifid 0, rechtspraak 15",
+          "search_sources \"abonnementsval\" [acm,ap,kifid,rechtspraak]: acm 10, ap 3, kifid 0, rechtspraak 0",
+          "search_sources \"Belvilla\" [acm,ap,kifid,rechtspraak]: acm 2, ap 0, kifid 0, rechtspraak 13",
+          "search_sources \"TrendX\" [acm,ap,kifid,rechtspraak]: acm 10, ap 1, kifid 10, rechtspraak 20",
+          "search_sources \"schaarste\" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 7, rechtspraak 20",
+          "search_sources \"online misleiding boete\" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 8, rechtspraak 20",
+          "search_sources \"verborgen kosten\" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 10, rechtspraak 20",
+          "text: Er is een belangrijke nieuwe lead: een ACM-bericht over webshops met misleidende countdowntimers (2023-06-27). Ik lees dat bericht, de nepreviews-zaak, de Belvilla- en House Tickets-besluiten, en de TrendX- en Tix-zaken.",
+          "read_document acm:acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken: 3072 chars",
+          "read_document acm:boete-voor-belvilla-voor-misleidende-prijsvermelding: 1937 chars",
+          "read_document acm:acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding: 4924 chars",
+          "read_document acm:acm-beboet-webwinkel-trendx-voor-misleiden-consumenten: 3874 chars",
+          "read_document acm:boete-voor-oneerlijke-handelspraktijken-trendx: 37931 chars",
+          "read_document acm:boete-house-tickets-voor-misleiding-bij-online-veilingen: 17518 chars",
+          "text: Het beeld over countdowntimers is nuanceringsrijk: de ACM heeft 41 gevallen aangesproken, maar in dit bericht staat geen boete. Ik moet nog controleren of er daarna wel boetes zijn opgelegd. Eerst lees ik de vervolgdocumenten: Belvilla (2024 en 2026), Tix, KPN-websites, de ASS-webwinkel en de Leidra",
+          "read_document acm:boete-kpn-voor-oneerlijke-handelspraktijken-op-websites: 1666 chars",
+          "read_document acm:boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding: 1831 chars",
+          "read_document acm:acm-geeft-update-spelregels-tegen-online-misleiding: 5787 chars",
+          "read_document acm:acm-webwinkel-boxershorts-ass-moet-duidelijker-zijn-over-abonnement: 2237 chars",
+          "read_document acm:acm-stelt-grenzen-aan-online-misleiding: 4732 chars",
+          "read_document acm:de-acm-beboet-reisbemiddelaar-tix-voor-oneerlijke-handelspraktijk: 20083 chars",
+          "text: Dit levert nieuwe leads op: de Belvilla-zaak van 2017 (€325.000), Sneakerstad, Wish (schijnkortingen) en de ACM-zaak tegen Epic. Ik controleer de Belvilla-boete van 2026 en zoek naar Sneakerstad, Wish en de Epic-zaak.",
+          "read_document {\"key\":\"acm:boete-voor-belvilla-voor-misleidende-prijsvermelding-2026\"}: error www.acm.nl gaf status 404",
+          "search_sources \"Wish schijnkortingen\" [acm,ap,kifid,rechtspraak]: acm 10, ap 1, kifid 0, rechtspraak 0",
+          "search_sources \"Epic Fortnite boete\" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 1",
+          "search_sources \"Sneakerstad\" [acm,ap,kifid,rechtspraak]: acm 2, ap 0, kifid 0, rechtspraak 1",
+          "search_sources \"opzeggen abonnement twee klikken\" [acm,ap,kifid,rechtspraak]: acm 5, ap 0, kifid 0, rechtspraak 13",
+          "search_sources \"Shein\" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 3, rechtspraak 13",
+          "text: Ik lees nu de Sneakerstad-, Wish-, Epic- en Shein-zaken en de telecom-opzegging. Let op: de datums in de zoekindex voor Belvilla wijken af van de inhoud van de besluiten (2017 in plaats van 2024/2026); ik noteer die afwijking.",
+          "read_document acm:telecomaanbieders-maken-opzeggen-abonnementen-makkelijker-na-actie-acm: 4786 chars",
+          "read_document acm:acm-beboet-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite: 6113 chars",
+          "read_document acm:wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm: 3591 chars",
+          "read_document acm:acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen: 10814 chars",
+          "read_document acm:acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming: 4910 chars",
+          "read_document acm:acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op: 69403 chars",
+          "text: Epic (Fortnite) is een belangrijke dark-pattern-zaak: boete van €1.125.000 mede wegens misleidende aftelklokken. Epic is geen webwinkel, maar de ACM gebruikt daar expliciet de term 'dark pattern', dus ik neem het op als aanvullende categorie. Nu zoek ik de rechterlijke uitspraken over de nepkortinge",
+          "read_document rechtspraak:ECLI:NL:RBROT:2026:171: 39789 chars",
+          "search_sources \"Day Traders Koopjedeal\" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"Tommy Hilfiger PVH boete\" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 0, rechtspraak 1",
+          "search_sources \"aftelteller misleidend\" [acm,ap,kifid,rechtspraak]: acm 10, ap 7, kifid 0, rechtspraak 0",
+          "search_sources \"van-prijs Prijzenwet korting\" [acm,ap,kifid,rechtspraak]: acm 2, ap 0, kifid 0, rechtspraak 7",
+          "search_sources \"Leen Bakker boete\" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 10, rechtspraak 20",
+          "text: De rechtbankuitspraken over Leen Bakker en Koopjedeal (ROT 24/7554 en ROT 24/9212) zijn gevonden, plus een nieuwe ACM-boete tegen meubelverkoper Seats and Sofas (2026). Ik lees die, de beslissing op bezwaar van Koopjedeal, en de ACM-berichten over nog-veel-misleidende-kortingen (2025).",
+          "read_document acm:acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen: 3078 chars",
+          "read_document acm:acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen: 4782 chars",
+          "read_document acm:acm-wil-eerlijke-kortingen-om-consumenten-te-beschermen-tegen-misleiding: 3820 chars",
+          "read_document rechtspraak:ECLI:NL:RBROT:2025:12968: 39215 chars",
+          "read_document rechtspraak:ECLI:NL:RBROT:2025:12967: 63313 chars",
+          "read_document acm:beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal: 32941 chars",
+          "text: Nu heb ik de kern van de nepkortingen-zaken bevestigd, inclusief de rechterlijke toetsing. Ik zoek nog naar: het CBb-arrest over Volkswagen, de ACM-gamersaanpak (2026), de Leidraad Bescherming Online Consument (die de norm voor aftelklokken en dark patterns geeft), Temu, en eventuele dwangsommen teg",
+          "read_document acm:de-acm-en-andere-europese-consumententoezichthouders-gaan-harder-optreden-om-gamers-te-beschermen-tegen-misleiding: 5826 chars",
+          "read_document acm:uitspraak-cbb-boete-misleidende-handelspraktijken-volkswagen: 2840 chars",
+          "search_sources \"Temu consumentenregels\" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 0, rechtspraak 0",
+          "search_sources \"last onder dwangsom webwinkel\" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 0, rechtspraak 20",
+          "search_sources \"countdown timer misleidend webshop\" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"leidraad bescherming online consument\" [acm,ap,kifid,rechtspraak]: acm 10, ap 6, kifid 6, rechtspraak 20",
+          "text: Er zijn nog drie webwinkel-dwangsommen (Ti-84shop, Kjekk, We Love Musthaves), een recente Bol-toezegging en de Temu-zaak. Ik lees die en de Leidraad (versie 2026) over aftelklokken en dark patterns.",
+          "read_document acm:eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels: 3374 chars",
+          "read_document acm:bol-doet-toezeggingen-aan-acm-die-consumenten-en-verkopers-meer-beschermen: 4561 chars",
+          "read_document acm:naleving-leidraad-bescherming-online-consument-onderzoek-onder-webshops: 68151 chars",
+          "read_document acm:acm-legt-webwinkel-we-love-musthaves-last-onder-dwangsom-op: 1179 chars",
+          "read_document acm:acm-legt-webwinkel-kjekk-last-onder-dwangsom-op: 36271 chars",
+          "read_document acm:acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op: 57370 chars",
+          "text: Ik heb nu de bevestigde sanctiepraktijk voor webwinkels in beeld. Voordat ik de wettelijke bepalingen (BW Boek 6 art. 6:193b e.v., Prijzenwet art. 2b, Bpp art. 5a, Whc art. 8.8 en 2.9/2.15) lees, controleer ik de Leidraad Bescherming Online Consument op de passages over aftelklokken en dark patterns",
+          "search_laws \"van-prijs prijsvermindering laagste verkoopprijs dertig dagen\": 0 articles",
+          "search_laws \"oneerlijke handelspraktijk misleidende handelspraktijk artikel 6:193c\": 2 articles",
+          "read_document acm:leidraad-bescherming-online-consument: 151112 chars",
+          "text: De Leidraad heeft een hoofdstuk 14 over \"beperkte beschikbaarheid\" (aftelklokken en schaarste), dat ik direct wil lezen. Ook zoek ik de wettelijke bronnen op: BW Boek 6 (BWB R0005289), de Prijzenwet, het Bpp en de Whc.",
+          "read_document acm:leidraad-bescherming-online-consument @138000: 151112 chars",
+          "search_laws \"Besluit prijsaanduiding producten laagste verkoopprijs prijsvermindering\": 1 articles",
+          "search_laws \"Wet handhaving consumentenbescherming boete oneerlijke handelspraktijken artikel 8.8\": 1 articles",
+          "read_law BWBR0005289 [6:193b,6:193c,6:193d,6:193g,6:193i,6:193j]: 0 found, missing 6:193b,6:193c,6:193d,6:193g,6:193i,6:193j",
+          "text: De read_law-aanroep faalde op de artikellabels; de zoekindex gebruikt \"193b\" zonder de 6:-prefix. Ik probeer het opnieuw met die labels, en lees tegelijk art. 5a Bpp, de Whc-artikelen (2.9, 2.10, 2.15, 8.8) en de Prijzenwet art. 2b.",
+          "read_law BWBR0005289 [193b,193c,193d,193g,193i,193j]: 6 found",
+          "read_law BWBR0015104 [5a]: 1 found",
+          "read_law BWBR0020586 [2.9,2.10,2.15,8.8]: 3 found, missing 2.10",
+          "search_laws \"Prijzenwet prijsvermindering bekendmaken 2b\": 0 articles",
+          "text: De wettelijke basis is nu geverifieerd. Belangrijk: in het huidige BW staat de zwarte lijst in art. 6:193g (niet 6:193j), met onder g de bedrieglijke \"beperkte beschikbaarheid\" (aftelklok) en onder aa de valse reviews. Whc art. 2.15 lid 2 geeft een maximum van 10% van de omzet voor 6:193g/6:193i. No",
+          "read_document acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen @60000: 144931 chars",
+          "search_laws \"Prijzenwet\": 20 articles",
+          "search_sources \"We Love Musthaves\" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"reviews levertijd dropshipping boete\" [acm,ap,kifid,rechtspraak]: acm 5, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"Amazon Prime opzeggen twee klikken\" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 0, rechtspraak 0",
+          "read_document acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite: 101928 chars",
+          "text: Twee belangrijke nieuwe vondsten: een ACM-boete tegen een dropshipper (mei 2025) en een 2025-bericht over We Love Musthaves en Bluegood. Ook heb ik nu de Koopjedeal- en Leen Bakker-besluiten gelezen en de details bevestigd (art. 2b lid 2 Prijzenwet j° art. 5a Bpp). Ik lees die drie nieuwe zaken plus",
+          "read_document acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite @30000: 101928 chars",
+          "read_document acm:gebruikers-moeten-amazon-prime-twee-klikken-op-kunnen-zeggen: 2756 chars",
+          "read_document acm:webwinkels-we-love-musthaves-en-bluegood-moeten-hun-klanten-duidelijker-informeren: 3375 chars",
+          "read_document acm:acm-beboet-dropshipper-voor-onduidelijke-informatie-over-leveren-en-retourneren-bestellingen: 9754 chars",
+          "text: Het Epic-sanctiebesluit bevestigt het artikel voor de timers: art. 6:193g aanhef en onder g BW (bedrieglijk beweren dat een product slechts beperkt beschikbaar is), met art. 8.8 Whc. Het Epic-overtreding 2 is art. 6:193i onder e, overtreding 3 art. 6:193b lid 2. Ik zoek nu het GT Ecom-boetebesluit (",
+          "search_sources \"aftellende timer aanbieding\" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 0, rechtspraak 0",
+          "search_sources \"Seats and Sofas\" [acm,ap,kifid,rechtspraak]: acm 6, ap 0, kifid 0, rechtspraak 18",
+          "search_sources \"beperkte tijd timer\" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 10, rechtspraak 20",
+          "search_sources \"GT Ecom\" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 10, rechtspraak 0",
+          "text: Ik lees nu het GT Ecom-boetebesluit (dropshipper, €90.000) voor de geschonden bepalingen, en de rechterlijke uitspraak over Seats and Sofas (ROT 18/4040) voor de bevestiging van de misleidende van-voor-prijzen.",
+          "read_document rechtspraak:ECLI:NL:RBROT:2019:4155: 53227 chars",
+          "read_document acm:boetebesluit-gt-ecom-vanwege-onduidelijke-informatie-op-website: 14243 chars",
+          "text: Ik heb nu voldoende primaire bronnen voor de kernzaken. Voor de volledigheid controleer ik nog: of er rechterlijke toetsing is van de Belvilla-boete (@Leisure) en TrendX; de cvmaker-zaak (verborgen kosten, 2026); en of er nog nieuwe ACM-boetes voor webshops zijn met \"misleidende prijsvermelding\" of ",
+          "read_document acm:website-cvmaker-voortaan-duidelijk-over-kosten-voor-gebruikers-na-actie-acm: 3240 chars",
+          "search_sources \"misleidende prijsvermelding webwinkel\" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 3",
+          "search_sources \"Poqlo Trendx\" [acm,ap,kifid,rechtspraak]: acm 10, ap 1, kifid 0, rechtspraak 0",
+          "search_sources \"@Leisure Belvilla\" [acm,ap,kifid,rechtspraak]: acm 4, ap 0, kifid 0, rechtspraak 1",
+          "search_sources \"dark pattern boete\" [acm,ap,kifid,rechtspraak]: acm 1, ap 1, kifid 0, rechtspraak 1",
+          "text: ## Onderzoeksnotitie (geen eindantwoord) Ik heb het plan uitgevoerd, de relevante besluiten en rechterlijke uitspraken gelezen, en gezocht tot er geen nieuwe bronnen meer opdoken. Hieronder staan de deelvragen, de sleutelbronnen per deelvraag en de zaken die ik in de bronnen heb geverifieerd. ### De",
+          "table \"Welke ACM-besluiten en boetes zijn opgelegd aan webwinkels voor misleidende kortingen (nepkortingen, van-voor-prijzen)?\": 4 questions over 12 documents",
+          "table \"Welke ACM-besluiten en boetes zijn opgelegd voor nep-afteltimers, valse schaarste of urgentie?\": 4 questions over 10 documents",
+          "table \"Welke ACM-besluiten en dwangsommen zijn opgelegd voor andere dark patterns, zoals nepreviews, verborgen kosten, levertijd, biedbots en abonnementsvallen?\": 4 questions over 12 documents",
+          "table \"Welk juridisch kader geldt voor deze ACM-zaken?\": 3 questions over 10 documents",
+          "not in a table: 15 documents, given to the draft as text",
+          "laws: BWBR0005289, BWBR0020586, BWBR0015104",
+          "quote check: {\"passed\":45,\"failed\":1,\"fixed\":1,\"dropped\":0}"
+        ],
+        "usage": {
+          "input_tokens": 5236432,
+          "output_tokens": 176256,
+          "cache_read_tokens": 4459841
+        },
+        "loopCostUsd": 0.541045985,
+        "answer": "# ACM-besluiten tegen webshops voor misleidende kortingen, afteltimers en andere dark patterns\n\n## Kernantwoord\n\n- **Nepkortingen:** op 2 mei 2024 legde de ACM boetes op aan vijf webwinkels: Koopjedeal, Leen Bakker, G-Star, JYSK en Tommy Hilfiger [1][2][3][4][5].\n  - Bij Koopjedeal en Leen Bakker is de geschonden bepaling art. 2b lid 2 Prijzenwet jo. art. 5a lid 1 Bpp [7][8].\n  - De rechtbank heeft deze twee boetes bevestigd en de uitspraken zijn onherroepelijk [10][11].\n- **Nep-afteltimers:** er is geen boete aan een klassieke webshop gevonden. De ACM sprak tientallen webshops aan en die zijn gestopt [17][18].\n  - De enige gevonden timerboete betreft Epic Games (Fortnite Item Shop): € 562.500, op grond van de zwarte lijst (art. 6:193g onder g BW) [19].\n- **Andere dark patterns:** er zijn boetes en lasten onder dwangsom opgelegd voor onder meer nepreviews, een biedbot, onduidelijke informatie en druk op reviews [25][27][29][31][33].\n\n---\n\n## 1. Nepkortingen (boeterondes 2024)\n\n**Norm:** wie een prijsverlaging aankondigt, moet de laagste prijs van de voorgaande dertig dagen vermelden [12].\n\n| Bedrijf | Jaar | Boete | Geschonden bepaling |\n|---|---|---|---|\n| Day Trayders B.V. (Koopjedeal) | 2024 | € 163.000 [1] | Art. 2b lid 2 Prijzenwet jo. art. 5a lid 1 Bpp [8] |\n| Leen Bakker Nederland B.V. | 2024 | € 130.000 [2] | Art. 2b lid 2 Prijzenwet jo. art. 5a lid 1 Bpp [7] |\n| G-Star Raw eStore B.V. | 2024 | € 110.000 [3] | Niet geverifieerd (zie \"Niet gevonden\") |\n| JYSK B.V. | 2024 | € 112.500 [4] | Niet geverifieerd (zie \"Niet gevonden\") |\n| PVH Brands Netherlands B.V. (Tommy Hilfiger) | 2024 | € 105.500 [5][6] | Niet geverifieerd (zie \"Niet gevonden\") |\n\n**Toelichting:**\n- **Koppeling in de uitspraken:** de rechtbankuitspraken over Leen Bakker en Koopjedeal zijn geanonimiseerd. Ze zijn aan deze bedrijven gekoppeld via het boetebedrag [7][8].\n- **Bezwaar Koopjedeal:** het bezwaar is verworpen. Volgens de ACM is elke onjuiste prijsaankondiging een afzonderlijke overtreding [9].\n- **Beroep:** de Rechtbank Rotterdam bevestigde op 11 november 2025 de boetes aan Leen Bakker en Koopjedeal (ECLI:NL:RBROT:2025:12967 en 12968) [7][8][10]. Deze uitspraken zijn onherroepelijk [11].\n- **Overige besluiten in dezelfde ronde:** volgens de publicatie van de boetebesluiten kregen ook vier andere bedrijven een besluit, maar zonder boete [6].\n- **Vervolgcontrole 2025:** de ACM vond bij 18 van 24 onderzochte verkopers misleidende prijsvermeldingen en sprak hen daarop aan. Boetes worden daarbij niet genoemd [13].\n\n## 2. Eerdere zaken over misleidende prijzen\n\n- **Seats and Sofas (2018):** € 350.000 aan boetes in totaal [14].\n  - € 200.000 voor misleidende van-voor-prijzen, op grond van art. 8.8 Whc jo. art. 6:193c lid 1 onder d BW [14].\n  - € 150.000 voor overtreding van art. 2b Prijzenwet jo. art. 3 lid 1 en 4 lid 1 Bpp [14].\n  - Het CBb verklaarde het hoger beroep in 2020 ongegrond. Dit blijkt alleen uit een verwijzing; de CBb-uitspraak zelf is niet gelezen [15].\n- **@Leisure BR B.V. (Belvilla), december 2017:** € 325.000 voor misleidende vanaf-prijzen en onvermijdbare kosten op belvilla.nl [16]. De geschonden bepaling is niet gevonden (zie hieronder).\n- **KPN (2019):** ruim € 3,4 miljoen aan boetes. Onvermijdbare eenmalige kosten stonden niet duidelijk op Telfort.nl en Simyo.nl (misleidende omissie) [30].\n  - Dit is geen webshop, maar het gaat wel om online aanbiedingen.\n  - De geschonden artikelen zijn niet geverifieerd [30].\n\n## 3. Afteltimers en schaarsteclaims\n\n- **Epic Games International S.à.r.l. (Fortnite Item Shop), besluit 18 december 2023** [19][20][21]:\n  - € 562.500 voor bedrieglijke timers: art. 8.8 Whc jo. art. 6:193g aanhef en onder g BW (zwarte lijst, beperkte beschikbaarheid) [19].\n  - € 562.500 voor het rechtstreeks aansporen van kinderen tot aankopen: art. 6:193i onder e BW. Samen komt dit op € 1.125.000 [20].\n  - Een bindende aanwijzing, in plaats van een boete, voor overtreding van art. 6:193b lid 2 BW [21].\n  - De Rechtbank Rotterdam verklaarde het beroep op 14 januari 2026 ongegrond (ECLI:NL:RBROT:2026:171) [22]. Volgens de onderzoeksnotitie is de timer-overtreding niet inhoudelijk getoetst, omdat Epic daartegen geen gronden had aangevoerd [22].\n- **Tientallen webshops:** na een geautomatiseerde controle van duizenden webshops zijn deze aangesproken op misleidende countdowntimers. Zij zijn daarmee gestopt. Een sanctie wordt niet vermeld [17][18].\n- **SHEIN (2025, CPC-verband):** aangesproken op nepkortingen, misleidende aftelklokken en schaarsteclaims. Sancties zijn alleen aangekondigd als mogelijk vervolg [23].\n- **Temu (2024, CPC-verband):** aangesproken op aftelklokken en schaarsteclaims. Een boete wordt niet vermeld [24].\n\n## 4. Andere dark patterns en misleiding: boetes\n\n| Bedrijf | Jaar | Praktijk | Sanctie | Geschonden bepaling |\n|---|---|---|---|---|\n| TrendX B.V. | 2022 | Nepreviews, verbergen van negatieve reviews, onduidelijke levertijden [25] | € 100.000 [25] | Art. 8.8 Whc jo. art. 6:193c lid 1 onder b en c BW en art. 6:193g BW. Volgens de samenvatting gaat het om onder v, maar die letter valt in het citaat weg [26] |\n| House of Tickets B.V. (Ticketveiling.nl) | 2026 | Biedbot die zich voordeed als consument; misleiding over de prijsvorming [27] | € 270.000 [27] | Art. 8.8 Whc jo. art. 6:193c lid 1 onder d BW en art. 6:193g aanhef en onder v BW [28] |\n| GT Ecom B.V. (wolffashion.de) | 2025 | Niet duidelijk vermeld dat levering uit China kwam en dat retour naar China moest [29] | € 90.000 [29] | Art. 8.2a lid 1 Whc jo. art. 6:230m lid 1 onder g en h BW [29] |\n| Tix.nl B.V. | 2022 | Ongevraagd annuleringskosten rekenen [36] | € 1.000, een symbolische boete [36] | Art. 8.8 Whc [36] |\n\n## 5. Lasten onder dwangsom\n\n- **Sneakerstad B.V. (2022):** dwangsom van € 15.000 per week, met een maximum van € 150.000 [31].\n  - Praktijk: klanten werden onder meer gedwongen negatieve reviews te verwijderen, en er werd niet of te laat geleverd [31].\n  - Geschonden onder meer: art. 8.8 Whc jo. art. 6:193c lid 1 onder b BW, en art. 8.2a Whc jo. art. 6:230r BW [32].\n- **TI84shop.nl (september 2023):** dwangsom van € 25.000 per week, met een maximum van € 250.000 [33].\n  - Praktijk: de webwinkel rapporteerde structureel negatieve reviews op Trustpilot [34].\n  - Geschonden onder meer: art. 6:193g onder aa BW (misleidende reviews), art. 6:193b lid 2 BW en art. 6:193c lid 1 onder b BW [34].\n- **We Love Musthaves (2020):** last onder dwangsom [35]. Bepaling, praktijk en hoogte zijn niet geverifieerd (zie hieronder).\n\n## 6. Optreden zonder boete of dwangsom\n\n- **Wish (2022):** verbood na een actie van de ACM schijnkortingen op zijn platform [37].\n- **On that ass (2024):** moest duidelijk melden dat klanten een abonnement afsluiten bij een 'gratis' product. Een boete wordt niet vermeld [38].\n- **CVmaker B.V. (2026):** verborgen abonnementskosten zijn aangepakt met een verbetertraject, niet met een boete [39].\n- **Negen telecomaanbieders (2026):** de ACM noemt de opzegdrempels uitdrukkelijk 'misleidende ontwerpen'. De aanbieders pasten hun websites aan; een boete wordt niet vermeld [40].\n- **Amazon Prime (2022):** na afspraken met de Europese Commissie en de nationale toezichthouders moet Prime in twee klikken opzegbaar zijn [41].\n\n## 7. Juridisch kader\n\n- **Verbodsbepaling:** art. 8.8 Whc verbiedt oneerlijke handelspraktijken in de zin van afdeling 6.3A BW. Dit is de grondslag voor de ACM-sancties [43].\n- **Misleiding over prijs:** art. 6:193c lid 1 onder d BW merkt misleidende informatie over de prijs of over een specifiek prijsvoordeel aan als misleidend [44].\n- **Kortingsaankondigingen:** art. 5a Bpp verplicht de verkoper de laagste prijs van ten minste de voorgaande dertig dagen te vermelden [12].\n- **Boetemaximum:** bij overtreding van de zwarte lijst (art. 6:193g BW, zoals bij timers en nepreviews) of bij agressieve praktijken (art. 6:193i BW) is het maximum € 900.000 of 10% van de omzet [45].\n- **Sanctiemiddelen:** de ACM kan kiezen tussen een last onder dwangsom en een bestuurlijke boete [46].\n\n---\n\n## Niet gevonden\n\n- **G-Star, JYSK en PVH/Tommy Hilfiger:** de geschonden bepaling is niet in een gelezen document geverifieerd. Waarschijnlijk gaat het om hetzelfde kader (art. 2b lid 2 Prijzenwet jo. art. 5a lid 1 Bpp), maar de boetebesluiten zelf zijn niet gelezen.\n- **Belvilla:** de geschonden bepaling staat niet in de gelezen berichten. Het besluit zelf is niet gelezen.\n- **Afteltimers bij webshops:** in de gelezen documenten is geen boetebesluit tegen een webshop gevonden. Dat betekent niet dat zo'n besluit niet bestaat.\n- **SHEIN en Temu:** niet duidelijk is of de CPC-acties tot een boete hebben geleid.\n- **We Love Musthaves:** de geschonden bepaling, het type praktijk en de hoogte van de dwangsom zijn niet geverifieerd.\n- **Verkopers van nepreviews:** de ACM is in 2024 onderzoeken gestart naar partijen die nepreviews verkopen. Een besluit daarover is niet gevonden [42].\n- **Wettekst:** art. 2b Prijzenwet (en de BWB-id van de Prijzenwet), art. 8.2a Whc en art. 6:230m en 6:230r BW zijn niet zelf gelezen. Ze worden wel in de besluiten genoemd.\n- **TrendX:** de exacte letter van art. 6:193g BW (volgens de samenvatting onder v) staat niet volledig in het citaat [26].\n- **KPN:** de geschonden artikelen zijn niet geverifieerd [30].\n- **Seats and Sofas:** de CBb-uitspraak zelf is niet gelezen [15].\n\n## Bronnen\n1. ACM legt boetes op aan webwinkels voor nepkortingen, 2024-05-02: \"Voor nepkortingen op de website van Day Trayders (www.koopjedeal.nl) legt de ACM een boete op van 163.000 euro.\" https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen\n2. ACM legt boetes op aan webwinkels voor nepkortingen, 2024-05-02: \"Ook Leen Bakker (www.leenbakker.nl) gebruikte nepkortingen, hiervoor legt de ACM een boete op van 130.000 euro.\" https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen\n3. ACM legt boetes op aan webwinkels voor nepkortingen, 2024-05-02: \"Aan G-star (www.g-star.com) heeft de ACM een boete opgelegd van 110.000 euro\" https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen\n4. ACM legt boetes op aan webwinkels voor nepkortingen, 2024-05-02: \"aan JYSK (www.jysk.nl) een boete van 112.500 euro\" https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen\n5. ACM legt boetes op aan webwinkels voor nepkortingen, 2024-05-02: \"aan Tommy Hilfiger (nl.tommy.com) een boete van 105.500 euro\" https://www.acm.nl/nl/publicaties/acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen\n6. ACM publiceert boetebesluiten webwinkels voor nepkortingen, 2024-05-02: \"Boetebesluit PVH Brands Netherlands B.V. (Tommy Hilfiger)\" https://www.acm.nl/nl/publicaties/acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen\n7. Rechtbank Rotterdam 2025-11-11, ECLI:NL:RBROT:2025:12967, 2025-11-11: \"Daarmee heeft [eiseres] gehandeld in strijd met artikel 2b, tweede lid, van de Prijzenwet in verbinding met artikel 5a, eerste lid, van het Bpp.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2025:12967\n8. Rechtbank Rotterdam 2025-11-11, ECLI:NL:RBROT:2025:12968, 2025-11-11: \"Daarmee heeft [bedrijf X] gehandeld in strijd met artikel 2b, tweede lid, van de Prijzenwet in verbinding met artikel 5a, eerste lid, van het Bpp.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2025:12968\n9. Beslissing op bezwaar boetebesluit Day Traders (Koopjedeal), 2024-08-29: \"Bij iedere onjuiste prijsaankondiging als bedoeld in artikel 2b, tweede lid, Prijzenwet en artikel 5a, eerste lid, Bpp is er immers sprake van een overtreding.\" https://www.acm.nl/nl/publicaties/beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal\n10. Rechtbank bevestigt boetes ACM voor nepkortingen Leen Bakker en Koopjedeal, 13-11-2025: \"De rechtbank heeft op 11 november 2025 uitspraak gedaan in twee zaken waarin de ACM boetes heeft opgelegd aan Leen Bakker en Koopjedeal voor nepkortingen.\" https://www.acm.nl/nl/publicaties/rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal\n11. Rechtbank bevestigt boetes ACM voor nepkortingen Leen Bakker en Koopjedeal, 13-11-2025: \"Deze uitspraken zijn inmiddels onherroepelijk.\" https://www.acm.nl/nl/publicaties/rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal\n12. Besluit prijsaanduiding producten, art. 5a: \"Bij aankondigingen van prijsverminderingen geeft de verkoper de laagste verkoopprijs aan die door hem is toegepast gedurende een periode die niet korter is dan dertig dagen voor de toepassing van de prijsvermindering.\" https://wetten.overheid.nl/BWBR0015104/2023-01-01#Artikel5a\n13. ACM ziet nog veel misleidende kortingen en adviseert: eerst checken, dan bestellen, 20-11-2025: \"Bij 18 van de 24 onderzochte verkopers zijn een of meer misleidende prijsvermeldingen vastgesteld.\" https://www.acm.nl/nl/publicaties/acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen\n14. Rechtbank Rotterdam 2019-05-23, ECLI:NL:RBROT:2019:4155, 2019-05-23: \"Bij besluit van 4 mei 2018 (het bestreden besluit) heeft verweerder eiseres een bestuurlijke boete opgelegd van € 200.000 wegens overtreding van artikel 8.8 van de Wet handhaving consumentenbescherming (Whc) in verbinding met artikel 6:193c, eerste lid, aanhef en onder d, van het Burgerlijk Wetboek (BW) en haar een bestuurlijke boete opgelegd van € 150.000 wegens overtreding van artikel 2b van de Prijzenwet in verbinding met de artikelen 3, eerste lid en 4, eerste lid, van het Besluit prijsaanduiding producten (Bpp).\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2019:4155\n15. ACM beboet meubelverkoper Seats and Sofas voor misleidende prijzen, 07-06-2018: \"01-12-2020 CBb verklaart hoger beroep Seats and Sofas tegen boetes prijsaanduiding ongegrond\" https://www.acm.nl/nl/publicaties/acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen\n16. Boete besluit voor Belvilla voor misleidende prijsvermelding, 2017-12-14: \"De ACM legt @Leisure BR B.V. hiervoor een boete op van 325.000 euro.\" https://www.acm.nl/nl/publicaties/boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding\n17. ACM spreekt webshops aan die misleidende countdowntimers gebruiken, 27-06-2023: \"Tientallen webshops moeten stoppen met misleidende countdown timers. De Autoriteit Consument & Markt (ACM) heeft na een geautomatiseerde controle van duizenden webshops deze webshops op hun gedrag aangesproken.\" https://www.acm.nl/nl/publicaties/acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken\n18. ACM: aanpak verkoop nepreviews nieuwe stap in bestrijding online misleiding, 22-08-2024: \"De ACM heeft tientallen webshops aangesproken die gebruik maakten van misleidende aftelklokken. Inmiddels zijn zij hiermee gestopt.\" https://www.acm.nl/nl/publicaties/acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding\n19. Sancties Epic voor oneerlijke praktijken gericht op kinderen in Fortnite, 2023-12-18: \"562.500 euro wegens overtreding van artikel 8.8 Whc juncto artikel 6:193g, aanhef en onder g, BW; en\" https://www.acm.nl/nl/publicaties/sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite\n20. Sancties Epic voor oneerlijke praktijken gericht op kinderen in Fortnite, 2023-12-18: \"562.500 euro wegens overtreding van artikel 8.8 Whc juncto artikel 6:193i, aanhef en onder e, BW\" https://www.acm.nl/nl/publicaties/sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite\n21. Rechtbank Rotterdam 2026-01-14, ECLI:NL:RBROT:2026:171, 2026-01-14: \"Voor overtreding 3 heeft de ACM een bindende aanwijzing opgelegd.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2026:171\n22. Rechtbank Rotterdam 2026-01-14, ECLI:NL:RBROT:2026:171, 2026-01-14: \"Epic krijgt geen gelijk en het beroep is dus ongegrond.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2026:171\n23. ACM en Europese consumententoezichthouders: SHEIN moet website aanpassen, 26-05-2025: \"Consumenten met misleidende aftelklokken en schaarsteclaims onder druk zetten tot het doen van een aankoop, terwijl die aanbiedingen vervolgens niet tijdelijk of schaars blijken te zijn;\" https://www.acm.nl/nl/publicaties/acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen\n24. EU toezichthouders: Temu moet zich houden aan consumentenregels, 08-11-2024: \"Gebruik van aftelklokken en schaarste claims om consumenten onder druk te zetten om een aankoop te doen\" https://www.acm.nl/nl/publicaties/eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels\n25. ACM beboet webwinkel TrendX voor misleiden consumenten, 2022-11-11: \"De webwinkel plaatste positieve reviews die nep waren en verborg negatieve reviews van echte klanten.\" https://www.acm.nl/nl/publicaties/acm-beboet-webwinkel-trendx-voor-misleiden-consumenten\n26. Boete voor oneerlijke handelspraktijken TrendX, 2022-11-11: \"van artikel 8.8 Whc juncto artikel 6:193c, eerste lid, aanhef en onder b en c, BW en artikel 6:193g, aanhef\" https://www.acm.nl/nl/publicaties/boete-voor-oneerlijke-handelspraktijken-trendx\n27. Boete House of Tickets voor misleiding bij online veilingen, 2026-05-22: \"De ACM legt House of Tickets B.V., het bedrijf achter de website, hiervoor een boete op van 270.000 euro.\" https://www.acm.nl/nl/publicaties/boete-house-tickets-voor-misleiding-bij-online-veilingen\n28. Boete House of Tickets voor misleiding bij online veilingen, 2026-05-22: \"wegens overtreding van artikel 8.8 Whc juncto artikel 6:193c, eerste lid, onder d, BW en artikel\" https://www.acm.nl/nl/publicaties/boete-house-tickets-voor-misleiding-bij-online-veilingen\n29. Boetebesluit GT Ecom vanwege onduidelijke informatie op website, 2025-05-02: \"overtreding van artikel 8.2a, eerste lid, Whc juncto artikel 6:230m, eerste lid, aanhef en onder g en h, BW.\" https://www.acm.nl/nl/publicaties/boetebesluit-gt-ecom-vanwege-onduidelijke-informatie-op-website\n30. Boete KPN voor oneerlijke handelspraktijken op websites, 2019-12-27: \"KPN heeft bij online aanbiedingen op haar websites Telfort.nl en Simyo.nl de onvermijdbare eenmalige kosten niet duidelijk vermeld.\" https://www.acm.nl/nl/publicaties/boete-kpn-voor-oneerlijke-handelspraktijken-op-websites\n31. ACM dwingt webwinkel Sneakerstad te voldoen aan regels consumentenbescherming, 2022-07-29: \"Als het bedrijf niet op 9 september 2022 voldoet, dan moet het bedrijf elke week een dwangsom betalen van 15.000 euro met een maximum van 150.000 euro.\" https://www.acm.nl/nl/publicaties/acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming\n32. ACM legt webwinkel Sneakerstad last onder dwangsom op, 06-09-2022: \"Artikel 8.8 Whc jo. artikel 6:193c, eerste lid, aanhef en onder b, BW.\" https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op\n33. ACM legt webwinkel Ti-84shop last onder dwangsom op, 2023-09-26: \"De Autoriteit Consument en Markt (ACM) legt de eigenaar van webwinkel Ti-84shop.nl een last onder dwangsom op van 25.000 euro per week met een maximum van 250.000 euro.\" https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op\n34. ACM legt webwinkel Ti-84shop last onder dwangsom op, 2023-09-26: \"Artikel 8.8 Whc jo. 6:193g, aanhef en onder aa, BW.\" https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op\n35. ACM legt webwinkel We Love Musthaves last onder dwangsom op, 30-10-2020: \"De Autoriteit Consument & Markt (ACM) heeft vastgesteld dat webwinkel We Love Musthaves de regels overtreedt en heeft het bedrijf een last onder dwangsom opgelegd.\" https://www.acm.nl/nl/publicaties/acm-legt-webwinkel-we-love-musthaves-last-onder-dwangsom-op\n36. De ACM beboet reisbemiddelaar Tix voor oneerlijke handelspraktijk, 2022-03-30: \"De ACM houdt rekening met de uitzonderlijke situatie waarin de reisbranche verkeerde en legt daarom een symbolische boete van 1000 euro op.\" https://www.acm.nl/nl/publicaties/de-acm-beboet-reisbemiddelaar-tix-voor-oneerlijke-handelspraktijk\n37. Wish stopt met schijnkortingen en prijspersonalisatie na actie ACM, 26-07-2022: \"Na een actie van de Autoriteit Consument & Markt (ACM) heeft het online platform Wish handelaren verboden gebruik te maken van schijnkortingen op zijn platforms.\" https://www.acm.nl/nl/publicaties/wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm\n38. ACM: webwinkel boxershorts On that ass moet duidelijker zijn over abonnement, 23-04-2024: \"De Autoriteit Consument & Markt (ACM) heeft webwinkel On that ass gedwongen op zijn website duidelijk te melden dat je een abonnement afsluit.\" https://www.acm.nl/nl/publicaties/acm-webwinkel-boxershorts-ass-moet-duidelijker-zijn-over-abonnement\n39. Website CVmaker voortaan duidelijk over kosten voor gebruikers na actie ACM, 30-07-2026: \"In dit geval is de ACM een verbetertraject gestart met CVmaker ten aanzien van de manier waarop het consumenten informeerde.\" https://www.acm.nl/nl/publicaties/website-cvmaker-voortaan-duidelijk-over-kosten-voor-gebruikers-na-actie-acm\n40. Telecomaanbieders maken opzeggen abonnementen makkelijker na actie ACM, 06-05-2026: \"Dit zijn vormen van zogeheten ‘misleidende ontwerpen’ waarmee op websites bewust onduidelijkheid wordt gecreëerd.\" https://www.acm.nl/nl/publicaties/telecomaanbieders-maken-opzeggen-abonnementen-makkelijker-na-actie-acm\n41. Gebruikers moeten Amazon Prime in twee klikken op kunnen zeggen, 01-07-2022: \"Gebruikers moeten Amazon Prime in twee klikken op kunnen zeggen.\" https://www.acm.nl/nl/publicaties/gebruikers-moeten-amazon-prime-twee-klikken-op-kunnen-zeggen\n42. ACM: aanpak verkoop nepreviews nieuwe stap in bestrijding online misleiding, 22-08-2024: \"Daarom is de ACM onderzoeken gestart naar partijen die nepreviews verkopen.\" https://www.acm.nl/nl/publicaties/acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding\n43. Wet handhaving consumentenbescherming, art. 8.8: \"Het is een handelaar als bedoeld in artikel 193a, eerste lid, onderdeel b, van Boek 6 van het Burgerlijk wetboek niet toegestaan oneerlijke handelspraktijken te verrichten als bedoeld in Afdeling 3A van Titel 3 van dat boek.\" https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk8_Artikel8.8\n44. Burgerlijk Wetboek Boek 6, art. 193c: \"d. de prijs of de wijze waarop de prijs wordt berekend, of het bestaan van een specifiek prijsvoordeel;\" https://wetten.overheid.nl/BWBR0005289/2026-07-16#Boek6_Titeldeel3_Afdeling3A_Artikel193c\n45. Wet handhaving consumentenbescherming, art. 2.15: \"In afwijking van het eerste lid bedraagt de bestuurlijke boete, bedoeld in artikel 2.9, in geval van overtreding van artikel 8.8, voor zover het een oneerlijke handelspraktijk betreft als bedoeld in artikel 193g of artikel 193i van Boek 6 van het Burgerlijk Wetboek, ten hoogste € 900.000 of, indien dat meer is, 10% van de omzet van de overtreder.\" https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk2_Paragraaf2_Artikel2.15\n46. Wet handhaving consumentenbescherming, art. 2.9: \"Indien de Autoriteit Consument en Markt van oordeel is dat een inbreuk of inbreuk binnen de Unie heeft plaatsgevonden, kan zij de overtreder opleggen:\" https://wetten.overheid.nl/BWBR0020586/2026-06-25#Hoofdstuk2_Paragraaf2_Artikel2.9",
+        "claims": [
+          {
+            "text": "Misleidende kortingen: op 2 mei 2024 legde de ACM boetes op aan vijf webwinkels voor nepkortingen. Day Trayders B.V. (Koopjedeal) kreeg de hoogste boete, € 163.000.",
+            "quote": "Voor nepkortingen op de website van Day Trayders (www.koopjedeal.nl) legt de ACM een boete op van 163.000 euro.",
+            "doc": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "Leen Bakker Nederland B.V. kreeg in 2024 een boete van € 130.000 voor nepkortingen.",
+            "quote": "Ook Leen Bakker (www.leenbakker.nl) gebruikte nepkortingen, hiervoor legt de ACM een boete op van 130.000 euro.",
+            "doc": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "G-Star Raw eStore B.V. kreeg in 2024 een boete van € 110.000 voor nepkortingen.",
+            "quote": "Aan G-star (www.g-star.com) heeft de ACM een boete opgelegd van 110.000 euro",
+            "doc": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "JYSK B.V. kreeg in 2024 een boete van € 112.500 voor nepkortingen.",
+            "quote": "aan JYSK (www.jysk.nl) een boete van 112.500 euro",
+            "doc": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "Tommy Hilfiger kreeg in 2024 een boete van € 105.500 voor nepkortingen.",
+            "quote": "aan Tommy Hilfiger (nl.tommy.com) een boete van 105.500 euro",
+            "doc": "acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "Het boetebesluit voor Tommy Hilfiger is gericht aan PVH Brands Netherlands B.V. In dezelfde ronde kregen ook vier andere bedrijven een besluit, maar zonder boete.",
+            "quote": "Boetebesluit PVH Brands Netherlands B.V. (Tommy Hilfiger)",
+            "doc": "acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen",
+            "ok": true
+          },
+          {
+            "text": "Geschonden bepaling bij Leen Bakker (geanonimiseerd in de uitspraak, gekoppeld via het boetebedrag van € 130.000): artikel 2b, tweede lid, Prijzenwet in verbinding met artikel 5a, eerste lid, Besluit prijsaanduiding producten (Bpp).",
+            "quote": "Daarmee heeft [eiseres] gehandeld in strijd met artikel 2b, tweede lid, van de Prijzenwet in verbinding met artikel 5a, eerste lid, van het Bpp.",
+            "doc": "rechtspraak:ECLI:NL:RBROT:2025:12967",
+            "ok": true
+          },
+          {
+            "text": "Geschonden bepaling bij Koopjedeal (geanonimiseerd in de uitspraak, gekoppeld via het boetebedrag van € 163.000): artikel 2b, tweede lid, Prijzenwet in verbinding met artikel 5a, eerste lid, Bpp.",
+            "quote": "Daarmee heeft [bedrijf X] gehandeld in strijd met artikel 2b, tweede lid, van de Prijzenwet in verbinding met artikel 5a, eerste lid, van het Bpp.",
+            "doc": "rechtspraak:ECLI:NL:RBROT:2025:12968",
+            "ok": true
+          },
+          {
+            "text": "Het bezwaar van Koopjedeal is verworpen en de boete van € 163.000 bleef in stand. Volgens de ACM is elke onjuiste prijsaankondiging een afzonderlijke overtreding.",
+            "quote": "Bij iedere onjuiste prijsaankondiging als bedoeld in artikel 2b, tweede lid, Prijzenwet en artikel 5a, eerste lid, Bpp is er immers sprake van een overtreding.",
+            "doc": "acm:beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal",
+            "ok": true
+          },
+          {
+            "text": "De Rechtbank Rotterdam heeft op 11 november 2025 de boetes aan Leen Bakker en Koopjedeal bevestigd.",
+            "quote": "De rechtbank heeft op 11 november 2025 uitspraak gedaan in twee zaken waarin de ACM boetes heeft opgelegd aan Leen Bakker en Koopjedeal voor nepkortingen.",
+            "doc": "acm:rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal",
+            "ok": true
+          },
+          {
+            "text": "Deze twee rechterlijke uitspraken zijn onherroepelijk.",
+            "quote": "Deze uitspraken zijn inmiddels onherroepelijk.",
+            "doc": "acm:rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal",
+            "ok": true
+          },
+          {
+            "text": "De norm achter deze zaken: bij een aangekondigde prijsverlaging moet de verkoper de laagste prijs van de voorgaande dertig dagen vermelden.",
+            "quote": "Bij aankondigingen van prijsverminderingen geeft de verkoper de laagste verkoopprijs aan die door hem is toegepast gedurende een periode die niet korter is dan dertig dagen voor de toepassing van de prijsvermindering.",
+            "doc": "bwb:BWBR0015104:5a",
+            "ok": true
+          },
+          {
+            "text": "In een controle in 2025 stelde de ACM bij 18 van 24 verkopers misleidende prijsvermeldingen vast. Zij sprak die bedrijven aan; boetes worden daarbij niet genoemd.",
+            "quote": "Bij 18 van de 24 onderzochte verkopers zijn een of meer misleidende prijsvermeldingen vastgesteld.",
+            "doc": "acm:acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen",
+            "ok": true
+          },
+          {
+            "text": "Voorloper (2018): Seats and Sofas (meubelverkoper, ook via de website) kreeg in totaal € 350.000 aan boetes. € 200.000 was voor misleidende van-voor-prijzen op grond van art. 8.8 Whc jo. art. 6:193c lid 1 onder d BW. € 150.000 was voor overtreding van art. 2b Prijzenwet jo. art. 3 lid 1 en 4 lid 1 Bpp.",
+            "quote": "Bij besluit van 4 mei 2018 (het bestreden besluit) heeft verweerder eiseres een bestuurlijke boete opgelegd van € 200.000 wegens overtreding van artikel 8.8 van de Wet handhaving consumentenbescherming (Whc) in verbinding met artikel 6:193c, eerste lid, aanhef en onder d, van het Burgerlijk Wetboek (BW) en haar een bestuurlijke boete opgelegd van € 150.000 wegens overtreding van artikel 2b van de Prijzenwet in verbinding met de artikelen 3, eerste lid en 4, eerste lid, van het Besluit prijsaanduiding producten (Bpp).",
+            "doc": "rechtspraak:ECLI:NL:RBROT:2019:4155",
+            "ok": true
+          },
+          {
+            "text": "Het CBb verklaarde in 2020 het hoger beroep van Seats and Sofas ongegrond. Dit blijkt alleen uit een verwijzing; de CBb-uitspraak zelf is niet gelezen.",
+            "quote": "01-12-2020 CBb verklaart hoger beroep Seats and Sofas tegen boetes prijsaanduiding ongegrond",
+            "doc": "acm:acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen",
+            "ok": true
+          },
+          {
+            "text": "@Leisure BR B.V. (Belvilla) kreeg in december 2017 een boete van € 325.000 voor misleidende vanaf-prijzen en onvermijdbare kosten op belvilla.nl.",
+            "quote": "De ACM legt @Leisure BR B.V. hiervoor een boete op van 325.000 euro.",
+            "doc": "acm:boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding",
+            "ok": true
+          },
+          {
+            "text": "Nep-afteltimers bij webshops: de ACM sprak na een geautomatiseerde controle van duizenden webshops tientallen webshops aan op misleidende countdown timers.",
+            "quote": "Tientallen webshops moeten stoppen met misleidende countdown timers. De Autoriteit Consument & Markt (ACM) heeft na een geautomatiseerde controle van duizenden webshops deze webshops op hun gedrag aangesproken.",
+            "doc": "acm:acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken",
+            "ok": true
+          },
+          {
+            "text": "Volgens de ACM zijn de aangesproken webshops gestopt met de misleidende aftelklokken.",
+            "quote": "De ACM heeft tientallen webshops aangesproken die gebruik maakten van misleidende aftelklokken. Inmiddels zijn zij hiermee gestopt.",
+            "doc": "acm:acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding",
+            "ok": true
+          },
+          {
+            "text": "Afteltimers buiten de klassieke webshop: Epic Games International S.à.r.l. (Fortnite Item Shop) kreeg bij besluit van 18 december 2023 een boete van € 562.500 voor bedrieglijke timers. De grondslag is art. 8.8 Whc jo. art. 6:193g aanhef en onder g BW (zwarte lijst, beperkte beschikbaarheid).",
+            "quote": "562.500 euro wegens overtreding van artikel 8.8 Whc juncto artikel 6:193g, aanhef en onder g, BW; en",
+            "doc": "acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "ok": true
+          },
+          {
+            "text": "Epic kreeg daarnaast € 562.500 voor het rechtstreeks aansporen van kinderen tot aankopen (art. 6:193i onder e BW), samen € 1.125.000.",
+            "quote": "562.500 euro wegens overtreding van artikel 8.8 Whc juncto artikel 6:193i, aanhef en onder e, BW",
+            "doc": "acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite",
+            "ok": true
+          },
+          {
+            "text": "Voor een derde overtreding (art. 6:193b lid 2 BW) legde de ACM Epic een bindende aanwijzing op in plaats van een boete.",
+            "quote": "Voor overtreding 3 heeft de ACM een bindende aanwijzing opgelegd.",
+            "doc": "rechtspraak:ECLI:NL:RBROT:2026:171",
+            "ok": true
+          },
+          {
+            "text": "De Rechtbank Rotterdam verklaarde het beroep van Epic op 14 januari 2026 ongegrond. Volgens de onderzoeksnotitie is de timer-overtreding niet inhoudelijk getoetst, omdat Epic daartegen geen gronden had aangevoerd.",
+            "quote": "Epic krijgt geen gelijk en het beroep is dus ongegrond.",
+            "doc": "rechtspraak:ECLI:NL:RBROT:2026:171",
+            "ok": true
+          },
+          {
+            "text": "In CPC-verband (EU-samenwerking) wezen de toezichthouders, waaronder de ACM, SHEIN in 2025 op nepkortingen en misleidende aftelklokken en schaarsteclaims. Sancties zijn alleen aangekondigd als mogelijk vervolg.",
+            "quote": "Consumenten met misleidende aftelklokken en schaarsteclaims onder druk zetten tot het doen van een aankoop, terwijl die aanbiedingen vervolgens niet tijdelijk of schaars blijken te zijn;",
+            "doc": "acm:acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen",
+            "ok": true
+          },
+          {
+            "text": "Ook Temu werd in 2024 in CPC-verband aangesproken op aftelklokken en schaarsteclaims, zonder vermelde boete.",
+            "quote": "Gebruik van aftelklokken en schaarste claims om consumenten onder druk te zetten om een aankoop te doen",
+            "doc": "acm:eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels",
+            "ok": true
+          },
+          {
+            "text": "Nepreviews: webwinkel TrendX B.V. kreeg in november 2022 een boete van € 100.000 voor nepreviews, het verbergen van negatieve reviews en onduidelijke levertijden.",
+            "quote": "De webwinkel plaatste positieve reviews die nep waren en verborg negatieve reviews van echte klanten.",
+            "doc": "acm:acm-beboet-webwinkel-trendx-voor-misleiden-consumenten",
+            "ok": true
+          },
+          {
+            "text": "Bij TrendX zijn geschonden: art. 8.8 Whc jo. art. 6:193c lid 1 onder b en c BW, en art. 6:193g BW. Volgens de samenvatting gaat het om onder v; die letter valt in het citaat net weg.",
+            "quote": "van artikel 8.8 Whc juncto artikel 6:193c, eerste lid, aanhef en onder b en c, BW en artikel 6:193g, aanhef",
+            "doc": "acm:boete-voor-oneerlijke-handelspraktijken-trendx",
+            "ok": true
+          },
+          {
+            "text": "Biedbot bij online veilingen: House of Tickets B.V. (Ticketveiling.nl) kreeg in mei 2026 een boete van € 270.000. Een biedbot deed zich voor als consument en consumenten werden misleid over de prijsvorming.",
+            "quote": "De ACM legt House of Tickets B.V., het bedrijf achter de website, hiervoor een boete op van 270.000 euro.",
+            "doc": "acm:boete-house-tickets-voor-misleiding-bij-online-veilingen",
+            "ok": true
+          },
+          {
+            "text": "Bij House of Tickets is art. 8.8 Whc jo. art. 6:193c lid 1 onder d BW geschonden, plus art. 6:193g aanhef en onder v BW.",
+            "quote": "wegens overtreding van artikel 8.8 Whc juncto artikel 6:193c, eerste lid, onder d, BW en artikel",
+            "doc": "acm:boete-house-tickets-voor-misleiding-bij-online-veilingen",
+            "ok": true
+          },
+          {
+            "text": "Onduidelijke informatie bij een dropshipper: GT Ecom B.V. (wolffashion.de) kreeg in mei 2025 een boete van € 90.000. Op de site stond niet duidelijk dat levering uit China kwam en dat retour naar China moest. Geschonden is art. 8.2a lid 1 Whc jo. art. 6:230m lid 1 onder g en h BW.",
+            "quote": "overtreding van artikel 8.2a, eerste lid, Whc juncto artikel 6:230m, eerste lid, aanhef en onder g en h, BW.",
+            "doc": "acm:boetebesluit-gt-ecom-vanwege-onduidelijke-informatie-op-website",
+            "ok": true
+          },
+          {
+            "text": "Verborgen kosten bij telecomaanbieders (2019, geen webshop maar wel online aanbiedingen): KPN kreeg in totaal ruim € 3,4 miljoen aan boetes. Onvermijdbare eenmalige kosten stonden niet duidelijk op Telfort.nl en Simyo.nl (misleidende omissie). De artikelen zijn niet geverifieerd.",
+            "quote": "KPN heeft bij online aanbiedingen op haar websites Telfort.nl en Simyo.nl de onvermijdbare eenmalige kosten niet duidelijk vermeld.",
+            "doc": "acm:boete-kpn-voor-oneerlijke-handelspraktijken-op-websites",
+            "ok": true
+          },
+          {
+            "text": "Druk op reviews: Sneakerstad B.V. kreeg in 2022 een last onder dwangsom (€ 15.000 per week, maximaal € 150.000). De webwinkel dwong klanten onder meer negatieve reviews te verwijderen en leverde niet of te laat.",
+            "quote": "Als het bedrijf niet op 9 september 2022 voldoet, dan moet het bedrijf elke week een dwangsom betalen van 15.000 euro met een maximum van 150.000 euro.",
+            "doc": "acm:acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming",
+            "ok": true
+          },
+          {
+            "text": "Bij Sneakerstad zijn onder meer art. 8.8 Whc jo. art. 6:193c lid 1 onder b BW en art. 8.2a Whc jo. art. 6:230r BW geschonden.",
+            "quote": "Artikel 8.8 Whc jo. artikel 6:193c, eerste lid, aanhef en onder b, BW.",
+            "doc": "acm:acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op",
+            "ok": true
+          },
+          {
+            "text": "TI84shop.nl kreeg in september 2023 een last onder dwangsom van € 25.000 per week, met een maximum van € 250.000.",
+            "quote": "De Autoriteit Consument en Markt (ACM) legt de eigenaar van webwinkel Ti-84shop.nl een last onder dwangsom op van 25.000 euro per week met een maximum van 250.000 euro.",
+            "doc": "acm:acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op",
+            "ok": true
+          },
+          {
+            "text": "Bij TI84shop is onder meer art. 6:193g onder aa BW (misleidende reviews) geschonden. De webwinkel rapporteerde structureel negatieve reviews op Trustpilot. Daarnaast zijn art. 6:193b lid 2 en art. 6:193c lid 1 onder b BW geschonden.",
+            "quote": "Artikel 8.8 Whc jo. 6:193g, aanhef en onder aa, BW.",
+            "doc": "acm:acm-legt-webwinkel-ti-84shop-last-onder-dwangsom-op",
+            "ok": true
+          },
+          {
+            "text": "We Love Musthaves kreeg in 2020 een last onder dwangsom.",
+            "quote": "De Autoriteit Consument & Markt (ACM) heeft vastgesteld dat webwinkel We Love Musthaves de regels overtreedt en heeft het bedrijf een last onder dwangsom opgelegd.",
+            "doc": "acm:acm-legt-webwinkel-we-love-musthaves-last-onder-dwangsom-op",
+            "ok": true
+          },
+          {
+            "text": "Reisbemiddelaar Tix.nl B.V. rekende ongevraagd annuleringskosten en kreeg daarvoor in 2022 een symbolische boete van € 1.000 wegens overtreding van art. 8.8 Whc.",
+            "quote": "De ACM houdt rekening met de uitzonderlijke situatie waarin de reisbranche verkeerde en legt daarom een symbolische boete van 1000 euro op.",
+            "doc": "acm:de-acm-beboet-reisbemiddelaar-tix-voor-oneerlijke-handelspraktijk",
+            "ok": true
+          },
+          {
+            "text": "Zonder boete of dwangsom, na aanspreken of toezegging: Wish verbood in 2022 schijnkortingen op zijn platform na een actie van de ACM.",
+            "quote": "Na een actie van de Autoriteit Consument & Markt (ACM) heeft het online platform Wish handelaren verboden gebruik te maken van schijnkortingen op zijn platforms.",
+            "doc": "acm:wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm",
+            "ok": true
+          },
+          {
+            "text": "Verborgen abonnement achter een 'gratis' product: webwinkel On that ass moest in 2024 duidelijk melden dat klanten een abonnement afsluiten. Een boete wordt niet vermeld.",
+            "quote": "De Autoriteit Consument & Markt (ACM) heeft webwinkel On that ass gedwongen op zijn website duidelijk te melden dat je een abonnement afsluit.",
+            "doc": "acm:acm-webwinkel-boxershorts-ass-moet-duidelijker-zijn-over-abonnement",
+            "ok": true
+          },
+          {
+            "text": "Verborgen abonnementskosten bij CVmaker B.V. (2026): dit is opgelost met een verbetertraject, niet met een boete.",
+            "quote": "In dit geval is de ACM een verbetertraject gestart met CVmaker ten aanzien van de manier waarop het consumenten informeerde.",
+            "doc": "acm:website-cvmaker-voortaan-duidelijk-over-kosten-voor-gebruikers-na-actie-acm",
+            "ok": true
+          },
+          {
+            "text": "Opzegdrempels bij negen telecomaanbieders (2026) noemt de ACM uitdrukkelijk 'misleidende ontwerpen'. De aanbieders pasten hun websites aan; een boete wordt niet vermeld.",
+            "quote": "Dit zijn vormen van zogeheten ‘misleidende ontwerpen’ waarmee op websites bewust onduidelijkheid wordt gecreëerd.",
+            "doc": "acm:telecomaanbieders-maken-opzeggen-abonnementen-makkelijker-na-actie-acm",
+            "ok": true
+          },
+          {
+            "text": "Na afspraken met de Europese Commissie en de nationale toezichthouders (2022) moet Amazon Prime in twee klikken opzegbaar zijn.",
+            "quote": "Gebruikers moeten Amazon Prime in twee klikken op kunnen zeggen.",
+            "doc": "acm:gebruikers-moeten-amazon-prime-twee-klikken-op-kunnen-zeggen",
+            "ok": true
+          },
+          {
+            "text": "Open punt: de ACM is in 2024 onderzoeken gestart naar verkopers van nepreviews. Een besluit daarover is niet gevonden.",
+            "quote": "Daarom is de ACM onderzoeken gestart naar partijen die nepreviews verkopen.",
+            "doc": "acm:acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding",
+            "ok": true
+          },
+          {
+            "text": "Juridisch kader, verbodsbepaling: art. 8.8 Whc verbiedt oneerlijke handelspraktijken in de zin van afdeling 6.3A BW en vormt de grondslag voor de ACM-sancties.",
+            "quote": "Het is een handelaar als bedoeld in artikel 193a, eerste lid, onderdeel b, van Boek 6 van het Burgerlijk wetboek niet toegestaan oneerlijke handelspraktijken te verrichten als bedoeld in Afdeling 3A van Titel 3 van dat boek.",
+            "doc": "bwb:BWBR0020586:8.8",
+            "ok": true
+          },
+          {
+            "text": "Juridisch kader, misleiding over prijs: art. 6:193c lid 1 onder d BW merkt misleidende informatie over de prijs of over een prijsvoordeel aan als misleidend.",
+            "quote": "d. de prijs of de wijze waarop de prijs wordt berekend, of het bestaan van een specifiek prijsvoordeel;",
+            "doc": "bwb:BWBR0005289:193c",
+            "ok": true
+          },
+          {
+            "text": "Juridisch kader, boetemaximum: bij overtredingen van de zwarte lijst (6:193g, zoals bij timers en nepreviews) of van agressieve praktijken (6:193i) is het maximum € 900.000 of 10% van de omzet.",
+            "quote": "In afwijking van het eerste lid bedraagt de bestuurlijke boete, bedoeld in artikel 2.9, in geval van overtreding van artikel 8.8, voor zover het een oneerlijke handelspraktijk betreft als bedoeld in artikel 193g of artikel 193i van Boek 6 van het Burgerlijk Wetboek, ten hoogste € 900.000 of, indien dat meer is, 10% van de omzet van de overtreder.",
+            "doc": "bwb:BWBR0020586:2.15",
+            "ok": true
+          },
+          {
+            "text": "Juridisch kader, sanctiemiddelen: de ACM kan kiezen tussen een last onder dwangsom en een bestuurlijke boete.",
+            "quote": "Indien de Autoriteit Consument en Markt van oordeel is dat een inbreuk of inbreuk binnen de Unie heeft plaatsgevonden, kan zij de overtreder opleggen:",
+            "doc": "bwb:BWBR0020586:2.9",
+            "ok": true
+          }
+        ],
+        "costUsd": 1.384565285,
+        "apiCalls": 31,
+        "ms": 807007,
+        "quoteCheck": {
+          "passed": 45,
+          "failed": 1,
+          "fixed": 1,
+          "dropped": 0
+        }
+      },
+      "costUsd": 1.384565285
+    }
+  ]
+}

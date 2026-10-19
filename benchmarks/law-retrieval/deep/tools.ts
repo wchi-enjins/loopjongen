@@ -17,7 +17,7 @@ export const TOOLS: Anthropic.Beta.BetaTool[] = [
   {
     name: "search_sources",
     description:
-      "Keyword search in Dutch regulator decisions and case law. Sources: acm = ACM (competition/consumer authority) decisions and press releases; ap = Autoriteit Persoonsgegevens (data protection authority) decisions, fines and guidance; kifid = Kifid financial services complaint rulings (full-text search); rechtspraak = Dutch court rulings (full-text search). ACM and AP search mainly match titles, so use short title-like Dutch keywords (1-3 words, e.g. 'nepkorting', 'boete cookies'); all words usually must match. Returns per source up to 10 hits as key | title | date | snippet; pass a key to read_document.",
+      "Keyword search in Dutch regulator decisions and case law. Sources: acm = ACM (competition/consumer authority) decisions and press releases; ap = Autoriteit Persoonsgegevens (data protection authority) decisions, fines and guidance; kifid = Kifid financial services complaint rulings (full-text search); rechtspraak = Dutch court rulings (full-text search). ACM search is full text over ACM's publications and their decision PDFs, in web-search syntax: words are ANDed, 'or' between words, \"quoted phrase\", -word to exclude; or a bracketed boolean query such as (afteltimer OR \"aftellende klok\") AND (boete OR sanctie), so one broad query can replace many narrow ones (publications not indexed yet match on title only). AP search mainly matches titles, so use short title-like Dutch keywords there (1-3 words, e.g. 'boete cookies'); all words usually must match. Returns per source up to 10 hits as key | title | date | snippet; pass keys to read_document or analyze_documents.",
     input_schema: {
       type: "object",
       properties: {
@@ -55,6 +55,22 @@ export const TOOLS: Anthropic.Beta.BetaTool[] = [
     },
   },
 ];
+
+/** Moonlit-style grid: reads documents for the loop and returns only answers with quotes. Run in search.ts. */
+export const GRID_TOOL: Anthropic.Beta.BetaTool = {
+  name: "analyze_documents",
+  description:
+    "Reads up to 12 documents for you and answers 1-4 fixed questions for each, as a table: one row per document, each cell a short answer with verbatim quotes; a document about several cases or companies gets one quote per case. You see only the table, not the document text. Keys come from search_sources, or are 'bwb:<law id>:<article label>' for law articles from search_laws (e.g. 'bwb:BWBR0005290:6:193g'). Start with a broad grid over the promising hits, then run small grids to fill gaps (a missing article, amount or outcome).",
+  input_schema: {
+    type: "object",
+    properties: {
+      questions: { type: "array", items: { type: "string" }, description: "1-4 short questions, asked of every document." },
+      keys: { type: "array", items: { type: "string" }, description: "Up to 12 document keys, most important first." },
+    },
+    required: ["questions", "keys"],
+    additionalProperties: false,
+  },
+};
 
 const clip = (text: string, offset = 0) => {
   const part = text.slice(offset, offset + MAX_RESULT_CHARS);
@@ -114,24 +130,27 @@ async function readLaw(input: { law_id: string; articles: string[] }, ctx: Ctx) 
   return clip((missing.length ? `Not found in ${input.law_id}: art. ${missing.join(", ")}\n\n` : "") + body);
 }
 
-async function readDocument(input: { key: string; offset?: number }, ctx: Ctx) {
-  let doc = ctx.docs.get(input.key);
-  if (!doc) {
-    const i = input.key.indexOf(":");
-    const source = input.key.slice(0, i) as Source | "bwb";
-    const id = input.key.slice(i + 1);
-    if (source === "bwb") {
-      const j = id.indexOf(":"); // law ids have no colon, labels can ("8:1")
-      await readLaw({ law_id: id.slice(0, j), articles: [id.slice(j + 1)] }, ctx);
-      doc = ctx.docs.get(input.key);
-      if (!doc) return `Error: no article for key ${input.key}`;
-    } else {
-      if (!NAMES.includes(source)) return `Error: unknown key ${input.key}; use a key from search_sources ("<source>:<id>")`;
-      const full = await getSourceDoc(source, id);
-      doc = { key: input.key, source, id, ...full };
-      ctx.docs.set(doc.key, doc);
-    }
+/** The document for a key, fetched into ctx.docs on first use; an error string if there is none. */
+export async function fetchDoc(key: string, ctx: Ctx): Promise<Doc | string> {
+  let doc = ctx.docs.get(key);
+  if (doc) return doc;
+  const i = key.indexOf(":");
+  const source = key.slice(0, i) as Source | "bwb";
+  const id = key.slice(i + 1);
+  if (source === "bwb") {
+    const j = id.indexOf(":"); // law ids have no colon, labels can ("8:1")
+    await readLaw({ law_id: id.slice(0, j), articles: [id.slice(j + 1)] }, ctx);
+    return ctx.docs.get(key) ?? `Error: no article for key ${key}`;
   }
+  if (!NAMES.includes(source)) return `Error: unknown key ${key}; use a key from search_sources ("<source>:<id>")`;
+  doc = { key, source, id, ...(await getSourceDoc(source, id)) };
+  ctx.docs.set(key, doc);
+  return doc;
+}
+
+async function readDocument(input: { key: string; offset?: number }, ctx: Ctx) {
+  const doc = await fetchDoc(input.key, ctx);
+  if (typeof doc === "string") return doc;
   ctx.trace.push(`read_document ${input.key}${input.offset ? ` @${input.offset}` : ""}: ${doc.text.length} chars`);
   return `<document key="${doc.key}" title="${doc.title}" date="${doc.date}" url="${doc.url}">\n${clip(doc.text, input.offset ?? 0)}\n</document>`;
 }
@@ -147,10 +166,13 @@ const HANDLERS: Record<string, (input: any, ctx: Ctx) => Promise<string>> = {
 export async function runTool(name: string, input: any, ctx: Ctx): Promise<string> {
   const handler = HANDLERS[name];
   if (!handler) return `Error: unknown tool ${name}`;
+  const t0 = Date.now();
   try {
     return await handler(input, ctx);
   } catch (e: any) {
     ctx.trace.push(`${name} ${JSON.stringify(input)}: error ${e?.message ?? e}`);
     return `Error: ${e?.message ?? e}`;
+  } finally {
+    ctx.trace.push(`${name} took ${((Date.now() - t0) / 1000).toFixed(1)} s`);
   }
 }

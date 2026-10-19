@@ -1,10 +1,29 @@
 /** Shared helpers for the sources that only have a website (ACM, AP): polite fetch, HTML/PDF to text, sitemap search. */
+import { setDefaultResultOrder } from "node:dns";
 import { extractText } from "../extract";
+
+// acm.nl's IPv6 address often times out on connect (UND_ERR_CONNECT_TIMEOUT); its IPv4 address answers. Process-wide.
+setDefaultResultOrder("ipv4first");
 import { HEADERS } from "../wetten";
 import { tidy } from "../xml";
 
+// robots.txt Crawl-delay per host: requests to it are spaced this far apart.
+// ponytail: per process; the app and a crawl running at the same time each keep it, so together they go twice as fast.
+const CRAWL_DELAY: Record<string, number> = { "www.acm.nl": 10_000 };
+const nextSlot = new Map<string, number>();
+
+async function waitTurn(host: string) {
+  const gap = CRAWL_DELAY[host];
+  if (!gap) return;
+  const now = Date.now();
+  const at = Math.max(now, nextSlot.get(host) ?? 0);
+  nextSlot.set(host, at + gap);
+  if (at > now) await new Promise((r) => setTimeout(r, at - now));
+}
+
 /** fetch with our User-Agent and a timeout, so a slow source never hangs the chat; throws on non-2xx. */
 export async function fetchOk(url: string, init: RequestInit = {}) {
+  await waitTurn(new URL(url).host);
   const res = await fetch(url, { ...init, headers: { "User-Agent": HEADERS["User-Agent"] }, signal: AbortSignal.timeout(15_000) });
   if (!res.ok) throw new Error(`${new URL(url).host} gaf status ${res.status}`);
   return res;
@@ -38,7 +57,7 @@ const DAY = 24 * 3600_000;
 const sitemaps = new Map<string, { at: number; entries: Promise<Entry[]> }>();
 
 /** All urls in a sitemap index (cached for a day), filtered by `keep`. */
-function sitemap(index: string, keep: (url: string) => boolean) {
+export function sitemap(index: string, keep: (url: string) => boolean) {
   const hit = sitemaps.get(index);
   if (hit && Date.now() - hit.at < DAY) return hit.entries;
   const entries = (async () => {

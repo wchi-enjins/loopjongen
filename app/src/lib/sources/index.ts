@@ -42,7 +42,7 @@ export async function searchSources(q: string): Promise<Record<Source, SourceDoc
 /** Full text of one document; pdfs=false skips attached decision PDFs (ACM, AP) when the page text is enough. */
 export const getSourceDoc = (source: Source, id: string, pdfs = true) => SOURCES[source].get(id, pdfs);
 
-const QUERY_MODEL = "claude-haiku-4-5";
+const QUERY_MODEL = "claude-haiku-5-5";
 const PER_SOURCE = 3;
 // ponytail: only the start of each document goes into the prompt; deep search reads further.
 const MAX_DOC_CHARS = 4_000;

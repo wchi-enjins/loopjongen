@@ -97,11 +97,9 @@ export async function POST(req: Request, ctx: RouteContext<"/api/conversations/[
         const stream = anthropic(userKey).beta.messages.stream({
           model,
           max_tokens: 64000,
-          ...(supportsEffort(model) && {
-            output_config: { effort },
-            betas: ["server-side-fallback-2026-07-01"],
-            fallbacks: "default",
-          }),
+          ...(supportsEffort(model) && { output_config: { effort } }),
+          // Haiku models have no server-side fallback.
+          ...(!model.startsWith("claude-haiku") && { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }),
           system: fullSystem,
           // Attached images go in front of the first message, so the prefix stays the same every turn.
           messages: history.rows.map((m: { role: "user" | "assistant"; content: string }, i: number) => ({

@@ -1,0 +1,129 @@
+acm-dark-patterns …   call 1 claude-haiku-5-5: 1851 in / 1301 out, total $0.001
+  text: **Plan vooraf** 1. **Misleidende kortingen (nepkorting, referentieprijs):** ACM-besluiten en boetes; wettelijk kader in Boek 6 BW (oneerlijke handelspraktijken, art. 6:193a e.v.) en de Prijzenwet/Prijsaanduidingsregels. 2. **Nep-afteltimers en schaarste-/urgentiemeldingen:** ACM-besluiten over valse
+  search_laws {"query":"aanbieding korting referentieprijs oneerlijke handelspraktijk"}: error 
+  search_sources "afteltimer" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 0, rechtspraak 0
+  search_sources "nepkorting" [acm,ap,kifid,rechtspraak]: acm 6, ap 0, kifid 0, rechtspraak 0
+  search_sources "referentieprijs" [acm,ap,kifid,rechtspraak]: acm 10, ap 2, kifid 6, rechtspraak 20
+  search_sources "misleidende korting" [acm,ap,kifid,rechtspraak]: acm 10, ap 7, kifid 10, rechtspraak 20
+  search_sources "boete webshop" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 1, rechtspraak 20
+  search_sources "dark patterns" [acm,ap,kifid,rechtspraak]: acm 1, ap 1, kifid 0, rechtspraak 6
+  call 2 claude-haiku-5-5: 21360 in / 969 out, total $0.004
+  text: Ik heb de kernzaken gevonden: de ACM-persberichten over nepkortingen (2023–2026), de rechtbankuitspraak over Leen Bakker en Koopjedeal, en de Belvilla-, Seats and Sofas- en House Tickets-zaken. Ik lees ze nu.
+  read_document acm:acm-pakt-webwinkels-aan-die-nepkortingen-gebruiken: 3730 chars
+  read_document acm:acm-beboet-meubelverkoper-seats-and-sofas-voor-misleidende-prijzen: 3078 chars
+  read_document acm:rechtbank-bevestigt-boetes-acm-voor-nepkortingen-leen-bakker-en-koopjedeal: 1941 chars
+  read_document acm:acm-legt-boetes-op-aan-webwinkels-voor-nepkortingen: 4685 chars
+  read_document acm:boete-voor-belvilla-voor-misleidende-prijsvermelding: 1937 chars
+  read_document acm:boete-house-tickets-voor-misleiding-bij-online-veilingen: 17518 chars
+  read_document acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen: 144931 chars
+  call 3 claude-haiku-5-5: 53239 in / 1252 out, total $0.008
+  text: Vijf van de zes nepkortingzaken uit het ACM-besluit van 2 mei 2024 zijn nu gelezen; de overige drie (JYSK, Tommy Hilfiger, Koopjedeal en Leen Bakker) staan verder in het document. Ik lees die vervolgdelen en zoek tegelijk naar urgentie-, timer- en andere dark-pattern-zaken.
+  read_document acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen @30000: 144931 chars
+  read_document acm:acm-ziet-nog-veel-misleidende-kortingen-en-adviseert-eerst-checken-dan-bestellen: 4782 chars
+  search_sources "nepreviews" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 10
+  search_sources "urgentie" [acm,ap,kifid,rechtspraak]: acm 0, ap 1, kifid 10, rechtspraak 20
+  search_sources "timer" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 10, rechtspraak 20
+  search_sources "drip pricing" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 10, rechtspraak 2
+  search_sources "schaarste" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 7, rechtspraak 20
+  search_sources "verborgen kosten" [acm,ap,kifid,rechtspraak]: acm 10, ap 10, kifid 10, rechtspraak 20
+  call 4 claude-haiku-5-5: 96541 in / 1245 out, total $0.015
+  text: De ACM-publicaties over de nepkortingen zijn gelezen en het overzicht van november 2025 bevat een bruikbare sanctiecontext. Ik lees nu het Koopjedeal-besluit verder, het Epic/Fortnite-vonnis (een game-dark-pattern) en de nepreviews-zaak, en zoek naar overige platformzaken.
+  read_document acm:acm-publiceert-boetebesluiten-webwinkels-voor-nepkortingen @60000: 144931 chars
+  read_document rechtspraak:ECLI:NL:RBROT:2026:171: 39789 chars
+  read_document acm:acm-aanpak-verkoop-nepreviews-nieuwe-stap-bestrijding-online-misleiding: 4924 chars
+  search_sources "Fortnite" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 16
+  search_sources "Temu" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 9, rechtspraak 17
+  search_sources "gamers misleiding" [acm,ap,kifid,rechtspraak]: acm 10, ap 7, kifid 7, rechtspraak 0
+  search_sources "virtuele valuta" [acm,ap,kifid,rechtspraak]: acm 4, ap 0, kifid 1, rechtspraak 20
+  call 5 claude-haiku-5-5: 142888 in / 2201 out, total $0.054
+  text: De Epic/Fortnite-zaak is een belangrijke vondst: een ACM-boete voor misleidende aftelklokken en aankoopdruk. Ik lees de ACM-besluiten over Epic en de aftelklokkenzaak, en zoek de rechterlijke uitspraken en wettelijke artikelen die de boetes onderbouwen.
+  read_document acm:acm-beboet-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite: 6113 chars
+  read_document acm:acm-wil-eerlijke-kortingen-om-consumenten-te-beschermen-tegen-misleiding: 3820 chars
+  read_document acm:de-acm-en-andere-europese-consumententoezichthouders-gaan-harder-optreden-om-gamers-te-beschermen-tegen-misleiding: 5826 chars
+  read_document acm:eu-toezichthouders-temu-moet-zich-houden-aan-consumentenregels: 3374 chars
+  search_sources "countdowntimers" [acm,ap,kifid,rechtspraak]: acm 4, ap 0, kifid 0, rechtspraak 0
+  search_sources "aftelklokken" [acm,ap,kifid,rechtspraak]: acm 0, ap 0, kifid 0, rechtspraak 0
+  read_document acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite: 101928 chars
+  call 6 claude-haiku-5-5: 169105 in / 1090 out, total $0.081
+  text: De Epic-zaak heeft een besluit van 18 december 2023 met een persbericht van mei 2024; het sanctiebesluit zelf bevat de juridische grondslag van de timer-overtreding, dus die lees ik. Daarnaast zoek ik de SHEIN-actie, de countdown-aanpak van 2023 en de rechterlijke uitspraken over Leen Bakker en Koop
+  read_document acm:sancties-epic-voor-oneerlijke-praktijken-gericht-op-kinderen-fortnite @30000: 101928 chars
+  read_document acm:acm-spreekt-webshops-aan-die-misleidende-countdowntimers-gebruiken: 3072 chars
+  search_sources "Bezwaar Epic Fortnite" [acm,ap,kifid,rechtspraak]: acm 3, ap 0, kifid 0, rechtspraak 2
+  search_sources "SHEIN" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 3, rechtspraak 13
+  search_sources "Day Traders" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 10, rechtspraak 20
+  search_sources "Leen Bakker" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 10, rechtspraak 20
+  call 7 claude-haiku-5-5: 201876 in / 970 out, total $0.112
+  text: Ik heb nu de juridische grondslag van de Epic-timerovertreding (art. 6:193g onder g BW). Ik lees de SHEIN-actie, de bezwaarbeslissing Koopjedeal en de update van de spelregels. Daarnaast haal ik de wettelijke tekst op van de bepalingen die in de besluiten worden genoemd.
+  read_law {"law_id":"BWB","articles":["6:193g"]}: error 
+  read_document acm:acm-geeft-update-spelregels-tegen-online-misleiding: 5787 chars
+  read_document acm:beslissing-op-bezwaar-boetebesluit-day-traders-koopjedeal: 32941 chars
+  read_document acm:acm-en-europese-consumententoezichthouders-shein-moet-website-aanpassen: 10814 chars
+  read_document acm:bezwaar-epic-tegen-boetes-en-bindende-aanwijzing-fortnite-ongegrond: 241048 chars
+  call 8 claude-haiku-5-5: 239269 in / 799 out, total $0.147
+  text: De Epic-zaak is nu goed onderbouwd: de timer-overtreding is vastgesteld onder art. 6:193g onder g BW en Epic heeft die niet betwist. Ik controleer de wettekst en lees het slot van de rechtbankuitspraak, en zoek nog naar telecom- en andere webwinkelzaken met misleidende prijs- of aanbodvoorstelling.
+  read_document rechtspraak:ECLI:NL:RBROT:2026:171 @30000: 39789 chars
+  search_laws {"query":"bedrieglijk aanbieding beperkte tijd beschikbaar 6:193g"}: error 
+  search_laws {"query":"prijsverminderingen laagste verkoopprijs dertig dagen Besluit prijsaanduiding producten"}: error 
+  search_sources "telecom oneerlijke handelspraktijken boete website" [acm,ap,kifid,rechtspraak]: acm 10, ap 0, kifid 0, rechtspraak 4
+  search_sources "Leidraad bescherming online consument" [acm,ap,kifid,rechtspraak]: acm 10, ap 6, kifid 6, rechtspraak 20
+  call 9 claude-haiku-5-5: 251955 in / 916 out, total $0.170
+  text: Er zijn nieuwe leads: een ACM-boete voor TrendX (2024), telecomboetes voor misleidende websites (KPN 2023, Vodafone/T-Mobile/Tele2 2020), de Leidraad en het webshop-onderzoek van 2025, en een recente uitspraak over een verbod op het exploiteren van websites. Ik lees die.
+  read_document rechtspraak:ECLI:NL:RBMNE:2026:112: 27032 chars
+  read_document acm:boete-kpn-voor-oneerlijke-handelspraktijken-op-websites: 1666 chars
+  read_document acm:boete-voor-oneerlijke-handelspraktijken-trendx: 37931 chars
+  read_document acm:leidraad-bescherming-online-consument: 151112 chars
+  read_document acm:naleving-leidraad-bescherming-online-consument-onderzoek-onder-webshops: 68151 chars
+  call 10 claude-haiku-5-5: 309489 in / 1712 out, total $0.222
+  text: De Leidraad (versie 2024) bevat in hoofdstuk 14 de regels over beperkte beschikbaarheid en aftelklokken; die zoek ik op. Ik zoek ook naar webwinkel-zaken met vooraf aangevinkte vakjes, Sneakerstad, Perfectionbody en Wish, en naar de telecom-websiteboetes van 2019–2020.
+  read_document acm:leidraad-bescherming-online-consument @138000: 151112 chars
+  read_document acm:boete-vodafone-voor-oneerlijke-handelspraktijken-op-website: 1654 chars
+  search_sources "Sneakerstad" [acm,ap,kifid,rechtspraak]: acm 2, ap 0, kifid 0, rechtspraak 1
+  search_sources "Perfectionbody" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 0, rechtspraak 0
+  search_sources "Wish schijnkortingen" [acm,ap,kifid,rechtspraak]: acm 10, ap 1, kifid 0, rechtspraak 0
+  search_sources "aanvinken" [acm,ap,kifid,rechtspraak]: acm 1, ap 0, kifid 10, rechtspraak 20
+  call 11 claude-haiku-5-5: 325399 in / 871 out, total $0.250
+  text: Ik lees nu de Sneakerstad-zaak (dwangsom 2022 en nieuwe dwang 2026), de Wish-schijnkortingen en de vooraf-aangevinkt-zaak, plus de telecom-rechtbankuitspraak over onduidelijke websites.
+  read_document acm:acm-dwingt-webwinkel-sneakerstad-te-voldoen-aan-regels-consumentenbescherming: 4910 chars
+  read_document acm:acm-website-mag-keuzeoptie-niet-vooraf-aanvinken: 2205 chars
+  read_document acm:wish-stopt-met-schijnkortingen-en-prijspersonalisatie-na-actie-acm: 3591 chars
+  read_document acm:acm-waarschuwt-voor-agressieve-en-misleidende-verkooppraktijk-perfectionbody: 2968 chars
+  read_document acm:uitspraak-rechtbank-boetes-telecomaanbieders-voor-onduidelijke-websites: 2982 chars
+  read_document acm:acm-legt-webwinkel-sneakerstad-last-onder-dwangsom-op: 69403 chars
+  call 12 claude-haiku-5-5: 349051 in / 1505 out, total $0.285
+  text: Ik heb nu de meeste ACM-zaken. Ik controleer nog de rechtspraak over Seats and Sofas (boete bevestigd door het CBb in 2020) en Belvilla (@Leisure), de rechterlijke uitspraak over Leen Bakker/Koopjedeal, en of de AP cookie-dark patterns met boetes heeft aangepakt.
+  search_sources "cookiebanner boete" [ap]: ap 10
+  search_sources "Leen Bakker van-prijs Prijzenwet boete" [rechtspraak]: rechtspraak 0
+  search_sources "@Leisure" [acm,rechtspraak]: acm 2, rechtspraak 20
+  search_sources "Seats and Sofas" [rechtspraak]: rechtspraak 18
+  read_document ap:actueel/ap-pakt-misleidende-cookiebanners-aan: 3050 chars
+  call 13 claude-haiku-5-5: 359414 in / 865 out, total $0.311
+  text: De AP heeft in 2025 boetes opgelegd aan webwinkels Kruidvat en Coolblue voor cookies. Ik lees die twee en zoek de vervolgprocedure van Seats and Sofas.
+  search_sources "Seats" [acm]: acm 6
+  search_sources "prijsaanduiding meubels boete van-voor" [rechtspraak]: rechtspraak 2
+  read_document ap:actueel/boete-voor-coolblue-voor-het-ongevraagd-gebruiken-van-cookies: 27413 chars
+  read_document ap:actueel/boete-van-600000-euro-voor-tracking-cookies-op-kruidvatnl: 70561 chars
+  call 14 claude-haiku-5-5: 388375 in / 728 out, total $0.349
+  text: Seats and Sofas heeft twee rechterlijke vervolguitspraken (Rb. Rotterdam 2019 en CBb 2020). Ik lees het CBb-arrest voor de precieze bepalingen en de boetehoogte.
+  read_document rechtspraak:ECLI:NL:CBB:2020:914: 15982 chars
+  read_document acm:uitspraak-rechtbank-boete-seats-en-sofas: 2135 chars
+  call 15 claude-haiku-5-5: 397479 in / 455 out, total $0.375
+  text: Ik controleer nog de Belvilla-boete (2018) op de precieze bepalingen, en of het besluit zelf beschikbaar is.
+  search_sources "Belvilla" [acm]: acm 2
+  call 16 claude-haiku-5-5: 398077 in / 79 out, total $0.395
+  read_document acm:boete-besluit-voor-belvilla-voor-misleidende-prijsvermelding: 1831 chars
+  call 17 claude-haiku-5-5: 399157 in / 17055 out, total $0.459
+  text: # Onderzoeksnotitie: ACM-besluiten tegen webshops (misleidende kortingen, aftelklokken, dark patterns) Dit is een onderzoeksnotitie, geen eindantwoord. Bedragen en data komen uit de gelezen besluiten en persberichten. Bij een aantal zaken geldt de datum van het besluit, niet die in de zoekmetadata; 
+  call 18 claude-opus-5-5: 11129 in / 1227 out, total $0.528
+  table: 24 questions over 38 documents
+  call 19 claude-opus-5-5: 57275 in / 39890 out, total $1.555
+  call 20 claude-opus-5-5: 53439 in / 23351 out, total $2.235
+  call 21 claude-opus-5-5: 57650 in / 17002 out, total $2.806
+  call 22 claude-opus-5-5: 52795 in / 28721 out, total $3.592
+  call 23 claude-opus-5-5: 10587 in / 11578 out, total $3.866
+  call 24 claude-opus-5-5: 101696 in / 14061 out, total $4.554
+  laws: BWBR0005289, BWBR0002101, BWBR0011353, BWBR0020586
+  quote check: {"passed":47,"failed":0,"fixed":0,"dropped":0}
+  call 25 claude-opus-5-5: 9343 in / 6383 out, total $4.719
+1246s  25 calls  38 docs  $4.719 (loop $0.459)
+
+Rapport: /Users/wesselchi/Developer/loopjongen/benchmarks/research/results/2026-10-19-haiku-loop-acm.md
