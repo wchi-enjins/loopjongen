@@ -96,7 +96,9 @@ const LOOP_SYSTEM = `You research a Dutch legal question for a lawyer, as a thor
 4. Follow leads: use what you found (party names, case numbers, ECLI's, article numbers, the documents' own terms) for new searches, and read the articles that decisions say were breached.
 5. Stop only when new searches turn up nothing new for any sub-question. There is no budget: being thorough matters more than being fast.
 
-End with a short note and no tool calls: the sub-questions, the key documents (by key) per sub-question, and what you could not find. Do not write the final answer; later steps write it from the documents you read. Only documents you read count as sources.`;
+End with a short note and no tool calls: the sub-questions, the key documents (by key) per sub-question, and what you could not find. Do not write the final answer; later steps write it from the documents you read. Only documents you read count as sources.
+
+Hard rule: a search that finds nothing proves nothing. Report it as a gap ("not found in <source>"); never conclude from it that something doesn't exist or only happened elsewhere.`;
 
 const TABLE_Q_SYSTEM = `Je maakt een analysetabel voor een juridische onderzoeksvraag. Splits de vraag in deelvragen en schrijf per deelvraag 2 tot 4 vaste, korte vragen die je aan elk gevonden document kunt stellen (bijvoorbeeld: wie kreeg een boete, hoe hoog, welk artikel is geschonden, wat was de uitkomst). Schrijf in het Nederlands.`;
 
@@ -108,11 +110,13 @@ const DRAFT_QUOTES = `Je schrijft het onderbouwde antwoord op een juridische ond
 - Gebruik alleen de documenten hieronder als bron.
 - Kun je een deel van de vraag niet met een citaat onderbouwen, neem het dan op als claim met lege quote en lege doc: dat wordt een expliciet open punt.
 - Dek alle deelvragen.
+- Harde regel: niets gevonden is een open punt, geen conclusie. Schrijf nooit dat iets niet bestaat of alleen elders gebeurde omdat je er geen document over vond.
 - laws: de BWB-regelingen die de vraag beantwoorden, de meest relevante eerst, elk met BWB-id, artikelnummers (beste eerst) en één zin waarom. Alleen regelingen die je in de documenten hebt gezien (keys bwb:<id>:<artikel>) of die de gelezen besluiten noemen.`;
 
 const DRAFT_PLAIN = `Je beantwoordt een juridische onderzoeksvraag voor een advocaat, in het Nederlands, in markdown (kopjes en opsommingen waar dat helpt).
 - Baseer je alleen op de documenten hieronder en noem bij elke bewering de bron bij naam (titel, ECLI of artikel, datum).
 - Zeg expliciet wat je niet hebt gevonden. Verzin niets.
+- Harde regel: niets gevonden is een open punt, geen conclusie. Schrijf nooit dat iets niet bestaat of alleen elders gebeurde omdat je er geen document over vond.
 - laws: de BWB-regelingen die de vraag beantwoorden, de meest relevante eerst, elk met BWB-id, artikelnummers (beste eerst) en één zin waarom.`;
 
 const FIX_SYSTEM = `Deze citaten staan niet letterlijk in hun brondocument. Geef per claim (i) een citaat dat wél woord voor woord in de getoonde tekst staat en de claim draagt, en pas de claimtekst zo nodig aan zodat die niet meer zegt dan het citaat. Staat er niets in de tekst dat de claim draagt, zet dan drop op true. Schrijf in het Nederlands.`;

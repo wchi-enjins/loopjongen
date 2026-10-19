@@ -53,6 +53,10 @@ Each stage has its own switch, so we can measure what it adds.
 3. **Draft with exact quotes.** Every claim carries a verbatim quote and its source. A claim without a quote is dropped or marked as a gap.
 4. **Quote check.** A deterministic check that each quote appears word for word in the source text (after normalising whitespace and quote marks). This replaces Moonlit's noisy model-based checker. A failed quote gets fixed or removed before the answer goes out.
 
+## Hard rules
+
+- **Nothing found is a gap, not a conclusion.** When searches turn up nothing, deep search reports "not found in <source>". It never concludes that something doesn't exist or only happened elsewhere. (Added 2026-10-19 after Q1: it missed Epic/Fortnite and wrongly said timers were only tackled in EU-wide actions.)
+
 ## Benchmarks
 
 | Benchmark | What it measures | Runs on |
@@ -69,3 +73,11 @@ Moonlit's findings in `questions.json` are a reference, not gold: nobody has che
 - **Live search or local index** for ACM and AP. A local index is more reliable (no throttle, no robots issue) but needs a refresh job.
 - **Undocumented endpoints** (Kifid, rechtspraak `/api/zoek`) can break without notice. Cache results and keep a fallback.
 - **The rubric scores are judgement calls** until a lawyer checks the reference answers.
+
+## Results
+
+| Date | Question | Deep search | Moonlit | Report |
+|---|---|---|---|---|
+| 2026-10-19 | Q1 `acm-dark-patterns` | 8/10, coverage 81%, precision 97% (1 wrong) | 6/10, coverage 36%, precision 100% | [`benchmarks/research/results/2026-10-19-acm-comparison.md`](../benchmarks/research/results/2026-10-19-acm-comparison.md) |
+
+Q1 ran on the first, unoptimised version (no context trimming, Opus at high effort for every step, ≈ $5 per question). Re-run it after the cost fixes for a clean comparison; Q2–Q5 haven't run yet. Token breakdown: `benchmarks/research/results/2026-10-19-token-usage.excalidraw`.

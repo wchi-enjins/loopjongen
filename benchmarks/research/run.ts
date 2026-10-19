@@ -15,7 +15,7 @@ type Question = { id: string; question: string; portals: string[]; verified: boo
 
 const dir = new URL(".", import.meta.url);
 const { questions } = JSON.parse(readFileSync(new URL("questions.json", dir), "utf8")) as { questions: Question[] };
-const PRICE = { input: 4 / 1e6, cacheRead: 0.4 / 1e6, output: 20 / 1e6 }; // claude-opus-5-5, USD per token; ponytail: cache writes priced as plain input
+const PRICE = { input: 4 / 1e6, cacheRead: 0.2 / 1e6, output: 20 / 1e6 }; // claude-opus-5-5, USD per token; ponytail: cache writes priced as plain input
 
 const args = process.argv.slice(2);
 const opt = (name: string) => (args.includes(name) ? args[args.indexOf(name) + 1] : undefined);
