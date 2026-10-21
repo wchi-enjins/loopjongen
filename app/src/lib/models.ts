@@ -16,7 +16,7 @@ export const pickEffort = (v: unknown) => EFFORTS.find((e) => e === v);
 /** Haiku 4.5 rejects output_config.effort and the server-side fallback beta. */
 export const supportsEffort = (model: string) => model !== "claude-haiku-4-5";
 
-// How the chat looks up law articles before each answer (lib/lawsearch, compared in benchmarks/law-retrieval).
+// How the chat looks up law articles before each answer (lib/lawsearch, compared in benchmarks/law_retrieval).
 export const LAW_SEARCHES = [
   { id: "b", label: "B · volledige tekst" },
   { id: "a", label: "A · live zoeken" },

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Chevron from "@/components/Chevron";
-import Markdown from "@/components/Markdown";
+import Chevron from "@/components/chevron";
+import Markdown from "@/components/markdown";
 
 type Customer = {
   id: string;

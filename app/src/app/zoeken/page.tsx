@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import useDialog from "@/components/Dialog";
+import useDialog from "@/components/dialog";
 
 type LawHit = { id: string; title: string; type: string; authority: string; areas: string[]; validFrom: string; url: string };
 type LawItem =

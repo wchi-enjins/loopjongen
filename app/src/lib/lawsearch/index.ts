@@ -15,7 +15,7 @@ type Row = { law_id: string; law_title: string; label: string; article_title: st
 /**
  * Finds the laws and articles for a question with the chosen approach and returns them as a system-prompt block
  * plus a markdown list of sources. Article texts come from the local index (bwb_article, built by
- * benchmarks/law-retrieval/b-fulltext/index.ts); long articles are stored in several rows and joined here.
+ * benchmarks/law_retrieval/b_fulltext/index.ts); long articles are stored in several rows and joined here.
  */
 export async function lawContext(approach: LawSearch, question: string, client: Anthropic) {
   const { hits } = await SEARCHES[approach](question, client);

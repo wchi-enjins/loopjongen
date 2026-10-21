@@ -3,13 +3,13 @@
  * Score the answers by hand with rubric.md.
  *
  *   docker compose up -d db && set -a && . ./.env && set +a
- *   node --import ./benchmarks/law-retrieval/resolve-ts.mjs benchmarks/research/run.ts [--stages loop,table,quotes,check] [--case <id>]... [--out <name>]
+ *   node --import ./benchmarks/law_retrieval/resolve_ts.mjs benchmarks/research/run.ts [--stages loop,table,quotes,check] [--case <id>]... [--out <name>]
  *       --stages: the stages to switch on (default all; one left out is off); --case may be repeated;
  *       --out writes results/<name>.{json,md} (default: the date). Costs API credit.
  *   With Langfuse keys set (see app/src/lib/langfuse.ts) every question is a trace; --out is the session.
  */
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
-import { deepSearch, ALL, MODEL, EFFORT, LOOP_MODEL, TABLE_MODEL, type Stages, type DeepResult } from "../law-retrieval/deep/search.ts";
+import { deepSearch, ALL, MODEL, EFFORT, LOOP_MODEL, TABLE_MODEL, type Stages, type DeepResult } from "../law_retrieval/deep/search.ts";
 import { pool } from "../../app/src/lib/db.ts";
 import { propagateAttributes, startTracing } from "../../app/src/lib/langfuse.ts";
 

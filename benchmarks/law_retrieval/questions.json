@@ -1,0 +1,194 @@
+{
+  "_doc": "Gold set for the law search tool. Each question is phrased as a lawyer or client would ask it and never names the regulation. law = the BWB id that answers it; alsoAccept = other BWB ids that answer it equally well; articles = bare article labels as getLaw() returns them ('Artikel 8' -> '8', 'Artikel 5:3' -> '5:3', 'Artikel 3a.2' -> '3a.2'). Note that getLaw() labels Burgerlijk Wetboek articles without the book prefix ('Artikel 271', not '7:271'), so strip a leading '<book>:' from predictions for BW laws before comparing. Every law was checked against data/bwb/manifest.json (2026-10-09) and every article was read via getLaw(). difficulty: common = codes everyone knows, mid = well-known sector laws, obscure = ministerial regulations, beleidsregels and ZBO rules.",
+  "questions": [
+    {
+      "id": "tuchtrecht-km-bewaartermijn",
+      "question": "Een vrijwillig dienende militair heeft zijn initiële opleiding afgerond. Twee jaar later krijgt hij een tuchtstraf. Drie jaar na die straf wordt hij effectief bevorderd. Wanneer worden de tuchtrechtelijke gegevens verwijderd, zowel op onderdeelsniveau als uit de centrale registratie? Noem de relevante artikelleden.",
+      "law": "BWBR0003866",
+      "alsoAccept": [],
+      "articles": ["10"],
+      "difficulty": "obscure",
+      "note": "Q1 of benchmarks/2026-10-01_tuchtrecht_registratie_km_1985.md. Art. 10(2): unit level after 1 year; art. 10(3)(c): central registry deleted at the effective promotion (3 years), not after 6. Nothing in the wording names the Marine, so the Landmacht twin BWBR0003865 is a trap and is deliberately not accepted."
+    },
+    {
+      "id": "tuchtrecht-km-correctie",
+      "question": "Een matroos vindt dat een straf ten onrechte in de registratie staat. Bij wie dient hij een verzoek in, wat moet daarin staan, wie voert een correctie uit, wie moet worden geïnformeerd, en wat kan hij doen als het verzoek wordt afgewezen?",
+      "law": "BWBR0003866",
+      "alsoAccept": [],
+      "articles": ["8", "1"],
+      "difficulty": "obscure",
+      "note": "Q2 of the tuchtrecht benchmark. Art. 8(2)-(4) holds the whole procedure (request to the houder with data + reason, uitvoerder corrects, requester and earlier recipients informed, objection to the Minister van Defensie). Art. 1 identifies houder (Bevelhebber der Zeestrijdkrachten) and uitvoerder (hoofd Duyverman Computer Centrum), which the rubric asks for. 'Matroos' points to the Marine, not BWBR0003865."
+    },
+    {
+      "id": "tuchtrecht-km-verstrekking-toegang",
+      "question": "Mag de Directeur Personeel Koninklijke Marine gegevens uit de registratie opvragen om een justitiële beslissing te nemen? En wie heeft rechtstreeks toegang tot de registratie?",
+      "law": "BWBR0003866",
+      "alsoAccept": [],
+      "articles": ["5", "6", "2"],
+      "difficulty": "obscure",
+      "note": "Q3 of the tuchtrecht benchmark (trick question). Art. 5(2)(a): DPKM only for rechtspositionele beslissingen; 5(2)(c): justitiële only for militair rechterlijke colleges; art. 6: direct access only for persons designated by the houder plus Algemene Rekenkamer officials; art. 2(2): purpose limitation (1 rubric point)."
+    },
+    {
+      "id": "huur-opzegging-huurder",
+      "question": "Ik huur een appartement voor onbepaalde tijd en betaal de huur per maand. Ik ga verhuizen. Hoe moet ik de huur opzeggen en welke opzegtermijn geldt er voor mij?",
+      "law": "BWBR0005290",
+      "alsoAccept": [],
+      "articles": ["271"],
+      "difficulty": "common",
+      "note": "BW 7:271: lid 3 opzegging tegen een betaaldag, lid 4 bij exploot of aangetekende brief, lid 6(a) termijn gelijk aan de betalingsperiode, min. 1 en max. 3 maanden, so 1 month here."
+    },
+    {
+      "id": "awb-bezwaartermijn",
+      "question": "De gemeente heeft mijn aanvraag voor een parkeervergunning afgewezen. Het besluit is op 3 maart aan mij toegestuurd. Hoeveel tijd heb ik om bezwaar te maken en vanaf wanneer begint die termijn te lopen?",
+      "law": "BWBR0005537",
+      "alsoAccept": [],
+      "articles": ["6:7", "6:8"],
+      "difficulty": "common",
+      "note": "Awb 6:7: six weeks; 6:8(1): starts the day after the decision was announced in the prescribed way."
+    },
+    {
+      "id": "sr-diefstal-strafmaximum",
+      "question": "Iemand heeft voor het station een fiets meegenomen die niet van hem was, met de bedoeling die zelf te houden. Welke straf kan hij daarvoor maximaal krijgen?",
+      "law": "BWBR0001854",
+      "alsoAccept": [],
+      "articles": ["310"],
+      "difficulty": "common",
+      "note": "Sr 310: simple theft, max. 4 years or a fourth-category fine. No aggravating circumstances (art. 311) in the facts."
+    },
+    {
+      "id": "rv-kantonrechter-competentie",
+      "question": "Een klant betaalt een factuur van € 18.000 plus rente niet. Moet ik hem dagvaarden bij de kantonrechter of bij de civiele kamer van de rechtbank?",
+      "law": "BWBR0001827",
+      "alsoAccept": [],
+      "articles": ["93"],
+      "difficulty": "common",
+      "note": "Rv 93(a): claims up to € 25.000 including interest accrued up to the summons go to the kantonrechter."
+    },
+    {
+      "id": "arbeid-proeftijd-vast-contract",
+      "question": "Ik krijg een vast contract en mijn nieuwe werkgever wil een proeftijd van drie maanden afspreken. Mag dat, en wat als het toch zo in mijn contract komt te staan?",
+      "law": "BWBR0005290",
+      "alsoAccept": [],
+      "articles": ["652"],
+      "difficulty": "common",
+      "note": "BW 7:652(3): indefinite contract max. 2 months; 7:652(8): a clause contrary to the article is void."
+    },
+    {
+      "id": "arbeid-dagelijkse-rusttijd",
+      "question": "Ik ben 25 en werk in de bediening van een restaurant. Mijn werkgever roostert me in tot 23.00 uur en de volgende ochtend om 07.00 uur weer. Mag dat?",
+      "law": "BWBR0007671",
+      "alsoAccept": [],
+      "articles": ["5:3"],
+      "difficulty": "mid",
+      "note": "Arbeidstijdenwet 5:3(2): 11 hours uninterrupted rest per 24 hours for workers 18+, which may be shortened to 8 hours once per 7x24 hours if the work requires it. 8 hours rest here, so only allowed once a week."
+    },
+    {
+      "id": "medezeggenschap-camera-instemming",
+      "question": "Onze werkgever, een bedrijf met 120 werknemers, wil camera's en software invoeren waarmee de productiviteit van medewerkers wordt gevolgd. Heeft de gekozen vertegenwoordiging van het personeel daarover instemmingsrecht, en wat als de werkgever het toch zonder instemming invoert?",
+      "law": "BWBR0002747",
+      "alsoAccept": [],
+      "articles": ["27"],
+      "difficulty": "mid",
+      "note": "WOR 27(1)(l): instemming needed for systems that monitor attendance, behaviour or performance; 27(4): otherwise permission from the kantonrechter; 27(5): decision void if the OR invokes nullity within a month."
+    },
+    {
+      "id": "vakantiebijslag-minimum",
+      "question": "Ik werk als parttime schoonmaker. Mijn werkgever zegt dat hij geen vakantiegeld hoeft te betalen omdat dat niet in mijn arbeidscontract staat. Klopt dat, en hoeveel moet het minimaal zijn?",
+      "law": "BWBR0002638",
+      "alsoAccept": [],
+      "articles": ["15"],
+      "difficulty": "mid",
+      "note": "Wet minimumloon en minimumvakantiebijslag art. 15(1): statutory right to at least 8% of wages (capped at three times the minimum wage), regardless of the contract."
+    },
+    {
+      "id": "geboorteverlof-partner",
+      "question": "Mijn vriendin is gisteren bevallen van ons kind. Op hoeveel betaald verlof van mijn werkgever heb ik recht en binnen welke periode moet ik dat opnemen?",
+      "law": "BWBR0013008",
+      "alsoAccept": [],
+      "articles": ["4:2"],
+      "difficulty": "mid",
+      "note": "Wet arbeid en zorg 4:2(1): geboorteverlof of once the weekly working hours with full pay, within four weeks from the day after the birth. (Aanvullend geboorteverlof, 4:2a, is paid by UWV, not the employer.)"
+    },
+    {
+      "id": "winkel-zondag-feestdag",
+      "question": "Ik heb een kledingwinkel. Mag ik op zondag en op tweede Pinksterdag open zijn, en kan de gemeente daar een uitzondering voor maken?",
+      "law": "BWBR0007952",
+      "alsoAccept": [],
+      "articles": ["2", "3"],
+      "difficulty": "mid",
+      "note": "Winkeltijdenwet art. 2(1)(a)-(b): closed on Sundays and listed holidays incl. tweede Pinksterdag; art. 3: the gemeenteraad can grant vrijstelling by verordening or let B&W grant ontheffing."
+    },
+    {
+      "id": "huurcommissie-leges-voorschot",
+      "question": "Ik heb als huurder een geschil over mijn huurprijs aan de huurcommissie voorgelegd en moet een voorschot betalen. Krijg ik dat terug als ik gelijk krijg, en wat gebeurt er als ik het voorschot niet op tijd betaal?",
+      "law": "BWBR0014315",
+      "alsoAccept": [],
+      "articles": ["7"],
+      "difficulty": "mid",
+      "note": "Uitvoeringswet huurprijzen woonruimte art. 7: lid 3(a) advance refunded when the requester wins and the fee is collected from the other party; lid 4-5 pay within four weeks or the request is niet-ontvankelijk. The amounts themselves are in an AMvB (Besluit huurprijzen woonruimte), not asked here."
+    },
+    {
+      "id": "gedetineerde-uitvaart-verlof",
+      "question": "Mijn broer zit een gevangenisstraf uit. Onze vader is vorige week overleden. Kan hij toestemming krijgen om de uitvaart bij te wonen, ook als hij onder bewaking zou moeten staan, en maakt het uit wat de rest van de familie daarvan vindt?",
+      "law": "BWBR0010171",
+      "alsoAccept": [],
+      "articles": ["24", "21"],
+      "difficulty": "obscure",
+      "note": "Regeling tijdelijk verlaten van de inrichting (J&V). Art. 24(1)-(2): incidenteel verlof for a parent's death incl. attending the funeral; 24(3): not if bewaking is required; 24(4): only if the surviving relatives do not object. Art. 21: general conditions (escort, same-day return)."
+    },
+    {
+      "id": "lesmotor-lesaanduiding",
+      "question": "Ik geef motorrijlessen. Aan welke kleur en afmetingen moet de lesaanduiding op mijn lesmotor voldoen, en voor welk verkeer moet die zichtbaar zijn?",
+      "law": "BWBR0008048",
+      "alsoAccept": [],
+      "articles": ["1", "2", "3"],
+      "difficulty": "obscure",
+      "note": "Regeling vaststelling L-bord (I&M). Art. 1: white capital L on a light-blue square, not retroreflective; art. 2(2): on two-wheelers visible to traffic from behind; art. 3: two-wheelers 12 cm background, letter 8 cm high, stroke 1,5 cm."
+    },
+    {
+      "id": "pluimvee-sterfte-melden",
+      "question": "Ik heb een bedrijf met vleeskuikens. Vanaf welk sterftepercentage in een koppel ben ik verplicht dat te melden, en wanneer moet ik een dierenarts inschakelen?",
+      "law": "BWBR0035248",
+      "alsoAccept": [],
+      "articles": ["3a.2"],
+      "difficulty": "obscure",
+      "note": "Regeling houders van dieren (LNV) art. 3a.2(1)(a): report when broilers older than 10 days show mortality of 0,5% or more per day on two consecutive days; 3a.2(2): consult a vet on a clinical problem or a >5% drop in feed/water intake on two consecutive days."
+    },
+    {
+      "id": "belasting-afschrijving-betaalrekening",
+      "question": "De Belastingdienst heeft voor een openstaande aanslag inkomstenbelasting van € 1.200 zonder beslag rechtstreeks geld van mijn betaalrekening laten afschrijven. Hoeveel mag de ontvanger zo per keer innen, hoe vaak per maand en hoe lang mag dat doorgaan?",
+      "law": "BWBR0004766",
+      "alsoAccept": [],
+      "articles": ["1ce"],
+      "difficulty": "obscure",
+      "note": "Uitvoeringsregeling Invorderingswet 1990 (Financiën) art. 1ce: overheidsvordering max. € 500, only for assessments with at most € 1.500 outstanding, at most twice per calendar month per assessment, for at most three consecutive months. The power itself is in art. 19 Invorderingswet 1990, but the limits asked for are only here."
+    },
+    {
+      "id": "diplomaat-persoonsgegevens-inzage",
+      "question": "Ik werk als attaché bij een buitenlandse ambassade in Den Haag. Ik vermoed dat het ministerie van Buitenlandse Zaken onjuiste persoonsgegevens over mij heeft vastgelegd. Hoe kan ik inzage en verbetering vragen, en binnen welke termijn moet daarop worden beslist?",
+      "law": "BWBR0014172",
+      "alsoAccept": [],
+      "articles": ["10", "11"],
+      "difficulty": "obscure",
+      "note": "Beleidsregels Protocollaire Basisadministratie (BZ). Art. 10: written request to the Minister via DPG (Directie Protocol en Gastlandzaken), decision within four weeks; art. 11: same for verbetering/aanvulling/verwijdering/afscherming. Structurally a sibling of the tuchtrecht privacy regulation."
+    },
+    {
+      "id": "zwangerschapsuitkering-spreekuur-verhuizing",
+      "question": "Ik ontvang van het UWV een uitkering tijdens mijn zwangerschaps- en bevallingsverlof. Ik ben opgeroepen voor het spreekuur van de verzekeringsarts, maar kan die dag niet. Wat moet ik doen? En moet ik doorgeven dat ik tijdens mijn verlof ga verhuizen?",
+      "law": "BWBR0020117",
+      "alsoAccept": [],
+      "articles": ["5", "7"],
+      "difficulty": "obscure",
+      "note": "Controlevoorschriften Wet arbeid en zorg 2006 (UWV, ZBO). Art. 5(2): report the impediment immediately and at least 24 hours in advance, with the reason; art. 7: report a change of address immediately. Near-duplicate trap: Controlevoorschriften Ziektewet 2020 (BWBR0043626) is for sick leave, not pregnancy leave."
+    },
+    {
+      "id": "tattoo-vergunning-duur-kosten",
+      "question": "Ik wil een tattoostudio openen en heb daarvoor een vergunning van de GGD nodig. Hoe lang is zo'n vergunning geldig en wat kost de aanvraag als ik alleen met wegwerpmateriaal werk?",
+      "law": "BWBR0021915",
+      "alsoAccept": [],
+      "articles": ["3", "5"],
+      "difficulty": "obscure",
+      "note": "Warenwetregeling tatoeëren en piercen (VWS). Art. 3(1): valid for three years; art. 5(1)(b): € 509,06 for tattoo material with disposables (plus € 36,36 per quarter hour for follow-up checks or travel, art. 5(2)). The permit requirement itself is in the Warenwetbesluit tatoeëren en piercen (BWBR0021605), but duration and fees are only in this regulation."
+    }
+  ]
+}

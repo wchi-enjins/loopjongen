@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { CHAT_MODEL } from "@/lib/ai";
 import { DEFAULT_EFFORT } from "@/lib/models";
-import { serverLogs } from "@/lib/serverLog";
+import { serverLogs } from "@/lib/server_log";
 import pkg from "../../../../package.json";
 
 /** List without snapshots; the full data only comes out via /api/feedback/export with the PIN. */

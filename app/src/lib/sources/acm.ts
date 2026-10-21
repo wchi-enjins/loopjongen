@@ -1,6 +1,6 @@
 /**
  * ACM (acm.nl): no API, so plain HTML. Search and full text come from the local table acm_doc, filled by
- * scripts/acm-crawl.ts: every publication in the sitemap, with page text and decision PDFs once crawled. Pages not
+ * scripts/acm_crawl.ts: every publication in the sitemap, with page text and decision PDFs once crawled. Pages not
  * crawled yet are searched by title and fetched live. robots.txt disallows the site's own search (/nl/zoeken) and
  * asks for a Crawl-delay of 10 s, which fetchOk keeps.
  */
@@ -28,9 +28,9 @@ export function groups(q: string): string[][] | null {
  * Full-text search over acm_doc, best first: websearch syntax ("phrase", or, -word) or a bracketed boolean query
  * (see groups). A title search over the sitemap if the table does not exist yet or is empty.
  */
-export async function search(q: string): Promise<SourceDoc[]> {
+export async function search(q: string, limit = 10): Promise<SourceDoc[]> {
   const g = groups(q);
-  const params = g ? g.flat() : [q];
+  const params = [...(g ? g.flat() : [q]), limit];
   let n = 0;
   const tsq = g
     ? g.map((terms) => `(${terms.map(() => `phraseto_tsquery('dutch', $${++n})`).join(" || ")})`).join(" && ")
@@ -40,7 +40,7 @@ export async function search(q: string): Promise<SourceDoc[]> {
       `SELECT id, url, title, coalesce(nullif(date, ''), left(lastmod, 10)) AS date,
          ts_headline('dutch', coalesce(page_text, '') || ' ' || coalesce(pdf_text, ''), q, 'MaxWords=30, MinWords=12, MaxFragments=2, FragmentDelimiter=" … "') AS snippet
        FROM (SELECT d.*, q, ts_rank_cd(tsv, q, 32) AS rank FROM acm_doc d, (SELECT ${tsq} AS q) x
-             WHERE tsv @@ q ORDER BY rank DESC LIMIT 10) t
+             WHERE tsv @@ q ORDER BY rank DESC LIMIT $${params.length}) t
        ORDER BY rank DESC`,
       params,
     )
@@ -62,23 +62,27 @@ export async function get(idOrUrl: string, pdfs = true): Promise<FullDoc> {
   return { title: doc.title, url: doc.url, date: doc.date, text: pdfs ? doc.pageText + doc.pdfText : doc.pageText };
 }
 
-/** A publication page from acm.nl: its <main> text and, unless pdfs=false, the text of its decision PDFs. */
-export async function fetchLive(url: string, pdfs = true) {
-  const html = await (await fetchOk(url)).text();
+/** Title, date, text and decision-PDF links (at most MAX_PDFS) of a publication page's HTML. */
+export function parsePage(html: string) {
   const main = mainHtml(html);
   const pageText = htmlText(main);
-  let pdfText = "";
-  if (pdfs) {
-    // Relative /system/files/documents links are the decisions under "Documenten"; absolute ones are general guides.
-    const links = [...new Set([...main.matchAll(/href="(\/system\/files\/documents\/[^"]+\.pdf)"/g)].map((m) => BASE + m[1]))].slice(0, MAX_PDFS);
-    const texts = await Promise.all(links.map((l) => pdfToText(l).catch(() => "")));
-    pdfText = links.map((l, i) => (texts[i] ? `\n\n--- ${l} ---\n${texts[i]}` : "")).join("");
-  }
+  // Relative links are the decisions under "Documenten" (/system/files/documents/, and on older pages
+  // /sites/default/files/documents/ or .../old_publication/); absolute ones are general guides.
+  const pdfs = [...new Set([...main.matchAll(/href="(\/(?:system\/files|sites\/default\/files)\/[^"]+\.pdf)"/g)].map((m) => BASE + m[1]))].slice(0, MAX_PDFS);
   return {
     title: htmlText(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? ""),
-    url,
     date: main.match(/<time datetime="(\d{4}-\d{2}-\d{2})/)?.[1] ?? pageText.match(/Publicatiedatum\s+(\d{2}-\d{2}-\d{4})/)?.[1] ?? "",
     pageText,
-    pdfText,
+    pdfs,
   };
+}
+
+/** PDF texts as stored in acm_doc.pdf_text: each after a "--- <url> ---" line; empty texts are left out. */
+export const joinPdfs = (links: string[], texts: string[]) => links.map((l, i) => (texts[i] ? `\n\n--- ${l} ---\n${texts[i]}` : "")).join("");
+
+/** A publication page from acm.nl: its <main> text and, unless pdfs=false, the text of its decision PDFs. */
+export async function fetchLive(url: string, pdfs = true) {
+  const page = parsePage(await (await fetchOk(url)).text());
+  const texts = pdfs ? await Promise.all(page.pdfs.map((l) => pdfToText(l).catch(() => ""))) : [];
+  return { title: page.title, url, date: page.date, pageText: page.pageText, pdfText: joinPdfs(page.pdfs, texts) };
 }

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import useDialog from "@/components/Dialog";
+import useDialog from "@/components/dialog";
 import { ANALYSIS_PROMPTS } from "@/lib/prompts";
 
 type Doc = { id: string; filename: string; mime: string; size: number; source: string; text_length: number; created_at: string };

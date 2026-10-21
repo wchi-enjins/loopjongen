@@ -28,7 +28,7 @@ const SHOWN = 5; // articles with snippet per candidate law
 const TOC_MAX = 60; // laws with at most this many articles also get their full article list
 
 
-// Same as normLabel in c-catalog/search.ts (index.ts already stores labels normalized).
+// Same as normLabel in c_catalog/search.ts (index.ts already stores labels normalized).
 export const normLabel = (label: string) => label.replace(/^(artikel|art\.)\s*/i, "").trim().replace(/\.$/, "");
 
 /**

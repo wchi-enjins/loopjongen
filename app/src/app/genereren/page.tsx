@@ -1,6 +1,6 @@
 "use client";
 
-import Generator from "@/components/Generator";
+import Generator from "@/components/generator";
 import { TEMPLATES } from "@/lib/templates";
 
 export default function GeneratePage() {

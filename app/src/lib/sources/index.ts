@@ -23,7 +23,7 @@ const rechtspraak = {
   },
 };
 
-export const SOURCES: Record<Source, { search(q: string): Promise<SourceDoc[]>; get(id: string, pdfs?: boolean): Promise<FullDoc> }> = { acm, ap, kifid, rechtspraak };
+export const SOURCES: Record<Source, { search(q: string, limit?: number): Promise<SourceDoc[]>; get(id: string, pdfs?: boolean): Promise<FullDoc> }> = { acm, ap, kifid, rechtspraak };
 export const LABELS: Record<Source, string> = { acm: "ACM", ap: "Autoriteit Persoonsgegevens", kifid: "Kifid", rechtspraak: "Rechtspraak" };
 const NAMES = Object.keys(SOURCES) as Source[];
 

@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Chevron from "@/components/Chevron";
-import useDialog from "@/components/Dialog";
-import Markdown from "@/components/Markdown";
+import Chevron from "@/components/chevron";
+import useDialog from "@/components/dialog";
+import Markdown from "@/components/markdown";
 import { readStream } from "@/lib/stream";
 import { ANALYSIS_PROMPTS } from "@/lib/prompts";
 import { CHAT_MODELS, DEFAULT_EFFORT, DEFAULT_LAW_SEARCH, EFFORTS, LAW_SEARCHES, pickEffort, pickLawSearch, pickModel, supportsEffort, type Effort, type LawSearch } from "@/lib/models";
@@ -14,7 +14,7 @@ type DocRef = { id: string; filename: string };
 /** model/effort/law_search: this chat's choice; null = server default. */
 type Detail = { id: string; title: string; model?: string | null; effort?: string | null; law_search?: string | null; customer_id?: string | null; messages: Msg[]; documents: DocRef[] };
 
-// id = localStorage key; "anthropic-api-key" is also read by components/Generator.tsx.
+// id = localStorage key; "anthropic-api-key" is also read by components/generator.tsx.
 const KEYS = [
   { id: "anthropic-api-key", label: "Claude: AI-chat, documentanalyses en Genereren", href: "https://platform.claude.com/settings/keys", placeholder: "sk-ant-…" },
 ];

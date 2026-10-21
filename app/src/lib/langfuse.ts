@@ -1,5 +1,5 @@
 /**
- * Langfuse tracing for deep search (benchmarks/law-retrieval/deep). Off unless LANGFUSE_PUBLIC_KEY and
+ * Langfuse tracing for deep search (benchmarks/law_retrieval/deep). Off unless LANGFUSE_PUBLIC_KEY and
  * LANGFUSE_SECRET_KEY are set; LANGFUSE_BASE_URL picks the region or a self-hosted server. When off, the
  * observations from @langfuse/tracing are no-ops.
  */

@@ -1,6 +1,6 @@
 "use client";
 
-import Generator from "@/components/Generator";
+import Generator from "@/components/generator";
 import { GOVERNANCE } from "@/lib/templates";
 
 export default function GovernancePage() {

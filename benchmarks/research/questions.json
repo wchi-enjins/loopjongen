@@ -1,5 +1,5 @@
 {
-  "_doc": "Research-answer benchmark for deep search: Moonlit's 5 questions (Dutch text exactly as sent on 2026-10-10). 'reference' lists what Moonlit Luna found (competitor research/moonlit-raw/2026-10-10-5-questions.md). It is a REFERENCE, not gold: nothing was verified independently, and Moonlit's own claim check flagged some of it. 'gaps' are things Moonlit said it could not find; an honest 'not found' there is a correct answer unless a source proves otherwise. Score with rubric.md.",
+  "_doc": "Research-answer benchmark for deep search: Moonlit's 5 questions (Dutch text exactly as sent on 2026-10-10), plus q2b (an AP-only follow-up to ap-cookies, sent 2026-10-20; Moonlit's answer in moonlit/2026-10-20_q2b_*). 'reference' lists what Moonlit Luna found (competitor_research/moonlit_raw/2026-10-10_5_questions.md). It is a REFERENCE, not gold: nothing was verified independently, and Moonlit's own claim check flagged some of it. 'gaps' are things Moonlit said it could not find; an honest 'not found' there is a correct answer unless a source proves otherwise. Score with rubric.md.",
   "questions": [
     {
       "id": "acm-dark-patterns",
@@ -30,6 +30,21 @@
         "Only enforcement on 11.7a itself found: ACM order subject to penalty against NPO (2014)"
       ],
       "gaps": []
+    },
+    {
+      "id": "q2b",
+      "question": "Welke boetes heeft de Autoriteit Persoonsgegevens opgelegd voor het niet of te laat melden van een datalek of voor onvoldoende beveiliging van persoonsgegevens? Noem per zaak de organisatie, het jaar, het boetebedrag en de geschonden AVG-bepaling. En wat zegt de AP over wanneer een datalek binnen 72 uur gemeld moet worden?",
+      "portals": ["autoriteitpersoonsgegevens.nl", "uitspraken.rechtspraak.nl"],
+      "verified": false,
+      "reference": [
+        "Late or no breach notification: Uber B.V. and Uber Technologies (decision 6 Nov 2018) EUR 600,000 for art. 34a lid 1 and 2 Wbp (pre-AVG; reported 371 days late); PVV Overijssel (16 Jun 2020) EUR 7,500 for art. 33 lid 1 AVG (never reported); Booking.com (10 Dec 2020) EUR 475,000 for art. 33 lid 1 AVG (22 days late)",
+        "Security (art. 32 AVG): HagaZiekenhuis (18 Jun 2019) EUR 460,000, art. 32 lid 1, lowered by Rechtbank Den Haag to EUR 350,000 (ECLI:NL:RBDHA:2021:3090); OLVG (26 Nov 2020) EUR 440,000, art. 32 lid 1; orthodontiepraktijk (4 Feb 2021) EUR 12,000, art. 32 lid 1; CP&A EUR 15,000, art. 9 lid 1 and 32 lid 1",
+        "Security (art. 32 AVG), continued: UWV (31 May 2021) EUR 450,000, art. 13 Wbp and art. 32 lid 1 and 2; Transavia (23 Sep 2021) EUR 400,000, art. 32 lid 1 and 2; Minister of BZ, NVIS (24 Feb 2022) EUR 565,000 of which EUR 465,000 for art. 32 lid 1 (plus art. 13 lid 1 onder e); Minister of Financien, FSV (7 Apr 2022) EUR 3.7 million of which EUR 500,000 for art. 32 lid 1; SVB (19 Jan 2023) EUR 150,000, art. 32 lid 1 and 2; HAN (15 Dec 2025) EUR 175,000, art. 32",
+        "Curator of a bankrupt care institution (9 Dec 2021) EUR 310,000 for art. 5 lid 1 onder f jo. 32 lid 1 and 2 AVG; EUR 148,750 on objection; Rechtbank Gelderland lowered it to EUR 58,125 (ECLI:NL:RBGEL:2025:6547). Only known through the ruling",
+        "72 hours (Booking decision): the period starts when the controller has 'a reasonable degree of certainty' that a security incident compromised personal data; ongoing investigation is no reason to wait, since art. 33 lid 4 AVG allows notification in phases; a late notification needs a justification. The AP step-by-step plan says: first notification within 72 hours, follow-up later",
+        "No notification only if a risk is unlikely, judged case by case; data seen by an unauthorised person is already a risk. The controller stays responsible when a processor or IT supplier is involved (art. 33 lid 2, art. 28 lid 3 onder f AVG); waiting for a full investigation or fear of reputational damage are no good reasons (Jaarrapportage meldplicht datalekken 2021)"
+      ],
+      "gaps": ["No court ruling found on the AP's reading of the 72-hour period", "CP&A decision date not in Moonlit's sources"]
     },
     {
       "id": "bnpl-ccd2",

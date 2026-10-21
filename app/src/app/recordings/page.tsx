@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import useDialog from "@/components/Dialog";
+import useDialog from "@/components/dialog";
 
 type Meeting = { id: string; title: string; date: string; document_id: string | null };
 type Status = { connected: boolean; account?: string; meetings: Meeting[] };

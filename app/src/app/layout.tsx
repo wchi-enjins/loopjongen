@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import Nav from "@/components/Nav";
-import Feedback from "@/components/Feedback";
+import Nav from "@/components/nav";
+import Feedback from "@/components/feedback";
 import "./globals.css";
 
 export const metadata: Metadata = {
