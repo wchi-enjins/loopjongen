@@ -151,7 +151,7 @@ if (REINDEX) {
 }
 
 if (process.stderr.isTTY) process.stderr.write("reading the sitemap (10 requests, about 2 min)…\n");
-const entries = await sitemap(`${BASE}/sitemap.xml`, (u) => u.startsWith(BASE + PUB));
+const entries = await sitemap(`${BASE}/sitemap.xml`, (u) => u.startsWith(BASE + PUB) && !u.includes("?"));
 const ids = entries.map((e) => e.url.slice((BASE + PUB).length));
 await pool.query(
   `INSERT INTO acm_doc (id, url, title, lastmod) SELECT * FROM unnest($1::text[], $2::text[], $3::text[], $4::text[])

@@ -7,12 +7,17 @@ import { SOURCES, getSourceDoc, type Source } from "../../../app/src/lib/sources
 import { normLabel, pool, searchText } from "../../../app/src/lib/lawsearch/fulltext.ts";
 
 export type Doc = { key: string; source: Source | "bwb"; id: string; title: string; url: string; date: string; text: string };
-export type Ctx = { docs: Map<string, Doc>; trace: string[] }; // key = "<source>:<id>"; bwb articles: "bwb:<lawId>:<label>"
+export type Ctx = { docs: Map<string, Doc>; trace: string[]; costUsd?: number }; // key = "<source>:<id>"; bwb articles: "bwb:<lawId>:<label>"
 
 const NAMES = Object.keys(SOURCES) as Source[];
 // ponytail: fixed window per read; the model pages on with offset, the full text stays in ctx.docs.
 const MAX_RESULT_CHARS = 30_000;
 const HITS = 30; // per source for acm and ap (Moonlit lists 20-50); one AP fine often takes two hits
+// DEEP_JEV=1: TypeSafe's Jev scores every search hit on its full text against the loop's relevance question and the hits
+// come back sorted by that score, so a relevant document with a vague title still reaches a grid. $0.042 per M input tokens.
+export const JEV = process.env.DEEP_JEV === "1";
+const JEV_CHARS = 30_000; // as the tables see it (DOC_CHARS in search.ts)
+type Relevance = { question: string; yes: string; no: string };
 
 export const TOOLS: Anthropic.Beta.BetaTool[] = [
   {
@@ -24,6 +29,15 @@ export const TOOLS: Anthropic.Beta.BetaTool[] = [
       properties: {
         query: { type: "string", description: "Short Dutch keywords." },
         sources: { type: "array", items: { type: "string", enum: NAMES }, description: "Optional subset; default all four." },
+        ...(JEV && {
+          relevance: {
+            type: "object",
+            description: "The sub-question this search is for, with what counts as relevant (yes) and not (no), as specific as the sub-question: name the kind of decision, the articles and what falls outside. Every hit is scored on its full text against it and the hits come sorted by p (0-1).",
+            properties: { question: { type: "string" }, yes: { type: "string" }, no: { type: "string" } },
+            required: ["question", "yes", "no"],
+            additionalProperties: false,
+          },
+        }),
       },
       required: ["query"],
       additionalProperties: false,
@@ -79,15 +93,48 @@ const clip = (text: string, offset = 0) => {
   return end < text.length || offset > 0 ? `${part}\n\n[showing characters ${offset}-${end} of ${text.length}${end < text.length ? `; call again with offset ${end} for more` : ""}]` : part;
 };
 
-async function searchSourcesTool(input: { query: string; sources?: string[] }, ctx: Ctx) {
+/** Jev's probability of yes for one question about a state (text or JSON); undefined when the call fails. */
+export async function jev(state: unknown, instructions: string, ctx: Ctx, criteria?: { true: string; false: string }): Promise<number | undefined> {
+  const res = await fetch("https://api.typesafe.ai/v1/systemone", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.JEV_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ model: "jev-latest", state, questions: { q: { type: "noul", instructions, ...(criteria && { criteria }) } } }),
+  }).catch(() => undefined);
+  if (!res?.ok) return undefined;
+  const body = await res.json();
+  if (ctx.costUsd !== undefined) ctx.costUsd += ((body.usage?.input_tokens ?? 0) * 0.042) / 1e6; // shows in the run's total
+  return body.answers?.q?.noul;
+}
+
+/** Jev's probability that the document is relevant, scored on its full text. */
+export async function jevDoc(key: string, question: string, ctx: Ctx, criteria?: { true: string; false: string }) {
+  const had = ctx.docs.has(key);
+  const doc = await fetchDoc(key, ctx).catch(() => "error");
+  // A hit fetched only to score it is not a read document: kept in ctx.docs it would reach the draft as text.
+  if (!had) ctx.docs.delete(key);
+  if (typeof doc === "string") return undefined;
+  return jev({ title: doc.title, published: doc.date, text: doc.text.slice(0, JEV_CHARS) }, question, ctx, criteria);
+}
+
+async function searchSourcesTool(input: { query: string; sources?: string[]; relevance?: Relevance }, ctx: Ctx) {
   const names = input.sources?.length ? NAMES.filter((s) => input.sources!.includes(s)) : NAMES;
   const results = await Promise.allSettled(names.map((s) => SOURCES[s].search(input.query, HITS)));
   ctx.trace.push(`search_sources "${input.query}" [${names}]: ${results.map((r, i) => `${names[i]} ${r.status === "fulfilled" ? r.value.length : "error"}`).join(", ")}`);
+  const rel = JEV ? input.relevance : undefined;
+  const scores = new Map<string, number | undefined>();
+  if (rel) {
+    const keys = results.flatMap((r, i) => (r.status === "fulfilled" ? r.value.map((d) => `${names[i]}:${d.id}`) : []));
+    // ponytail: 8 at a time, no backoff; add it if Jev returns 429s.
+    for (let i = 0; i < keys.length; i += 8) await Promise.all(keys.slice(i, i + 8).map(async (k) => scores.set(k, await jevDoc(k, rel.question, ctx, { true: rel.yes, false: rel.no }))));
+    ctx.trace.push(`jev "${rel.question}": ${keys.length} hits, ${[...scores.values()].filter((p) => p !== undefined && p >= 0.5).length} with p >= 0.5`);
+  }
   return names
     .map((s, i) => {
       const r = results[i];
       if (r.status === "rejected") return `## ${s}: search failed (${r.reason?.message ?? r.reason})`;
-      const lines = r.value.map((d) => `${s}:${d.id} | ${d.title} | ${d.date}${d.snippet ? ` | ${d.snippet.replace(/\s+/g, " ").slice(0, 200)}` : ""}`);
+      const p = (d: { id: string }) => scores.get(`${s}:${d.id}`) ?? -1;
+      const hits = rel ? [...r.value].sort((a, b) => p(b) - p(a)) : r.value;
+      const lines = hits.map((d) => `${rel ? `p=${p(d) < 0 ? "?" : p(d).toFixed(2)} | ` : ""}${s}:${d.id} | ${d.title} | ${d.date}${d.snippet ? ` | ${d.snippet.replace(/\s+/g, " ").slice(0, 200)}` : ""}`);
       return `## ${s}: ${lines.length} hits\n${lines.join("\n")}`;
     })
     .join("\n\n");

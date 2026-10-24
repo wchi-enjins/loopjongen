@@ -1,0 +1,184 @@
+{
+  "rows": [
+    {
+      "step": "draft",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "in": 69153,
+      "out": 4219,
+      "s": 33.9,
+      "total": 0.361
+    },
+    {
+      "step": "quote fix",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "in": 2874,
+      "out": 155,
+      "s": 2.7,
+      "total": 0.376
+    },
+    {
+      "step": "answer",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "in": 4315,
+      "out": 2085,
+      "s": 16.9,
+      "total": 0.435
+    }
+  ],
+  "quoteCheck": {
+    "passed": 22,
+    "failed": 1,
+    "fixed": 1,
+    "dropped": 0
+  },
+  "claims": [
+    {
+      "text": "Booking.com B.V. kreeg een boete van € 475.000 wegens overtreding van art. 33 lid 1 AVG (te late melding van een datalek); besluit van 10 december 2020, gepubliceerd in 2021.",
+      "quote": "De AP legt aan Booking, wegens overtreding van artikel 33, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 475.000,--",
+      "doc": "ap:documenten/boete-bookingcom",
+      "ok": true
+    },
+    {
+      "text": "Booking.com werd volgens de AP op 13 januari 2019 op de hoogte gebracht en meldde pas op 7 februari, 22 dagen te laat.",
+      "quote": "Booking.com werd op 13 januari 2019 op de hoogte gebracht van het datalek, maar meldde het pas op 7 februari bij de AP. Dat is 22 dagen te laat.",
+      "doc": "ap:actueel/boete-bookingcom-voor-te-laat-melden-datalek",
+      "ok": true
+    },
+    {
+      "text": "Stichting PVV Overijssel kreeg een boete van € 7.500 wegens het niet melden van een datalek (art. 33 lid 1 AVG); besluit 16 juni 2020, gepubliceerd in 2021.",
+      "quote": "De AP legt aan de PVV Overijssel, wegens overtreding van artikel 33, eerste lid, van de AVG in de periode van 14 januari 2019 tot heden, een bestuurlijke boete op ten bedrage van € 7.500,-- (zegge: zevenduizend vijfhonderd euro).",
+      "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+      "ok": true
+    },
+    {
+      "text": "Het oorspronkelijk bezien bedrag van € 525.000 voor PVV Overijssel is verlaagd omdat de partij dat niet kon dragen.",
+      "quote": "het boetebedrag van € 525.000 financieel niet kan dragen.",
+      "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+      "ok": true
+    },
+    {
+      "text": "Uber B.V. en Uber Technologies Inc. kregen in 2018 (besluit 6 november 2018) gezamenlijk € 600.000 voor te laat melden; dit betrof art. 34a lid 1 en 2 Wbp, niet de AVG.",
+      "quote": "De AP legt aan het UBV en UTI gezamenlijk, wegens overtreding van artikel 34a, eerste en tweede lid, Wbp, een bestuurlijke boete op ten bedrage van € 600.000, voor de betaling waarvan zij hoofdelijk aansprakelijk zijn.",
+      "doc": "ap:documenten/boete-uber-datalek",
+      "ok": true
+    },
+    {
+      "text": "Stichting HagaZiekenhuis kreeg bij besluit van 18 juni 2019 een boete van € 460.000 wegens overtreding van art. 32 lid 1 AVG.",
+      "quote": "bij besluit van 18 juni 2019 besloten tot oplegging van zowel een bestuurlijke boete als een last onder dwangsom wegens overtreding van artikel 32, eerste lid, van de AVG.",
+      "doc": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+      "ok": true
+    },
+    {
+      "text": "De rechtbank Den Haag (2021) matigde de Haga-boete tot € 350.000.",
+      "quote": "De rechtbank vindt dit bedrag echter in dit geval te hoog en ziet aanleiding de boete te matigen tot € 350.000,-.",
+      "doc": "rechtspraak:ECLI:NL:RBDHA:2021:3090",
+      "ok": true
+    },
+    {
+      "text": "Stichting OLVG kreeg € 440.000 wegens overtreding van art. 32 lid 1 AVG (besluit 26 november 2020, gepubliceerd 2021).",
+      "quote": "De AP legt aan OLVG, wegens overtreding van artikel 32, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 440.000,-- (zegge vierhonderdenveertigduizend euro).67",
+      "doc": "ap:documenten/boete-olvg",
+      "ok": true
+    },
+    {
+      "text": "Transavia Airlines C.V. kreeg € 400.000 wegens overtreding van art. 32 lid 1 en 2 AVG (besluit 23 september 2021).",
+      "quote": "De AP legt aan Transavia Airlines C.V. wegens overtreding van artikel 32, eerste en tweede lid, van de AVG een bestuurlijke boete op ten bedrage van:",
+      "doc": "ap:documenten/boete-transavia",
+      "ok": true
+    },
+    {
+      "text": "Het UWV kreeg in 2021 (besluit 31 mei 2021) € 450.000 wegens overtreding van art. 13 Wbp en art. 32 lid 1 en 2 AVG.",
+      "quote": "Hierdoor heeft UWV in strijd gehandeld met artikel 13 van de Wet bescherming persoonsgegevens en artikel 32, eerste en tweede lid, van de Algemene verordening gegevensbescherming.",
+      "doc": "ap:documenten/boete-uwv-beveiliging-groepsberichten",
+      "ok": true
+    },
+    {
+      "text": "De minister van Buitenlandse Zaken (NVIS) kreeg in 2022 (besluit 24 februari 2022) € 565.000 wegens art. 13 lid 1 sub e en art. 32 lid 1 AVG.",
+      "quote": "De Minister handelt hierdoor in strijd met artikel 13, lid 1 onder e, en artikel 32, lid 1, van de Algemene Verordening Gegevensbescherming (AVG).",
+      "doc": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+      "ok": true
+    },
+    {
+      "text": "De Belastingdienst (minister van Financiën) kreeg in 2022 (besluit 7 april 2022) in totaal € 3,7 mln, waarvan € 500.000 voor overtreding van art. 32 lid 1 AVG (FSV).",
+      "quote": "Hierdoor heeft de Minister van Financiën artikel 32, eerste lid, van de AVG overtreden.",
+      "doc": "ap:documenten/boete-belastingdienst-zwarte-lijst-fsv",
+      "ok": true
+    },
+    {
+      "text": "De Sociale Verzekeringsbank kreeg in 2023 (besluit 19 januari 2023) € 150.000 wegens art. 32 lid 1 en 2 AVG.",
+      "quote": "De AP stelt het boetebedrag voor de overtreding van artikel 32, eerste en tweede lid, van de AVG, gelet op het voorgaande vast op € 150.000.",
+      "doc": "ap:documenten/boete-sociale-verzekeringsbank",
+      "ok": true
+    },
+    {
+      "text": "De Hogeschool van Arnhem en Nijmegen kreeg in 2025 (besluit 15 december 2025) € 175.000 wegens overtreding van art. 32 AVG.",
+      "quote": "De Autoriteit Persoonsgegevens legt aan de Stichting Hogeschool van Arnhem en Nijmegen een bestuurlijke boete op van € 175.000,00 (zegge: honderdvijfenzeventigduizend euro) voor het overtreden van artikel 32 van de AVG.",
+      "doc": "ap:documenten/boete-han",
+      "ok": true
+    },
+    {
+      "text": "Een (geanonimiseerde) orthodontiepraktijk kreeg in 2021 (besluit 4 februari 2021) € 12.000 wegens art. 32 lid 1 AVG.",
+      "quote": "Daarmee heeft zij artikel 32, eerste lid, van de AVG overtreden.",
+      "doc": "ap:documenten/boete-orthodontiepraktijk",
+      "ok": true
+    },
+    {
+      "text": "CP&A B.V. kreeg in 2020 (besluit 24 maart 2020) totaal € 15.000 voor art. 9 lid 1 en art. 32 lid 1 AVG; het art. 32-bedrag was vastgesteld op € 310.000 en is wegens draagkracht verlaagd.",
+      "quote": "De AP legt aan CP&A, wegens overtreding van artikel 9, eerste lid, van de AVG en artikel 32, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 15.000 (zegge: vijftienduizend euro).",
+      "doc": "ap:documenten/boete-cpa-verzuimregistratie",
+      "ok": true
+    },
+    {
+      "text": "Een curator kreeg bij AP-besluit van 9 december 2021 € 310.000 (art. 5 lid 1 sub f jo. art. 32 lid 1 en 2 AVG), na bezwaar € 148.750; de rechtbank Gelderland matigde in 2025 tot € 58.125.",
+      "quote": "De rechtbank komt in deze uitspraak tot het oordeel dat de AP terecht een boete heeft opgelegd aan eiser, maar dat de boete moet worden gematigd tot een bedrag van € 58.125.",
+      "doc": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+      "ok": true
+    },
+    {
+      "text": "Volgens de AP moet een datalek binnen 72 uur na kennisname worden gemeld.",
+      "quote": "U moet een datalek binnen 72 uur na kennisname van het lek melden aan de AP.",
+      "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+      "ok": true
+    },
+    {
+      "text": "Kennisname betekent volgens de AP redelijke zekerheid dat een incident tot aantasting van persoonsgegevens heeft geleid; een enkel vermoeden of ontdekking van een mogelijk datalek is niet genoeg.",
+      "quote": "Met ‘kennisname’ wordt bedoeld dat u er redelijk zeker van kunt zijn dat een beveiligingsincident heeft geleid tot de aantasting van de vertrouwelijkheid, integriteit en/of beschikbaarheid van persoonsgegevens.",
+      "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+      "ok": true
+    },
+    {
+      "text": "Bij een complexe inbreuk moet een voorlopige melding binnen 72 uur, met later een vervolgmelding.",
+      "quote": "Dan moet u de eerste (voorlopige) melding nog steeds binnen 72 uur doen. Wacht dus niet tot het onderzoek naar het datalek is afgerond.",
+      "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+      "ok": true
+    },
+    {
+      "text": "Een late melding accepteert de AP alleen bij uitzondering; weekend, vakantie, ziekte of drukte zijn geen geldige redenen.",
+      "quote": "De AP accepteert een late melding (na 72 uur) alleen in uitzonderlijke gevallen.",
+      "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+      "ok": true
+    },
+    {
+      "text": "Een melding na 72 uur moet volgens art. 33 lid 1 AVG vergezeld gaan van een motivering voor de vertraging.",
+      "quote": "Indien de melding aan de toezichthoudende autoriteit niet binnen 72 uur plaatsvindt, gaat zij vergezeld van een motivering voor de vertraging",
+      "doc": "ap:documenten/woo-besluit-informatie-datalekken",
+      "ok": true
+    },
+    {
+      "text": "Oudere AP-publicaties (2019) noemden nog ontdekking als startmoment; dat is niet de huidige formulering.",
+      "quote": "U dient een meldplichtig datalek, voor zover mogelijk, te melden binnen 72 uur nadat u het datalek ontdekt heeft.",
+      "doc": "ap:documenten/meldplicht-datalekken-feiten-en-cijfers-eerste-helft-2019",
+      "ok": true
+    }
+  ],
+  "trace": [
+    "call 1 claude-opus-5-5: 69153 in / 4219 out, 33.9 s, total $0.361",
+    "laws: ",
+    "call 2 claude-opus-5-5: 2874 in / 155 out, 2.7 s, total $0.376",
+    "quote check: {\"passed\":22,\"failed\":1,\"fixed\":1,\"dropped\":0}",
+    "call 3 claude-opus-5-5: 4315 in / 2085 out, 16.9 s, total $0.435"
+  ]
+}

@@ -10,14 +10,23 @@
  *   node --no-warnings --import ./benchmarks/law_retrieval/resolve_ts.mjs benchmarks/law_retrieval/deep/search.ts [--no-split] [--no-loop] [--no-grid] [--no-table] [--no-quotes] [--no-check] "<vraag>"
  *
  * DEEP_MODEL (default claude-opus-5-5) and DEEP_EFFORT (default high) override the model; DEEP_LOOP_MODEL (default
- * DEEP_MODEL) sets the model of the search loop only, DEEP_TABLE_MODEL (default claude-haiku-5-5) that of the table step.
+ * DEEP_MODEL) sets the model of the search loop only, DEEP_TABLE_MODEL (default claude-haiku-5-5) that of the table step,
+ * DEEP_TABLE_EFFORT (default DEEP_EFFORT) its effort, DEEP_DRAFT_MODEL and DEEP_DRAFT_EFFORT (default DEEP_MODEL and
+ * DEEP_EFFORT) those of the draft only. DEEP_JEV=1 has Jev score every search hit (grid stage only, see tools.ts).
+ * DEEP_JEV_FLOW=1 adds the Jev workflow: one Rechtspraak search per sub-question, a checklist per part from the split
+ * that Jev checks before a loop may stop, a Jev relevance filter before each grid's table (instead of the table's own
+ * first question), and a Jev check that each quote supports its claim.
+ * DEEP_PLAN=1 replaces the search loop, Moonlit-style: one call (DEEP_PLAN_MODEL, default DEEP_MODEL, at DEEP_EFFORT)
+ * writes all searches and the fixed grid questions per sub-question, the searches run in parallel, and each
+ * sub-question gets one grid over its top hits, read one document per call in parallel. No follow-up grids.
  * With LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY set, each run is traced in Langfuse (app/src/lib/langfuse.ts).
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { anthropic } from "../../../app/src/lib/ai.ts";
 import { pickEffort, supportsEffort } from "../../../app/src/lib/models.ts";
-import { normLabel, pool } from "../../../app/src/lib/lawsearch/fulltext.ts";
-import { TOOLS, GRID_TOOL, fetchDoc, runTool, type Ctx, type Doc } from "./tools.ts";
+import { normLabel, pool, searchText } from "../../../app/src/lib/lawsearch/fulltext.ts";
+import { SOURCES, type Source } from "../../../app/src/lib/sources/index.ts";
+import { TOOLS, GRID_TOOL, JEV, fetchDoc, jev, jevDoc, runTool, type Ctx, type Doc } from "./tools.ts";
 import { checkQuote, normalize } from "./quotes.ts";
 import { openaiMessage } from "./openai.ts";
 import { startActiveObservation, startObservation, startTracing } from "../../../app/src/lib/langfuse.ts";
@@ -36,25 +45,44 @@ export type DeepResult = {
   loopCostUsd: number;
   apiCalls: number;
   ms: number;
-  quoteCheck?: { passed: number; failed: number; fixed: number; dropped: number };
+  quoteCheck?: { passed: number; failed: number; fixed: number; dropped: number; unsupported?: number };
 };
 
 export const MODEL = process.env.DEEP_MODEL ?? "claude-opus-5-5";
 export const LOOP_MODEL = process.env.DEEP_LOOP_MODEL ?? MODEL;
 export const TABLE_MODEL = process.env.DEEP_TABLE_MODEL ?? "claude-haiku-5-5"; // Q1 run 4: same coverage as Opus at $0.08 instead of $1.99
 export const EFFORT = pickEffort(process.env.DEEP_EFFORT) ?? "high";
+export const TABLE_EFFORT = pickEffort(process.env.DEEP_TABLE_EFFORT) ?? EFFORT;
+export const DRAFT_MODEL = process.env.DEEP_DRAFT_MODEL ?? MODEL;
+export const DRAFT_EFFORT = pickEffort(process.env.DEEP_DRAFT_EFFORT) ?? EFFORT;
+export const FLOW = process.env.DEEP_JEV_FLOW === "1";
+export const PLAN = process.env.DEEP_PLAN === "1";
+export const PLAN_MODEL = process.env.DEEP_PLAN_MODEL ?? MODEL;
+const PLAN_DOCS = 25; // documents per sub-question grid (Moonlit read 20 for Q2b)
+const GATE_ROUNDS = 2; // times Jev may send a loop back for unchecked items
+const GATE_P = 0.5; // a checklist item counts as covered at p >= this
+const GRID_P = 0.3; // documents below this skip the table (first Jev test: no relevant document dropped at 0.2-0.3)
+// ponytail: tuned on 5 hand cases (bad 0.05 and 0.22, short true quotes 0.28 and 0.48); flagged claims go to the fix
+// step, not out, so a false flag costs a re-quote. Retune on a run's support-check trace.
+const SUPPORT_P = 0.25;
+const SUPPORT = process.env.DEEP_JEV_SUPPORT !== "0"; // DEEP_JEV_SUPPORT=0: workflow without the support check (run 9 flagged 15 of 28)
+const SUPPORT_CRITERIA = {
+  true: "The quote states what the claim says, in other words or partly, so a lawyer can rely on it for this claim. A claim may summarise or name its subject when the source makes clear who it is about.",
+  false: "The quote says something else, contradicts the claim, only states what a party itself said while the claim presents it as the regulator's finding, or the claim adds a fact (date, amount, article, party) the quote does not contain.",
+};
 // ponytail: runaway guard only, no search budget (we compare with Moonlit); add a budget before this moves into the app.
 const MAX_TURNS = 100;
 const MAX_TABLES = 4; // sub-questions, one table each (Moonlit: 8 tables for 5 questions)
 const TABLE_DOCS = 12; // documents per table (Moonlit: 6-12)
 const REST_CHARS = 8_000; // per document that no table picked, given to the draft as text
 const DOC_CHARS = 30_000; // per document in a table call
-const BATCH_CHARS = 120_000; // documents per table call
+// DEEP_PARALLEL_GRIDS=1 (or DEEP_PLAN=1): one document per table call, all in parallel (each stays under Haiku's 100K price step).
+const BATCH_CHARS = process.env.DEEP_PARALLEL_GRIDS === "1" || process.env.DEEP_PLAN === "1" ? DOC_CHARS : 120_000; // documents per table call
 const DRAFT_CHARS = 400_000; // all document text in the draft when the table step is off
 // Haiku 4.5 rejects effort; Haiku models have no server-side fallback.
-const base = (model: string) => ({
+const base = (model: string, effort: string) => ({
   ...(model.startsWith("claude-haiku") ? {} : { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }),
-  output_config: supportsEffort(model) ? { effort: EFFORT } : {},
+  output_config: supportsEffort(model) ? { effort } : {},
 });
 
 // USD per 1M tokens: fresh input, cache read, 5-minute cache write, output. Haiku 5.5 has a second rate card above
@@ -68,19 +96,19 @@ const PRICES: Record<string, Price | ((prompt: number) => Price)> = {
   "gpt-6.1-sol": (prompt) => (prompt > 272_000 ? { in: 4, read: 0.2, write: 4, out: 15 } : { in: 2, read: 0.1, write: 2, out: 10 }),
 };
 
-type Run = Ctx & { usage: DeepResult["usage"]; apiCalls: number; costUsd: number; stage: string; progress: number };
+export type Run = Ctx & { usage: DeepResult["usage"]; apiCalls: number; costUsd: number; stage: string; progress: number };
 
 // Streams, so long outputs don't hit the SDK's 10-minute limit for plain requests.
-async function call(client: Anthropic, run: Run, params: Record<string, any>, model = MODEL) {
-  const b = base(model);
+async function call(client: Anthropic, run: Run, params: Record<string, any>, model = MODEL, effort = EFFORT) {
+  const b = base(model, effort);
   const t0 = Date.now();
   // Named after the step; the input is the newest message only (the loop repeats the whole history every call).
-  const gen = startObservation(run.stage, { model, input: params.messages?.at(-1)?.content, modelParameters: supportsEffort(model) ? { effort: EFFORT } : {} }, { asType: "generation" });
+  const gen = startObservation(run.stage, { model, input: params.messages?.at(-1)?.content, modelParameters: supportsEffort(model) ? { effort } : {} }, { asType: "generation" });
   let msg: Anthropic.Beta.BetaMessage;
   const betas = [...(b.betas ?? []), ...(params.betas ?? [])];
   try {
     msg = model.startsWith("gpt-")
-      ? ((await openaiMessage({ max_tokens: 64000, ...params }, model, EFFORT)) as any as Anthropic.Beta.BetaMessage)
+      ? ((await openaiMessage({ max_tokens: 64000, ...params }, model, effort)) as any as Anthropic.Beta.BetaMessage)
       : await client.beta.messages
           .stream({ model, max_tokens: 64000, ...b, ...params, ...(betas.length && { betas }), output_config: { ...b.output_config, ...params.output_config } } as any)
           .finalMessage();
@@ -114,8 +142,8 @@ async function call(client: Anthropic, run: Run, params: Record<string, any>, mo
 
 const textOf = (msg: Anthropic.Beta.BetaMessage) => msg.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("").trim();
 
-async function ask<T>(client: Anthropic, run: Run, system: string, content: string, schema: object, model = MODEL): Promise<T> {
-  return JSON.parse(textOf(await call(client, run, { system, messages: [{ role: "user", content }], output_config: { format: { type: "json_schema", schema } } }, model)));
+async function ask<T>(client: Anthropic, run: Run, system: string, content: string, schema: object, model = MODEL, effort = EFFORT): Promise<T> {
+  return JSON.parse(textOf(await call(client, run, { system, messages: [{ role: "user", content }], output_config: { format: { type: "json_schema", schema } } }, model, effort)));
 }
 
 const str = { type: "string" };
@@ -124,7 +152,7 @@ const obj = (properties: Record<string, object>) => ({ type: "object", propertie
 const LAWS = arr(obj({ id: str, articles: arr(str), why: str }));
 
 /** Head and tail of a long text (rulings put the decision at the end), with a note that it was cut. */
-function clip(text: string, max: number) {
+export function clip(text: string, max: number) {
   if (text.length <= max) return text;
   const head = Math.round(max * 0.7);
   return `${text.slice(0, head)}\n\n[... ingekort: ${text.length - max} van ${text.length} tekens weggelaten ...]\n\n${text.slice(text.length - (max - head))}`;
@@ -156,14 +184,17 @@ End with a short note and no tool calls: the sub-questions, the key documents (b
 
 Hard rule: a search that finds nothing proves nothing. Report it as a gap ("not found in <source>"); never conclude from it that something doesn't exist or only happened elsewhere.`;
 
+const JEV_RULE = `\n\nWith every search_sources call, pass relevance: the sub-question it is for, what counts as yes and what as no. Make yes and no exactly as narrow as the sub-question (if it asks only about art. 32 fines, a fine for late reporting is no). Hits come sorted by p, the chance the full text is relevant: grid the hits with high p even when their title does not look relevant, and skip those with low p.`;
 // Grid stage: the loop reads through analyze_documents and never sees document texts.
-const LOOP_GRID_SYSTEM = LOOP_SYSTEM.replace(
+const FLOW_RULE = `\n\nSearch rechtspraak at least once per sub-question, with 2-4 plain keywords (a party name, the regulator, the subject), even when the regulator's own decisions seem to answer it: court rulings on appeal change fines and outcomes.`;
+const LOOP_GRID_SYSTEM = (LOOP_SYSTEM + (JEV ? JEV_RULE : "") + (FLOW ? FLOW_RULE : "")).replace(
   /^3\. .*$/m,
   "3. Read through analyze_documents: give each sub-question its own grid of 2-4 fixed questions. Make the first question a relevance filter (for example: does this document decide a case of the kind the sub-question asks about? yes or no), then ask the facts you need (who, what sanction or amount, which article, what outcome); for a legal norm, ask how the regulator reads it and which defences it rejected. Grid the decisions themselves (AP: ap:documenten/boete-...), not the press releases about them. You see only the answers and quotes, never the full text. Then run small grids on just the documents with gaps, for example a missing article or amount.",
 ).replace("Only documents you read count as sources.", "Only documents in a grid count as sources.");
 const GRID_TOOLS = [...TOOLS.filter((t) => t.name.startsWith("search_")), GRID_TOOL];
 
 const SPLIT_SYSTEM = `Split a Dutch legal research question into the parts that can be researched independently, each by its own search, at most ${MAX_TABLES}. Do not split a question that has one part: return it as the only part. Keep parts together when one needs the other's findings. Write each part as a self-contained question in the question's language, repeating the regulator, law, sector and period it is about.`;
+const CHECKS_RULE = ` For each part, also write 3-6 checks: short yes/no questions that a complete answer to that part must pass, about what a thorough lawyer would look for, for example "Is for each fine the court ruling on appeal named, if there is one?", "Is it explained when the term starts?", "Are the exceptions named?". Name kinds of facts, not facts you expect.`;
 
 // The loop's prompt stays under ~100K tokens (Haiku 5.5's higher rate card): past 80K the API drops the oldest tool
 // results, keeping the last 10 and every grid. Nothing is lost for the answer: grids and read documents go to the
@@ -200,7 +231,7 @@ const DRAFT_PLAIN = `Je beantwoordt een juridische onderzoeksvraag voor een advo
 - Harde regel: niets gevonden is een open punt, geen conclusie. Schrijf nooit dat iets niet bestaat of alleen elders gebeurde omdat je er geen document over vond.
 - laws: de BWB-regelingen die de vraag beantwoorden, de meest relevante eerst, elk met BWB-id, artikelnummers (beste eerst) en één zin waarom.`;
 
-const FIX_SYSTEM = `Deze citaten staan niet letterlijk in hun brondocument. Geef per claim (i) een citaat dat wél woord voor woord in de getoonde tekst staat en de claim draagt, en pas de claimtekst zo nodig aan zodat die niet meer zegt dan het citaat. Staat er niets in de tekst dat de claim draagt, zet dan drop op true. Schrijf in het Nederlands.`;
+const FIX_SYSTEM = `Deze citaten staan niet letterlijk in hun brondocument, of dragen hun claim niet volledig. Geef per claim (i) een citaat dat wél woord voor woord in de getoonde tekst staat en de claim draagt, en pas de claimtekst zo nodig aan zodat die niet meer zegt dan het citaat. Staat er niets in de tekst dat de claim draagt, zet dan drop op true. Schrijf in het Nederlands.`;
 
 const RENDER_SYSTEM = `Je schrijft het eindantwoord op een juridische onderzoeksvraag voor een advocaat, in het Nederlands, in markdown (kopjes en opsommingen waar dat helpt).
 - Gebruik uitsluitend de genummerde claims. Zet na elke bewering het nummer van de claim(s) die haar dragen, bijvoorbeeld [3] of [2][5].
@@ -228,6 +259,22 @@ function progress(run: Run) {
   };
 }
 
+// ponytail: one global cap on table calls; run 10 hit the org's concurrent-request limit (429) at about 100. Run 4
+// parallel grids ran up to about 24 fine. Raise it if the org tier allows more.
+const TABLE_CONCURRENCY = 16;
+let tablesRunning = 0;
+const tableQueue: (() => void)[] = [];
+async function tableSlot<T>(f: () => Promise<T>): Promise<T> {
+  if (tablesRunning >= TABLE_CONCURRENCY) await new Promise<void>((r) => tableQueue.push(r));
+  tablesRunning++;
+  try {
+    return await f();
+  } finally {
+    tablesRunning--;
+    tableQueue.shift()?.();
+  }
+}
+
 /** One analysis table: every question asked of every document, in batches of BATCH_CHARS; returned as markdown. */
 async function fillTable(client: Anthropic, run: Run, qs: string[], picked: Doc[]) {
   const batches: Doc[][] = [[]];
@@ -243,14 +290,15 @@ async function fillTable(client: Anthropic, run: Run, qs: string[], picked: Doc[
   }
   const qList = qs.map((q, i) => `${i + 1}. ${q}`).join("\n");
   // Parallel; on a rate limit (429) the SDK retries with backoff (maxRetries 2).
-  const results = await Promise.all(batches.map((batch) =>
+  const results = await Promise.all(batches.map((batch) => tableSlot(() =>
     ask<{ rows: { doc: string; cells: { answer: string; quotes: string[] }[] }[] }>(
       client, run, TABLE_SYSTEM,
       `Vragen:\n${qList}\n\n${batch.map((d) => docXml(d, DOC_CHARS)).join("\n\n")}`,
       obj({ rows: arr(obj({ doc: str, cells: arr(obj({ answer: str, quotes: arr(str) })) })) }),
       TABLE_MODEL,
+      TABLE_EFFORT,
     ),
-  ));
+  )));
   return results
     .flatMap(({ rows }) => rows)
     .map((r) => `\n### ${r.doc} | ${run.docs.get(r.doc)?.title ?? ""}\n${r.cells.map((c, i) => `- ${qs[i] ?? `vraag ${i + 1}`}: ${c.answer}${c.quotes.map((q) => ` | "${q}"`).join("")}`).join("\n")}\n`)
@@ -258,15 +306,25 @@ async function fillTable(client: Anthropic, run: Run, qs: string[], picked: Doc[
 }
 
 /** analyze_documents: fetches the documents into run.docs and returns only their table. Never throws, like runTool. */
-async function grid(client: Anthropic, run: Run, input: { questions: string[]; keys: string[] }, grids: string[]) {
+async function grid(client: Anthropic, run: Run, input: { questions: string[]; keys: string[] }, grids: string[], maxDocs = TABLE_DOCS) {
   try {
     const qs = input.questions.slice(0, 4);
     const t0 = Date.now();
-    const got = await Promise.all([...new Set(input.keys)].slice(0, TABLE_DOCS).map((k) => fetchDoc(k, run).catch((e) => `Error: ${k}: ${e?.message ?? e}`)));
+    const got = await Promise.all([...new Set(input.keys)].slice(0, maxDocs).map((k) => fetchDoc(k, run).catch((e) => `Error: ${k}: ${e?.message ?? e}`)));
     const picked = got.filter((d): d is Doc => typeof d !== "string");
     const errors = got.filter((d): d is string => typeof d === "string");
     run.trace.push(`analyze_documents: ${qs.length} questions over ${picked.length} documents${errors.length ? `, ${errors.length} failed` : ""}, fetched in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
     if (!qs.length || !picked.length) return [...errors, "Error: give 1-4 questions and at least one valid key."].join("\n");
+    if (FLOW && qs.length > 1) {
+      // Jev answers the first (relevance) question on the full text; the table only extracts the rest.
+      const ps = await Promise.all(picked.map((d) => jevDoc(d.key, qs[0], run)));
+      const out = picked.filter((_, i) => (ps[i] ?? 1) < GRID_P);
+      run.trace.push(`grid filter "${qs[0]}": ${picked.map((d, i) => `${d.key} ${ps[i]?.toFixed(2) ?? "?"}`).join(", ")}`);
+      picked.splice(0, picked.length, ...picked.filter((d) => !out.includes(d)));
+      qs.shift();
+      if (out.length) errors.push(`Not relevant by Jev (p < ${GRID_P}), skipped: ${out.map((d) => d.key).join(", ")}`);
+      if (!picked.length) return errors.join("\n");
+    }
     const table = `Vragen: ${qs.join(" / ")}\n${await fillTable(client, run, qs, picked)}`;
     grids.push(table);
     return [...errors, table].join("\n");
@@ -281,7 +339,7 @@ export async function deepSearch(question: string, stages: Stages = ALL, client:
   const stop = progress(run);
   try {
     return await startActiveObservation("deep-search", async (root) => {
-      root.update({ input: question, metadata: { stages, model: MODEL, loopModel: LOOP_MODEL, tableModel: TABLE_MODEL, effort: EFFORT } });
+      root.update({ input: question, metadata: { stages, model: MODEL, loopModel: LOOP_MODEL, tableModel: TABLE_MODEL, effort: EFFORT, tableEffort: TABLE_EFFORT, draftModel: DRAFT_MODEL, draftEffort: DRAFT_EFFORT, jev: JEV, jevFlow: FLOW } });
       const result = await research(question, stages, client, run);
       root.update({ output: { answer: result.answer, costUsd: result.costUsd, apiCalls: result.apiCalls, ms: result.ms, docs: result.docs.length, quoteCheck: result.quoteCheck } });
       run.progress = 1;
@@ -292,17 +350,91 @@ export async function deepSearch(question: string, stages: Stages = ALL, client:
   }
 }
 
+const PLAN_SYSTEM = `You plan the research for a Dutch legal question for a lawyer, as a thorough senior associate would. You get one shot: your searches all run at once, the top hits of each sub-question are read by an assistant who answers your fixed questions for every document, and the answer is written from those tables. There are no follow-up searches, so cover every variant now.
+
+Sources: ${(TOOLS[0] as any).description}
+Also "laws": full-text search over all Dutch national legislation (BWB), plain keywords; returns articles.
+
+Give 1-4 sub-questions. Per sub-question:
+- searches: 4-8 queries, each with its sources. For acm and ap use broad bracketed boolean queries that cover synonyms and the formal vocabulary, for example (datalek OR inbreuk) AND (boete OR sanctie). For rechtspraak and kifid use 2-4 plain keywords (they AND every word), such as a party name plus the regulator. Include at least one rechtspraak search for appeals of the decisions, and one laws search when a statutory norm is asked.
+- questions: 2-4 fixed questions asked of every document. First a relevance filter (yes or no, does this document decide or explain what the sub-question asks), then the facts a lawyer needs: who, when (the decision date from the text, not the publication date), what sanction or amount, which article, what outcome or appeal; for a norm, how the regulator reads it and the exceptions.`;
+
+/** Moonlit-style search: one planning call, all searches in parallel, one grid per sub-question. */
+async function planSearch(client: Anthropic, run: Run, question: string, grids: string[]) {
+  run.stage = "plan";
+  const names = [...Object.keys(SOURCES), "laws"];
+  const { subquestions } = await ask<{ subquestions: { subquestion: string; searches: { query: string; sources: string[] }[]; questions: string[] }[] }>(
+    client, run, PLAN_SYSTEM, question,
+    obj({ subquestions: arr(obj({ subquestion: str, searches: arr(obj({ query: str, sources: arr({ type: "string", enum: names }) })), questions: arr(str) })) }),
+    PLAN_MODEL,
+  );
+  return executePlan(client, run, subquestions, grids);
+}
+
+export type PlanPart = { subquestion: string; searches: { query: string; sources: string[] }[]; questions: string[] };
+
+// Grid order: AP fine decisions first, then other documents, guidance and rulings, then laws, press releases and Woo
+// disclosures (a press release ranks above its own decision, and a Woo page named "boete" is no decision). Run 10's
+// turn-taking over all hit lists kept 5 of the 13 fine decisions in 25 slots.
+const KIND = (k: string) =>
+  /^ap:documenten\/(besluit-(op-bezwaar-)?)?boete/.test(k) ? 0
+  : /^ap:(themas\/|documenten\/(?!wo[ob]-))|^acm:|^rechtspraak:|^kifid:/.test(k) ? 1
+  : 2;
+
+/** Runs a plan: all searches in parallel, then one grid per sub-question over its top PLAN_DOCS hits. */
+export async function executePlan(client: Anthropic, run: Run, subquestions: PlanPart[], grids: string[]) {
+  run.trace.push(`plan: ${subquestions.map((s) => `\n  - ${s.subquestion}${s.searches.map((q) => `\n      search [${q.sources}] ${q.query}`).join("")}${s.questions.map((q) => `\n      ask ${q}`).join("")}`).join("")}`);
+  run.stage = "search";
+  run.progress = 0.1;
+  const notes: string[] = [];
+  await Promise.all(subquestions.slice(0, MAX_TABLES).map(async (s) => {
+    // Every query on every source in parallel; hit lists are interleaved, so each query's best hits come first.
+    const lists = await Promise.all(s.searches.flatMap((q) => (q.sources.length ? q.sources : Object.keys(SOURCES)).map(async (src) => {
+      try {
+        const keys = src === "laws"
+          ? (await searchText(q.query, 20)).map((r) => `bwb:${r.law_id}:${r.label}`)
+          : (await SOURCES[src as Source].search(q.query, 30)).map((d) => `${src}:${d.id}`);
+        run.trace.push(`search_sources "${q.query}" [${src}]: ${src} ${keys.length}`);
+        return keys;
+      } catch (e: any) {
+        run.trace.push(`search_sources "${q.query}" [${src}]: error ${e?.message ?? e}`);
+        return [];
+      }
+    })));
+    const best = new Map<string, number>(); // key -> best rank in any list
+    for (const l of lists) l.forEach((k, i) => best.set(k, Math.min(best.get(k) ?? i, i)));
+    const keys = [...best.keys()].sort((a, b) => KIND(a) - KIND(b) || best.get(a)! - best.get(b)!).slice(0, PLAN_DOCS);
+    run.trace.push(`plan grid "${s.subquestion.slice(0, 60)}": ${keys.filter((k) => KIND(k) === 0).length} decisions of ${keys.length}`);
+    run.progress += 0.1 / Math.min(subquestions.length, MAX_TABLES);
+    const table = await grid(client, run, { questions: s.questions, keys }, grids, PLAN_DOCS);
+    notes.push(`### ${s.subquestion}\nZoekvragen: ${s.searches.map((q) => `[${q.sources}] ${q.query}`).join("; ")}\nGelezen in de tabel: ${keys.length} documenten${table.startsWith("Error") ? `\n${table}` : ""}`);
+    run.progress += 0.4 / Math.min(subquestions.length, MAX_TABLES);
+  }));
+  return notes;
+}
+
 /** The independent parts of the question, each self-contained; just the question when it does not split. */
 export async function split(client: Anthropic, run: Run, question: string) {
-  const { parts } = await ask<{ parts: string[] }>(client, run, SPLIT_SYSTEM, question, obj({ parts: arr(str) }), LOOP_MODEL);
-  const kept = parts.map((p) => p.trim()).filter(Boolean).slice(0, MAX_TABLES);
-  run.trace.push(`split: ${kept.length} parts${kept.map((p) => `\n  - ${p}`).join("")}`);
-  return kept.length > 1 ? kept : [question];
+  const { parts } = FLOW
+    ? await ask<{ parts: { question: string; checks: string[] }[] }>(client, run, SPLIT_SYSTEM + CHECKS_RULE, question, obj({ parts: arr(obj({ question: str, checks: arr(str) })) }), LOOP_MODEL)
+    : { parts: (await ask<{ parts: string[] }>(client, run, SPLIT_SYSTEM, question, obj({ parts: arr(str) }), LOOP_MODEL)).parts.map((q) => ({ question: q, checks: [] as string[] })) };
+  const kept = parts.map((p) => ({ question: p.question.trim(), checks: p.checks })).filter((p) => p.question).slice(0, MAX_TABLES);
+  run.trace.push(`split: ${kept.length} parts${kept.map((p) => `\n  - ${p.question}${p.checks.map((c) => `\n      check: ${c}`).join("")}`).join("")}`);
+  return kept.length > 1 ? kept : [{ question, checks: kept.flatMap((p) => p.checks) }];
+}
+
+/** The checklist items Jev does not find covered in the loop's notes and grids. */
+async function gaps(run: Run, checks: string[], notes: string[], grids: string[]) {
+  const state = { notes: notes.join("\n\n").slice(-60_000), tables: grids.join("\n").slice(-60_000) };
+  const ps = await Promise.all(checks.map((c) => jev(state, `Do these research notes and tables answer this check? ${c}`, run)));
+  run.trace.push(`gate: ${checks.map((c, i) => `${ps[i]?.toFixed(2) ?? "?"} ${c}`).join(" / ")}`);
+  return checks.filter((_, i) => (ps[i] ?? 1) < GATE_P);
 }
 
 /** One search loop (loop=false: one round of tool calls); returns its notes and, for loop=false, the raw results. */
-async function searchLoop(client: Anthropic, run: Run, stages: Stages, prompt: string, grids: string[], tag: string) {
+async function searchLoop(client: Anthropic, run: Run, stages: Stages, prompt: string, grids: string[], tag: string, checks: string[] = []) {
   const notes: string[] = [];
+  let gateRounds = 0;
   let firstRound = "";
   const messages: any[] = [{ role: "user", content: prompt }];
   for (let turn = 0; ; turn++) {
@@ -318,7 +450,13 @@ async function searchLoop(client: Anthropic, run: Run, stages: Stages, prompt: s
       run.trace.push(`text${tag}: ${text.replace(/\s+/g, " ").slice(0, 300)}`);
     }
     const calls = msg.content.filter((b): b is Anthropic.Beta.BetaToolUseBlock => b.type === "tool_use");
-    if (!calls.length) break;
+    if (!calls.length) {
+      const open = FLOW && stages.loop && checks.length && gateRounds < GATE_ROUNDS ? await gaps(run, checks, notes, grids) : [];
+      if (!open.length) break;
+      gateRounds++;
+      messages.push({ role: "user", content: `Not covered yet:\n${open.map((c) => `- ${c}`).join("\n")}\n\nSearch and grid further for these (try rechtspraak and the regulator's guidance pages), then end with a new note. If they truly have no answer in the sources, say so in the note.` });
+      continue;
+    }
     const results = await Promise.all(calls.map(async (c) => ({
       type: "tool_result",
       tool_use_id: c.id,
@@ -345,18 +483,23 @@ async function research(question: string, stages: Stages, client: Anthropic, run
 
   // 1. Search loops: one per independent part of the question, in parallel, sharing run.docs and grids.
   const grids: string[] = [];
-  const parts = stages.split ? await split(client, run, question) : [question];
-  const branches = await Promise.all(parts.map((part, i) =>
+  let notes: string[];
+  let firstRound = "";
+  if (PLAN) notes = await planSearch(client, run, question, grids);
+  else {
+  const parts = stages.split ? await split(client, run, question) : [{ question, checks: [] as string[] }];
+  const branches = await Promise.all(parts.map(({ question: part, checks }, i) =>
     startActiveObservation(`loop ${i + 1}`, async (span) => {
       const prompt = parts.length > 1 ? `${part}\n\n(This is one part of the question below; other searches cover the other parts. Research only your part.)\n\n${question}` : question;
       span.update({ input: prompt });
-      const branch = await searchLoop(client, run, stages, prompt, grids, parts.length > 1 ? ` ${i + 1}` : "");
+      const branch = await searchLoop(client, run, stages, prompt, grids, parts.length > 1 ? ` ${i + 1}` : "", checks);
       span.update({ output: branch.notes.at(-1) });
       return branch;
     }, { asType: "agent" }),
   ));
-  const notes = branches.map((b, i) => (parts.length > 1 ? `### ${parts[i]}\n${b.notes.join("\n\n")}` : b.notes.join("\n\n")));
-  const firstRound = branches.map((b) => b.firstRound).filter(Boolean).join("\n\n");
+  notes = branches.map((b, i) => (parts.length > 1 ? `### ${parts[i].question}\n${b.notes.join("\n\n")}` : b.notes.join("\n\n")));
+  firstRound = branches.map((b) => b.firstRound).filter(Boolean).join("\n\n");
+  }
   const loopCostUsd = run.costUsd;
   const docs = [...run.docs.values()];
   const index = docs.map((d) => `- ${d.key} | ${d.title}${d.date ? ` | ${d.date}` : ""}`).join("\n");
@@ -374,6 +517,7 @@ async function research(question: string, stages: Stages, client: Anthropic, run
       `Vraag: ${question}\n\nAantekeningen uit het zoeken:\n${notes.join("\n\n")}\n\nGelezen documenten:\n${index}`,
       obj({ subquestions: arr(obj({ subquestion: str, questions: arr(str), docs: arr(str) })) }),
       TABLE_MODEL,
+      TABLE_EFFORT,
     );
     // All tables in parallel, joined in sub-question order.
     const parts = await Promise.all(subquestions.slice(0, MAX_TABLES).map(async (s) => {
@@ -404,9 +548,18 @@ async function research(question: string, stages: Stages, client: Anthropic, run
     table && docs.some((d) => !inTable.has(d.key)) && `Overige gelezen documenten (niet in een tabel, ingekort):\n${docs.filter((d) => !inTable.has(d.key)).map((d) => docXml(d, REST_CHARS)).join("\n\n")}`,
     firstRound && `Zoekresultaten (alleen snippets, niet gelezen):\n${firstRound}`,
   ].filter(Boolean).join("\n\n");
+  return finish(client, run, stages, question, material, docs, t0, loopCostUsd);
+}
+
+/** Steps 3-5: draft, quote check and answer from the draft material; run.docs must hold every document it cites. */
+export async function finish(client: Anthropic, run: Run, stages: Stages, question: string, material: string, docs: Doc[], t0: number, loopCostUsd: number): Promise<DeepResult> {
+  run.stage = "draft";
+  run.progress = 0.85;
   const draft = await ask<{ claims?: Claim[]; answer?: string; laws: { id: string; articles: string[]; why: string }[] }>(
     client, run, stages.quotes ? DRAFT_QUOTES : DRAFT_PLAIN, material,
     obj(stages.quotes ? { claims: arr(obj({ text: str, quote: str, doc: str })), laws: LAWS } : { answer: str, laws: LAWS }),
+    DRAFT_MODEL,
+    DRAFT_EFFORT,
   );
   const lawTitle = (id: string) => docs.find((d) => d.source === "bwb" && d.id.startsWith(`${id}:`))?.title.split(", art. ")[0] ?? "";
   const laws = draft.laws
@@ -425,12 +578,20 @@ async function research(question: string, stages: Stages, client: Anthropic, run
   let quoteCheck: DeepResult["quoteCheck"];
   if (stages.check) {
     for (const c of claims) c.ok = checkQuote(c.quote, run.docs.get(c.doc)!.text);
+    let unsupported = 0;
+    if (FLOW && SUPPORT) {
+      // A verbatim quote can still not carry its claim (run 7: Booking's own date stated as the AP's finding).
+      const verbatim = claims.filter((c) => c.ok);
+      const ps = await Promise.all(verbatim.map((c) => jev({ claim: c.text, quote: c.quote, source: run.docs.get(c.doc)!.title }, "Does the quote support the claim?", run, SUPPORT_CRITERIA)));
+      verbatim.forEach((c, i) => { if ((ps[i] ?? 1) < SUPPORT_P) { c.ok = false; unsupported++; } });
+      run.trace.push(`support check: ${unsupported} of ${verbatim.length} quotes do not carry their claim`);
+    }
     const failed = claims.filter((c) => !c.ok);
-    quoteCheck = { passed: claims.length - failed.length, failed: failed.length, fixed: 0, dropped: 0 };
+    quoteCheck = { passed: claims.length - failed.length, failed: failed.length, fixed: 0, dropped: 0, ...(FLOW && { unsupported }) };
     if (failed.length) {
       const { fixes } = await ask<{ fixes: { i: number; text: string; quote: string; drop: boolean }[] }>(
         client, run, FIX_SYSTEM,
-        failed.map((c, i) => `## Claim ${i}\nClaim: ${c.text}\nCitaat (niet gevonden): ${c.quote}\nTekst uit ${c.doc} rond de beste gedeeltelijke match:\n${around(c.quote, run.docs.get(c.doc)!.text)}`).join("\n\n"),
+        failed.map((c, i) => `## Claim ${i}\nClaim: ${c.text}\nCitaat (niet gevonden, of draagt de claim niet): ${c.quote}\nTekst uit ${c.doc} rond de beste gedeeltelijke match:\n${around(c.quote, run.docs.get(c.doc)!.text)}`).join("\n\n"),
         obj({ fixes: arr(obj({ i: { type: "integer" }, text: str, quote: str, drop: { type: "boolean" } })) }),
       );
       for (const f of fixes) {

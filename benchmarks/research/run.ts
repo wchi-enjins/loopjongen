@@ -9,7 +9,7 @@
  *   With Langfuse keys set (see app/src/lib/langfuse.ts) every question is a trace; --out is the session.
  */
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
-import { deepSearch, ALL, MODEL, EFFORT, LOOP_MODEL, TABLE_MODEL, type Stages, type DeepResult } from "../law_retrieval/deep/search.ts";
+import { deepSearch, ALL, MODEL, EFFORT, LOOP_MODEL, TABLE_MODEL, TABLE_EFFORT, DRAFT_MODEL, DRAFT_EFFORT, FLOW, PLAN, PLAN_MODEL, type Stages, type DeepResult } from "../law_retrieval/deep/search.ts";
 import { pool } from "../../app/src/lib/db.ts";
 import { propagateAttributes, startTracing } from "../../app/src/lib/langfuse.ts";
 
@@ -48,7 +48,7 @@ for (const q of selected) {
 }
 
 const stageList = Object.entries(stages).filter(([, v]) => v).map(([s]) => s).join(", ") || "geen";
-const lines = [`# Benchmark: research-antwoorden (${date})`, "", `- **Stages:** ${stageList}`, `- **Model zoeklus:** ${LOOP_MODEL}`, `- **Model tabellen:** ${TABLE_MODEL}`, `- **Model concept en antwoord:** ${MODEL}`, `- **Effort:** ${EFFORT}`, `- **Vragen:** ${selected.length} (questions.json, scoren met rubric.md)`, ""];
+const lines = [`# Benchmark: research-antwoorden (${date})`, "", `- **Stages:** ${stageList}`, `- **Model zoeklus:** ${LOOP_MODEL}`, `- **Model tabellen:** ${TABLE_MODEL}`, `- **Model concept:** ${DRAFT_MODEL}${DRAFT_EFFORT !== EFFORT ? ` (effort ${DRAFT_EFFORT})` : ""}`, `- **Model antwoord en herstel:** ${MODEL}`, ...(FLOW ? ["- **Jev-workflow:** aan (DEEP_JEV_FLOW=1)"] : []), ...(PLAN ? [`- **Plan (geen zoeklus):** ${PLAN_MODEL} (DEEP_PLAN=1)`] : []), `- **Effort:** ${EFFORT}${TABLE_EFFORT !== EFFORT ? ` (tabellen ${TABLE_EFFORT})` : ""}`, `- **Vragen:** ${selected.length} (questions.json, scoren met rubric.md)`, ""];
 for (const r of rows) {
   lines.push(`## ${r.id}`, "", `> ${r.question}`, "");
   if (!r.result) {

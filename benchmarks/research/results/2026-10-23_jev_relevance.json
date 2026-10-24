@@ -1,0 +1,746 @@
+[
+  {
+    "question": "Gaat dit document over te laat gemelde datalekken (72-uurstermijn van artikel 33 AVG)? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/brief-ap-college-eindhoven",
+    "grid": true,
+    "ms": 453,
+    "jev": 0.81,
+    "tokens": 3227
+  },
+  {
+    "question": "Gaat dit document over te laat gemelde datalekken (72-uurstermijn van artikel 33 AVG)? Ja of nee, met korte toelichting.",
+    "key": "ap:actueel/haga-beboet-voor-onvoldoende-interne-beveiliging-patientendossiers",
+    "grid": false,
+    "ms": 438,
+    "jev": 0.06,
+    "tokens": 9990
+  },
+  {
+    "question": "Gaat dit document over te laat gemelde datalekken (72-uurstermijn van artikel 33 AVG)? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/jaarverslag-ap-2019",
+    "grid": false,
+    "ms": 439,
+    "jev": 0.13,
+    "tokens": 10645
+  },
+  {
+    "question": "Gaat dit document over te laat gemelde datalekken (72-uurstermijn van artikel 33 AVG)? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/jaarrapportage-meldplicht-datalekken-2019",
+    "grid": true,
+    "ms": 440,
+    "jev": 0.46,
+    "tokens": 8917
+  },
+  {
+    "question": "Does this document decide a fine (boete) that includes a breach of security of personal data (art. 32 AVG or art. 13 Wbp) or breach notification (art. 33 AVG/34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-cpa-verzuimregistratie",
+    "grid": true,
+    "ms": 564,
+    "jev": 0.98,
+    "tokens": 9763
+  },
+  {
+    "question": "Does this document decide a fine (boete) that includes a breach of security of personal data (art. 32 AVG or art. 13 Wbp) or breach notification (art. 33 AVG/34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-belastingdienst-zwarte-lijst-fsv",
+    "grid": true,
+    "ms": 559,
+    "jev": 0.98,
+    "tokens": 9790
+  },
+  {
+    "question": "Does this document decide a fine (boete) that includes a breach of security of personal data (art. 32 AVG or art. 13 Wbp) or breach notification (art. 33 AVG/34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-knltb",
+    "grid": false,
+    "ms": 559,
+    "jev": 0.04,
+    "tokens": 10079
+  },
+  {
+    "question": "Does this document decide a fine (boete) that includes a breach of security of personal data (art. 32 AVG or art. 13 Wbp) or breach notification (art. 33 AVG/34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/woo-besluit-besluit-tot-oplegging-berisping",
+    "grid": false,
+    "ms": 558,
+    "jev": 0.04,
+    "tokens": 9650
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 223,
+    "jev": 0.98,
+    "tokens": 9273
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": false,
+    "ms": 233,
+    "jev": 0.69,
+    "tokens": 9887
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/boete-olvg",
+    "grid": false,
+    "ms": 245,
+    "jev": 0.03,
+    "tokens": 10099
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/boete-transavia",
+    "grid": false,
+    "ms": 278,
+    "jev": 0.04,
+    "tokens": 10332
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+    "grid": false,
+    "ms": 419,
+    "jev": 0.06,
+    "tokens": 10148
+  },
+  {
+    "question": "Gaat dit AP-besluit over de 72-uurstermijn of over het (te laat) melden van een datalek aan de AP onder artikel 33 AVG? Ja of nee, met korte toelichting.",
+    "key": "ap:documenten/onderzoek-toegang-digitale-patientendossiers-hagaziekenhuis",
+    "grid": false,
+    "ms": 431,
+    "jev": 0.08,
+    "tokens": 9556
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+    "grid": true,
+    "ms": 410,
+    "jev": 0.38,
+    "tokens": 3663
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+    "grid": true,
+    "ms": 400,
+    "jev": 0.96,
+    "tokens": 4569
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+    "grid": true,
+    "ms": 301,
+    "jev": 0.63,
+    "tokens": 2649
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:documenten/beleidsregels-meldplicht-datalekken-wbp",
+    "grid": true,
+    "ms": 517,
+    "jev": 0.94,
+    "tokens": 8248
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:documenten/stappenplan-kom-in-actie-bij-een-datalek",
+    "grid": true,
+    "ms": 306,
+    "jev": 0.78,
+    "tokens": 1032
+  },
+  {
+    "question": "Does this document contain AP guidance on when a data breach must be reported (72-hour term, when knowledge starts, 'onverwijld', risk assessment)? Answer yes or no, then quote the key sentences.",
+    "key": "ap:actueel/bookingcom-meldt-datalekken-op-tijd-na-ingrijpen-ap",
+    "grid": false,
+    "ms": 482,
+    "jev": 0.1,
+    "tokens": 1142
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+    "grid": true,
+    "ms": 245,
+    "jev": 0.94,
+    "tokens": 4589
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+    "grid": true,
+    "ms": 244,
+    "jev": 0.86,
+    "tokens": 2669
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+    "grid": false,
+    "ms": 245,
+    "jev": 0.59,
+    "tokens": 3683
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 252,
+    "jev": 0.93,
+    "tokens": 9287
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 202,
+    "jev": 0.79,
+    "tokens": 9901
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 247,
+    "jev": 0.88,
+    "tokens": 10026
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/beleidsregels-meldplicht-datalekken-wbp",
+    "grid": true,
+    "ms": 200,
+    "jev": 0.22,
+    "tokens": 8268
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/jaarverslag-ap-2020",
+    "grid": true,
+    "ms": 238,
+    "jev": 0.34,
+    "tokens": 10117
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/jaarrapportage-meldplicht-datalekken-2021",
+    "grid": true,
+    "ms": 254,
+    "jev": 0.81,
+    "tokens": 7195
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/stappenplan-kom-in-actie-bij-een-datalek",
+    "grid": true,
+    "ms": 260,
+    "jev": 0.95,
+    "tokens": 1052
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/wob-besluit-informatie-en-documentatie-over-het-meldformulier-datalekken-van-de-ap",
+    "grid": false,
+    "ms": 738,
+    "jev": 0.11,
+    "tokens": 12856
+  },
+  {
+    "question": "Is dit document relevant voor de vraag wanneer een datalek binnen 72 uur bij de Autoriteit Persoonsgegevens gemeld moet worden (AP-richtlijn of AP-besluit over de 72-uurstermijn van artikel 33 AVG)? Antwoord ja of nee.",
+    "key": "ap:documenten/woo-besluit-informatie-datalekken",
+    "grid": true,
+    "ms": 252,
+    "jev": 0.89,
+    "tokens": 6524
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-hagaziekenhuis",
+    "grid": true,
+    "ms": 280,
+    "jev": 0.96,
+    "tokens": 9871
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-olvg",
+    "grid": true,
+    "ms": 277,
+    "jev": 0.97,
+    "tokens": 10091
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-transavia",
+    "grid": true,
+    "ms": 267,
+    "jev": 0.98,
+    "tokens": 10324
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-uwv-beveiliging-groepsberichten",
+    "grid": true,
+    "ms": 223,
+    "jev": 0.98,
+    "tokens": 10314
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+    "grid": true,
+    "ms": 259,
+    "jev": 0.97,
+    "tokens": 10140
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-sociale-verzekeringsbank",
+    "grid": true,
+    "ms": 234,
+    "jev": 0.97,
+    "tokens": 9492
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-han",
+    "grid": true,
+    "ms": 198,
+    "jev": 0.98,
+    "tokens": 7110
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for insufficient security of personal data (art. 32 AVG or art. 13 Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-orthodontiepraktijk",
+    "grid": true,
+    "ms": 247,
+    "jev": 0.97,
+    "tokens": 9716
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for late or missing notification of a personal data breach (meldplicht, art. 33 AVG or art. 34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 243,
+    "jev": 0.98,
+    "tokens": 9274
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for late or missing notification of a personal data breach (meldplicht, art. 33 AVG or art. 34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 228,
+    "jev": 0.98,
+    "tokens": 10013
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for late or missing notification of a personal data breach (meldplicht, art. 33 AVG or art. 34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 228,
+    "jev": 0.98,
+    "tokens": 9888
+  },
+  {
+    "question": "Does this document decide a fine (boete) imposed for late or missing notification of a personal data breach (meldplicht, art. 33 AVG or art. 34a Wbp)? Answer yes or no, then one sentence.",
+    "key": "ap:documenten/besluit-op-bezwaar-boete-uber",
+    "grid": false,
+    "ms": 208,
+    "jev": 0.03,
+    "tokens": 9682
+  },
+  {
+    "question": "Does it list AP fines for data breach notification or security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/wob-besluit-lijsten-met-datalekken-boetes-en-aanpassingen-dataopslag",
+    "grid": false,
+    "ms": 274,
+    "jev": 0.54,
+    "tokens": 3239
+  },
+  {
+    "question": "Does it list AP fines for data breach notification or security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/ap-jaarverslag-2024",
+    "grid": false,
+    "ms": 225,
+    "jev": 0.15,
+    "tokens": 9392
+  },
+  {
+    "question": "Does this concern an AP fine for insufficient security (art. 32) or breach notification (art. 33/34)? yes/no",
+    "key": "ap:documenten/boete-belastingdienst-zwarte-lijst-fsv",
+    "grid": true,
+    "ms": 230,
+    "jev": 0.89,
+    "tokens": 9760
+  },
+  {
+    "question": "Does this concern an AP fine for insufficient security (art. 32) or breach notification (art. 33/34)? yes/no",
+    "key": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+    "grid": true,
+    "ms": 226,
+    "jev": 0.95,
+    "tokens": 9155
+  },
+  {
+    "question": "Does this concern an AP fine for insufficient security (art. 32) or breach notification (art. 33/34)? yes/no",
+    "key": "rechtspraak:ECLI:NL:RBDHA:2021:3090",
+    "grid": true,
+    "ms": 289,
+    "jev": 0.95,
+    "tokens": 9084
+  },
+  {
+    "question": "Does this concern an AP fine for insufficient security (art. 32) or breach notification (art. 33/34)? yes/no",
+    "key": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+    "grid": true,
+    "ms": 297,
+    "jev": 0.96,
+    "tokens": 9992
+  },
+  {
+    "question": "Does this concern an AP fine for insufficient security (art. 32) or breach notification (art. 33/34)? yes/no",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 303,
+    "jev": 0.94,
+    "tokens": 9254
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 303,
+    "jev": 0.94,
+    "tokens": 9869
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 236,
+    "jev": 0.93,
+    "tokens": 9994
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:actueel/boete-bookingcom-voor-te-laat-melden-datalek",
+    "grid": true,
+    "ms": 203,
+    "jev": 0.95,
+    "tokens": 9184
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-hagaziekenhuis",
+    "grid": true,
+    "ms": 227,
+    "jev": 0.92,
+    "tokens": 9861
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-olvg",
+    "grid": true,
+    "ms": 233,
+    "jev": 0.95,
+    "tokens": 10081
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-uwv-beveiliging-groepsberichten",
+    "grid": true,
+    "ms": 288,
+    "jev": 0.89,
+    "tokens": 10304
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-transavia",
+    "grid": true,
+    "ms": 288,
+    "jev": 0.93,
+    "tokens": 10314
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+    "grid": true,
+    "ms": 286,
+    "jev": 0.88,
+    "tokens": 10130
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-sociale-verzekeringsbank",
+    "grid": true,
+    "ms": 286,
+    "jev": 0.94,
+    "tokens": 9482
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-han",
+    "grid": true,
+    "ms": 203,
+    "jev": 0.94,
+    "tokens": 7100
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-cpa-verzuimregistratie",
+    "grid": true,
+    "ms": 250,
+    "jev": 0.73,
+    "tokens": 9734
+  },
+  {
+    "question": "Is this a fine for not/late notifying a data breach or for insufficient security (art. 32/33/34 AVG)? yes/no",
+    "key": "ap:documenten/boete-voor-gemeente-voorschoten",
+    "grid": false,
+    "ms": 224,
+    "jev": 0.03,
+    "tokens": 9291
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 234,
+    "jev": 0.82,
+    "tokens": 9249
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 278,
+    "jev": 0.86,
+    "tokens": 9988
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 278,
+    "jev": 0.69,
+    "tokens": 9863
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+    "grid": true,
+    "ms": 278,
+    "jev": 0.95,
+    "tokens": 4551
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+    "grid": false,
+    "ms": 278,
+    "jev": 0.22,
+    "tokens": 2631
+  },
+  {
+    "question": "Does this document explain when the 72-hour notification period (art. 33 AVG) starts and applies? yes/no",
+    "key": "ap:documenten/stappenplan-kom-in-actie-bij-een-datalek",
+    "grid": true,
+    "ms": 223,
+    "jev": 0.72,
+    "tokens": 1014
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-uwv-beveiliging-groepsberichten",
+    "grid": true,
+    "ms": 281,
+    "jev": 0.97,
+    "tokens": 10290
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+    "grid": true,
+    "ms": 334,
+    "jev": 0.96,
+    "tokens": 10116
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-hagaziekenhuis",
+    "grid": true,
+    "ms": 256,
+    "jev": 0.98,
+    "tokens": 9847
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-transavia",
+    "grid": true,
+    "ms": 236,
+    "jev": 0.99,
+    "tokens": 10300
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-olvg",
+    "grid": true,
+    "ms": 228,
+    "jev": 0.99,
+    "tokens": 10067
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:actueel/han-krijgt-boete-van-175000-euro-voor-onvoldoende-beveiliging-van-persoonsgegevens",
+    "grid": true,
+    "ms": 204,
+    "jev": 0.99,
+    "tokens": 7733
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": false,
+    "ms": 227,
+    "jev": 0.05,
+    "tokens": 9855
+  },
+  {
+    "question": "Does it impose a fine for violating art. 32 AVG (security)? yes/no",
+    "key": "ap:documenten/besluit-boete-yango",
+    "grid": false,
+    "ms": 221,
+    "jev": 0.13,
+    "tokens": 9888
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 266,
+    "jev": 0.93,
+    "tokens": 9861
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 218,
+    "jev": 0.92,
+    "tokens": 9247
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 218,
+    "jev": 0.92,
+    "tokens": 9986
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-hagaziekenhuis",
+    "grid": false,
+    "ms": 235,
+    "jev": 0.91,
+    "tokens": 9853
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-olvg",
+    "grid": true,
+    "ms": 251,
+    "jev": 0.92,
+    "tokens": 10073
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-transavia",
+    "grid": true,
+    "ms": 232,
+    "jev": 0.9,
+    "tokens": 10306
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-uwv-beveiliging-groepsberichten",
+    "grid": true,
+    "ms": 239,
+    "jev": 0.89,
+    "tokens": 10296
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+    "grid": true,
+    "ms": 241,
+    "jev": 0.89,
+    "tokens": 10122
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-cpa-verzuimregistratie",
+    "grid": true,
+    "ms": 225,
+    "jev": 0.71,
+    "tokens": 9726
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-han",
+    "grid": true,
+    "ms": 185,
+    "jev": 0.91,
+    "tokens": 7092
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/boete-belastingdienst-zwarte-lijst-fsv",
+    "grid": true,
+    "ms": 239,
+    "jev": 0.54,
+    "tokens": 9753
+  },
+  {
+    "question": "Is this a fine for late/non-notification of a data breach or insufficient security (yes/no)? Which organisation?",
+    "key": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+    "grid": true,
+    "ms": 233,
+    "jev": 0.88,
+    "tokens": 9985
+  },
+  {
+    "question": "Does this document explain when a data breach must be reported under art. 33 AVG within 72 hours? yes/no",
+    "key": "ap:documenten/boete-bookingcom",
+    "grid": true,
+    "ms": 232,
+    "jev": 0.91,
+    "tokens": 9249
+  },
+  {
+    "question": "Does this document explain when a data breach must be reported under art. 33 AVG within 72 hours? yes/no",
+    "key": "ap:documenten/boete-uber-datalek",
+    "grid": true,
+    "ms": 231,
+    "jev": 0.85,
+    "tokens": 9863
+  },
+  {
+    "question": "Does this document explain when a data breach must be reported under art. 33 AVG within 72 hours? yes/no",
+    "key": "ap:documenten/boete-datalek-pvv-overijssel",
+    "grid": true,
+    "ms": 232,
+    "jev": 0.9,
+    "tokens": 9988
+  },
+  {
+    "question": "Does this document explain when a data breach must be reported under art. 33 AVG within 72 hours? yes/no",
+    "key": "ap:documenten/praktijkgids-gezondheidsgegevens-in-de-cloud",
+    "grid": true,
+    "ms": 214,
+    "jev": 0.91,
+    "tokens": 10167
+  }
+]

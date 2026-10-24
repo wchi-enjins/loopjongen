@@ -71,7 +71,7 @@ export function parsePage(html: string) {
   const pdfs = [...new Set([...main.matchAll(/href="(\/(?:system\/files|sites\/default\/files)\/[^"]+\.pdf)"/g)].map((m) => BASE + m[1]))].slice(0, MAX_PDFS);
   return {
     title: htmlText(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? ""),
-    date: main.match(/<time datetime="(\d{4}-\d{2}-\d{2})/)?.[1] ?? pageText.match(/Publicatiedatum\s+(\d{2}-\d{2}-\d{4})/)?.[1] ?? "",
+    date: main.match(/<time datetime="(\d{4}-\d{2}-\d{2})/)?.[1] ?? pageText.match(/Publicatiedatum\s+(\d{2})-(\d{2})-(\d{4})/)?.slice(1).reverse().join("-") ?? "",
     pageText,
     pdfs,
   };

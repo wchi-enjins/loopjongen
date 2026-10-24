@@ -1,0 +1,896 @@
+{
+  "date": "2026-10-23",
+  "stages": {
+    "split": true,
+    "loop": true,
+    "grid": true,
+    "table": true,
+    "quotes": true,
+    "check": true
+  },
+  "questions": [
+    {
+      "id": "q2b",
+      "question": "Welke boetes heeft de Autoriteit Persoonsgegevens opgelegd voor het niet of te laat melden van een datalek of voor onvoldoende beveiliging van persoonsgegevens? Noem per zaak de organisatie, het jaar, het boetebedrag en de geschonden AVG-bepaling. En wat zegt de AP over wanneer een datalek binnen 72 uur gemeld moet worden?",
+      "result": {
+        "docs": [
+          {
+            "key": "ap:documenten/boete-transavia",
+            "title": "Boete Transavia",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-transavia",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boetebeleidsregels-autoriteit-persoonsgegevens-2023",
+            "title": "Boetebeleidsregels Autoriteit Persoonsgegevens 2023",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boetebeleidsregels-autoriteit-persoonsgegevens-2023",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+            "title": "Boete ministerie Buitenlandse Zaken NVIS",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-ministerie-buitenlandse-zaken-nvis",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-uber-datalek",
+            "title": "Boete Uber datalek",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-sociale-verzekeringsbank",
+            "title": "Boete Sociale Verzekeringsbank",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-sociale-verzekeringsbank",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-datalek-pvv-overijssel",
+            "title": "Boete datalek PVV Overijssel",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel",
+            "source": "ap"
+          },
+          {
+            "key": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "title": "Datalek: wel of niet melden",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-bookingcom",
+            "title": "Boete Booking.com",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-bookingcom",
+            "source": "ap"
+          },
+          {
+            "key": "ap:themas/vervoer/reisgegevens",
+            "title": "Reisgegevens",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/themas/vervoer/reisgegevens",
+            "source": "ap"
+          },
+          {
+            "key": "acm:acm-jaarverslag-2025",
+            "title": "ACM Jaarverslag 2025",
+            "url": "https://www.acm.nl/nl/publicaties/acm-jaarverslag-2025",
+            "source": "acm"
+          },
+          {
+            "key": "ap:documenten/ap-jaarverslag-2018",
+            "title": "AP jaarverslag 2018",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/ap-jaarverslag-2018",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/beleidsregels-meldplicht-datalekken-wbp",
+            "title": "Beleidsregels meldplicht datalekken Wbp",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/beleidsregels-meldplicht-datalekken-wbp",
+            "source": "ap"
+          },
+          {
+            "key": "acm:publicatie/13513/Jaarverslag-ACM-2013",
+            "title": "Jaarverslag ACM 2013",
+            "url": "https://www.acm.nl/nl/publicaties/publicatie/13513/Jaarverslag-ACM-2013",
+            "source": "acm"
+          },
+          {
+            "key": "acm:toezegging-online-dating-met-right-link-godai-green8group-boost-web-activities",
+            "title": "Toezegging online dating met The Right Link, GoDai, Green8Group, Boost Web Activities",
+            "url": "https://www.acm.nl/nl/publicaties/toezegging-online-dating-met-right-link-godai-green8group-boost-web-activities",
+            "source": "acm"
+          },
+          {
+            "key": "acm:jaarverslag-acm-2014",
+            "title": "Jaarverslag ACM 2014",
+            "url": "https://www.acm.nl/nl/publicaties/jaarverslag-acm-2014",
+            "source": "acm"
+          },
+          {
+            "key": "acm:publicatie/12712/jaarverslag-acm-2013",
+            "title": "Jaarverslag ACM 2013",
+            "url": "https://www.acm.nl/nl/publicaties/publicatie/12712/jaarverslag-acm-2013",
+            "source": "acm"
+          },
+          {
+            "key": "ap:documenten/meldplicht-datalekken-feiten-en-cijfers-eerste-helft-2019",
+            "title": "Meldplicht datalekken: feiten en cijfers eerste helft 2019",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/meldplicht-datalekken-feiten-en-cijfers-eerste-helft-2019",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/position-paper-cyberveiligheid-en-informatiebeveiliging",
+            "title": "Position paper cyberveiligheid en informatiebeveiliging",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/position-paper-cyberveiligheid-en-informatiebeveiliging",
+            "source": "ap"
+          },
+          {
+            "key": "acm:publicatie/15580/jaarverslag-acm-2015",
+            "title": "Jaarverslag ACM 2015",
+            "url": "https://www.acm.nl/nl/publicaties/publicatie/15580/jaarverslag-acm-2015",
+            "source": "acm"
+          },
+          {
+            "key": "ap:documenten/boete-olvg",
+            "title": "Boete OLVG",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-olvg",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-hagaziekenhuis",
+            "title": "Boete HagaZiekenhuis",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-hagaziekenhuis",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-cpa-verzuimregistratie",
+            "title": "Boete CP&A verzuimregistratie",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-cpa-verzuimregistratie",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-han",
+            "title": "Boete HAN",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-han",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+            "title": "Beslissing op bezwaar HagaZiekenhuis",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/beslissing-op-bezwaar-hagaziekenhuis",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/ap-jaarverslag-2025",
+            "title": "AP jaarverslag 2025",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/ap-jaarverslag-2025",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/boete-orthodontiepraktijk",
+            "title": "Boete orthodontiepraktijk",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/boete-orthodontiepraktijk",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/jaarverslag-ap-2021",
+            "title": "Jaarverslag AP 2021",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/jaarverslag-ap-2021",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/bijlage-3-rapport-berenschottilburg-university-evaluatie-ap",
+            "title": "Bijlage 3: Rapport Berenschot/Tilburg University Evaluatie AP",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/bijlage-3-rapport-berenschottilburg-university-evaluatie-ap",
+            "source": "ap"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:CBB:2024:636",
+            "title": "College van Beroep voor het bedrijfsleven 2024-09-17, ECLI:NL:CBB:2024:636",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:CBB:2024:636",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBGEL:2023:4848",
+            "title": "Rechtbank Gelderland 2023-08-23, ECLI:NL:RBGEL:2023:4848",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2023:4848",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "title": "Zo meldt u een datalek",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "source": "ap"
+          },
+          {
+            "key": "ap:themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+            "title": "Datalek? Dit moet u doen",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/onderzoek-afhandeling-van-datalekken-in-de-jeugdzorg",
+            "title": "Onderzoek afhandeling van datalekken in de jeugdzorg",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/onderzoek-afhandeling-van-datalekken-in-de-jeugdzorg",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/machtiging-datalek-melden-door-verwerker",
+            "title": "Machtiging datalek melden door verwerker",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/machtiging-datalek-melden-door-verwerker",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/voorbeeldlijst-welniet-melden-datalek",
+            "title": "Voorbeeldlijst: wel/niet melden datalek",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/voorbeeldlijst-welniet-melden-datalek",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/kpmg-onderzoek-taken-en-middelen-ap",
+            "title": "KPMG-onderzoek taken en middelen AP",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/kpmg-onderzoek-taken-en-middelen-ap",
+            "source": "ap"
+          },
+          {
+            "key": "ap:documenten/privacy-gedragscode-toegangsbeleid-isps-bedrijven",
+            "title": "Privacy Gedragscode Toegangsbeleid ISPS-bedrijven",
+            "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/privacy-gedragscode-toegangsbeleid-isps-bedrijven",
+            "source": "ap"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:PHR:2025:652",
+            "title": "Parket bij de Hoge Raad 2025-05-30, ECLI:NL:PHR:2025:652",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:PHR:2025:652",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "kifid:uitspraak-2024-0263-bindend",
+            "title": "Uitspraak 2024-0263 (Bindend), ING Bank N.V.",
+            "url": "https://www.kifid.nl/media/crpefw3f/uitspraak-2024-0263-bindend.pdf",
+            "source": "kifid"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:CBB:2016:346",
+            "title": "College van Beroep voor het bedrijfsleven 2016-11-16, ECLI:NL:CBB:2016:346",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:CBB:2016:346",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RVS:2024:2221",
+            "title": "Raad van State 2024-05-29, ECLI:NL:RVS:2024:2221",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RVS:2024:2221",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBDHA:2021:3090",
+            "title": "Rechtbank Den Haag 2021-03-31, ECLI:NL:RBDHA:2021:3090",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBDHA:2021:3090",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBMNE:2026:6338",
+            "title": "Rechtbank Midden-Nederland 2026-08-19, ECLI:NL:RBMNE:2026:6338",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBMNE:2026:6338",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBDHA:2018:10451",
+            "title": "Rechtbank Den Haag 2018-08-30, ECLI:NL:RBDHA:2018:10451",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBDHA:2018:10451",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBAMS:2024:1214",
+            "title": "Rechtbank Amsterdam 2024-01-15, ECLI:NL:RBAMS:2024:1214",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBAMS:2024:1214",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+            "title": "Rechtbank Gelderland 2025-08-07, ECLI:NL:RBGEL:2025:6547",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2025:6547",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBDHA:2014:15611",
+            "title": "Rechtbank Den Haag 2014-12-17, ECLI:NL:RBDHA:2014:15611",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBDHA:2014:15611",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:PHR:2021:83",
+            "title": "Parket bij de Hoge Raad 2021-01-29, ECLI:NL:PHR:2021:83",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:PHR:2021:83",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBAMS:2024:4264",
+            "title": "Rechtbank Amsterdam 2024-07-17, ECLI:NL:RBAMS:2024:4264",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBAMS:2024:4264",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:GHSHE:2023:128",
+            "title": "Gerechtshof 's-Hertogenbosch 2023-01-19, ECLI:NL:GHSHE:2023:128",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHSHE:2023:128",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:GHDHA:2022:300",
+            "title": "Gerechtshof Den Haag 2022-03-01, ECLI:NL:GHDHA:2022:300",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHDHA:2022:300",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:PHR:2024:996",
+            "title": "Parket bij de Hoge Raad 2024-09-30, ECLI:NL:PHR:2024:996",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:PHR:2024:996",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RVS:2019:3209",
+            "title": "Raad van State 2019-09-18, ECLI:NL:RVS:2019:3209",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RVS:2019:3209",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBGEL:2023:4071",
+            "title": "Rechtbank Gelderland 2023-07-17, ECLI:NL:RBGEL:2023:4071",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2023:4071",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:PHR:2023:823",
+            "title": "Parket bij de Hoge Raad 2023-07-21, ECLI:NL:PHR:2023:823",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:PHR:2023:823",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBAMS:2024:4479",
+            "title": "Rechtbank Amsterdam 2024-07-23, ECLI:NL:RBAMS:2024:4479",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBAMS:2024:4479",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:GHSHE:2026:1529",
+            "title": "Gerechtshof 's-Hertogenbosch 2026-06-10, ECLI:NL:GHSHE:2026:1529",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHSHE:2026:1529",
+            "source": "rechtspraak"
+          },
+          {
+            "key": "rechtspraak:ECLI:NL:RBAMS:2022:12",
+            "title": "Rechtbank Amsterdam 2022-01-10, ECLI:NL:RBAMS:2022:12",
+            "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBAMS:2022:12",
+            "source": "rechtspraak"
+          }
+        ],
+        "laws": [
+          {
+            "id": "BWBR0040940",
+            "title": "",
+            "articles": [
+              "41",
+              "42",
+              "38"
+            ],
+            "why": "De Uitvoeringswet AVG bevat de nationale uitzonderingen op de meldplicht datalekken (art. 41-42) en de grondslag voor AP-boetes die in de besluiten wordt aangehaald. De kernnormen (art. 32, 33, 34 AVG) staan in de AVG zelf, een EU-verordening zonder BWB-id."
+          },
+          {
+            "id": "BWBR0011468",
+            "title": "",
+            "articles": [
+              "34a",
+              "13"
+            ],
+            "why": "De Wet bescherming persoonsgegevens bevat de meldplicht (art. 34a) die Uber schond, en de vroegere beveiligingsplicht (art. 13)."
+          },
+          {
+            "id": "BWBR0005537",
+            "title": "",
+            "articles": [
+              "5:46",
+              "3:4"
+            ],
+            "why": "De Algemene wet bestuursrecht regelt de evenredige afstemming van de boetehoogte. Daarop baseerde de AP onder meer de verlaging bij PVV Overijssel, en de rechter de matiging bij HagaZiekenhuis."
+          }
+        ],
+        "trace": [
+          "call 1 claude-opus-5-5: 1469 in / 4432 out, 39.8 s, total $0.095",
+          "plan: \n  - Welke boetes heeft de AP opgelegd voor het niet of te laat melden van een datalek aan de AP of aan betrokkenen (art. 33/34 AVG, en eerder art. 34a Wbp)?\n      search [ap] (datalek OR \"inbreuk in verband met persoonsgegevens\") AND (\"te laat gemeld\" OR \"niet gemeld\" OR \"te laat melden\" OR meldplicht OR \"artikel 33\") AND (boete OR boetebesluit OR sanctie)\n      search [ap] (Booking OR Uber OR \"te laat\") AND (datalek OR meldplicht) AND (boete OR boetebesluit)\n      search [ap] (\"artikel 34\" OR \"betrokkenen informeren\" OR \"betrokkenen niet geïnformeerd\" OR \"34a Wbp\") AND datalek AND (boete OR sanctie OR last)\n      search [acm] (datalek OR \"inbreuk persoonsgegevens\") AND (melding OR meldplicht) AND (boete OR sanctie)\n      search [rechtspraak] Autoriteit Persoonsgegevens boete datalek melden\n      search [rechtspraak] meldplicht datalekken bestuurlijke boete\n      search [laws] meldplicht datalekken inbreuk persoonsgegevens melding\n      ask Gaat dit document over een boete (of ander sanctiebesluit) van de AP voor het niet of te laat melden van een datalek aan de AP of aan betrokkenen? (ja/nee)\n      ask Welke organisatie kreeg de boete, wat is de datum van het boetebesluit volgens de tekst en hoe hoog was het boetebedrag?\n      ask Welke bepaling is geschonden (bijv. art. 33 lid 1, art. 33 lid 5, art. 34 AVG of art. 34a Wbp) en hoeveel te laat of waarom niet werd gemeld?\n      ask Is bezwaar of beroep ingesteld, en met welke uitkomst (boete gehandhaafd, verlaagd of vernietigd)?\n  - Welke boetes heeft de AP opgelegd voor onvoldoende beveiliging van persoonsgegevens (art. 32 AVG, en eerder art. 13 Wbp)?\n      search [ap] (\"passende beveiliging\" OR \"onvoldoende beveiligd\" OR \"onvoldoende beveiliging\" OR \"artikel 32\" OR beveiligingsmaatregelen OR \"passende technische en organisatorische maatregelen\") AND (boete OR boetebesluit)\n      search [ap] (ziekenhuis OR HagaZiekenhuis OR OLVG OR patiëntendossier OR zorgverzekeraar OR Menzis) AND (beveiliging OR toegang OR inzage) AND (boete OR boetebesluit)\n      search [ap] (tweefactorauthenticatie OR \"multifactor\" OR \"twee-factor\" OR hack OR cyberaanval OR hacker OR inloggegevens) AND (boete OR boetebesluit)\n      search [ap] (Transavia OR \"Buitenlandse Zaken\" OR \"CP&A\" OR Uber OR gemeente) AND (beveiliging OR datalek) AND (boete OR boetebesluit)\n      search [rechtspraak] Autoriteit Persoonsgegevens boete beveiliging persoonsgegevens\n      search [rechtspraak] artikel 32 AVG boete Autoriteit Persoonsgegevens\n      search [laws] Uitvoeringswet Algemene verordening gegevensbescherming bestuurlijke boete\n      ask Gaat dit document over een boete (of ander sanctiebesluit) van de AP wegens onvoldoende beveiliging van persoonsgegevens? (ja/nee)\n      ask Welke organisatie kreeg de boete, wat is de datum van het boetebesluit volgens de tekst en hoe hoog was het boetebedrag?\n      ask Welke bepaling is geschonden (bijv. art. 32 AVG, art. 5 lid 1 sub f AVG, art. 13 Wbp) en welk beveiligingsgebrek stelde de AP vast (bijv. geen tweefactorauthenticatie, geen logging)?\n      ask Is bezwaar of beroep ingesteld, en met welke uitkomst?\n  - Wat zegt de AP over de termijn van 72 uur voor het melden van een datalek: wanneer begint deze te lopen, wanneer hoeft niet gemeld te worden, en wat geldt bij een te late of onvolledige melding?\n      search [ap] (datalek OR \"inbreuk in verband met persoonsgegevens\") AND (\"72 uur\" OR \"binnen 72 uur\" OR \"onverwijld\") AND (melden OR melding OR meldplicht)\n      search [ap] datalek AND (\"kennis genomen\" OR \"op de hoogte\" OR \"bewust\" OR \"vastgesteld\") AND (meldplicht OR melden) AND (richtsnoeren OR beleidsregels OR uitleg OR handleiding)\n      search [ap] datalek AND (\"niet melden\" OR \"geen risico\" OR \"onwaarschijnlijk\" OR uitzondering OR \"hoog risico\") AND (meldplicht OR melden)\n      search [ap] datalek AND (\"aanvullen\" OR \"in fasen\" OR \"voorlopige melding\" OR \"redenen voor de vertraging\" OR \"vertraging\") AND melding\n      search [rechtspraak] datalek 72 uur melden\n      search [kifid] datalek melden Autoriteit Persoonsgegevens\n      search [laws] datalek melden 72 uur\n      ask Legt dit document uit wanneer en binnen welke termijn een datalek bij de AP of bij betrokkenen gemeld moet worden? (ja/nee)\n      ask Vanaf welk moment begint volgens de AP of de rechter de termijn van 72 uur te lopen, en wat geldt als de melding later of in fasen wordt gedaan?\n      ask Welke uitzonderingen op de meldplicht noemt het document (bijv. geen risico voor betrokkenen), en wanneer moeten betrokkenen zelf worden geïnformeerd (art. 34 AVG)?\n      ask Om welk type document gaat het (richtsnoer, nieuwsbericht, boetebesluit, uitspraak), wat is de datum, en welke artikelen worden aangehaald?",
+          "search_sources \"Uitvoeringswet Algemene verordening gegevensbescherming bestuurlijke boete\" [laws]: laws 8",
+          "search_sources \"meldplicht datalekken inbreuk persoonsgegevens melding\" [laws]: laws 11",
+          "search_sources \"meldplicht datalekken bestuurlijke boete\" [rechtspraak]: rechtspraak 0",
+          "search_sources \"datalek melden Autoriteit Persoonsgegevens\" [kifid]: kifid 1",
+          "search_sources \"datalek 72 uur melden\" [rechtspraak]: rechtspraak 9",
+          "search_sources \"artikel 32 AVG boete Autoriteit Persoonsgegevens\" [rechtspraak]: rechtspraak 20",
+          "search_sources \"Autoriteit Persoonsgegevens boete datalek melden\" [rechtspraak]: rechtspraak 6",
+          "search_sources \"Autoriteit Persoonsgegevens boete beveiliging persoonsgegevens\" [rechtspraak]: rechtspraak 20",
+          "search_sources \"(datalek OR \"inbreuk persoonsgegevens\") AND (melding OR meldplicht) AND (boete OR sanctie)\" [acm]: acm 6",
+          "search_sources \"(\"artikel 34\" OR \"betrokkenen informeren\" OR \"betrokkenen niet geïnformeerd\" OR \"34a Wbp\") AND datalek AND (boete OR sanctie OR last)\" [ap]: ap 21",
+          "search_sources \"(datalek OR \"inbreuk in verband met persoonsgegevens\") AND (\"72 uur\" OR \"binnen 72 uur\" OR \"onverwijld\") AND (melden OR melding OR meldplicht)\" [ap]: ap 30",
+          "search_sources \"datalek melden 72 uur\" [laws]: laws 3",
+          "search_sources \"(tweefactorauthenticatie OR \"multifactor\" OR \"twee-factor\" OR hack OR cyberaanval OR hacker OR inloggegevens) AND (boete OR boetebesluit)\" [ap]: ap 30",
+          "search_sources \"(ziekenhuis OR HagaZiekenhuis OR OLVG OR patiëntendossier OR zorgverzekeraar OR Menzis) AND (beveiliging OR toegang OR inzage) AND (boete OR boetebesluit)\" [ap]: ap 30",
+          "search_sources \"(Transavia OR \"Buitenlandse Zaken\" OR \"CP&A\" OR Uber OR gemeente) AND (beveiliging OR datalek) AND (boete OR boetebesluit)\" [ap]: ap 30",
+          "search_sources \"(Booking OR Uber OR \"te laat\") AND (datalek OR meldplicht) AND (boete OR boetebesluit)\" [ap]: ap 30",
+          "search_sources \"(datalek OR \"inbreuk in verband met persoonsgegevens\") AND (\"te laat gemeld\" OR \"niet gemeld\" OR \"te laat melden\" OR meldplicht OR \"artikel 33\") AND (boete OR boetebesluit OR sanctie)\" [ap]: ap 30",
+          "plan grid \"Welke boetes heeft de AP opgelegd voor het niet of te laat m\": 7 decisions of 25",
+          "search_sources \"datalek AND (\"niet melden\" OR \"geen risico\" OR \"onwaarschijnlijk\" OR uitzondering OR \"hoog risico\") AND (meldplicht OR melden)\" [ap]: ap 30",
+          "search_sources \"(\"passende beveiliging\" OR \"onvoldoende beveiligd\" OR \"onvoldoende beveiliging\" OR \"artikel 32\" OR beveiligingsmaatregelen OR \"passende technische en organisatorische maatregelen\") AND (boete OR boetebesluit)\" [ap]: ap 30",
+          "plan grid \"Welke boetes heeft de AP opgelegd voor onvoldoende beveiligi\": 9 decisions of 25",
+          "search_sources \"datalek AND (\"kennis genomen\" OR \"op de hoogte\" OR \"bewust\" OR \"vastgesteld\") AND (meldplicht OR melden) AND (richtsnoeren OR beleidsregels OR uitleg OR handleiding)\" [ap]: ap 30",
+          "search_sources \"datalek AND (\"aanvullen\" OR \"in fasen\" OR \"voorlopige melding\" OR \"redenen voor de vertraging\" OR \"vertraging\") AND melding\" [ap]: ap 30",
+          "plan grid \"Wat zegt de AP over de termijn van 72 uur voor het melden va\": 5 decisions of 25",
+          "analyze_documents: 4 questions over 25 documents, fetched in 0.6 s",
+          "analyze_documents: 4 questions over 25 documents, fetched in 0.8 s",
+          "analyze_documents: 4 questions over 25 documents, fetched in 0.7 s",
+          "call 2 claude-haiku-5-5: 13709 in / 1231 out, 6.5 s, total $0.097",
+          "call 3 claude-haiku-5-5: 8276 in / 3235 out, 12.3 s, total $0.099",
+          "call 4 claude-haiku-5-5: 14372 in / 3182 out, 12.3 s, total $0.102",
+          "call 5 claude-haiku-5-5: 14874 in / 3246 out, 12.7 s, total $0.105",
+          "call 6 claude-haiku-5-5: 15557 in / 3196 out, 13.0 s, total $0.108",
+          "call 7 claude-haiku-5-5: 14759 in / 3916 out, 15.7 s, total $0.112",
+          "call 8 claude-haiku-5-5: 11283 in / 4134 out, 15.9 s, total $0.115",
+          "call 9 claude-haiku-5-5: 14517 in / 4084 out, 16.2 s, total $0.118",
+          "call 10 claude-haiku-5-5: 15900 in / 3598 out, 17.4 s, total $0.122",
+          "call 11 claude-haiku-5-5: 15263 in / 3344 out, 17.6 s, total $0.125",
+          "call 12 claude-haiku-5-5: 15183 in / 2892 out, 11.9 s, total $0.128",
+          "call 13 claude-haiku-5-5: 13956 in / 5215 out, 19.5 s, total $0.132",
+          "call 14 claude-haiku-5-5: 14278 in / 5486 out, 20.1 s, total $0.136",
+          "call 15 claude-haiku-5-5: 15459 in / 5526 out, 20.4 s, total $0.140",
+          "call 16 claude-haiku-5-5: 12751 in / 1861 out, 8.2 s, total $0.143",
+          "call 17 claude-haiku-5-5: 2406 in / 1798 out, 8.9 s, total $0.144",
+          "call 18 claude-haiku-5-5: 15341 in / 6143 out, 22.8 s, total $0.148",
+          "call 19 claude-haiku-5-5: 15472 in / 1993 out, 8.7 s, total $0.151",
+          "call 20 claude-haiku-5-5: 14626 in / 3113 out, 12.3 s, total $0.154",
+          "call 21 claude-haiku-5-5: 15351 in / 5929 out, 25.3 s, total $0.158",
+          "call 22 claude-haiku-5-5: 15582 in / 2504 out, 12.5 s, total $0.161",
+          "call 23 claude-haiku-5-5: 15130 in / 1364 out, 6.0 s, total $0.163",
+          "call 24 claude-haiku-5-5: 13270 in / 2973 out, 11.0 s, total $0.166",
+          "call 25 claude-haiku-5-5: 15760 in / 2567 out, 11.3 s, total $0.169",
+          "call 26 claude-haiku-5-5: 14928 in / 924 out, 5.0 s, total $0.171",
+          "call 27 claude-haiku-5-5: 15566 in / 2156 out, 9.4 s, total $0.174",
+          "call 28 claude-haiku-5-5: 14975 in / 7088 out, 30.3 s, total $0.179",
+          "call 29 claude-haiku-5-5: 11569 in / 821 out, 4.4 s, total $0.180",
+          "call 30 claude-haiku-5-5: 11807 in / 1188 out, 5.5 s, total $0.182",
+          "call 31 claude-haiku-5-5: 15274 in / 3834 out, 13.5 s, total $0.186",
+          "call 32 claude-haiku-5-5: 9454 in / 1355 out, 6.4 s, total $0.187",
+          "call 33 claude-haiku-5-5: 6642 in / 1258 out, 6.2 s, total $0.188",
+          "call 34 claude-haiku-5-5: 11834 in / 1047 out, 5.6 s, total $0.190",
+          "call 35 claude-haiku-5-5: 15909 in / 3250 out, 13.6 s, total $0.193",
+          "call 36 claude-haiku-5-5: 14619 in / 3991 out, 15.9 s, total $0.197",
+          "call 37 claude-haiku-5-5: 15972 in / 1006 out, 4.6 s, total $0.199",
+          "call 38 claude-haiku-5-5: 14857 in / 1489 out, 7.4 s, total $0.201",
+          "call 39 claude-haiku-5-5: 14673 in / 1873 out, 8.4 s, total $0.204",
+          "call 40 claude-haiku-5-5: 15390 in / 885 out, 4.1 s, total $0.206",
+          "call 41 claude-haiku-5-5: 14407 in / 923 out, 4.5 s, total $0.207",
+          "call 42 claude-haiku-5-5: 15360 in / 5114 out, 19.0 s, total $0.212",
+          "call 43 claude-haiku-5-5: 15166 in / 3705 out, 15.5 s, total $0.215",
+          "call 44 claude-haiku-5-5: 11877 in / 1203 out, 6.5 s, total $0.217",
+          "call 45 claude-haiku-5-5: 2415 in / 1423 out, 7.3 s, total $0.218",
+          "call 46 claude-haiku-5-5: 14381 in / 3502 out, 13.1 s, total $0.221",
+          "call 47 claude-haiku-5-5: 8098 in / 1082 out, 5.0 s, total $0.222",
+          "call 48 claude-haiku-5-5: 15591 in / 2060 out, 8.7 s, total $0.225",
+          "call 49 claude-haiku-5-5: 12760 in / 1966 out, 9.7 s, total $0.227",
+          "call 50 claude-haiku-5-5: 14984 in / 5506 out, 21.5 s, total $0.231",
+          "call 51 claude-haiku-5-5: 14604 in / 2255 out, 10.0 s, total $0.234",
+          "call 52 claude-haiku-5-5: 14237 in / 2010 out, 8.5 s, total $0.236",
+          "call 53 claude-haiku-5-5: 14139 in / 2048 out, 8.9 s, total $0.239",
+          "call 54 claude-haiku-5-5: 14662 in / 2747 out, 10.9 s, total $0.242",
+          "call 55 claude-haiku-5-5: 15575 in / 3030 out, 13.0 s, total $0.245",
+          "call 56 claude-haiku-5-5: 13727 in / 1707 out, 7.8 s, total $0.247",
+          "call 57 claude-haiku-5-5: 15378 in / 2102 out, 8.8 s, total $0.249",
+          "call 58 claude-haiku-5-5: 8055 in / 3663 out, 13.7 s, total $0.252",
+          "call 59 claude-haiku-5-5: 6651 in / 3218 out, 12.2 s, total $0.254",
+          "call 60 claude-haiku-5-5: 11619 in / 3222 out, 12.1 s, total $0.257",
+          "call 61 claude-haiku-5-5: 13511 in / 2194 out, 9.3 s, total $0.260",
+          "call 62 claude-haiku-5-5: 15139 in / 4449 out, 18.6 s, total $0.263",
+          "call 63 claude-haiku-5-5: 14641 in / 1003 out, 6.2 s, total $0.265",
+          "call 64 claude-haiku-5-5: 14688 in / 2429 out, 9.7 s, total $0.268",
+          "call 65 claude-haiku-5-5: 4881 in / 2257 out, 9.1 s, total $0.270",
+          "call 66 claude-haiku-5-5: 2331 in / 3074 out, 12.4 s, total $0.271",
+          "call 67 claude-haiku-5-5: 12769 in / 5877 out, 21.4 s, total $0.276",
+          "call 68 claude-haiku-5-5: 15000 in / 1506 out, 7.4 s, total $0.278",
+          "call 69 claude-haiku-5-5: 14752 in / 5829 out, 21.5 s, total $0.282",
+          "call 70 claude-haiku-5-5: 14729 in / 3081 out, 12.3 s, total $0.285",
+          "call 71 claude-haiku-5-5: 15981 in / 2326 out, 11.5 s, total $0.288",
+          "call 72 claude-haiku-5-5: 14527 in / 4011 out, 15.5 s, total $0.291",
+          "call 73 claude-haiku-5-5: 14628 in / 8073 out, 31.6 s, total $0.297",
+          "call 74 claude-haiku-5-5: 15369 in / 9810 out, 34.3 s, total $0.303",
+          "call 75 claude-haiku-5-5: 15175 in / 10406 out, 37.2 s, total $0.310",
+          "call 76 claude-haiku-5-5: 5138 in / 6096 out, 22.5 s, total $0.314",
+          "not in a table: 0 documents, given to the draft as text",
+          "call 77 claude-opus-5-5: 79277 in / 15108 out, 111.4 s, total $0.933",
+          "laws: BWBR0040940, BWBR0011468, BWBR0005537",
+          "call 78 claude-opus-5-5: 7486 in / 1397 out, 12.0 s, total $0.991",
+          "quote check: {\"passed\":58,\"failed\":3,\"fixed\":3,\"dropped\":0}",
+          "call 79 claude-opus-5-5: 9467 in / 5022 out, 40.5 s, total $1.129"
+        ],
+        "usage": {
+          "input_tokens": 1091188,
+          "output_tokens": 265561,
+          "cache_read_tokens": 0
+        },
+        "loopCostUsd": 0.3136659000000001,
+        "answer": "# AP-boetes voor datalekken: meldplicht en beveiliging\n\n## Kort antwoord\n\nDe gelezen documenten bevatten drie boetes voor het niet of te laat melden van een datalek: Uber, Booking.com en PVV Overijssel [33][38][41]. Ze bevatten daarnaast elf boetes voor onvoldoende beveiliging, meestal wegens schending van artikel 32 AVG [3][8][9][14][16][20][23][26][27][30].\n\nVolgens de AP moet een datalek zonder onredelijke vertraging en zo mogelijk binnen 72 uur na kennisname worden gemeld. Dat geldt niet als het niet waarschijnlijk is dat het lek een risico oplevert voor de rechten en vrijheden van betrokkenen [45].\n\n## 1. Boetes wegens het niet of te laat melden van een datalek\n\n| Organisatie | Jaar besluit | Boete | Geschonden bepaling |\n|---|---|---|---|\n| Uber (Uber B.V. en Uber Technologies, Inc. gezamenlijk) | 2018 (6 november) [34] | € 600.000 [33] | Art. 34a, eerste en tweede lid, Wbp (oud recht, niet de AVG) [35] |\n| Booking.com B.V. | 2020 (10 december) [39] | € 475.000 [38] | Art. 33, eerste lid, AVG [38] |\n| Stichting Ondersteuning Provinciale Fractie Overijssel PVV | 2020 (16 juni) [42] | € 7.500 [41] | Art. 33, eerste lid, AVG [43] |\n\n**Toelichting per zaak**\n\n- **Uber**\n  - De AP verweet Uber dat het de AP en de betrokkenen niet binnen 72 uur na ontdekking van het lek had geïnformeerd [37].\n  - Uber was op 14 november 2016 op de hoogte. Het meldde het lek pas op 21 november 2017 aan de AP en informeerde toen ook de betrokkenen [36].\n  - Het verwijt betrof dus ook het niet informeren van betrokkenen (art. 34a lid 2 Wbp) [35][37].\n- **Booking.com**\n  - Booking ontdekte de inbreuk op 10 januari 2019 en meldde pas op 7 februari 2019 [40].\n  - De AP stelde een overtreding vast van 16 januari tot en met 6 februari 2019 [40].\n- **PVV Overijssel**\n  - Het datalek was bekend sinds 11 januari 2019 en werd niet gemeld [43].\n  - De AP achtte aanvankelijk een boete van € 525.000 aan de orde. Omdat PVV Overijssel dit financieel niet kon dragen, verlaagde de AP de boete tot € 7.500 [44].\n  - De AP oordeelde ook dat de vrijwillige ontvangst van de e-mails door betrokkenen geen grond is om een inbreuk als niet-meldenswaardig te beschouwen [59].\n\n## 2. Boetes wegens onvoldoende beveiliging\n\n| Organisatie | Jaar besluit | Boete | Geschonden bepaling |\n|---|---|---|---|\n| Stichting HagaZiekenhuis | 2019 (18 juni) [2] | € 460.000 [1]; door de rechtbank verlaagd tot € 350.000 [4] | Art. 32, eerste lid, AVG, in samenhang met het Besluit elektronische gegevensverwerking door zorgaanbieders en NEN 7510-2 [3] |\n| CP&A B.V. | 2020 (24 maart) [7] | € 15.000 [6] | Art. 9, eerste lid, en art. 32, eerste lid, AVG [8] |\n| Stichting OLVG | 2020 (26 november) [10][11] | € 440.000 [9] | Art. 32, eerste lid, AVG [9] |\n| Orthodontiepraktijk (eenmanszaak, naam vertrouwelijk) | 2021 (4 februari) [12][13] | € 12.000 [12] | Art. 32, eerste lid, AVG [14][15] |\n| UWV | 2021 (juli) [23] | € 450.000 [23] | Niet vermeld (zie \"Niet gevonden\") |\n| Transavia Airlines C.V. | 2021 (23 september) [17][18] | € 400.000 [16] | Art. 32, eerste en tweede lid, AVG [16] |\n| Curator in het faillissement van een stichting (naam niet vermeld) | 2021 (9 december) [19] | € 310.000; na bezwaar € 148.750; door de rechtbank gematigd tot € 58.125 [19][21][22] | Art. 5, eerste lid, onder f, in samenhang met art. 32, eerste en tweede lid, AVG [20] |\n| Ministerie van Buitenlandse Zaken (NVIS) | 2022 (24 februari) [25] | € 565.000 [24] | Art. 32, eerste lid, en art. 13, eerste lid, onder e, AVG [26] |\n| Sociale Verzekeringsbank | 2023 (19 januari) [28] | € 150.000 [27] | Art. 32, eerste en tweede lid, AVG [27] |\n| Stichting Hogeschool van Arnhem en Nijmegen (HAN) | 2025 (15 december) [31] | € 175.000 [30] | Art. 32 AVG [30] |\n\n**Toelichting per zaak**\n\n- **HagaZiekenhuis**\n  - Er was geen tweefactorauthenticatie en de logbestanden werden niet regelmatig beoordeeld [3].\n  - De rechtbank Den Haag oordeelde dat de AP een boete en last mocht opleggen. Zij vond de boete echter te hoog en matigde die tot € 350.000 [5]. Deze uitspraak is definitief [4].\n- **CP&A**\n  - De verzuimregistratie met gezondheidsgegevens van zieke werknemers was zonder enige authenticatie toegankelijk [6][8].\n- **OLVG**\n  - Ook hier ontbrak tweefactorauthenticatie en werden de logbestanden niet regelmatig beoordeeld [10].\n- **Orthodontiepraktijk**\n  - Het inschrijfformulier werd verstuurd via een website zonder TLS-certificaat, dus zonder HTTPS [14].\n- **UWV**\n  - De verzending van groepsberichten was onvoldoende beveiligd [23].\n- **Transavia**\n  - Transavia had het datalek wel tijdig gemeld en de betrokkenen geïnformeerd. De boete betreft dus alleen de beveiliging [17].\n- **Curator**\n  - De rechtbank Gelderland oordeelde in 2025 dat de AP terecht een boete had opgelegd, maar matigde die tot € 58.125 [22].\n- **Sociale Verzekeringsbank**\n  - De telefonische helpdesk controleerde de identiteit van bellers gebrekkig [29].\n- **HAN**\n  - Er waren 4.381 wachtwoorden in platte tekst opgeslagen en 5.194 wachtwoorden zwak gehasht met MD5 en SHA1 [32].\n  - Verder was er onvoldoende bescherming tegen SQL-injectie en was de logging te beperkt [32].\n\n## 3. Wanneer moet een datalek binnen 72 uur worden gemeld?\n\n**De norm**\n\n- De verwerkingsverantwoordelijke moet een inbreuk zonder onredelijke vertraging melden, en zo mogelijk uiterlijk 72 uur na kennisname (art. 33 lid 1 AVG) [45].\n- Al onder de Wbp betekende \"onverwijld\" volgens de AP-beleidsregels: melding binnen 72 uur [60].\n\n**Start van de termijn**\n\n- De termijn begint bij kennisname. Dat is het moment waarop men redelijk zeker is dat een beveiligingsincident de vertrouwelijkheid, integriteit en/of beschikbaarheid van persoonsgegevens heeft aangetast [46].\n- Een vermoeden van een datalek laat de termijn nog niet lopen [47].\n\n**Complexe incidenten en late melding**\n\n- Bij een complexe inbreuk, zoals ransomware of phishing, moet ook zonder volledige informatie binnen 72 uur een voorlopige melding worden gedaan. Bij nieuwe informatie volgt een vervolgmelding [48].\n- De AP accepteert een melding na 72 uur alleen in uitzonderlijke gevallen [49].\n- Een late melding moet een motivering voor de vertraging bevatten [50].\n\n**Uitzonderingen op de meldplicht**\n\n- Melden bij de AP is niet nodig als een risico voor de rechten en vrijheden van betrokkenen niet waarschijnlijk is [51].\n- Passende maatregelen vóór het lek, zoals versleuteling, kunnen een melding overbodig maken [52].\n- De artikelen 41 en 42 UAVG bevatten aanvullende uitzonderingen op de meldplicht [53].\n\n**Latere ontwikkelingen en documentatie**\n\n- Een incident dat aanvankelijk niet meldplichtig was, moet alsnog worden gemeld als er later toch compromittering optreedt [56].\n- Ook niet-meldplichtige incidenten moeten worden geregistreerd (art. 33 lid 5 AVG) [57].\n\n**Informeren van betrokkenen**\n\n- Betrokkenen moeten zelf worden geïnformeerd als het lek waarschijnlijk een hoog risico voor hun rechten en vrijheden oplevert (art. 34 AVG) [54].\n- Dat moet onverwijld gebeuren [55].\n\n**Sanctie**\n\n- Wie ten onrechte niet meldt, riskeert een boete [58].\n- Het boetemaximum voor schending van de artikelen 33 en 34 AVG is € 10 miljoen of, voor een onderneming, 2% van de wereldwijde jaaromzet als dat hoger is [61].\n\n## Niet gevonden\n\n- **UWV:** welke AVG-bepaling is geschonden (vermoedelijk art. 32 AVG) en wat de exacte besluitdatum is.\n- **Rechtsmiddelen bij de beveiligingsboetes:** voor OLVG, CP&A, de orthodontiepraktijk, Transavia, Buitenlandse Zaken, SVB, HAN en UWV blijkt niet of bezwaar of beroep is ingesteld, en zo ja, met welke uitkomst.\n- **Rechtsmiddelen bij de meldplichtboetes:** voor Uber, Booking.com en PVV Overijssel blijkt niet of bezwaar of beroep is ingesteld.\n- **Art. 34 AVG:** er is geen afzonderlijk boetebesluit gevonden dat uitsluitend het niet informeren van betrokkenen betreft. Bij Uber is dit wel mede beboet, maar onder de Wbp. Daaruit kan niet worden afgeleid dat zulke zaken niet bestaan.\n\n## Bronnen\n1. Boete HagaZiekenhuis, 2019-07-16: \"De Autoriteit Persoonsgegevens (AP) heeft het HagaZiekenhuis een boete van 460.000 euro opgelegd.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-hagaziekenhuis\n2. Beslissing op bezwaar HagaZiekenhuis, 2020-02-20: \"Het bezwaar is gericht tegen het besluit van de AP van 18 juni 2019 (kenmerk: z2019-07604) tot oplegging van een bestuurlijke boete alsmede een last onder dwangsom aan uw cliënt Stichting HagaZiekenhuis (HagaZiekenhuis).\" https://www.autoriteitpersoonsgegevens.nl/documenten/beslissing-op-bezwaar-hagaziekenhuis\n3. Beslissing op bezwaar HagaZiekenhuis, 2020-02-20: \"De AP heeft in het primaire besluit aan HagaZiekenhuis een bestuurlijke boete en een last onder dwangsom opgelegd wegens overtreding van artikel 32, eerste lid van de AVG in samenhang gelezen met artikel 3, tweede lid, van het Besluit elektronische gegevensverwerking door zorgaanbieders en het bepaalde onder 12.4.1 van NEN 7510-2 omdat niet is voldaan aan de eis van tweefactor authenticatie en de eis om regelmatig de logbestanden te beoordelen.\" https://www.autoriteitpersoonsgegevens.nl/documenten/beslissing-op-bezwaar-hagaziekenhuis\n4. Boete HagaZiekenhuis, 2019-07-16: \"De rechtbank Den Haag heeft de boete aan het HagaZiekenhuis verlaagd tot een bedrag van 350.000 euro. Deze uitspraak is definitief.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-hagaziekenhuis\n5. Rechtbank Den Haag 2021-03-31, ECLI:NL:RBDHA:2021:3090, 2021-03-31: \"De rechtbank vindt dit bedrag echter in dit geval te hoog en ziet aanleiding de boete te matigen tot € 350.000,-.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBDHA:2021:3090\n6. Boete CP&A verzuimregistratie, 2021-05-19: \"De Autoriteit Persoonsgegevens (AP) heeft onderhoudsbedrijf CP&A een boete opgelegd van 15.000 euro vanwege overtredingen bij het verwerken van gezondheidsgegevens van zieke werknemers.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-cpa-verzuimregistratie\n7. Boete CP&A verzuimregistratie, 2021-05-19: \"24 maart 2020\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-cpa-verzuimregistratie\n8. Boete CP&A verzuimregistratie, 2021-05-19: \"Daarnaast heeft CP&A voor deze verwerking tijdens diezelfde periode onvoldoende passende beveiligingsmaatregelen genomen als bedoeld in artikel 32, eerste lid, van de AVG.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-cpa-verzuimregistratie\n9. Boete OLVG, 2021-02-11: \"De AP legt aan OLVG, wegens overtreding van artikel 32, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 440.000,-- (zegge vierhonderdenveertigduizend euro).\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-olvg\n10. Boete OLVG, 2021-02-11: \"De Autoriteit Persoonsgegevens (AP) heeft besloten aan Stichting OLVG (OLVG) een bestuurlijke boete van €440.000,- op te leggen, omdat OLVG niet heeft voldaan aan het vereiste van tweefactor authenticatie en het regelmatig beoordelen van logbestanden.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-olvg\n11. Boete OLVG, 2021-02-11: \"26 november 2020\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-olvg\n12. Boete orthodontiepraktijk, 2021-06-10: \"De Autoriteit Persoonsgegevens (hierna: AP) heeft besloten om u een bestuurlijke boete van € 12.000,00 op te leggen.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-orthodontiepraktijk\n13. Boete orthodontiepraktijk, 2021-06-10: \"4 februari 2021\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-orthodontiepraktijk\n14. Boete orthodontiepraktijk, 2021-06-10: \"De AP stelt vast dat de oude website van de orthodontiepraktijk niet beschikte over een TLS-certificaat en daardoor geen gebruik maakte van het HTTPS-protocol.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-orthodontiepraktijk\n15. Boete orthodontiepraktijk, 2021-06-10: \"Daarmee heeft zij artikel 32, eerste lid, van de AVG overtreden.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-orthodontiepraktijk\n16. Boete Transavia, 2021-11-12: \"De AP legt aan Transavia Airlines C.V. wegens overtreding van artikel 32, eerste en tweede lid, van de AVG een bestuurlijke boete op ten bedrage van:\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-transavia\n17. Boete Transavia, 2021-11-12: \"Verder heeft Transavia het datalek tijdig bij de AP gemeld en de betrokkenen geïnformeerd.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-transavia\n18. Boete Transavia, 2021-11-12: \"23 september 2021\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-transavia\n19. Rechtbank Gelderland 2025-08-07, ECLI:NL:RBGEL:2025:6547, 2025-08-07: \"De AP heeft vervolgens met het besluit van 9 december 2021 aan eiser een boete opgelegd van € 310.000.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2025:6547\n20. Rechtbank Gelderland 2025-08-07, ECLI:NL:RBGEL:2025:6547, 2025-08-07: \"Boetebesluit wegens overtreding van artikel 5, eerste lid, aanhef en onder f, in samenhang met artikel 32, eerste en tweede lid, van de AVG.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2025:6547\n21. Rechtbank Gelderland 2025-08-07, ECLI:NL:RBGEL:2025:6547, 2025-08-07: \"Met het bestreden besluit van 25 augustus 2022 op het bezwaar van eiser heeft de AP de hoogte van de boete gewijzigd naar € 148.750.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2025:6547\n22. Rechtbank Gelderland 2025-08-07, ECLI:NL:RBGEL:2025:6547, 2025-08-07: \"De rechtbank komt in deze uitspraak tot het oordeel dat de AP terecht een boete heeft opgelegd aan eiser, maar dat de boete moet worden gematigd tot een bedrag van € 58.125.\" https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2025:6547\n23. Jaarverslag AP 2021, 2022-04-19: \"In juli legde de AP het Uitvoeringsinstituut Werknemersverzekeringen (UWV) een boete van 450.000 euro op voor het onvoldoende beveiligen van de verzending van groepsberichten.\" https://www.autoriteitpersoonsgegevens.nl/documenten/jaarverslag-ap-2021\n24. Boete ministerie Buitenlandse Zaken NVIS, 2022-04-06: \"De Autoriteit Persoonsgegevens (AP) heeft besloten om aan de minister van Buitenlandse Zaken (hierna: de Minister) een bestuurlijke boete van € 565.000 op te leggen.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-ministerie-buitenlandse-zaken-nvis\n25. Boete ministerie Buitenlandse Zaken NVIS, 2022-04-06: \"24 februari 2022\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-ministerie-buitenlandse-zaken-nvis\n26. Boete ministerie Buitenlandse Zaken NVIS, 2022-04-06: \"De Minister handelt hierdoor in strijd met artikel 13, lid 1 onder e, en artikel 32, lid 1, van de Algemene Verordening Gegevensbescherming (AVG).\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-ministerie-buitenlandse-zaken-nvis\n27. Boete Sociale Verzekeringsbank, 2023-04-13: \"SVB) een bestuurlijke boete van € 150.000,-- op te leggen voor overtreding van artikel 32, eerste en tweede\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-sociale-verzekeringsbank\n28. Boete Sociale Verzekeringsbank, 2023-04-13: \"19 januari 2023\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-sociale-verzekeringsbank\n29. Boete Sociale Verzekeringsbank, 2023-04-13: \"De SVK krijgt de boete vanwege gebrekkige identiteitscontrole door de telefonische helpdesk.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-sociale-verzekeringsbank\n30. Boete HAN, 2025-12-17: \"De Autoriteit Persoonsgegevens legt aan de Stichting Hogeschool van Arnhem en Nijmegen een bestuurlijke boete op van € 175.000,00 (zegge: honderdvijfenzeventigduizend euro) voor het overtreden van artikel 32 van de AVG.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-han\n31. Boete HAN, 2025-12-17: \"15 december 2025\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-han\n32. Boete HAN, 2025-12-17: \"Op databaseserver Robin waren 4.381 wachtwoorden opgeslagen in platte tekst, zonder enige versleuteling. Daarnaast waren er 5.194 wachtwoorden opgeslagen die zijn gehasht met de MD5- en SHA1-algoritmen.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-han\n33. Boete Uber datalek, 2018-11-29: \"De Autoriteit Persoonsgegevens (AP) heeft Uber een boete van 600.000 euro opgelegd voor het overtreden van de meldplicht datalekken.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n34. Boete Uber datalek, 2018-11-29: \"6 november 2018\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n35. Boete Uber datalek, 2018-11-29: \"Dit is een overtreding van artikel 34a, eerste en tweede lid, van de Wet bescherming persoonsgegevens (Wbp), zoals dat destijds gold.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n36. Boete Uber datalek, 2018-11-29: \"De melding aan de AP heeft eerst plaatsgevonden op 21 november 2017. Op diezelfde dag heeft Uber een nieuwsbericht over het datalek op haar website gepubliceerd.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n37. Boete Uber datalek, 2018-11-29: \"Het Uber-concern krijgt de boete omdat het de AP en betrokkenen niet binnen 72 uur na het ontdekken van het lek heeft geïnformeerd.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n38. Boete Booking.com, 2021-03-31: \"De AP legt aan Booking, wegens overtreding van artikel 33, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 475.000,-- (zegge: vierhonderdvijfenzeventigduizend euro).\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-bookingcom\n39. Boete Booking.com, 2021-03-31: \"10 december 2020\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-bookingcom\n40. Boete Booking.com, 2021-03-31: \"De AP is van oordeel dat Booking artikel 33, eerste lid, van de Algemene Verordening Gegevensbescherming (AVG) vanaf 16 januari 2019 tot en met 6 februari 2019 heeft overtreden, omdat Booking heeft nagelaten een inbreuk in verband met persoonsgegevens binnen 72 uur nadat daarvan kennis was genomen, te melden bij de AP.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-bookingcom\n41. Boete datalek PVV Overijssel, 2021-05-11: \"De Autoriteit Persoonsgegevens (hierna: AP) heeft besloten aan de Stichting Ondersteuning Provinciale Fractie Overijssel Partij voor de Vrijheid (PVV) (hierna: PVV Overijssel) een bestuurlijke boete van € 7.500,-- op te leggen.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n42. Boete datalek PVV Overijssel, 2021-05-11: \"16 juni 2020\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n43. Boete datalek PVV Overijssel, 2021-05-11: \"De AP is van oordeel dat de PVV Overijssel in de periode van 14 januari 2019 tot heden heeft nagelaten een inbreuk in verband met persoonsgegevens, zonder onredelijke vertraging en uiterlijk binnen 72 uur nadat de PVV Overijssel op 11 januari 2019 op de hoogte raakte van de inbreuk, te melden aan de AP.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n44. Boete datalek PVV Overijssel, 2021-05-11: \"komt tot de conclusie dat de PVV Overijssel het boetebedrag van € 525.000 financieel niet kan dragen. Op grond daarvan ziet de AP aanleiding om het boetebedrag te verlagen. De AP acht in dit geval een boete van € 7.500 passend en geboden.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n45. Boete Booking.com, 2021-03-31: \"Ingevolge artikel 33, eerste lid, van de AVG dient een verwerkingsverantwoordelijke een inbreuk in verband met persoonsgegevens zonder onredelijke vertraging te melden en, indien mogelijk, uiterlijk 72 uur nadat hij er kennis van heeft genomen, aan de overeenkomstig artikel 55 bevoegde toezichthoudende autoriteit, tenzij het niet waarschijnlijk is dat de inbreuk een risico inhoudt voor de rechten en vrijheden van natuurlijke personen\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-bookingcom\n46. Zo meldt u een datalek, 2026-07-22: \"Met ‘kennisname’ wordt bedoeld dat u er redelijk zeker van kunt zijn dat een beveiligingsincident heeft geleid tot de aantasting van de vertrouwelijkheid, integriteit en/of beschikbaarheid van persoonsgegevens.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/zo-meldt-u-een-datalek\n47. Zo meldt u een datalek, 2026-07-22: \"Heeft u een mogelijk datalek ontdekt? Dan hoeft u het datalek nog niet direct te melden. Dit moet pas na kennisname van het datalek.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/zo-meldt-u-een-datalek\n48. Zo meldt u een datalek, 2026-07-22: \"Gaat het om een complexe inbreuk, zoals een incident door ransomware of phishing ? En heeft u nog niet alle informatie? Dan moet u de eerste (voorlopige) melding nog steeds binnen 72 uur doen.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/zo-meldt-u-een-datalek\n49. Zo meldt u een datalek, 2026-07-22: \"De AP accepteert een late melding (na 72 uur) alleen in uitzonderlijke gevallen.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/zo-meldt-u-een-datalek\n50. Boete datalek PVV Overijssel, 2021-05-11: \"Indien de melding aan de toezichthoudende autoriteit niet binnen 72 uur plaatsvindt, gaat zij vergezeld van een motivering voor de vertraging.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n51. Datalek: wel of niet melden, 2025-09-09: \"Een datalek moet melden bij de AP, tenzij het niet waarschijnlijk is dat het datalek een risico oplevert voor 'de rechten en vrijheden van betrokkenen'.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden\n52. Datalek: wel of niet melden, 2025-09-09: \"U hoeft het datalek niet te melden bij de AP als u passende maatregelen heeft getroffen voordat het datalek plaatsvond.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden\n53. Datalek: wel of niet melden, 2025-09-09: \"In artikel 41 UAVG en artikel 42 UAVG staan uitzonderingen op de meldplicht datalekken.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden\n54. Datalek: wel of niet melden, 2025-09-09: \"U hoeft de slachtoffers alleen te informeren als een datalek waarschijnlijk een hoog risico voor hun rechten en vrijheden oplevert.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden\n55. Datalek? Dit moet u doen, 2026-07-22: \"U kunt verplicht zijn om het datalek binnen 72 uur te melden bij de AP. Ook kunt u verplicht zijn om de slachtoffers onverwijld te informeren over het datalek.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-dit-moet-u-doen\n56. Voorbeeldlijst: wel/niet melden datalek, 2019-06-28: \"Vindt er later echter een compromittering plaats, moet de inbreuk wel worden gemeld.\" https://www.autoriteitpersoonsgegevens.nl/documenten/voorbeeldlijst-welniet-melden-datalek\n57. Voorbeeldlijst: wel/niet melden datalek, 2019-06-28: \"Dit is geen te melden inbreuk, maar wel een te registreren incident overeenkomst artikel 33, lid 5.\" https://www.autoriteitpersoonsgegevens.nl/documenten/voorbeeldlijst-welniet-melden-datalek\n58. Datalek: wel of niet melden, 2025-09-09: \"Meldt u een datalek ten onrechte niet bij de AP? Dan kan de AP u een boete opleggen.\" https://www.autoriteitpersoonsgegevens.nl/themas/beveiliging/datalekken/datalek-wel-of-niet-melden\n59. Boete datalek PVV Overijssel, 2021-05-11: \"Dit is echter geen criterium op basis waarvan zou kunnen worden geconcludeerd dat het in deze zou gaan om een niet meldenswaardige inbreuk.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-datalek-pvv-overijssel\n60. Boete Uber datalek, 2018-11-29: \"De Beleidsregels meldplicht datalekken bepalen onder meer dat ‘onverwijld’, zoals bedoeld in artikel 34a, eerste lid, van de Wbp, melding binnen 72 uur betekent.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek\n61. Boete Uber datalek, 2018-11-29: \"Artikel 83, vierde lid, van de AVG bepaalt dat op inbreuken van de artikelen 33 en 34 een administratieve geldboete kan worden opgelegd tot € 10.000.000 of, voor een onderneming, tot 2% van de totale wereldwijde jaaromzet in het voorgaande boekjaar, indien dit cijfer hoger is.\" https://www.autoriteitpersoonsgegevens.nl/documenten/boete-uber-datalek",
+        "claims": [
+          {
+            "text": "Beveiliging – HagaZiekenhuis (Stichting HagaZiekenhuis): de AP legde een boete op van € 460.000.",
+            "quote": "De Autoriteit Persoonsgegevens (AP) heeft het HagaZiekenhuis een boete van 460.000 euro opgelegd.",
+            "doc": "ap:documenten/boete-hagaziekenhuis",
+            "ok": true
+          },
+          {
+            "text": "Het boetebesluit tegen HagaZiekenhuis dateert van 18 juni 2019.",
+            "quote": "Het bezwaar is gericht tegen het besluit van de AP van 18 juni 2019 (kenmerk: z2019-07604) tot oplegging van een bestuurlijke boete alsmede een last onder dwangsom aan uw cliënt Stichting HagaZiekenhuis (HagaZiekenhuis).",
+            "doc": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+            "ok": true
+          },
+          {
+            "text": "De geschonden bepaling bij HagaZiekenhuis is artikel 32, eerste lid, AVG, gelezen met het Besluit elektronische gegevensverwerking door zorgaanbieders en NEN 7510-2. De gebreken waren: geen tweefactorauthenticatie en geen regelmatige beoordeling van logbestanden.",
+            "quote": "De AP heeft in het primaire besluit aan HagaZiekenhuis een bestuurlijke boete en een last onder dwangsom opgelegd wegens overtreding van artikel 32, eerste lid van de AVG in samenhang gelezen met artikel 3, tweede lid, van het Besluit elektronische gegevensverwerking door zorgaanbieders en het bepaalde onder 12.4.1 van NEN 7510-2 omdat niet is voldaan aan de eis van tweefactor authenticatie en de eis om regelmatig de logbestanden te beoordelen.",
+            "doc": "ap:documenten/beslissing-op-bezwaar-hagaziekenhuis",
+            "ok": true
+          },
+          {
+            "text": "De AP verklaarde het bezwaar van HagaZiekenhuis ongegrond. De rechtbank Den Haag verlaagde de boete daarna definitief tot € 350.000.",
+            "quote": "De rechtbank Den Haag heeft de boete aan het HagaZiekenhuis verlaagd tot een bedrag van 350.000 euro. Deze uitspraak is definitief.",
+            "doc": "ap:documenten/boete-hagaziekenhuis",
+            "ok": true
+          },
+          {
+            "text": "De rechtbank oordeelde dat de AP een boete en last mocht opleggen, maar matigde de boete wegens te hoge hoogte.",
+            "quote": "De rechtbank vindt dit bedrag echter in dit geval te hoog en ziet aanleiding de boete te matigen tot € 350.000,-.",
+            "doc": "rechtspraak:ECLI:NL:RBDHA:2021:3090",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – CP&A B.V.: de AP legde een boete op van € 15.000.",
+            "quote": "De Autoriteit Persoonsgegevens (AP) heeft onderhoudsbedrijf CP&A een boete opgelegd van 15.000 euro vanwege overtredingen bij het verwerken van gezondheidsgegevens van zieke werknemers.",
+            "doc": "ap:documenten/boete-cpa-verzuimregistratie",
+            "ok": true
+          },
+          {
+            "text": "Het boetebesluit tegen CP&A is gedateerd 24 maart 2020.",
+            "quote": "24 maart 2020",
+            "doc": "ap:documenten/boete-cpa-verzuimregistratie",
+            "ok": true
+          },
+          {
+            "text": "CP&A schond naast artikel 9, eerste lid, AVG ook artikel 32, eerste lid, AVG. De verzuimregistratie was zonder enige authenticatie toegankelijk.",
+            "quote": "Daarnaast heeft CP&A voor deze verwerking tijdens diezelfde periode onvoldoende passende beveiligingsmaatregelen genomen als bedoeld in artikel 32, eerste lid, van de AVG.",
+            "doc": "ap:documenten/boete-cpa-verzuimregistratie",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – OLVG (Stichting OLVG): de AP legde een boete op van € 440.000 wegens schending van artikel 32, eerste lid, AVG.",
+            "quote": "De AP legt aan OLVG, wegens overtreding van artikel 32, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 440.000,-- (zegge vierhonderdenveertigduizend euro).",
+            "doc": "ap:documenten/boete-olvg",
+            "ok": true
+          },
+          {
+            "text": "Het boetebesluit tegen OLVG dateert van 26 november 2020. Grond: geen tweefactorauthenticatie en geen regelmatige beoordeling van logbestanden.",
+            "quote": "De Autoriteit Persoonsgegevens (AP) heeft besloten aan Stichting OLVG (OLVG) een bestuurlijke boete van €440.000,- op te leggen, omdat OLVG niet heeft voldaan aan het vereiste van tweefactor authenticatie en het regelmatig beoordelen van logbestanden.",
+            "doc": "ap:documenten/boete-olvg",
+            "ok": true
+          },
+          {
+            "text": "Datum van het OLVG-boetebesluit.",
+            "quote": "26 november 2020",
+            "doc": "ap:documenten/boete-olvg",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – orthodontiepraktijk (eenmanszaak, naam vertrouwelijk): de AP legde een boete op van € 12.000, bij besluit van 4 februari 2021.",
+            "quote": "De Autoriteit Persoonsgegevens (hierna: AP) heeft besloten om u een bestuurlijke boete van € 12.000,00 op te leggen.",
+            "doc": "ap:documenten/boete-orthodontiepraktijk",
+            "ok": true
+          },
+          {
+            "text": "Datum van het boetebesluit tegen de orthodontiepraktijk.",
+            "quote": "4 februari 2021",
+            "doc": "ap:documenten/boete-orthodontiepraktijk",
+            "ok": true
+          },
+          {
+            "text": "De orthodontiepraktijk schond artikel 32, eerste lid, AVG. Het inschrijfformulier werd verstuurd over een website zonder TLS/HTTPS.",
+            "quote": "De AP stelt vast dat de oude website van de orthodontiepraktijk niet beschikte over een TLS-certificaat en daardoor geen gebruik maakte van het HTTPS-protocol.",
+            "doc": "ap:documenten/boete-orthodontiepraktijk",
+            "ok": true
+          },
+          {
+            "text": "Bepaling bij de orthodontiepraktijk.",
+            "quote": "Daarmee heeft zij artikel 32, eerste lid, van de AVG overtreden.",
+            "doc": "ap:documenten/boete-orthodontiepraktijk",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – Transavia Airlines C.V.: boete van € 400.000 wegens schending van artikel 32, eerste en tweede lid, AVG.",
+            "quote": "De AP legt aan Transavia Airlines C.V. wegens overtreding van artikel 32, eerste en tweede lid, van de AVG een bestuurlijke boete op ten bedrage van:",
+            "doc": "ap:documenten/boete-transavia",
+            "ok": true
+          },
+          {
+            "text": "Het Transavia-besluit dateert van 23 september 2021. Transavia had het datalek wel tijdig gemeld; de boete gaat dus alleen over de beveiliging.",
+            "quote": "Verder heeft Transavia het datalek tijdig bij de AP gemeld en de betrokkenen geïnformeerd.",
+            "doc": "ap:documenten/boete-transavia",
+            "ok": true
+          },
+          {
+            "text": "Datum van het Transavia-boetebesluit.",
+            "quote": "23 september 2021",
+            "doc": "ap:documenten/boete-transavia",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – curator in het faillissement van een stichting (naam niet vermeld): de AP legde bij besluit van 9 december 2021 een boete op van € 310.000.",
+            "quote": "De AP heeft vervolgens met het besluit van 9 december 2021 aan eiser een boete opgelegd van € 310.000.",
+            "doc": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+            "ok": true
+          },
+          {
+            "text": "De geschonden bepaling in die zaak is artikel 5, eerste lid, onder f, in samenhang met artikel 32, eerste en tweede lid, AVG.",
+            "quote": "Boetebesluit wegens overtreding van artikel 5, eerste lid, aanhef en onder f, in samenhang met artikel 32, eerste en tweede lid, van de AVG.",
+            "doc": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+            "ok": true
+          },
+          {
+            "text": "Na bezwaar verlaagde de AP de boete tot € 148.750.",
+            "quote": "Met het bestreden besluit van 25 augustus 2022 op het bezwaar van eiser heeft de AP de hoogte van de boete gewijzigd naar € 148.750.",
+            "doc": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+            "ok": true
+          },
+          {
+            "text": "Rechtbank Gelderland (2025) matigde de boete verder tot € 58.125.",
+            "quote": "De rechtbank komt in deze uitspraak tot het oordeel dat de AP terecht een boete heeft opgelegd aan eiser, maar dat de boete moet worden gematigd tot een bedrag van € 58.125.",
+            "doc": "rechtspraak:ECLI:NL:RBGEL:2025:6547",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – UWV: in juli 2021 kreeg het UWV een boete van € 450.000 wegens onvoldoende beveiligde verzending van groepsberichten.",
+            "quote": "In juli legde de AP het Uitvoeringsinstituut Werknemersverzekeringen (UWV) een boete van 450.000 euro op voor het onvoldoende beveiligen van de verzending van groepsberichten.",
+            "doc": "ap:documenten/jaarverslag-ap-2021",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – ministerie van Buitenlandse Zaken (NVIS): boete van € 565.000.",
+            "quote": "De Autoriteit Persoonsgegevens (AP) heeft besloten om aan de minister van Buitenlandse Zaken (hierna: de Minister) een bestuurlijke boete van € 565.000 op te leggen.",
+            "doc": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+            "ok": true
+          },
+          {
+            "text": "Het besluit tegen Buitenlandse Zaken dateert van 24 februari 2022.",
+            "quote": "24 februari 2022",
+            "doc": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+            "ok": true
+          },
+          {
+            "text": "Buitenlandse Zaken schond artikel 32, eerste lid, AVG (beveiliging) en artikel 13, eerste lid, onder e, AVG (informatie aan betrokkenen).",
+            "quote": "De Minister handelt hierdoor in strijd met artikel 13, lid 1 onder e, en artikel 32, lid 1, van de Algemene Verordening Gegevensbescherming (AVG).",
+            "doc": "ap:documenten/boete-ministerie-buitenlandse-zaken-nvis",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – Sociale Verzekeringsbank: boete van € 150.000 wegens schending van artikel 32, eerste en tweede lid, AVG.",
+            "quote": "SVB) een bestuurlijke boete van € 150.000,-- op te leggen voor overtreding van artikel 32, eerste en tweede",
+            "doc": "ap:documenten/boete-sociale-verzekeringsbank",
+            "ok": true
+          },
+          {
+            "text": "Het SVB-besluit dateert van 19 januari 2023.",
+            "quote": "19 januari 2023",
+            "doc": "ap:documenten/boete-sociale-verzekeringsbank",
+            "ok": true
+          },
+          {
+            "text": "Het beveiligingsgebrek bij de SVB was een gebrekkige identiteitscontrole door de telefonische helpdesk.",
+            "quote": "De SVK krijgt de boete vanwege gebrekkige identiteitscontrole door de telefonische helpdesk.",
+            "doc": "ap:documenten/boete-sociale-verzekeringsbank",
+            "ok": true
+          },
+          {
+            "text": "Beveiliging – Stichting Hogeschool van Arnhem en Nijmegen (HAN): boete van € 175.000 wegens schending van artikel 32 AVG.",
+            "quote": "De Autoriteit Persoonsgegevens legt aan de Stichting Hogeschool van Arnhem en Nijmegen een bestuurlijke boete op van € 175.000,00 (zegge: honderdvijfenzeventigduizend euro) voor het overtreden van artikel 32 van de AVG.",
+            "doc": "ap:documenten/boete-han",
+            "ok": true
+          },
+          {
+            "text": "Het HAN-besluit dateert van 15 december 2025.",
+            "quote": "15 december 2025",
+            "doc": "ap:documenten/boete-han",
+            "ok": true
+          },
+          {
+            "text": "Bij de HAN waren onder meer wachtwoorden onversleuteld of zwak gehasht opgeslagen. Andere gebreken waren onvoldoende bescherming tegen SQL-injectie en te beperkte logging.",
+            "quote": "Op databaseserver Robin waren 4.381 wachtwoorden opgeslagen in platte tekst, zonder enige versleuteling. Daarnaast waren er 5.194 wachtwoorden opgeslagen die zijn gehasht met de MD5- en SHA1-algoritmen.",
+            "doc": "ap:documenten/boete-han",
+            "ok": true
+          },
+          {
+            "text": "Meldplicht – Uber (Uber B.V. en Uber Technologies, Inc. gezamenlijk): boete van € 600.000 voor het overtreden van de meldplicht datalekken.",
+            "quote": "De Autoriteit Persoonsgegevens (AP) heeft Uber een boete van 600.000 euro opgelegd voor het overtreden van de meldplicht datalekken.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Het Uber-besluit dateert van 6 november 2018.",
+            "quote": "6 november 2018",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Uber schond artikel 34a, eerste en tweede lid, Wbp; het datalek viel nog onder het oude recht, niet onder de AVG.",
+            "quote": "Dit is een overtreding van artikel 34a, eerste en tweede lid, van de Wet bescherming persoonsgegevens (Wbp), zoals dat destijds gold.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Uber was op 14 november 2016 op de hoogte. Pas op 21 november 2017 meldde Uber het lek aan de AP en informeerde het de betrokkenen, ruim een jaar te laat.",
+            "quote": "De melding aan de AP heeft eerst plaatsgevonden op 21 november 2017. Op diezelfde dag heeft Uber een nieuwsbericht over het datalek op haar website gepubliceerd.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Kern van het verwijt aan Uber.",
+            "quote": "Het Uber-concern krijgt de boete omdat het de AP en betrokkenen niet binnen 72 uur na het ontdekken van het lek heeft geïnformeerd.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Meldplicht – Booking.com B.V.: boete van € 475.000 wegens schending van artikel 33, eerste lid, AVG.",
+            "quote": "De AP legt aan Booking, wegens overtreding van artikel 33, eerste lid, van de AVG een bestuurlijke boete op ten bedrage van € 475.000,-- (zegge: vierhonderdvijfenzeventigduizend euro).",
+            "doc": "ap:documenten/boete-bookingcom",
+            "ok": true
+          },
+          {
+            "text": "Het Booking-besluit dateert van 10 december 2020.",
+            "quote": "10 december 2020",
+            "doc": "ap:documenten/boete-bookingcom",
+            "ok": true
+          },
+          {
+            "text": "Booking ontdekte de inbreuk op 10 januari 2019 maar meldde pas op 7 februari 2019. De overtreding liep van 16 januari tot en met 6 februari 2019, ruim drie weken te laat.",
+            "quote": "De AP is van oordeel dat Booking artikel 33, eerste lid, van de Algemene Verordening Gegevensbescherming (AVG) vanaf 16 januari 2019 tot en met 6 februari 2019 heeft overtreden, omdat Booking heeft nagelaten een inbreuk in verband met persoonsgegevens binnen 72 uur nadat daarvan kennis was genomen, te melden bij de AP.",
+            "doc": "ap:documenten/boete-bookingcom",
+            "ok": true
+          },
+          {
+            "text": "Meldplicht – PVV Overijssel (Stichting Ondersteuning Provinciale Fractie Overijssel PVV): boete van € 7.500.",
+            "quote": "De Autoriteit Persoonsgegevens (hierna: AP) heeft besloten aan de Stichting Ondersteuning Provinciale Fractie Overijssel Partij voor de Vrijheid (PVV) (hierna: PVV Overijssel) een bestuurlijke boete van € 7.500,-- op te leggen.",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "Het PVV Overijssel-besluit dateert van 16 juni 2020.",
+            "quote": "16 juni 2020",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "PVV Overijssel schond artikel 33, eerste lid, AVG: het datalek, bekend sinds 11 januari 2019, werd niet gemeld.",
+            "quote": "De AP is van oordeel dat de PVV Overijssel in de periode van 14 januari 2019 tot heden heeft nagelaten een inbreuk in verband met persoonsgegevens, zonder onredelijke vertraging en uiterlijk binnen 72 uur nadat de PVV Overijssel op 11 januari 2019 op de hoogte raakte van de inbreuk, te melden aan de AP.",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "De AP concludeerde dat PVV Overijssel het boetebedrag van € 525.000 financieel niet kon dragen en verlaagde de boete daarom tot € 7.500.",
+            "quote": "komt tot de conclusie dat de PVV Overijssel het boetebedrag van € 525.000 financieel niet kan dragen. Op grond daarvan ziet de AP aanleiding om het boetebedrag te verlagen. De AP acht in dit geval een boete van € 7.500 passend en geboden.",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "Wettelijke norm volgens de AP: een datalek melden zonder onredelijke vertraging en zo mogelijk uiterlijk 72 uur na kennisname. Dit geldt niet als het niet waarschijnlijk is dat er risico ontstaat voor rechten en vrijheden.",
+            "quote": "Ingevolge artikel 33, eerste lid, van de AVG dient een verwerkingsverantwoordelijke een inbreuk in verband met persoonsgegevens zonder onredelijke vertraging te melden en, indien mogelijk, uiterlijk 72 uur nadat hij er kennis van heeft genomen, aan de overeenkomstig artikel 55 bevoegde toezichthoudende autoriteit, tenzij het niet waarschijnlijk is dat de inbreuk een risico inhoudt voor de rechten en vrijheden van natuurlijke personen",
+            "doc": "ap:documenten/boete-bookingcom",
+            "ok": true
+          },
+          {
+            "text": "De termijn begint bij kennisname. Dat is het moment waarop men redelijk zeker is dat een beveiligingsincident persoonsgegevens heeft aangetast.",
+            "quote": "Met ‘kennisname’ wordt bedoeld dat u er redelijk zeker van kunt zijn dat een beveiligingsincident heeft geleid tot de aantasting van de vertrouwelijkheid, integriteit en/of beschikbaarheid van persoonsgegevens.",
+            "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "ok": true
+          },
+          {
+            "text": "Een vermoeden van een datalek laat de termijn nog niet lopen.",
+            "quote": "Heeft u een mogelijk datalek ontdekt? Dan hoeft u het datalek nog niet direct te melden. Dit moet pas na kennisname van het datalek.",
+            "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "ok": true
+          },
+          {
+            "text": "Bij een complexe inbreuk, zoals ransomware of phishing, moet binnen 72 uur een voorlopige melding worden gedaan. Bij nieuwe informatie volgt een vervolgmelding.",
+            "quote": "Gaat het om een complexe inbreuk, zoals een incident door ransomware of phishing ? En heeft u nog niet alle informatie? Dan moet u de eerste (voorlopige) melding nog steeds binnen 72 uur doen.",
+            "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "ok": true
+          },
+          {
+            "text": "De AP accepteert een melding na 72 uur alleen in uitzonderlijke gevallen.",
+            "quote": "De AP accepteert een late melding (na 72 uur) alleen in uitzonderlijke gevallen.",
+            "doc": "ap:themas/beveiliging/datalekken/zo-meldt-u-een-datalek",
+            "ok": true
+          },
+          {
+            "text": "Een melding na 72 uur moet een motivering voor de vertraging bevatten.",
+            "quote": "Indien de melding aan de toezichthoudende autoriteit niet binnen 72 uur plaatsvindt, gaat zij vergezeld van een motivering voor de vertraging.",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "Uitzondering: melden bij de AP hoeft niet als een risico voor betrokkenen niet waarschijnlijk is.",
+            "quote": "Een datalek moet melden bij de AP, tenzij het niet waarschijnlijk is dat het datalek een risico oplevert voor 'de rechten en vrijheden van betrokkenen'.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "ok": true
+          },
+          {
+            "text": "Ook passende maatregelen vóór het lek, zoals versleuteling, kunnen een melding overbodig maken.",
+            "quote": "U hoeft het datalek niet te melden bij de AP als u passende maatregelen heeft getroffen voordat het datalek plaatsvond.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "ok": true
+          },
+          {
+            "text": "De UAVG bevat aanvullende uitzonderingen, onder meer voor financiële ondernemingen onder de Wft wat betreft het informeren van betrokkenen.",
+            "quote": "In artikel 41 UAVG en artikel 42 UAVG staan uitzonderingen op de meldplicht datalekken.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "ok": true
+          },
+          {
+            "text": "Betrokkenen moeten zelf worden geïnformeerd als er waarschijnlijk een hoog risico is (art. 34 AVG).",
+            "quote": "U hoeft de slachtoffers alleen te informeren als een datalek waarschijnlijk een hoog risico voor hun rechten en vrijheden oplevert.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "ok": true
+          },
+          {
+            "text": "Het informeren van betrokkenen moet onverwijld gebeuren.",
+            "quote": "U kunt verplicht zijn om het datalek binnen 72 uur te melden bij de AP. Ook kunt u verplicht zijn om de slachtoffers onverwijld te informeren over het datalek.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-dit-moet-u-doen",
+            "ok": true
+          },
+          {
+            "text": "Een aanvankelijk niet-meldplichtig incident moet alsnog worden gemeld als later toch compromittering optreedt.",
+            "quote": "Vindt er later echter een compromittering plaats, moet de inbreuk wel worden gemeld.",
+            "doc": "ap:documenten/voorbeeldlijst-welniet-melden-datalek",
+            "ok": true
+          },
+          {
+            "text": "Ook niet-meldplichtige incidenten moeten worden gedocumenteerd op grond van artikel 33, vijfde lid, AVG.",
+            "quote": "Dit is geen te melden inbreuk, maar wel een te registreren incident overeenkomst artikel 33, lid 5.",
+            "doc": "ap:documenten/voorbeeldlijst-welniet-melden-datalek",
+            "ok": true
+          },
+          {
+            "text": "De AP kan een boete opleggen als ten onrechte niet wordt gemeld.",
+            "quote": "Meldt u een datalek ten onrechte niet bij de AP? Dan kan de AP u een boete opleggen.",
+            "doc": "ap:themas/beveiliging/datalekken/datalek-wel-of-niet-melden",
+            "ok": true
+          },
+          {
+            "text": "In de PVV-zaak oordeelde de AP dat vrijwillige ontvangst van de e-mails door betrokkenen geen grond is om een inbreuk als niet meldenswaardig te beschouwen.",
+            "quote": "Dit is echter geen criterium op basis waarvan zou kunnen worden geconcludeerd dat het in deze zou gaan om een niet meldenswaardige inbreuk.",
+            "doc": "ap:documenten/boete-datalek-pvv-overijssel",
+            "ok": true
+          },
+          {
+            "text": "Onder de Wbp gold al dat 'onverwijld' volgens de AP-beleidsregels melding binnen 72 uur betekende.",
+            "quote": "De Beleidsregels meldplicht datalekken bepalen onder meer dat ‘onverwijld’, zoals bedoeld in artikel 34a, eerste lid, van de Wbp, melding binnen 72 uur betekent.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          },
+          {
+            "text": "Het boetemaximum voor schending van artikelen 33 en 34 AVG is € 10 miljoen of 2% van de wereldwijde jaaromzet.",
+            "quote": "Artikel 83, vierde lid, van de AVG bepaalt dat op inbreuken van de artikelen 33 en 34 een administratieve geldboete kan worden opgelegd tot € 10.000.000 of, voor een onderneming, tot 2% van de totale wereldwijde jaaromzet in het voorgaande boekjaar, indien dit cijfer hoger is.",
+            "doc": "ap:documenten/boete-uber-datalek",
+            "ok": true
+          }
+        ],
+        "costUsd": 1.1291259,
+        "apiCalls": 79,
+        "ms": 279941,
+        "quoteCheck": {
+          "passed": 58,
+          "failed": 3,
+          "fixed": 3,
+          "dropped": 0
+        }
+      },
+      "costUsd": 1.1291259
+    }
+  ]
+}

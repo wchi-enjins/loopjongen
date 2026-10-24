@@ -45,6 +45,7 @@ Run 0 has no per-call log: its numbers are the estimate from `2026-10-19_token_u
 | 5 | 1,633 s | 28 | 58 | 25 (53%) | 0 found | 7–9 |
 | Moonlit | ≈ 12 min for 5 questions | | | 17 (36%) | 0 | 6 |
 | Moonlit, Q1 only | 166 s | | 23 | ≈ 28 (≈ 60%) | 0 | 9–10 |
+| Moonlit MCP by hand (Claude Code, 2026-10-22) | ≈ 15 min | 30 Moonlit calls | 25 | 26 (55%) | 0 | 8–9 |
 
 ## Per step: Haiku setup (run 4) vs GPT-6.1 (run 5)
 
@@ -68,6 +69,8 @@ Performance scores are judgement calls (1–5), backed by the counts in each cel
 - **Run 3:** a cell lists every case in a document, each with its own quote, and documents no table picked go to the draft as text. Coverage back to 70%.
 - **Run 4:** the table step on Haiku too. Same quality, table step from $1.99 to $0.08. The draft is now the most expensive step (42%).
 - **Run 5:** every step on `gpt-6.1-sol` (effort high) through a small Responses API adapter (`deep/openai.ts`). The loop searched widely (96 source searches, 13 law lookups, 59 reads in 18 calls) and its later calls went over 272K input tokens, the higher rate. The answer is the most careful so far: exact articles for most cases, plus later stages that no other run had (Bicep Papa's articles and the CBb ruling of 22 Apr 2025, T.O.M.'s final fines after the CBb, a Bol.com draft commitments decision of Aug 2026). But it missed Seats and Sofas, KPN, Boomfietsen, TI84shop and Sneakerstad, gave no ECLIs, and would not attribute Leen Bakker's article although the ECLI mapping was available. 2 of 39 quotes needed a fix. Draft and answer cost less than on Opus ($0.29 against $0.75), but it was the slowest run (27 min).
+
+- **Moonlit MCP by hand (2026-10-22):** Claude Opus 5.5 in Claude Code, using only the Moonlit MCP connector on the free plan, with no pipeline of ours. 4 searches (all 158 hits of the main query listed), 25 documents read, 30 calls (30 of the 100 free monthly units). Exact articles for every case, from the decisions' dicta; missed the cases one keyword query doesn't reach (TrendX, KPN, TI84shop, the timer sweep, the CPC actions). New finds: Reizendeal (countdown timer as time pressure, 2024), Privilege (2022). Details: `2026-10-22_moonlit_mcp_q1.md`.
 
 ## Caveats
 
